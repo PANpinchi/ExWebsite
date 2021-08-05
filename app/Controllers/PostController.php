@@ -10,4 +10,19 @@ class PostController extends BaseController
 	{
 		return view('posts/index');
 	}
+
+	public function user_login()
+	{
+		return view('posts/user_login');
+	}
+
+	public function store()
+	{
+		$data = [
+			'email' => $this->request->getVar('email'),
+			'password' => $this->request->getVar('password')
+		];
+
+		print_r($data);
+	}
 }
