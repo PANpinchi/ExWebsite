@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class Post extends Model
 {
 	protected $DBGroup              = 'default';
-	protected $table                = 'posts';
+	protected $table                = 'account';
 	protected $primaryKey           = 'id';
 	protected $useAutoIncrement     = true;
 	protected $insertID             = 0;
@@ -16,7 +16,7 @@ class Post extends Model
 	protected $protectFields        = true;
 	protected $allowedFields        = [
 		'email',
-		'content'
+		'password'
 	];
 
 	// Dates

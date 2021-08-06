@@ -12,7 +12,13 @@ class Post extends Migration
 			'id' => [
 				'type' => 'INT',
 				'unsigned' => TRUE,
-				'auto_increment' => TRUE
+				'auto_increment' => FALSE
+			],
+
+			'name' => [
+				'type' => 'VARCHAR',
+				'constraint' => '100',
+				'null' => true
 			],
 	
 			'email' => [
@@ -21,7 +27,7 @@ class Post extends Migration
 				'null' => true
 			],
 	
-			'email' => [
+			'password' => [
 				'type' => 'VARCHAR',
 				'constraint' => '200',
 				'null' => true
@@ -29,11 +35,11 @@ class Post extends Migration
 		]);
 
 		$this->forge->addKey('id', TRUE);
-		$this->forge->createTable('email');
+		$this->forge->createTable('account');
 	}
 
 	public function down()
 	{
-		$this->forge->dropTable('post');
+		$this->forge->dropTable('account');
 	}
 }
