@@ -59,7 +59,7 @@
                 <div>
                     <p class="type1 margin-top">大學甄選入學委員會 - 系統登入</p>
 
-                    <form name = "account" action = "/PostController/store" method="POST" class="box" style="box-shadow: 4px 4px 20px 1px #505050">
+                    <form name = "account" action = "/PostController/compare_account" method="POST" class="box" style="box-shadow: 4px 4px 20px 1px #505050">
                         <p class = "margin-top">
                         <br><br><br>
                         
