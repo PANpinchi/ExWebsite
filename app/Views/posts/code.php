@@ -1,53 +1,30 @@
 <?php
-    session_start();
-    //生成驗證碼圖片
-    header("Content-type: image/PNG");
-    $im = imagecreate(44,18);
-    $back = ImageColorAllocate($im, 245,245,245);
-    imagefill($im,0,0,$back); //背景
-    srand((double)microtime()*1000000);
-    //生成4位數字
-    for($i=0;$i<4;$i){
-    $font = ImageColorAllocate($im, rand(100,255),rand(0,100),rand(100,255));
-    $authnum=rand(1,9);
-    $vcodes.=$authnum;
-    imagestring($im, 5, $i*10, 1, $authnum, $font);
-    }
-    for($i=0;$i<100;$i  ) //加入干擾象素
-    {
-    $randcolor = ImageColorallocate($im,rand(0,255),rand(0,255),rand(0,255));
-    imagesetpixel($im, rand() , rand() , $randcolor);
-    }
-    ImagePNG($im);
-    ImageDestroy($im);
-    $_SESSION['Checknum'] = $vcodes;
+    $all = array_merge(range('a', 'z'), range('A', 'Z'), range(0, 9));
+    $div = ['1', 'l', '0', 'o', 'O', 'I'];
+    $word = array_diff($all, $div);
+    unset($all ,$div);
 
-    session_start();//啟動會話
-    $code=$_POST["passcode"];
-    if($code == $_SESSION['Checknum'])
-    {
-        echo "<script>alert('讚');</script>";
-    }
-    else
-    {
-        echo "<script>alert('不讚');</script>";
+    $index = array_rand($word, 4);
+    shuffle($index);
+    
+    $code = '';
+    foreach($index as $i){
+        $code .= $word[$i];
     }
 
+    print_r($code);
+
+    /*$img = imagecreate(150, 30);
+    imagecolorallocate($img, 255, 0, 0);
+    $color = imagecolorallocate($img, 255, 255, 255);
+
+    $font = 5;
+    $x = (imagesx($img) - imagefontwidth($font) * strlen($code)) / 2;
+    $y = (imagesy($img) - imagefontheight($font)) / 2;
+    imagestring($img, $font, $x, $y, $code, $color);
+
+    ob_end_clean();
+    header('content-type:image/x-png');
+    imagepng($img);
+    imagedestroy($img);*/
 ?>
-
-<?php
-if (isset($_POST["passcode"])) {
-    echo "<script>alert('成功');</script>";
-    session_start();//啟動會話
-    $code=$_POST["passcode"];
-    if( $code == $_SESSION["Checknum"])
-    {
-        echo "<script>alert('成功');</script>";
-    }
-    else
-    {
-        echo "<script>alert('失敗');</script>";
-    }
-}
-?>
-

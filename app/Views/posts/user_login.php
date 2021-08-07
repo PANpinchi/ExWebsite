@@ -1,6 +1,21 @@
 <?= $this->extend('templates\user_default') ?>
 <?= $this->section('content') ?>
 
+<?php
+    $all = array_merge(range('a', 'z'), range('A', 'Z'), range(0, 9));
+    $div = ['1', 'l', '0', 'o', 'O', 'I'];
+    $word = array_diff($all, $div);
+    unset($all ,$div);
+
+    $index = array_rand($word, 4);
+    shuffle($index);
+    
+    $code = '';
+    foreach($index as $i){
+        $code .= $word[$i];
+    }
+?>
+
 <!doctype html>
 <html lang="en">
     <head>
@@ -71,8 +86,13 @@
 
                         <br><br><br>
 
-                        <img src="code.php"><br>
-                        <input type="text" name="passcode" id="passcode">
+                        <?php
+                            print_r($code);
+                        ?>
+
+                        <br><br>
+
+                        <input type="text" name="passcode" id="passcode" placeholder = "請輸入驗證碼" required>
 
                         <br><br><br>
 
