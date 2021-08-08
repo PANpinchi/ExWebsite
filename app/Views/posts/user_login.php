@@ -74,23 +74,21 @@
                 <div>
                     <p class="type1 margin-top">大學甄選入學委員會 - 系統登入</p>
 
-                    <form name = "account" action = "/PostController/compare_account" method="POST" class="box" style="box-shadow: 4px 4px 20px 1px #505050">
+                    <form name = "accounts" action = "/PostController/compare_user_account" method="POST" class="box" style="box-shadow: 4px 4px 20px 1px #505050">
                         <p class = "margin-top">
                         <br><br><br>
                         
-                        帳號 : <input name = "email" style="font-family:serif;" type = "email" placeholder = "Email">
+                        帳號 : <input name = "email" style="font-family:serif;" type = "email" placeholder = "電子郵件">
                         
                         <br><br><br>
                         
-                        密碼 : <input name = "password" style="font-family:serif;" type = "password" placeholder = "Password">
+                        密碼 : <input name = "password" style="font-family:serif;" type = "password" placeholder = "請輸入密碼">
 
                         <br><br><br>
 
                         <?php
                             print_r($code);
                         ?>
-
-                        <br><br>
 
                         <input type="text" name="passcode" id="passcode" placeholder = "請輸入驗證碼" required>
 

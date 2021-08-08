@@ -4,10 +4,10 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class Post extends Model
+class Post_user_login extends Model
 {
 	protected $DBGroup              = 'default';
-	protected $table                = 'account';
+	protected $table                = 'user_account';
 	protected $primaryKey           = 'id';
 	protected $useAutoIncrement     = true;
 	protected $insertID             = 0;

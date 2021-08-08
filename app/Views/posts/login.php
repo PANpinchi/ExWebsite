@@ -90,7 +90,7 @@ foreach($index as $i){
     <body>
         <div class = "window">
             <div class="container">
-                <img class = "left" src="caclogo.jpg"/>
+                <img class = "left" src="caclogo.jpg">
 
                 <p class = "type1">110 學年度繁星推薦、個人申請個人密碼設定系統</p>
             </div>
@@ -108,21 +108,23 @@ foreach($index as $i){
             </div>
 
             <div class="container">
-                <form name = "account" action = "" method="POST" style="border: 1px rgb(230, 215, 210) solid">
+                <form name = "accounts" action = "/PostController/compare_account" method="POST" style="border: 1px rgb(230, 215, 210) solid">
                     <div class="margin type2">
                         <p align="center" style = "color: rgb(160, 5, 0)">
                         <br>              
-                        帳號 : <input name = "email" style="font-family:serif;" type = "email" placeholder = "Email">
+                        帳號 : <input name = "account" style="font-family:serif;" type = "account" placeholder = "准考證號碼">
                         <br><br>
-                        密碼 : <input name = "password" style="font-family:serif;" type = "password" placeholder = "Password">
+                        密碼 : <input name = "password" style="font-family:serif;" type = "password" placeholder = "請輸入密碼">
                         <br><br>
                         <?php
                             print_r($code);
                         ?>
-                        <br><br>
-                        <input type="text" name="passcode" id="passcode" placeholder = "請輸入驗證碼" required>
+                        <input name="passcode" id="passcode" type="text" placeholder = "請輸入驗證碼" required>
                         <hr>
-                        <p align = "center"><button class="btn btn-primary" style="background-color: orange; border:0px"> 登入 </button></p>
+                        <p align = "center">
+                            <a href="#" class="btn btn-primary" style="background-color: orange; border:0px; margin-right: 30px;" type="button"> 忘記密碼 </a>
+                            <button class="btn btn-primary" style="background-color: orange; border:0px"> 登入 </button>
+                        </p>
                         </p>
                     </div>
                 </form>

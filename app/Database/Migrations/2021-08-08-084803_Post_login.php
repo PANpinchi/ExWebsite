@@ -4,7 +4,7 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class Post extends Migration
+class Post_login extends Migration
 {
 	public function up()
 	{
@@ -21,7 +21,7 @@ class Post extends Migration
 				'null' => true
 			],
 	
-			'email' => [
+			'account' => [
 				'type' => 'VARCHAR',
 				'constraint' => '100',
 				'null' => true
@@ -34,7 +34,6 @@ class Post extends Migration
 			],
 		]);
 
-		$this->forge->addKey('id', TRUE);
 		$this->forge->createTable('account');
 	}
 
