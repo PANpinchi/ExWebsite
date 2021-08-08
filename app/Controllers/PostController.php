@@ -25,6 +25,12 @@ class PostController extends BaseController
 		return view('posts/login');
 	}
 
+	/* 忘記密碼頁面 */
+	public function forget()
+	{
+		return view('posts/forget');
+	}
+
 	/*匹配後台帳號*/
 	public function compare_user_account()
 	{

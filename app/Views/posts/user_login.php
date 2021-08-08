@@ -78,7 +78,7 @@
                         <p class = "margin-top">
                         <br><br><br>
                         
-                        帳號 : <input name = "email" style="font-family:serif;" type = "email" placeholder = "電子郵件">
+                        帳號 : <input name = "email" style="font-family:serif;" type = "email" placeholder = "請輸入電子郵件">
                         
                         <br><br><br>
                         

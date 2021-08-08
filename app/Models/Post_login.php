@@ -16,7 +16,8 @@ class Post_login extends Model
 	protected $protectFields        = true;
 	protected $allowedFields        = [
 		'account',
-		'password'
+		'password',
+		'email'
 	];
 
 	// Dates
