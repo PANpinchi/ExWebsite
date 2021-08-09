@@ -18,6 +18,34 @@ class PostController extends BaseController
 		return view('posts/date');
 	}
 
+	/*期限資料*/
+	public function store()
+	{
+		$date=
+			[
+				'startdate1' => $this->request->getVar('start1'),
+				'startdate2' => $this->request->getVar('start2'),
+				'startdate3' => $this->request->getVar('start3'),
+				'startdate4' => $this->request->getVar('start4'),
+				'startdate5' => $this->request->getVar('start5')
+				/*'startdate6' => $this->request->getVar('start5')
+				'startdate7' => $this->request->getVar('start5')
+				'startdate8' => $this->request->getVar('start5')
+				'startdate9' => $this->request->getVar('start5')
+				'startdate10' => $this->request->getVar('start5')
+				'startdate11' => $this->request->getVar('start5')
+				'startdate12' => $this->request->getVar('start5')
+				'startdate13' => $this->request->getVar('start5')
+				'startdate14' => $this->request->getVar('start5')
+				'startdate15' => $this->request->getVar('start5')
+				'startdate16' => $this->request->getVar('start5')
+				'startdate17' => $this->request->getVar('start5')
+				'startdate18' => $this->request->getVar('start5')
+				'startdate19' => $this->request->getVar('start5')*/
+			];
+		print_r($date);
+	}
+
 	/* 後台登入頁面 */
 	public function user_login()
 	{

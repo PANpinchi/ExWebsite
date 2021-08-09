@@ -90,7 +90,7 @@ foreach($index as $i){
     <body>
         <div class = "window">
             <div class="container">
-                <img class = "left" src="caclogo.jpg">
+                <img class = "left" src="/app/Views/posts/images/caclogo.jpg">
 
                 <p class = "type1">110 學年度繁星推薦、個人申請個人密碼設定系統</p>
             </div>
