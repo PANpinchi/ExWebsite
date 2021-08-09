@@ -11,7 +11,7 @@
     foreach($index as $i){
         $code .= $word[$i];
     }
-
+    
     print_r($code);
 
     /*$img = imagecreate(150, 30);

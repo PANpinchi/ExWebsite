@@ -13,6 +13,11 @@ class PostController extends BaseController
 		return view('posts/index');
 	}
 
+	public function date()
+	{
+		return view('posts/date');
+	}
+
 	/* 後台登入頁面 */
 	public function user_login()
 	{
