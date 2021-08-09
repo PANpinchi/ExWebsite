@@ -176,6 +176,7 @@ class PostController extends BaseController
 			]);
 
 			echo '<script>alert("更改密碼成功，跳轉回登入頁面！")</script>';
+			session_destroy();
 			return view('posts/login');
 		}
 		else{

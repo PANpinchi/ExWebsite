@@ -28,7 +28,7 @@
         
         <style>
             p{
-            font: bold 20px 標楷體;
+            font: bold 20px serif;
             text-align: center;
             }
 
@@ -46,7 +46,12 @@
             }
             
             .type1{
-                font : bold 3em 標楷體;
+                font : bold 3em serif;
+            }
+
+            .type2{
+                font-weight: bold;
+                font-size: 3vh;
             }
 
             .margin-top{
@@ -64,41 +69,54 @@
             .box{
                 margin:auto;
             }
+
+            .margin{
+                margin:0 auto;
+            }
         </style>
     </head>
 
     <body>
         <div class="window">
             <div class="container">
-                <br>
-                <div>
+                    <br>
                     <p class="type1 margin-top">大學甄選入學委員會 - 系統登入</p>
+            </div>
 
-                    <form name = "accounts" action = "/PostController/compare_user_account" method="POST" class="box" style="box-shadow: 4px 4px 20px 1px #505050">
-                        <p class = "margin-top">
-                        <br><br><br>
-                        
-                        帳號 : <input name = "email" style="font-family:serif;" type = "email" placeholder = "請輸入電子郵件">
-                        
-                        <br><br><br>
-                        
-                        密碼 : <input name = "password" style="font-family:serif;" type = "password" placeholder = "請輸入密碼">
+            <br><br><br>
 
-                        <br><br><br>
+            <div class="container">
+                <form name = "accounts" action = "/PostController/compare_user_account" method="POST" class="box" style="box-shadow: 4px 4px 20px 1px #505050">
+                    <div class="margin">
+                        <div align="center">
+                            <p class="type2" style = "width: min-content; text-align: left;">
+                                <br>
+                                
+                                帳號 : <br> <input name = "email" style="font-family:serif;" type = "email" placeholder = "請輸入電子郵件">
+                                
+                                <br><br>
+                                
+                                密碼 : <br> <input name = "password" style="font-family:serif;" type = "password" placeholder = "請輸入密碼">
 
-                        <?php
-                            print_r($code);
-                        ?>
+                                <br><br>
 
-                        <input type="text" name="passcode" id="passcode" placeholder = "請輸入驗證碼" required>
+                                <?php
+                                    print_r($code);
+                                ?>
 
-                        <br><br><br>
+                                <br>
 
-                        <button class="btn btn-primary"> 登入 </button>
-                        <br><br><br>
-                        </p>
-                    </form>
-                </div>
+                                <input type="text" name="passcode" id="passcode" placeholder = "請輸入驗證碼" required>
+
+                                <br><br>
+                            </p>
+
+                            <button class="btn btn-primary" text-align="center"> 登入 </button>
+                            
+                            <br><br>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     <body>

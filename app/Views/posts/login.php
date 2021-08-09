@@ -27,7 +27,6 @@ foreach($index as $i){
             body{
                 width: auto;
                 height: 720px;
-                background-color: rgb(250, 250, 250);
             }
 
             form{
@@ -62,6 +61,10 @@ foreach($index as $i){
                 float: left;
             }
 
+            .right{
+                float: right;
+            }
+
             .center{
                 align: center;
                 width: 990px;
@@ -90,7 +93,7 @@ foreach($index as $i){
     <body>
         <div class = "window">
             <div class="container">
-                <img class = "left" src="caclogo.jpg">
+                <img class = "left" src="/img/caclogo.jpg">
 
                 <p class = "type1">110 學年度繁星推薦、個人申請個人密碼設定系統</p>
             </div>
@@ -110,25 +113,52 @@ foreach($index as $i){
             <div class="container">
                 <form name = "accounts" action = "/PostController/compare_account" method="POST" style="border: 1px rgb(230, 215, 210) solid">
                     <div class="margin type2">
-                        <p align="center" style = "color: rgb(160, 5, 0)">
-                        <br>              
-                        帳號 : <input name = "account" style="font-family:serif;" type = "account" placeholder = "請輸入准考證號碼">
-                        <br><br>
-                        密碼 : <input name = "password" style="font-family:serif;" type = "password" placeholder = "請輸入密碼">
-                        <br><br>
-                        <?php
-                            print_r($code);
-                        ?>
-                        <input name="passcode" id="passcode" type="text" placeholder = "請輸入驗證碼" required>
-                        <hr>
-                        <p align = "center">
-                            <a href="/PostController/forget" class="btn btn-primary" style="background-color: orange; border:0px; margin-right: 30px;" type="button"> 忘記密碼 </a>
-                            <button class="btn btn-primary" style="background-color: orange; border:0px"> 登入 </button>
-                        </p>
-                        </p>
+                        <div align="center">
+                            <p style = "color: rgb(160, 5, 0); width: min-content; text-align: left;">
+                                <br>              
+                                准考證號碼 : <br> <input name = "account" style="font-family:serif;" type = "account" placeholder = "請輸入准考證號碼">
+                                <br><br>
+                                密碼 : <br> <input name = "password" style="font-family:serif;" type = "password" placeholder = "請輸入密碼">
+                                <br><br>
+                                <?php
+                                    print_r($code);
+                                ?>
+
+                                <input name="passcode" id="passcode" type="text" placeholder = "請輸入驗證碼" required>
+                                <hr>
+                                <p align = "center">
+                                    <a href="/PostController/forget" class="btn btn-primary" style="background-color: orange; border:0px; margin-right: 30px;" type="button"> 忘記密碼 </a>
+                                    <button class="btn btn-primary" style="background-color: orange; border:0px"> 登入 </button>
+                                </p>
+                            </p>
+                        </div>
                     </div>
                 </form>
             </div>
+
+            <br>
+
+            <div class="container">
+                <div class="col-md-6"></div>
+                <table align="right">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img src="/img/caclogo_footer_logo.png">
+                            </td>
+                            <td>
+                                <p style="font-size:15px; width: 300px">
+                                        62102嘉義縣民雄鄉大學路一段168號
+                                        <br>
+                                        TEL：(05)2721799
+                                        <br>
+                                        Copyright by CAC. All rights reserved.
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div> 
         </div>
     <body>
 </html>

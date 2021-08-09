@@ -27,7 +27,6 @@ foreach($index as $i){
             body{
                 width: auto;
                 height: 720px;
-                background-color: rgb(250, 250, 250);
             }
 
             form{
@@ -62,6 +61,10 @@ foreach($index as $i){
                 float: left;
             }
 
+            .right{
+                float: right;
+            }
+
             .center{
                 align: center;
                 width: 990px;
@@ -90,7 +93,7 @@ foreach($index as $i){
     <body>
         <div class = "window">
             <div class="container">
-                <img class = "left" src="caclogo.jpg">
+                <img class = "left" src="/img/caclogo.jpg">
 
                 <p class = "type1">110 學年度繁星推薦、個人申請個人密碼設定系統</p>
             </div>
@@ -110,7 +113,7 @@ foreach($index as $i){
             <div class="container">
                 <form name = "accounts" action = "/PostController/change_pass" method="POST" style="border: 1px rgb(230, 215, 210) solid">
                     <div class="margin type2">
-                        <div align="center" style = "color: rgb(160, 5, 0)">
+                        <div align="center">
                             <p style = "color: rgb(160, 5, 0); width: min-content; text-align: left;">
                                 <br>              
                                 請輸入新的密碼 : <br> <input name = "password" style="font-family:serif;" type = "password" placeholder = "">
@@ -132,6 +135,30 @@ foreach($index as $i){
                     </div>
                 </form>
             </div>
+
+            <br>
+
+            <div class="container">
+                <div class="col-md-6"></div>
+                <table align="right">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img src="/img/caclogo_footer_logo.png">
+                            </td>
+                            <td>
+                                <p style="font-size:15px; width: 300px">
+                                        62102嘉義縣民雄鄉大學路一段168號
+                                        <br>
+                                        TEL：(05)2721799
+                                        <br>
+                                        Copyright by CAC. All rights reserved.
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div> 
         </div>
     <body>
 </html>
