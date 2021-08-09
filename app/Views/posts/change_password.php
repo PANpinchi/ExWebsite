@@ -108,19 +108,20 @@ foreach($index as $i){
             </div>
 
             <div class="container">
-                <form name = "accounts" action = "/PostController/forget_account" method="POST" style="border: 1px rgb(230, 215, 210) solid">
+                <form name = "accounts" action = "/PostController/change_pass" method="POST" style="border: 1px rgb(230, 215, 210) solid">
                     <div class="margin type2">
                         <div align="center" style = "color: rgb(160, 5, 0)">
                             <p style = "color: rgb(160, 5, 0); width: min-content; text-align: left;">
                                 <br>              
-                                帳號 : <br> <input name = "account" style="font-family:serif;" type = "account" placeholder = "請輸入准考證號碼">
+                                請輸入新的密碼 : <br> <input name = "password" style="font-family:serif;" type = "password" placeholder = "">
                                 <br><br>
-                                電子郵件 : <br> <input name = "email" style="font-family:serif;" type = "email" placeholder = "請輸入電子郵件">
+                                請再次輸入密碼 : <br> <input name = "check" style="font-family:serif;" type = "password" placeholder = "">
                                 <br><br>
                                 <?php
                                     print_r($code);
                                 ?>
-                                <input name="passcode" id="passcode" type="text" placeholder = "請輸入驗證碼" required>
+                                <input name="passcode" id="passcode" style="width: 280px;" type="text" placeholder = "請輸入驗證碼" required>
+                                <br><br>
                                 <hr>
                                 <p align = "center">
                                     <a href="/PostController/login" class="btn btn-primary" style="background-color: orange; border:0px; margin-right: 30px;" type="button"> 回上一頁 </a>
