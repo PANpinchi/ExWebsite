@@ -32,6 +32,51 @@ class PostController extends BaseController
 	/*期限資料*/
 	public function store()
 	{	
+		/*
+		$date=
+			[
+				'start1' => $this->request->getVar('start1'),
+						'end1' => $this->request->getVar('end1'),
+						'start2' => $this->request->getVar('start2'),
+						'end2' => $this->request->getVar('end2'),
+						'start3' => $this->request->getVar('start3'),
+						'end3' => $this->request->getVar('end3'),
+						'start4' => $this->request->getVar('start4'),
+						'end4' => $this->request->getVar('end4'),
+						'start5' => $this->request->getVar('start5'),
+						'end5' => $this->request->getVar('end5'),
+						'start6' => $this->request->getVar('start6'),
+						'end6' => $this->request->getVar('end6'),
+						'start7' => $this->request->getVar('start7'),
+						'end7' => $this->request->getVar('end7'),
+						'start8' => $this->request->getVar('start8'),
+						'end8' => $this->request->getVar('end8'),
+						'start9' => $this->request->getVar('start9'),
+						'end9' => $this->request->getVar('end9'),
+						'start10' => $this->request->getVar('start10'),
+						'end10' => $this->request->getVar('end10'),
+						'start11' => $this->request->getVar('start11'),
+						'end11' => $this->request->getVar('end11'),
+						'start12' => $this->request->getVar('start12'),
+						'end12' => $this->request->getVar('end12'),
+						'start13' => $this->request->getVar('start13'),
+						'end13' => $this->request->getVar('end13'),
+						'start14' => $this->request->getVar('start14'),
+						'end14' => $this->request->getVar('end14'),
+						'start15' => $this->request->getVar('start15'),
+						'end15' => $this->request->getVar('end15'),
+						'start16' => $this->request->getVar('start16'),
+						'end16' => $this->request->getVar('end16'),
+						'start17' => $this->request->getVar('start17'),
+						'end17' => $this->request->getVar('end17'),
+						'start18' => $this->request->getVar('start18'),
+						'end18' => $this->request->getVar('end18'),
+						'start19' => $this->request->getVar('start19'),
+						'end19' => $this->request->getVar('end19')
+			];
+		print_r($date);
+		*/
+		///*
 		$model = new Date();
 		$model->save([
 						'start1' => $this->request->getVar('start1'),
@@ -74,6 +119,7 @@ class PostController extends BaseController
 						'end19' => $this->request->getVar('end19')
 					]);
 			return redirect('dateview');
+			//*/
 	}
 
 	/* 後台登入頁面 */
