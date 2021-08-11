@@ -118,6 +118,7 @@ class PostController extends BaseController
 						'start19' => $this->request->getVar('start19'),
 						'end19' => $this->request->getVar('end19')
 					]);
+			//$model->update($id,$date);
 			return redirect('dateview');
 			//*/
 	}

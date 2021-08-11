@@ -11,7 +11,7 @@ class Date extends Migration
 		$this->forge->addField([
 			'id'		=>[
 				'type'			=> 'INT',
-				'constraint'	=> 1,
+				'constraint'	=> 5,
 				'unsgined'		=> true,
 				'auto_increment'=> true
 			],
