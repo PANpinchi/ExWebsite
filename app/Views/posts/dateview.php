@@ -19,6 +19,9 @@
 
 </head>
 
+<body>
+
+<input type="button" value="編輯" name="button" onclick="/PostController/date"></input>
 
 
 <?php
