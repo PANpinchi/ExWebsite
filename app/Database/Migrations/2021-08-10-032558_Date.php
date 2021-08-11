@@ -13,7 +13,7 @@ class Date extends Migration
 				'type'			=> 'INT',
 				'constraint'	=> 5,
 				'unsgined'		=> true,
-				'auto_increment'=> true
+				'auto_increment'=> false
 			],
 			'start1'	=>[
 				'type'			=>'VARCHAR',

@@ -32,7 +32,6 @@ class PostController extends BaseController
 	/*期限資料*/
 	public function store()
 	{	
-		/*
 		$date=
 			[
 						'start1' => $this->request->getVar('start1'),
@@ -72,13 +71,14 @@ class PostController extends BaseController
 						'start18' => $this->request->getVar('start18'),
 						'end18' => $this->request->getVar('end18'),
 						'start19' => $this->request->getVar('start19'),
-						'end19' => $this->request->getVar('end19')
+						'end19' => $this->request->getVar('end19'),
+						'id'	=> 1
 			];
-			*/
-
 		$model = new Date();
-		$model->save(
+		$model->save($date);
+		/*$model->save(
 			[
+						'id'       => 0,
 						'start1' => $this->request->getVar('start1'),
 						'end1' => $this->request->getVar('end1'),
 						'start2' => $this->request->getVar('start2'),
@@ -117,7 +117,7 @@ class PostController extends BaseController
 						'end18' => $this->request->getVar('end18'),
 						'start19' => $this->request->getVar('start19'),
 						'end19' => $this->request->getVar('end19')
-			]);
+			]);*/
 			
 		//$id = 0;
 		//$model->update([0],$date);
