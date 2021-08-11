@@ -45,8 +45,14 @@ class PostController extends BaseController
 		/* 輸入的帳號及密碼 */
 		$data = [
 			'email' => $this->request->getVar('email'),
-			'password' => $this->request->getVar('password')
+			'password' => $this->request->getVar('password'),
+			'valicode' => $this->request->getVar('valicode')
 		];
+
+		if($data['valicode'] != $_SESSION['code']){
+			echo '<script>alert("驗證碼輸入錯誤，請重新登入！")</script>';
+			return view('posts/user_login');
+		}
 
 		$model = new Post_user_login(); //開啟 account 資料庫
 		
@@ -84,8 +90,14 @@ class PostController extends BaseController
 		/* 輸入的帳號及密碼 */
 		$data = [
 			'account' => $this->request->getVar('account'),
-			'password' => $this->request->getVar('password')
+			'password' => $this->request->getVar('password'),
+			'valicode' => $this->request->getVar('valicode')
 		];
+
+		if($data['valicode'] != $_SESSION['code']){
+			echo '<script>alert("驗證碼輸入錯誤，請重新登入！")</script>';
+			return view('posts/login');
+		}
 
 		$model = new Post_login(); //開啟 account 資料庫
 		
@@ -123,8 +135,14 @@ class PostController extends BaseController
 		/* 輸入的帳號及密碼 */
 		$data = [
 			'account' => $this->request->getVar('account'),
-			'email' => $this->request->getVar('email')
+			'email' => $this->request->getVar('email'),
+			'valicode' => $this->request->getVar('valicode')
 		];
+
+		if($data['valicode'] != $_SESSION['code']){
+			echo '<script>alert("驗證碼輸入錯誤，請重新登入！")</script>';
+			return view('posts/forget');
+		}
 
 		$model = new Post_login(); //開啟 account 資料庫
 		
@@ -159,8 +177,14 @@ class PostController extends BaseController
 		/* 輸入的帳號及密碼 */
 		$data = [
 			'password' => $this->request->getVar('password'),
-			'check' => $this->request->getVar('check')
+			'check' => $this->request->getVar('check'),
+			'valicode' => $this->request->getVar('valicode')
 		];
+
+		if($data['valicode'] != $_SESSION['code']){
+			echo '<script>alert("驗證碼輸入錯誤，請重新登入！")</script>';
+			return view('posts/change_password');
+		}
 
 		$same = strcmp($data['password'], $data['check']);
 
@@ -183,5 +207,56 @@ class PostController extends BaseController
 			echo '<script>alert("兩次密碼不一致，請重新輸入！")</script>';
 			return view('posts/change_password');
 		}
+	}
+
+	/* 產生驗證碼 */
+	public function verification_code()
+	{		
+		/* 創建驗證碼 */
+		$all = array_merge(range('a', 'z'), range('A', 'Z'), range(0, 9));
+		$div = ['1', 'l', '0', 'o', 'O', 'I'];
+		$word = array_diff($all, $div);
+		unset($all ,$div);
+	
+		$index = array_rand($word, 4);
+		shuffle($index);
+	
+		$_SESSION['code'] = '';
+		foreach($index as $i){
+			$_SESSION['code'] .= $word[$i];
+		}
+	
+		/* 生成圖片 */
+		$w = 100;
+		$h = 36;
+		header("Content-type: image/PNG");
+		$im = imagecreate($w, $h);
+		$black = imagecolorallocate($im, mt_rand(0, 200), mt_rand(0, 120), mt_rand(0, 120));
+		$gray = imagecolorallocate($im, 100, 100, 100);
+		$bgcolor = imagecolorallocate($im, 235, 236, 237);
+	
+		/*背景*/
+		imagefilledrectangle($im, 0, 0, $w, $h, $bgcolor);
+		/*邊框*/
+		imagerectangle($im, 0, 0, $w-1, $h-1, $gray);
+		/*隨機生成大量點*/
+		for ($i = 0; $i < 200; $i++) {
+			$color = imagecolorallocate($im, mt_rand(0, 255), mt_rand(0, 255), mt_rand(0, 255));
+			imagesetpixel($im, rand(0, $w), rand(0, $h), $color);
+		}
+	
+		/* 將字符隨機顯示在圖片上 */
+		$strx = rand(3, 8);
+		for ($i = 0; $i < 4; $i++) {
+			$strpos = rand(5, 15);
+			imagestring($im, 5, $strx, $strpos, substr($_SESSION['code'], $i, 1), $black);
+			$strx += rand(25, 28);
+		}
+	
+		/*輸出圖片*/
+		$this->response->setHeader('Content-Type', 'image/png');
+		imagepng($im);
+		/*刪除圖片*/
+		imagedestroy($im);
 	}
 }
