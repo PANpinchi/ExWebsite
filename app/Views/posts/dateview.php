@@ -21,8 +21,7 @@
 
 <body>
 
-<input type="button" value="編輯" name="button" onclick="/PostController/date"></input>
-
+<input type="button" value="編輯" name="button" onclick= "location.href='PostController/date'"></input>
 
 <?php
     if (! empty($date) && is_array($date))  {
