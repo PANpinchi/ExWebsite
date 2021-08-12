@@ -14,14 +14,14 @@
     </head>
 
     <body>
-        <form name = "accounts" action = "/PostController/compare_account" method="POST" style="border: 1px rgb(230, 215, 210) solid">
+        <form name = "accounts" action = "/PostController/forget_account" method="POST" style="border: 1px rgb(230, 215, 210) solid">
             <div class="margin type2">
-                <div align="center">
+                <div align="center" style = "color: rgb(160, 5, 0)">
                     <p style = "color: rgb(160, 5, 0); width: min-content; text-align: left;">
                         <br>              
-                        准考證號碼 : <br> <input name = "account" style="font-family:serif;" type = "account" placeholder = "請輸入准考證號碼">
+                        帳號 : <br> <input name = "account" style="font-family:serif;" type = "account" placeholder = "請輸入准考證號碼">
                         <br><br>
-                        密碼 : <br> <input name = "password" style="font-family:serif;" type = "password" placeholder = "請輸入密碼">
+                        電子郵件 : <br> <input name = "email" style="font-family:serif;" type = "email" placeholder = "請輸入電子郵件">
                         <br><br>
                     </p>
 
@@ -37,8 +37,8 @@
                         <hr>
 
                         <div align = "center">
-                            <a href="/PostController/forget" class="btn btn-primary" style="background-color: orange; border:0px; margin-right: 30px;" type="button"> 忘記密碼 </a>
-                            <button class="btn btn-primary" style="background-color: orange; border:0px"> 登入 </button>
+                            <a href="/PostController/login" class="btn btn-primary" style="background-color: orange; border:0px; margin-right: 30px;" type="button"> 回上一頁 </a>
+                            <button class="btn btn-primary" style="background-color: orange; border:0px"> 送出 </button>
                             <br><br>
                         </div>
                     </div>

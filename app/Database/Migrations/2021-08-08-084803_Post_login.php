@@ -32,6 +32,12 @@ class Post_login extends Migration
 				'constraint' => '200',
 				'null' => true
 			],
+
+			'email' => [
+				'type' => 'VARCHAR',
+				'constraint' => '100',
+				'null' => true
+			],
 		]);
 
 		$this->forge->createTable('account');
