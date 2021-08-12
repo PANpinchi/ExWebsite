@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Controllers\BaseController;
 use App\Models\Post_user_login;
 use App\Models\Post_login;
+use App\Models\Post_post_page;
 
 class PostController extends BaseController
 {
@@ -101,5 +102,58 @@ class PostController extends BaseController
 		if($check == 0){
 			echo '帳號輸入錯誤，請重新登入！';
 		}
+	}
+
+	/*創建新的貼文*/
+	public function create()
+	{
+		return view('posts/create');
+	}
+
+	/*顯示公告的文章*/
+	public function show()
+	{
+		$model = new Post_post_page();
+		$data = 
+		[
+			'post_page' => $model->findAll()
+		];
+		return view('posts/show', $data);
+	}
+
+	public function show_content($post_page_id)
+	{
+		$model = new Post_post_page();
+		$data = 
+		[
+			'post_page' => $model->find($post_page_id)
+		];
+		return view('posts/show_content', $data);
+	}
+
+	public function store()
+	{
+		$data=
+			[
+				'title' => $this->request->getVar('title'),
+				'subtitle' => $this->request->getVar('subtitle'),
+				'subtitle2' => $this->request->getVar('subtitle2'),
+				'content' => $this->request->getVar('content'),
+				'start' => $this->request->getVar('start'),
+				'end' => $this->request->getVar('end')
+			];	
+		/*substr($data['start'], 0, 10);	
+		substr($data['end'], 0, 10);*/	
+
+		$model = new Post_post_page();
+		$model->save([
+			'title' => $data['title'],
+			'subtitle' => $data['subtitle'],
+			'subtitle2' => $data['subtitle2'],
+			'content' => $data['content'],
+			'start' => substr($data['start'], 0, 10),
+			'end' => substr($data['end'], 0, 10)
+		]);
+		return redirect('PostController');
 	}
 }

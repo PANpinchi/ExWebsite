@@ -1,0 +1,28 @@
+body{
+    width: auto;
+    height: 720px;
+}
+
+td {
+    border-width : 1px;                
+}
+
+.title{
+    font: bold 40px 標楷體;
+}
+
+.content{
+    font: bold 22px 標楷體;              
+}
+
+.margin{
+    width: auto;
+    margin: 10px auto;
+}
+.container{
+    height: auto;
+    width: auto;    
+               
+    justify-content: center; 
+    align-items: center;
+}
