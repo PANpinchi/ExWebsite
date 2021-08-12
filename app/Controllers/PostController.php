@@ -26,6 +26,7 @@ class PostController extends BaseController
 		return view('posts/dateedit',$data);
 	}
 
+	/*顯示關閉頁面*/
 	public function pageclose()
 	{
 		return view('posts/pageclose');
@@ -43,7 +44,7 @@ class PostController extends BaseController
 	}
 
 	/*後台網頁開放時間網址與說明資料更新*/
-	public function store()
+	public function norcollegestore()
 	{	
 		$date=
 			[

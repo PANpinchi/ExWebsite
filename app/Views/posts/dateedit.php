@@ -25,7 +25,7 @@
 	
 foreach($date as $date_item){
 echo '
-<form action="/PostController/store" method="post">
+<form action="/PostController/norcollegestore" method="post">
 <input type="submit" value="一鍵更改" name="submit">
 <table border="1" class="c" style="border-style:solid">
 	  <tr>
