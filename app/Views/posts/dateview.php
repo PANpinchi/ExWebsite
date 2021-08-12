@@ -41,7 +41,7 @@
                     <input type="button" value="測試按鈕1" name="test1" onclick=test()></input>
                     <script>
                         function test(){
-                            window.open("/PostController/pageclose");
+                            window.open("/pageclose");
                         }
                     </script>
                 ';
