@@ -1,0 +1,61 @@
+body{
+    width: auto;
+    height: 720px;
+}
+
+form{
+    width: 1000px;
+    height: auto;
+    border: auto;
+    background-color: rgb(255, 224, 223);
+    border-radius: 10px 10px 10px 10px;
+    margin: auto;
+}
+
+.window{
+    width: auto;
+    height: auto;
+}
+
+.container{
+    height: auto;
+    width: auto;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.margin{
+    margin:0 auto;
+}
+
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+
+.margin{
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.type1{
+    font-weight: bold;
+    font-size: 1.5em;
+    color : rgb(0, 48, 136);
+}
+
+.type2{
+    font-weight: bold;
+    font-size: 3vh;
+    color : rgb(0, 48, 136);
+}
+
+.type3{
+    font-weight: bold;
+    font-size: 2vh;
+    color : rgb(255, 0, 0);
+}

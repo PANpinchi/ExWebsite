@@ -14,20 +14,20 @@
     </head>
 
     <body>
-        <form name = "accounts" action = "/PostController/compare_account" method="POST" style="border: 1px rgb(230, 215, 210) solid">
+        <form name = "accounts" action = "/PostController/change_pass" method="POST" style="border: 1px rgb(230, 215, 210) solid">
             <div class="margin type2">
                 <div align="center">
                     <p style = "color: rgb(160, 5, 0); width: min-content; text-align: left;">
                         <br>              
-                        准考證號碼 : <br> <input name = "account" style="font-family:serif;" type = "account" placeholder = "請輸入准考證號碼">
+                        請輸入新的密碼 : <br> <input name = "password" style="font-family:serif;" type = "password" placeholder = "">
                         <br><br>
-                        密碼 : <br> <input name = "password" style="font-family:serif;" type = "password" placeholder = "請輸入密碼">
+                        請再次輸入密碼 : <br> <input name = "check" style="font-family:serif;" type = "password" placeholder = "">
                         <br><br>
                     </p>
 
                     <div>
                         <input name="valicode" style="width: 180px;" type="text" placeholder = "請輸入驗證碼" required>
-
+                        
                         <img id="Img" src = "<?= base_url('PostController/verification_code') ?>" onclick="reImg();">
 
                         <br>
@@ -37,8 +37,7 @@
                         <hr>
 
                         <div align = "center">
-                            <a href="/PostController/forget" class="btn btn-primary" style="background-color: orange; border:0px; margin-right: 30px;" type="button"> 忘記密碼 </a>
-                            <button class="btn btn-primary" style="background-color: orange; border:0px"> 登入 </button>
+                            <button class="btn btn-primary" style="background-color: orange; border:0px"> 送出 </button>
                             <br><br>
                         </div>
                     </div>
