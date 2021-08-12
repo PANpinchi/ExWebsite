@@ -121,6 +121,7 @@ class PostController extends BaseController
 		return view('posts/show', $data);
 	}
 
+	/*顯示文章內容*/
 	public function show_content($post_page_id)
 	{
 		$model = new Post_post_page();
@@ -130,7 +131,7 @@ class PostController extends BaseController
 		];
 		return view('posts/show_content', $data);
 	}
-
+	/*儲存文章頁面*/
 	public function store()
 	{
 		$data=
@@ -141,9 +142,7 @@ class PostController extends BaseController
 				'content' => $this->request->getVar('content'),
 				'start' => $this->request->getVar('start'),
 				'end' => $this->request->getVar('end')
-			];	
-		/*substr($data['start'], 0, 10);	
-		substr($data['end'], 0, 10);*/	
+			];				
 
 		$model = new Post_post_page();
 		$model->save([
