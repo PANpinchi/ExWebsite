@@ -40,11 +40,11 @@
 					<input type="datetime-local" id="bookdate" name="end1">
 			<th> <div class="mb-3">
 					<label for="wedsite" class="form-label"></label>
-					<input type="website" class="form-control" id="website">
+					<input type="website" class="form-control" id="website" name="website1">
 					</div>
 			<th> <div class="mb-3">
 					<label for="help" class="form-label"></label>
-					<input type="help" class="form-control" id="help">
+					<input type="help" class="form-control" id="help" name="instruction1">
 					</div>
 	  <tr>
 			<th>2
@@ -55,11 +55,11 @@
 					<input type="datetime-local" id="bookdate" name="end2">
 			<th> <div class="mb-3">
 					<label for="wedsite" class="form-label"></label>
-					<input type="website" class="form-control" id="website">
+					<input type="website" class="form-control" id="website" name="website2">
 					</div>
 			<th> <div class="mb-3">
 					<label for="help" class="form-label"></label>
-					<input type="help" class="form-control" id="help">
+					<input type="help" class="form-control" id="help" name="instruction2">
 					</div>
 	  <tr>
 			<th>3
@@ -70,11 +70,11 @@
 					<input type="datetime-local" id="bookdate" name="end3">
 			<th> <div class="mb-3">
 					<label for="wedsite" class="form-label"></label>
-					<input type="website" class="form-control" id="website">
+					<input type="website" class="form-control" id="website" name="website3">
 					</div>
 			<th> <div class="mb-3">
 					<label for="help" class="form-label"></label>
-					<input type="help" class="form-control" id="help">
+					<input type="help" class="form-control" id="help" name="instruction3">
 					</div>
 	  <tr>
 			<th>4
@@ -85,11 +85,11 @@
 					<input type="datetime-local" id="bookdate" name="end4">
 			<th> <div class="mb-3">
 					<label for="wedsite" class="form-label"></label>
-					<input type="website" class="form-control" id="website">
+					<input type="website" class="form-control" id="website" name="website4">
 					</div>
 			<th> <div class="mb-3">
 					<label for="help" class="form-label"></label>
-					<input type="help" class="form-control" id="help">
+					<input type="help" class="form-control" id="help" name="instruction4">
 					</div>
 	  <tr>
 			<th>5
@@ -100,11 +100,11 @@
 					<input type="datetime-local" id="bookdate" name="end5">
 			<th> <div class="mb-3">
 					<label for="wedsite" class="form-label"></label>
-					<input type="website" class="form-control" id="website">
+					<input type="website" class="form-control" id="website" name="website5">
 					</div>
 			<th> <div class="mb-3">
 					<label for="help" class="form-label"></label>
-					<input type="help" class="form-control" id="help">
+					<input type="help" class="form-control" id="help" name="instruction5">
 					</div>
 	  <tr>
 			<th>6
@@ -115,11 +115,11 @@
 					<input type="datetime-local" id="bookdate" name="end6">
 			<th> <div class="mb-3">
 					<label for="wedsite" class="form-label"></label>
-					<input type="website" class="form-control" id="website">
+					<input type="website" class="form-control" id="website" name="website6">
 					</div>
 			<th> <div class="mb-3">
 					<label for="help" class="form-label"></label>
-					<input type="help" class="form-control" id="help">
+					<input type="help" class="form-control" id="help" name="instruction6">
 					</div>
 		<tr>
 			<th>7 
@@ -130,11 +130,11 @@
 					<input type="datetime-local" id="bookdate" name="end7">
 			<th> <div class="mb-3">
 					<label for="wedsite" class="form-label"></label>
-					<input type="website" class="form-control" id="website">
+					<input type="website" class="form-control" id="website" name="website7">
 					</div>
 			<th> <div class="mb-3">
 					<label for="help" class="form-label"></label>
-					<input type="help" class="form-control" id="help">
+					<input type="help" class="form-control" id="help" name="instruction7">
 					</div>
 	  <tr>
 			<th>8
@@ -145,11 +145,11 @@
 					<input type="datetime-local" id="bookdate" name="end8">
 			<th> <div class="mb-3">
 					<label for="wedsite" class="form-label"></label>
-					<input type="website" class="form-control" id="website">
+					<input type="website" class="form-control" id="website" name="website8">
 					</div>
 			<th> <div class="mb-3">
 					<label for="help" class="form-label"></label>
-					<input type="help" class="form-control" id="help">
+					<input type="help" class="form-control" id="help" name="instruction8">
 					</div>
 	  <tr>
 			<th>9
@@ -160,11 +160,11 @@
 					<input type="datetime-local" id="bookdate" name="end9">
 			<th> <div class="mb-3">
 					<label for="wedsite" class="form-label"></label>
-					<input type="website" class="form-control" id="website">
+					<input type="website" class="form-control" id="website" name="website9">
 					</div>
 			<th> <div class="mb-3">
 					<label for="help" class="form-label"></label>
-					<input type="help" class="form-control" id="help">
+					<input type="help" class="form-control" id="help" name="instruction9">
 					</div>
 	  <tr>
 			<th>10
@@ -175,11 +175,11 @@
 					<input type="datetime-local" id="bookdate" name="end10">
 			<th> <div class="mb-3">
 					<label for="wedsite" class="form-label"></label>
-					<input type="website" class="form-control" id="website">
+					<input type="website" class="form-control" id="website" name="website10">
 					</div>
 			<th> <div class="mb-3">
 					<label for="help" class="form-label"></label>
-					<input type="help" class="form-control" id="help">
+					<input type="help" class="form-control" id="help" name="instruction10">
 					</div>
 	  <tr>
 			<th>11
@@ -190,11 +190,11 @@
 					<input type="datetime-local" id="bookdate" name="end11">
 			<th> <div class="mb-3">
 					<label for="wedsite" class="form-label"></label>
-					<input type="website" class="form-control" id="website">
+					<input type="website" class="form-control" id="website" name="website11">
 					</div>
 			<th> <div class="mb-3">
 					<label for="help" class="form-label"></label>
-					<input type="help" class="form-control" id="help">
+					<input type="help" class="form-control" id="help" name="instruction11">
 					</div>
 	 	<tr>
 			<th>12
@@ -205,11 +205,11 @@
 					<input type="datetime-local" id="bookdate" name="end12">
 			<th> <div class="mb-3">
 					<label for="wedsite" class="form-label"></label>
-					<input type="website" class="form-control" id="website">
+					<input type="website" class="form-control" id="website" name="website12">
 					</div>
 			<th> <div class="mb-3">
 					<label for="help" class="form-label"></label>
-					<input type="help" class="form-control" id="help">
+					<input type="help" class="form-control" id="help" name="instruction12">
 					</div>
 		<tr>
 			<th>13
@@ -220,11 +220,11 @@
 					<input type="datetime-local" id="bookdate" name="end13">
 			<th> <div class="mb-3">
 					<label for="wedsite" class="form-label"></label>
-					<input type="website" class="form-control" id="website">
+					<input type="website" class="form-control" id="website" name="website13">
 					</div>
 			<th> <div class="mb-3">
 					<label for="help" class="form-label"></label>
-					<input type="help" class="form-control" id="help">
+					<input type="help" class="form-control" id="help" name="instruction13">
 					</div>
 	 	<tr>
 			<th>14
@@ -235,11 +235,11 @@
 					<input type="datetime-local" id="bookdate" name="end14">
 			<th> <div class="mb-3">
 					<label for="wedsite" class="form-label"></label>
-					<input type="website" class="form-control" id="website">
+					<input type="website" class="form-control" id="website" name="website14">
 					</div>
 			<th> <div class="mb-3">
 					<label for="help" class="form-label"></label>
-					<input type="help" class="form-control" id="help">
+					<input type="help" class="form-control" id="help" name="instruction14">
 					</div>
 	 	<tr>
 			<th>15
@@ -250,11 +250,11 @@
 					<input type="datetime-local" id="bookdate" name="end15">
 			<th> <div class="mb-3">
 					<label for="wedsite" class="form-label"></label>
-					<input type="website" class="form-control" id="website">
+					<input type="website" class="form-control" id="website" name="website15">
 					</div>
 			<th> <div class="mb-3">
 					<label for="help" class="form-label"></label>
-					<input type="help" class="form-control" id="help">
+					<input type="help" class="form-control" id="help" name="instruction15">
 					</div>
 	 	<tr>
 			<th>16
@@ -265,11 +265,11 @@
 					<input type="datetime-local" id="bookdate" name="end16">
 			<th> <div class="mb-3">
 					<label for="wedsite" class="form-label"></label>
-					<input type="website" class="form-control" id="website">
+					<input type="website" class="form-control" id="website" name="website16">
 					</div>
 			<th> <div class="mb-3">
 					<label for="help" class="form-label"></label>
-					<input type="help" class="form-control" id="help">
+					<input type="help" class="form-control" id="help" name="instruction16">
 					</div>
 	 	<tr>
 			<th>17
@@ -280,11 +280,11 @@
 					<input type="datetime-local" id="bookdate" name="end17">
 			<th> <div class="mb-3">
 					<label for="wedsite" class="form-label"></label>
-					<input type="website" class="form-control" id="website">
+					<input type="website" class="form-control" id="website" name="website17">
 					</div>
 			<th> <div class="mb-3">
 					<label for="help" class="form-label"></label>
-					<input type="help" class="form-control" id="help">
+					<input type="help" class="form-control" id="help" name="instruction17">
 						</div>
 		<tr>
 		  	<th>18
@@ -295,11 +295,11 @@
 					<input type="datetime-local" id="bookdate" name="end18">
 			<th> <div class="mb-3">
 					<label for="wedsite" class="form-label"></label>
-					<input type="website" class="form-control" id="website">
+					<input type="website" class="form-control" id="website" name="website18">
 					</div>
 			<th> <div class="mb-3">
 					<label for="help" class="form-label"></label>
-					<input type="help" class="form-control" id="help">
+					<input type="help" class="form-control" id="help" name="instruction18">
 					</div>
 	  	<tr>
 			<th>19
@@ -310,16 +310,14 @@
 					<input type="datetime-local" id="bookdate" name="end19">
 			<th> <div class="mb-3">
 					<label for="wedsite" class="form-label"></label>
-					<input type="website" class="form-control" id="website">
+					<input type="website" class="form-control" id="website" name="website19">
 					</div>
 			<th> <div class="mb-3">
 					<label for="help" class="form-label"></label>
-					<input type="help" class="form-control" id="help">
+					<input type="help" class="form-control" id="help" name="instruction19">
 					</div>
   	</table>
 </form>
-
-
 
     <!-- Optional JavaScript; choose one of the two! -->
 
@@ -331,17 +329,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     -->
-
-
-
-
-
-
-  
 </body>
-
-
-     
 </html>
 
 <?= $this->endSection() ?>

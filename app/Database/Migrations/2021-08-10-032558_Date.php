@@ -15,194 +15,384 @@ class Date extends Migration
 				'unsgined'		=> true,
 				'auto_increment'=> false
 			],
-			'start1'	=>[
+			'start1'		=>[
 				'type'			=>'VARCHAR',
 				'constraint'	=>'20',
 				'null'			=> true
 			],
-			'end1'		=>[
+			'end1'			=>[
 				'type'			=>'VARCHAR',
 				'constraint'	=>'20',
 				'null'			=> true
 			],
-			'start2'	=>[
+			'website1'		=>[
+				'type'			=>'VARCHAR',
+				'constraint'	=>'300',
+				'null'			=> true
+			],
+			'instruction1'	=>[
+				'type'			=>'VARCHAR',
+				'constraint'	=>'300',
+				'null'			=> true
+			],
+			'start2'		=>[
 				'type'			=>'VARCHAR',
 				'constraint'	=>'20',
 				'null'			=> true
 			],
-			'end2'		=>[
+			'end2'			=>[
 				'type'			=>'VARCHAR',
 				'constraint'	=>'20',
 				'null'			=> true
 			],
-			'start3'	=>[
+			'website2'		=>[
+				'type'			=>'VARCHAR',
+				'constraint'	=>'300',
+				'null'			=> true
+			],
+			'instruction2'	=>[
+				'type'			=>'VARCHAR',
+				'constraint'	=>'300',
+				'null'			=> true
+			],
+			'start3'		=>[
 				'type'			=>'VARCHAR',
 				'constraint'	=>'20',
 				'null'			=> true
 			],
-			'end3'		=>[
+			'end3'			=>[
 				'type'			=>'VARCHAR',
 				'constraint'	=>'20',
 				'null'			=> true
 			],
-			'start4'	=>[
+			'website3'		=>[
+				'type'			=>'VARCHAR',
+				'constraint'	=>'300',
+				'null'			=> true
+			],
+			'instruction3'	=>[
+				'type'			=>'VARCHAR',
+				'constraint'	=>'300',
+				'null'			=> true
+			],
+			'start4'		=>[
 				'type'			=>'VARCHAR',
 				'constraint'	=>'20',
 				'null'			=> true
 			],
-			'end4'		=>[
+			'end4'			=>[
 				'type'			=>'VARCHAR',
 				'constraint'	=>'20',
 				'null'			=> true
 			],
-			'start5'	=>[
+			'website4'		=>[
+				'type'			=>'VARCHAR',
+				'constraint'	=>'300',
+				'null'			=> true
+			],
+			'instruction4'	=>[
+				'type'			=>'VARCHAR',
+				'constraint'	=>'300',
+				'null'			=> true
+			],
+			'start5'		=>[
 				'type'			=>'VARCHAR',
 				'constraint'	=>'20',
 				'null'			=> true
 			],
-			'end5'		=>[
+			'end5'			=>[
 				'type'			=>'VARCHAR',
 				'constraint'	=>'20',
 				'null'			=> true
 			],
-			'start6'	=>[
+			'website5'		=>[
+				'type'			=>'VARCHAR',
+				'constraint'	=>'300',
+				'null'			=> true
+			],
+			'instruction5'	=>[
+				'type'			=>'VARCHAR',
+				'constraint'	=>'300',
+				'null'			=> true
+			],
+			'start6'		=>[
 				'type'			=>'VARCHAR',
 				'constraint'	=>'20',
 				'null'			=> true
 			],
-			'end6'		=>[
+			'end6'			=>[
 				'type'			=>'VARCHAR',
 				'constraint'	=>'20',
 				'null'			=> true
 			],
-			'start7'	=>[
+			'website6'		=>[
+				'type'			=>'VARCHAR',
+				'constraint'	=>'300',
+				'null'			=> true
+			],
+			'instruction6'	=>[
+				'type'			=>'VARCHAR',
+				'constraint'	=>'300',
+				'null'			=> true
+			],
+			'start7'		=>[
 				'type'			=>'VARCHAR',
 				'constraint'	=>'20',
 				'null'			=> true
 			],
-			'end7'		=>[
+			'end7'			=>[
 				'type'			=>'VARCHAR',
 				'constraint'	=>'20',
 				'null'			=> true
 			],
-			'start8'	=>[
+			'website7'		=>[
+				'type'			=>'VARCHAR',
+				'constraint'	=>'300',
+				'null'			=> true
+			],
+			'instruction7'	=>[
+				'type'			=>'VARCHAR',
+				'constraint'	=>'300',
+				'null'			=> true
+			],
+			'start8'		=>[
 				'type'			=>'VARCHAR',
 				'constraint'	=>'20',
 				'null'			=> true
 			],
-			'end8'		=>[
+			'end8'			=>[
 				'type'			=>'VARCHAR',
 				'constraint'	=>'20',
 				'null'			=> true
 			],
-			'start9'	=>[
+			'website8'		=>[
+				'type'			=>'VARCHAR',
+				'constraint'	=>'300',
+				'null'			=> true
+			],
+			'instruction8'	=>[
+				'type'			=>'VARCHAR',
+				'constraint'	=>'300',
+				'null'			=> true
+			],
+			'start9'		=>[
 				'type'			=>'VARCHAR',
 				'constraint'	=>'20',
 				'null'			=> true
 			],
-			'end9'		=>[
+			'end9'			=>[
 				'type'			=>'VARCHAR',
 				'constraint'	=>'20',
 				'null'			=> true
 			],
-			'start10'	=>[
+			'website9'		=>[
+				'type'			=>'VARCHAR',
+				'constraint'	=>'300',
+				'null'			=> true
+			],
+			'instruction9'	=>[
+				'type'			=>'VARCHAR',
+				'constraint'	=>'300',
+				'null'			=> true
+			],
+			'start10'		=>[
 				'type'			=>'VARCHAR',
 				'constraint'	=>'20',
 				'null'			=> true
 			],
-			'end10'		=>[
+			'end10'			=>[
 				'type'			=>'VARCHAR',
 				'constraint'	=>'20',
 				'null'			=> true
 			],
-			'start11'	=>[
+			'website10'		=>[
+				'type'			=>'VARCHAR',
+				'constraint'	=>'300',
+				'null'			=> true
+			],
+			'instruction10'	=>[
+				'type'			=>'VARCHAR',
+				'constraint'	=>'300',
+				'null'			=> true
+			],
+			'start11'		=>[
 				'type'			=>'VARCHAR',
 				'constraint'	=>'20',
 				'null'			=> true
 			],
-			'end11'		=>[
+			'end11'			=>[
 				'type'			=>'VARCHAR',
 				'constraint'	=>'20',
 				'null'			=> true
 			],
-			'start12'	=>[
+			'website11'		=>[
+				'type'			=>'VARCHAR',
+				'constraint'	=>'300',
+				'null'			=> true
+			],
+			'instruction11'	=>[
+				'type'			=>'VARCHAR',
+				'constraint'	=>'300',
+				'null'			=> true
+			],
+			'start12'		=>[
 				'type'			=>'VARCHAR',
 				'constraint'	=>'20',
 				'null'			=> true
 			],
-			'end12'		=>[
+			'end12'			=>[
 				'type'			=>'VARCHAR',
 				'constraint'	=>'20',
 				'null'			=> true
 			],
-			'start13'	=>[
+			'website12'		=>[
+				'type'			=>'VARCHAR',
+				'constraint'	=>'300',
+				'null'			=> true
+			],
+			'instruction12'	=>[
+				'type'			=>'VARCHAR',
+				'constraint'	=>'300',
+				'null'			=> true
+			],
+			'start13'		=>[
 				'type'			=>'VARCHAR',
 				'constraint'	=>'20',
 				'null'			=> true
 			],
-			'end13'		=>[
+			'end13'			=>[
 				'type'			=>'VARCHAR',
 				'constraint'	=>'20',
 				'null'			=> true
 			],
-			'start14'	=>[
+			'website13'		=>[
+				'type'			=>'VARCHAR',
+				'constraint'	=>'300',
+				'null'			=> true
+			],
+			'instruction13'	=>[
+				'type'			=>'VARCHAR',
+				'constraint'	=>'300',
+				'null'			=> true
+			],
+			'start14'		=>[
 				'type'			=>'VARCHAR',
 				'constraint'	=>'20',
 				'null'			=> true
 			],
-			'end14'		=>[
+			'end14'			=>[
 				'type'			=>'VARCHAR',
 				'constraint'	=>'20',
 				'null'			=> true
 			],
-			'start15'	=>[
+			'website14'		=>[
+				'type'			=>'VARCHAR',
+				'constraint'	=>'300',
+				'null'			=> true
+			],
+			'instruction14'	=>[
+				'type'			=>'VARCHAR',
+				'constraint'	=>'300',
+				'null'			=> true
+			],
+			'start15'		=>[
 				'type'			=>'VARCHAR',
 				'constraint'	=>'20',
 				'null'			=> true
 			],
-			'end15'		=>[
+			'end15'			=>[
 				'type'			=>'VARCHAR',
 				'constraint'	=>'20',
 				'null'			=> true
 			],
-			'start16'	=>[
+			'website15'		=>[
+				'type'			=>'VARCHAR',
+				'constraint'	=>'300',
+				'null'			=> true
+			],
+			'instruction15'	=>[
+				'type'			=>'VARCHAR',
+				'constraint'	=>'300',
+				'null'			=> true
+			],
+			'start16'		=>[
 				'type'			=>'VARCHAR',
 				'constraint'	=>'20',
 				'null'			=> true
 			],
-			'end16'		=>[
+			'end16'			=>[
 				'type'			=>'VARCHAR',
 				'constraint'	=>'20',
 				'null'			=> true
 			],
-			'start17'	=>[
+			'website16'		=>[
+				'type'			=>'VARCHAR',
+				'constraint'	=>'300',
+				'null'			=> true
+			],
+			'instruction16'	=>[
+				'type'			=>'VARCHAR',
+				'constraint'	=>'300',
+				'null'			=> true
+			],
+			'start17'		=>[
 				'type'			=>'VARCHAR',
 				'constraint'	=>'20',
 				'null'			=> true
 			],
-			'end17'		=>[
+			'end17'			=>[
 				'type'			=>'VARCHAR',
 				'constraint'	=>'20',
 				'null'			=> true
 			],
-			'start18'	=>[
+			'website17'		=>[
+				'type'			=>'VARCHAR',
+				'constraint'	=>'300',
+				'null'			=> true
+			],
+			'instruction17'	=>[
+				'type'			=>'VARCHAR',
+				'constraint'	=>'300',
+				'null'			=> true
+			],
+			'start18'		=>[
 				'type'			=>'VARCHAR',
 				'constraint'	=>'20',
 				'null'			=> true
 			],
-			'end18'		=>[
+			'end18'			=>[
 				'type'			=>'VARCHAR',
 				'constraint'	=>'20',
 				'null'			=> true
 			],
-			'start19'	=>[
+			'website18'		=>[
+				'type'			=>'VARCHAR',
+				'constraint'	=>'300',
+				'null'			=> true
+			],
+			'instruction18'	=>[
+				'type'			=>'VARCHAR',
+				'constraint'	=>'300',
+				'null'			=> true
+			],
+			'start19'		=>[
 				'type'			=>'VARCHAR',
 				'constraint'	=>'20',
 				'null'			=> true
 			],
-			'end19'		=>[
+			'end19'			=>[
 				'type'			=>'VARCHAR',
 				'constraint'	=>'20',
+				'null'			=> true
+			],
+			'website19'		=>[
+				'type'			=>'VARCHAR',
+				'constraint'	=>'300',
+				'null'			=> true
+			],
+			'instruction19'	=>[
+				'type'			=>'VARCHAR',
+				'constraint'	=>'300',
 				'null'			=> true
 			],
 		]);

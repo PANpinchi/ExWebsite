@@ -11,7 +11,6 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    
 	<style>
 		.c{text-align:center}
 		th {border-width : 1px;}
@@ -20,15 +19,34 @@
 </head>
 
 <body>
-
-<input type="button" value="編輯" name="button" onclick= "location.href='PostController/date'"></input>
-
+<input type="button" value="編輯" name="button" onclick= "location.href='PostController/dateedit'"></input><br>
 <?php
-    if (! empty($date) && is_array($date))  {
+    date_default_timezone_set('Asia/Taipei');
+    echo date("Y-m-d H:i:s");
 
-        //print_r($date);
+    if (! empty($date) && is_array($date))  {
         foreach($date as $date_item){
-        
+            if (strtotime($date_item['start1'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($date_item['end1']))
+                echo'
+                    <input type="button" value="測試按鈕1" name="test1" onclick=test()></input>
+                    <script>
+                        function test(){
+                            window.open("'.$date_item['website1'].'");
+                        }
+                    </script>
+                ';
+            else{
+                echo'
+                    <input type="button" value="測試按鈕1" name="test1" onclick=test()></input>
+                    <script>
+                        function test(){
+                            window.open("/PostController/pageclose");
+                        }
+                    </script>
+                ';
+            }
+
+
             echo '
             <table border="1" class="c" style="border-style:solid">
             <tr>
@@ -47,11 +65,11 @@
                     '.$date_item['end1'].'
                 <th><div class="mb-3">
                     <label for="wedsite" class="form-label"></label>
-                    <input type="website" class="form-control" id="website">
+                    <a href='.$date_item['website1'].'>'.$date_item['website1'].'</a>
                     </div>
                 <th><div class="mb-3">
                     <label for="help" class="form-label"></label>
-                    <input type="help" class="form-control" id="help">
+                    '.$date_item['instruction1'].'
                     </div>
             <tr>
                 <th>2
@@ -62,11 +80,11 @@
                     '.$date_item['end2'].'
                 <th><div class="mb-3">
                     <label for="wedsite" class="form-label"></label>
-                    <input type="website" class="form-control" id="website">
+                    <a href='.$date_item['website2'].'>'.$date_item['website2'].'</a>
                     </div>
                 <th><div class="mb-3">
                     <label for="help" class="form-label"></label>
-                    <input type="help" class="form-control" id="help">   
+                    '.$date_item['instruction2'].'   
                     </div>
             <tr>
                 <th>3
@@ -77,11 +95,11 @@
                     '.$date_item['end3'].'       
                 <th><div class="mb-3">
                     <label for="wedsite" class="form-label"></label>
-                    <input type="website" class="form-control" id="website">
+                    <a href='.$date_item['website3'].'>'.$date_item['website3'].'</a>
                     </div>
                 <th><div class="mb-3">
                     <label for="help" class="form-label"></label>
-                    <input type="help" class="form-control" id="help">
+                    '.$date_item['instruction3'].'
                     </div>
             <tr>
                 <th>4
@@ -92,11 +110,11 @@
                     '.$date_item['end4'].'
                 <th><div class="mb-3">
                     <label for="wedsite" class="form-label"></label>
-                    <input type="website" class="form-control" id="website">
+                    <a href='.$date_item['website4'].'>'.$date_item['website4'].'</a>
                     </div>
                 <th><div class="mb-3">
                     <label for="help" class="form-label"></label>
-                    <input type="help" class="form-control" id="help">
+                    '.$date_item['instruction4'].'
                     </div>
             <tr>
                 <th>5
@@ -107,11 +125,11 @@
                     '.$date_item['end5'].'
                 <th><div class="mb-3">
                     <label for="wedsite" class="form-label"></label>
-                    <input type="website" class="form-control" id="website">
+                    <a href='.$date_item['website5'].'>'.$date_item['website5'].'</a>
                     </div>
                 <th><div class="mb-3">
                     <label for="help" class="form-label"></label>
-                    <input type="help" class="form-control" id="help">
+                    '.$date_item['instruction5'].'
                     </div>
             <tr>
                 <th>6
@@ -122,11 +140,11 @@
                     '.$date_item['end6'].'    
                 <th><div class="mb-3">
                     <label for="wedsite" class="form-label"></label>
-                    <input type="website" class="form-control" id="website">
+                    <a href='.$date_item['website6'].'>'.$date_item['website6'].'</a>
                     </div>
                 <th><div class="mb-3">
                     <label for="help" class="form-label"></label>
-                    <input type="help" class="form-control" id="help">
+                    '.$date_item['instruction6'].'
                     </div>
             <tr>
                 <th>7 
@@ -137,11 +155,11 @@
                     '.$date_item['end7'].'   
                 <th> <div class="mb-3">
                     <label for="wedsite" class="form-label"></label>
-                    <input type="website" class="form-control" id="website">
+                    <a href='.$date_item['website7'].'>'.$date_item['website7'].'</a>
                     </div>
                 <th> <div class="mb-3">
                     <label for="help" class="form-label"></label>
-                    <input type="help" class="form-control" id="help">
+                    '.$date_item['instruction7'].'
                     </div>
             <tr>
                 <th>8
@@ -152,11 +170,11 @@
                     '.$date_item['end8'].'      
                 <th> <div class="mb-3">
                     <label for="wedsite" class="form-label"></label>
-                    <input type="website" class="form-control" id="website">
+                    <a href='.$date_item['website8'].'>'.$date_item['website8'].'</a>
                     </div>
                 <th> <div class="mb-3">
                     <label for="help" class="form-label"></label>
-                    <input type="help" class="form-control" id="help">
+                    '.$date_item['instruction8'].'
                     </div>
             <tr>
                 <th>9
@@ -167,11 +185,11 @@
                     '.$date_item['end9'].' 
                 <th><div class="mb-3">
                     <label for="wedsite" class="form-label"></label>
-                    <input type="website" class="form-control" id="website">
+                    <a href='.$date_item['website9'].'>'.$date_item['website9'].'</a>
                     </div>
                 <th><div class="mb-3">
                     <label for="help" class="form-label"></label>
-                    <input type="help" class="form-control" id="help">
+                    '.$date_item['instruction9'].'
                     </div>
             <tr>
                 <th>10
@@ -182,11 +200,11 @@
                     '.$date_item['end10'].'   
                 <th><div class="mb-3">
                     <label for="wedsite" class="form-label"></label>
-                    <input type="website" class="form-control" id="website">
+                    <a href='.$date_item['website10'].'>'.$date_item['website10'].'</a>
                     </div>
                 <th><div class="mb-3">
                     <label for="help" class="form-label"></label>
-                    <input type="help" class="form-control" id="help">
+                    '.$date_item['instruction10'].'
                     </div>
             <tr>
                 <th>11
@@ -197,11 +215,11 @@
                     '.$date_item['end11'].'   
                 <th><div class="mb-3">
                     <label for="wedsite" class="form-label"></label>
-                    <input type="website" class="form-control" id="website">
+                    <a href='.$date_item['website11'].'>'.$date_item['website11'].'</a>
                     </div>
                 <th><div class="mb-3">
                     <label for="help" class="form-label"></label>
-                    <input type="help" class="form-control" id="help">
+                    '.$date_item['instruction11'].'
                     </div>
             <tr>
                 <th>12
@@ -212,11 +230,11 @@
                     '.$date_item['end12'].'     
                 <th><div class="mb-3">
                     <label for="wedsite" class="form-label"></label>
-                    <input type="website" class="form-control" id="website">
+                    <a href='.$date_item['website12'].'>'.$date_item['website12'].'</a>
                     </div>
                 <th><div class="mb-3">
                     <label for="help" class="form-label"></label>
-                    <input type="help" class="form-control" id="help">
+                    '.$date_item['instruction12'].'
                     </div>
             <tr>
                 <th>13
@@ -227,11 +245,11 @@
                     '.$date_item['end13'].'     
                 <th><div class="mb-3">
                     <label for="wedsite" class="form-label"></label>
-                    <input type="website" class="form-control" id="website">
+                    <a href='.$date_item['website13'].'>'.$date_item['website13'].'</a>
                     </div>
                 <th><div class="mb-3">
                     <label for="help" class="form-label"></label>
-                    <input type="help" class="form-control" id="help">
+                    '.$date_item['instruction13'].'
                     </div>
             <tr>
                 <th>14
@@ -242,11 +260,11 @@
                    '.$date_item['end14'].'    
                 <th><div class="mb-3">
                     <label for="wedsite" class="form-label"></label>
-                    <input type="website" class="form-control" id="website">
+                    <a href='.$date_item['website14'].'>'.$date_item['website14'].'</a>
                     </div>
                 <th><div class="mb-3">
                     <label for="help" class="form-label"></label>
-                    <input type="help" class="form-control" id="help">
+                    '.$date_item['instruction14'].'
                     </div>
             <tr>
                 <th>15
@@ -257,11 +275,11 @@
                     '.$date_item['end15'].'    
                 <th><div class="mb-3">
                     <label for="wedsite" class="form-label"></label>
-                    <input type="website" class="form-control" id="website">
+                    <a href='.$date_item['website15'].'>'.$date_item['website15'].'</a>
                     </div>
                 <th><div class="mb-3">
                     <label for="help" class="form-label"></label>
-                    <input type="help" class="form-control" id="help">
+                    '.$date_item['instruction15'].'
                     </div>
             <tr>
                 <th>16
@@ -272,11 +290,11 @@
                     '.$date_item['end16'].'
                 <th><div class="mb-3">
                     <label for="wedsite" class="form-label"></label>
-                    <input type="website" class="form-control" id="website">
+                    <a href='.$date_item['website16'].'>'.$date_item['website16'].'</a>
                     </div>
                 <th><div class="mb-3">
                     <label for="help" class="form-label"></label>
-                    <input type="help" class="form-control" id="help">
+                    '.$date_item['instruction16'].'
                     </div>
             <tr>
                 <th>17
@@ -287,11 +305,11 @@
                     '.$date_item['end17'].'
                 <th><div class="mb-3">
                     <label for="wedsite" class="form-label"></label>
-                    <input type="website" class="form-control" id="website">
+                    <a href='.$date_item['website17'].'>'.$date_item['website17'].'</a>
                     </div>
                 <th><div class="mb-3">
                     <label for="help" class="form-label"></label>
-                    <input type="help" class="form-control" id="help">
+                    '.$date_item['instruction17'].'
                     </div>
             <tr>
                 <th>18
@@ -302,11 +320,11 @@
                     '.$date_item['end18'].'  
                 <th><div class="mb-3">
                     <label for="wedsite" class="form-label"></label>
-                    <input type="website" class="form-control" id="website">
+                    <a href='.$date_item['website18'].'>'.$date_item['website18'].'</a>
                     </div>
                 <th><div class="mb-3">
                     <label for="help" class="form-label"></label>
-                    <input type="help" class="form-control" id="help">
+                    '.$date_item['instruction18'].'
                     </div>
             <tr>
                 <th>19
@@ -317,11 +335,11 @@
                     '.$date_item['end19'].'
                 <th><div class="mb-3">
                     <label for="wedsite" class="form-label"></label>
-                    <input type="website" class="form-control" id="website">
+                    <a href='.$date_item['website19'].'>'.$date_item['website19'].'</a>
                     </div>
                 <th><div class="mb-3">
                     <label for="help" class="form-label"></label>
-                    <input type="help" class="form-control" id="help">
+                    '.$date_item['instruction19'].'
                     </div>
             </table>
             ';
