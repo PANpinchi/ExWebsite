@@ -26,6 +26,7 @@
 
     if (! empty($date) && is_array($date))  {
         foreach($date as $date_item){
+
             if (strtotime($date_item['start1'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($date_item['end1']))
                 echo'
                     <input type="button" value="測試按鈕1" name="test1" onclick=test()></input>

@@ -17,7 +17,13 @@ class PostController extends BaseController
 	/*編輯頁面*/
 	public function dateedit()
 	{
-		return view('posts/dateedit');
+		
+		$model = new Date();
+		$data =
+			[
+				'date' => $model->findall()
+			];
+		return view('posts/dateedit',$data);
 	}
 
 	public function pageclose()
