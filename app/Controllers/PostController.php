@@ -17,7 +17,7 @@ class PostController extends BaseController
 	}
 
 	/*編輯頁面*/
-	public function dateedit()
+	public function norcollegeedit()
 	{
 		
 		$model = new Date();
@@ -25,7 +25,7 @@ class PostController extends BaseController
 			[
 				'date' => $model->findall()
 			];
-		return view('posts/dateedit',$data);
+		return view('posts/norcollegeedit',$data);
 	}
 
 	/*顯示關閉頁面*/
@@ -35,14 +35,14 @@ class PostController extends BaseController
 	}
 
 	/*編輯畫面跳轉到觀看畫面*/
-	public function dateview()
+	public function norcollegeview()
 	{
 		$model = new Date();
 		$data =
 			[
 				'date' => $model->findall()
 			];
-		return view('posts/dateview',$data);
+		return view('posts/norcollegeview',$data);
 	}
 
 	/*後台網頁開放時間網址與說明資料更新*/
@@ -73,7 +73,7 @@ class PostController extends BaseController
 			];
 		$model = new Date();
 		$model->save($date);
-		return redirect('dateview');	
+		return redirect('PostController/norcollegeview');	
 	}
 /* 後台登入頁面 */
 public function user_login()

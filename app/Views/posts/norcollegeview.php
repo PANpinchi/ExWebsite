@@ -19,7 +19,7 @@
 </head>
 
 <body>
-<input type="button" value="編輯" name="button" onclick= "location.href='PostController/dateedit'"></input><br>
+<input type="button" value="編輯" name="button" onclick= "location.href='norcollegeedit'"></input><br>
 <?php
     date_default_timezone_set('Asia/Taipei');
     echo date("Y-m-d H:i:s");
