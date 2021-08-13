@@ -4,7 +4,7 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class Date extends Migration
+class Norcollege extends Migration
 {
 	public function up()
 	{
@@ -397,11 +397,11 @@ class Date extends Migration
 			],
 		]);
 		$this->forge->addKey('id',true);
-		$this->forge->createTable('date');
+		$this->forge->createTable('norcollege');
 	}
 
 	public function down()
 	{
-		$this->forge->dropTable('date');
+		$this->forge->dropTable('norcollege');
 	}
 }

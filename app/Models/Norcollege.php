@@ -4,10 +4,10 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class Date extends Model
+class Norcollege extends Model
 {
 	protected $DBGroup              = 'default';
-	protected $table                = 'date';
+	protected $table                = 'norcollege';
 	protected $primaryKey           = 'id';
 	protected $useAutoIncrement     = true;
 	protected $insertID             = 0;
