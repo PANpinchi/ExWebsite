@@ -1,17 +1,55 @@
 p{
-font: bold 20px serif;
-text-align: center;
+    font: bold 20px serif;
+    text-align: center;
+}
+
+body{
+    width: auto;
+    height: 720px;
+    background-color: rgb(250, 250, 250);
 }
 
 form{
-width: 400px;
-background-color: rgb(255, 255, 255);
-border-radius: 10px 10px 10px 10px;
+    width: 400px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px 10px 10px 10px;
 }
 
 .window{
     width: auto;
     height: auto;
+}
+
+.left{
+    float: left;
+}
+
+.black{
+    background-color: rgb(25, 25, 25);
+}
+
+.twhite{
+    color: rgb(255, 255, 255);
+}
+
+.window2{
+    width: 30vh;
+    height: 100vh;
+}
+
+.back:hover{
+    background-color: rgb(70, 70, 70);
+}
+
+.square{
+    height: 7vh;
+    width: 30vh;
+    background-color: rgb(25, 25, 25);
+}
+
+.center{
+    text-align: center;
+    line-height: 250%;
 }
 
 .type1{

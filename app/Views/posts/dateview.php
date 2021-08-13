@@ -1,4 +1,4 @@
-<?= $this->extend('templates\user_default') ?>
+<?= $this->extend('templates\user_login_default') ?>
 <?= $this->section('content') ?>
 
 <!doctype html>

@@ -153,6 +153,18 @@ class PostController extends BaseController
 		return view('posts/change_password');
 	}
 
+	/* 高中前台頁面 */
+	public function high_post()
+	{
+		return view('posts/high_post');
+	}
+
+	/* 測試頁面 */
+	public function test()
+	{
+		return view('posts/test');
+	}
+
 	/*匹配後台帳號*/
 	public function compare_user_account()
 	{
@@ -218,9 +230,15 @@ class PostController extends BaseController
 		$users = $model->findAll(); //取得資料
 
 		$check = 0; //檢查是否匹配帳號
+
+		print_r($data);
+
+		print_r($users);
+
+		
 		
 		/* 檢查是否匹配帳號 */
-		for($i = 0; isset($users[$i]); $i++)
+		/*for($i = 0; isset($users[$i]); $i++)
 		{
 			$account = strcmp($data['account'], $users[$i]['account']);
 			$password = strcmp($data['password'], $users[$i]['password']);
@@ -240,7 +258,7 @@ class PostController extends BaseController
 		if($check == 0){
 			echo '<script>alert("帳號輸入錯誤，請重新登入！")</script>';
 			return view('posts/login');
-		}
+		}*/
 	}
 
 	/* 忘記密碼 */
