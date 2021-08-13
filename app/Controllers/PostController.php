@@ -373,4 +373,9 @@ class PostController extends BaseController
 		/*刪除圖片*/
 		imagedestroy($im);
 	}
+
+	public function person_web()
+	{
+		return view('posts/person_web');
+	}
 }
