@@ -1,3 +1,7 @@
+img {
+    display: collapse;
+}
+
 #home a {
     background: url("/img/form_top_04_home.jpg");/*預設顯示圖片*/
     display: block;

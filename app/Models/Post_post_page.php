@@ -15,6 +15,7 @@ class Post_post_page extends Model
 	protected $useSoftDeletes       = false;
 	protected $protectFields        = true;
 	protected $allowedFields        = [
+		'id',
 		'title',
 		'subtitle',
 		'subtitle2',

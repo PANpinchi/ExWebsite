@@ -231,11 +231,7 @@ class PostController extends BaseController
 
 		$check = 0; //檢查是否匹配帳號
 
-		print_r($data);
-
 		print_r($users);
-
-		
 		
 		/* 檢查是否匹配帳號 */
 		/*for($i = 0; isset($users[$i]); $i++)
