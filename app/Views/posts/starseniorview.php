@@ -21,7 +21,34 @@
   </head>
 
   <body>
+  <input type="button" value="編輯" name="button" onclick= "location.href='/PostController/starcollegeedit'"></input><br>
+  <?php
+    date_default_timezone_set('Asia/Taipei');
+    echo date("Y-m-d H:i:s");
+    print_r($starcollege);
+    if (! empty($starcollege) && is_array($starcollege))  {
+        foreach($starcollege as $starcollege_item){
 
+            if (strtotime($starcollege_item['start1'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($starcollege_item['end1']))
+                echo'
+                    <input type="button" value="測試按鈕1" name="test1" onclick=test()></input>
+                    <script>
+                        function test(){
+                            window.open("'.$starcollege_item['website1'].'");
+                        }
+                    </script>
+                ';
+            else{
+                echo'
+                    <input type="button" value="測試按鈕1" name="test1" onclick=test()></input>
+                    <script>
+                        function test(){
+                            window.open("/PostController/pageclose");
+                        }
+                    </script>
+                ';
+            }
+    echo'
   <table border="1" class="c" style="border-style:solid">
 	  <tr>
 		  <th>編號
@@ -34,7 +61,7 @@
 		  <th>1 
 		  <th >各高中承辦人員聯絡資料維護暨繁星推薦108入學學生高一在校學業成績上傳作業軟體下載系統
 		  <th> <label for="bookdate"></label>
-                <input type="date" id="bookdate" name="date">
+          '.$starcollege_item['start1'].'
 		  <th> <label for="bookdate"></label>
                 <input type="date" id="bookdate" name="date">
 		  <th> <div class="mb-3">
@@ -49,7 +76,7 @@
 		  <th>2
 		  <th>校系分則資料下載
 		  <th> <label for="bookdate"></label>
-                <input type="date" id="bookdate" name="date">
+          '.$starcollege_item['start1'].'
 		  <th> <label for="bookdate"></label>
                 <input type="date" id="bookdate" name="date">
 		  <th> <div class="mb-3">
@@ -64,7 +91,7 @@
 		  <th>3
 		  <th>下載學生成績上傳作業軟體及使用手冊電子檔
 		  <th> <label for="bookdate"></label>
-                <input type="date" id="bookdate" name="date">
+          '.$starcollege_item['start1'].'
 		  <th> <label for="bookdate"></label>
                 <input type="date" id="bookdate" name="date">
 		  <th> <div class="mb-3">
@@ -79,7 +106,7 @@
 		  <th>4
 		  <th >高一在校學業成績比對差異回報系統
 		  <th> <label for="bookdate"></label>
-                <input type="date" id="bookdate" name="date">
+          '.$starcollege_item['start1'].'
 		  <th> <label for="bookdate"></label>
                 <input type="date" id="bookdate" name="date">
 		  <th> <div class="mb-3">
@@ -94,7 +121,7 @@
 		  <th>5
 		  <th>下載證號不符學生名冊檔案
 		  <th> <label for="bookdate"></label>
-                <input type="date" id="bookdate" name="date">
+          '.$starcollege_item['start1'].'
 		  <th> <label for="bookdate"></label>
                 <input type="date" id="bookdate" name="date">
 		  <th> <div class="mb-3">
@@ -109,7 +136,7 @@
 		  <th>6
 		  <th>登錄「繁星推薦」報名作業系統
 		  <th> <label for="bookdate"></label>
-                <input type="date" id="bookdate" name="date">
+          '.$starcollege_item['start1'].'
 		  <th> <label for="bookdate"></label>
                 <input type="date" id="bookdate" name="date">
 		  <th> <div class="mb-3">
@@ -124,7 +151,7 @@
 		  <th>7 
 		  <th >下載校系學測、英聽檢定標準查詢結果
 		  <th> <label for="bookdate"></label>
-                <input type="date" id="bookdate" name="date">
+          '.$starcollege_item['start1'].'
 		  <th> <label for="bookdate"></label>
                 <input type="date" id="bookdate" name="date">
 		  <th> <div class="mb-3">
@@ -139,7 +166,7 @@
 		  <th>8
 		  <th>推薦學校列印報名費收據
 		  <th> <label for="bookdate"></label>
-                <input type="date" id="bookdate" name="date">
+          '.$starcollege_item['start1'].'
 		  <th> <label for="bookdate"></label>
                 <input type="date" id="bookdate" name="date">
 		  <th> <div class="mb-3">
@@ -154,7 +181,7 @@
 		  <th>9
 		  <th>下載各高中推薦學生錄取(篩選)結果
 		  <th> <label for="bookdate"></label>
-                <input type="date" id="bookdate" name="date">
+          '.$starcollege_item['start1'].'
 		  <th> <label for="bookdate"></label>
                 <input type="date" id="bookdate" name="date">
 		  <th> <div class="mb-3">
@@ -169,7 +196,7 @@
 		  <th>10
 		  <th >集報考生個人密碼設定情形查詢系統
 		  <th> <label for="bookdate"></label>
-                <input type="date" id="bookdate" name="date">
+          '.$starcollege_item['start1'].'
 		  <th> <label for="bookdate"></label>
                 <input type="date" id="bookdate" name="date">
 		  <th> <div class="mb-3">
@@ -184,7 +211,7 @@
 		  <th>11
 		  <th>下載繁星及申請分發錄取且確定入學生名單(上傳高三下成績使用)
 		  <th> <label for="bookdate"></label>
-                <input type="date" id="bookdate" name="date">
+          '.$starcollege_item['start11'].'
 		  <th> <label for="bookdate"></label>
                 <input type="date" id="bookdate" name="date">
 		  <th> <div class="mb-3">
@@ -199,7 +226,7 @@
 		  <th>12
 		  <th>「分發錄取生之高三下學期在校成績證明檔案上傳系統」軟體安裝及系統使用說明手冊下載
 		  <th> <label for="bookdate"></label>
-                <input type="date" id="bookdate" name="date">
+          '.$starcollege_item['start12'].'
 		  <th> <label for="bookdate"></label>
                 <input type="date" id="bookdate" name="date">
 		  <th> <div class="mb-3">
@@ -214,7 +241,7 @@
 		  <th>13
 		  <th >分發錄取生之高三下學期在校成績證明檔案上傳系統
 		  <th> <label for="bookdate"></label>
-                <input type="date" id="bookdate" name="date">
+          '.$starcollege_item['start13'].'
 		  <th> <label for="bookdate"></label>
                 <input type="date" id="bookdate" name="date">
 		  <th> <div class="mb-3">
@@ -229,7 +256,7 @@
 		  <th>14
 		  <th>甄選入學意見調查作業
 		  <th> <label for="bookdate"></label>
-                <input type="date" id="bookdate" name="date">
+          '.$starcollege_item['start14'].'
 		  <th> <label for="bookdate"></label>
                 <input type="date" id="bookdate" name="date">
 		  <th> <div class="mb-3">
@@ -244,7 +271,7 @@
 		  <th>15
 		  <th>參加報名系統、成績證明檔案上傳系統說明會報名登錄
 		  <th> <label for="bookdate"></label>
-                <input type="date" id="bookdate" name="date">
+          '.$starcollege_item['start15'].'
 		  <th> <label for="bookdate"></label>
                 <input type="date" id="bookdate" name="date">
 		  <th> <div class="mb-3">
@@ -257,7 +284,12 @@
  				 </div>
 
   </table>
-  <button class="btn btn-primary"> submmit </button>
+  ';
+    
+}
+}
+
+?>
 
 
 

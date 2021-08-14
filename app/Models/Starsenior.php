@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class Starsenior extends Model
 {
 	protected $DBGroup              = 'default';
-	protected $table                = 'starseniors';
+	protected $table                = 'starsenior';
 	protected $primaryKey           = 'id';
 	protected $useAutoIncrement     = true;
 	protected $insertID             = 0;
