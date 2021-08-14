@@ -19,11 +19,11 @@
 </head>
 
 <body>
-<input type="button" value="編輯" name="button" onclick= "location.href='norcollegeedit'"></input><br>
+<input type="button" value="編輯" name="button" onclick= "location.href='/PostController/norcollegeedit'"></input><br>
 <?php
     date_default_timezone_set('Asia/Taipei');
     echo date("Y-m-d H:i:s");
-
+    print_r($norcollege);
     if (! empty($norcollege) && is_array($norcollege))  {
         foreach($norcollege as $norcollege_item){
 
@@ -346,7 +346,7 @@
     
         }
     }
-
+   
 ?>
 
     <!-- Optional JavaScript; choose one of the two! -->

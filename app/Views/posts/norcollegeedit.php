@@ -22,6 +22,7 @@
 <body>
 
 <?php
+print_r($norcollege);
 if (! empty($norcollege) && is_array($norcollege))  {
 foreach($norcollege as $norcollege_item){
 echo '

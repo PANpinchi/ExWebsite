@@ -1,4 +1,4 @@
-<?= $this->extend('templates\user_default') ?>
+<?= $this->extend('templates\user_login_default') ?>
 <?= $this->section('content') ?>
 
 
@@ -23,12 +23,11 @@
   <body>
 
   <?php
-	
+	if (! empty($norsenior) && is_array($norsenior))  {
     foreach($norsenior as $norsenior_item){
     echo '
     <form action="/PostController/norseniorstore" method="post">
-    <input type="submit" value="一鍵更改" name="submit">
-
+    <input type="submit" value="一鍵更改" name="submit"></input>
     <table border="1" class="c" style="border-style:solid">
 	    <tr>
 		    <th>編號
@@ -310,8 +309,9 @@
 
         </table>
     </form>
-';
-}
+    ';
+   }
+ }
 ?>
     <!-- Optional JavaScript; choose one of the two! -->
 

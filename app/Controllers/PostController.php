@@ -10,7 +10,6 @@ use App\Models\Post_login;
 use App\Models\Norcollege;
 use App\Models\Norsenior;
 use App\Models\Post_post_page;
-use App\Models\Date;
 
 class PostController extends BaseController
 {
@@ -87,10 +86,6 @@ class PostController extends BaseController
 			[
 				'norcollege' => $model->findall()
 			];
-		$model = new Date();
-		$data = [
-				'date' => $model->findall()
-			];
 		return view('posts/norcollegeedit',$data);
 	}
 
@@ -156,10 +151,11 @@ class PostController extends BaseController
 
 		return redirect('PostController/norcollegeview');	
 	}
-/*
+
 	public function norseniorstore()
 	{	
-		$norsenior=
+		$model = new Norsenior();
+		$model->save(
 		[
 				'id'	=> 1,
 				'start1' => $this->request->getVar('start1'),	'end1' => $this->request->getVar('end1'),	'website1' => $this->request->getVar('website1'),	'instruction1' => $this->request->getVar('instruction1'),
@@ -180,11 +176,9 @@ class PostController extends BaseController
 				'start16' => $this->request->getVar('start16'),	'end16' => $this->request->getVar('end16'),	'website16' => $this->request->getVar('website16'),	'instruction16' => $this->request->getVar('instruction16'),
 				'start17' => $this->request->getVar('start17'),	'end17' => $this->request->getVar('end17'),	'website17' => $this->request->getVar('website17'),	'instruction17' => $this->request->getVar('instruction17'),
 				'start18' => $this->request->getVar('start18'),	'end18' => $this->request->getVar('end18'),	'website18' => $this->request->getVar('website18'),	'instruction18' => $this->request->getVar('instruction18')
-		];
-		$model = new Norsenior();
-		$model->save($norsenior);
+		]);
 		return redirect('PostController/norseniorview');	
-	}*/
+	}
 
 
 /* 後台登入頁面 */
