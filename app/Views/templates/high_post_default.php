@@ -91,7 +91,7 @@
                                                 </td>
 
                                                 <td rowspan = "15" style = "width: 1000px; background-color: white;">
-                                                    <table>
+                                                    <table width="900px">
                                                         <tbody>
                                                             <?= $this->renderSection('content') ?>
                                                         </tbody>

@@ -10,14 +10,17 @@
 
         <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-        <link rel="stylesheet" href="/style/show.css">
+        <link rel="stylesheet" href="/style/show_front.css">
         <title>show_post</title>
     </head>
 
     <body>        
-        <tr><img src="/img/information.jpg">
-        <tr><img src="/img/newest.jpg">            
+        <img src="/img/information.jpg">
+        <br><img src="/img/newest.jpg"> 
+        
         <?php
+        $temp = 0;
+        $i = 0;
             if(! empty($post_page) && is_array($post_page)){
                 foreach($post_page as $post_page_item){
                     echo '
@@ -28,7 +31,11 @@
                             <td style="width: 400px"><a href="/PostController/show_content/'.$post_page_item['id'].'"> '.$post_page_item['title'].'</a>                      
                     </table>
                     ';
-                }
+                    $temp++;
+                }                
+            }
+            for($i = $temp; $i <= 25; $i++){
+                echo "<br>";
             }
         ?>
         </div>
