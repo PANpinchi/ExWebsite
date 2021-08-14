@@ -14,14 +14,9 @@
         <title>show_post</title>
     </head>
 
-    <body>
-        <div class="title margin">公告訊息</div>
-        <div class="content">
-        <table border="1" class="table-striped center">
-            <thead>
-                <td style="width: 150px">日期<td style="width: 150px">分類<td style="width: 400px">主旨
-            </thead>
-        </table>            
+    <body>        
+        <tr><img src="/img/information.jpg">
+        <tr><img src="/img/newest.jpg">            
         <?php
             if(! empty($post_page) && is_array($post_page)){
                 foreach($post_page as $post_page_item){
