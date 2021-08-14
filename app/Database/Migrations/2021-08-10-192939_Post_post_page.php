@@ -11,9 +11,9 @@ class Post_post_page extends Migration
 		$this->forge->addField([
 			'id'		=> [
 					'type'			=> 'INT',
-					'constraint'	=> 5,
+					'constraint'	=> 500,
 					'unsigned'		=> True,
-					'auto_increment'=> FALSE],
+					'auto_increment'=> True],
 			'title'		=> [
 					'type'			=> 'VARCHAR',
 					'constraint'	=> 100,

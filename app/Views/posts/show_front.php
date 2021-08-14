@@ -16,7 +16,7 @@
 
     <body>        
         <tr><img src="/img/information.jpg">
-        <tr><img src="/img/newest.jpg">            
+        <tr><img src="/img/newest.jpg">
         <?php
             if(! empty($post_page) && is_array($post_page)){
                 foreach($post_page as $post_page_item){
