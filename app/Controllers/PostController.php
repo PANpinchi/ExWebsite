@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 session_start();
+$_SESSION['user_login'] = false;
 
 use App\Controllers\BaseController;
 use App\Models\Post_user_login;
@@ -20,6 +21,10 @@ class PostController extends BaseController
 	/*創建新的貼文*/
 	public function create()
 	{
+		if($_SESSION['user_login'] == false){
+			echo '<script>alert("請先登入！")</script>';
+			return view('posts/user_login');
+		}
 		return view('posts/create');
 	}
 
@@ -59,6 +64,11 @@ class PostController extends BaseController
 	/*儲存文章頁面*/
 	public function store()
 	{
+		if($_SESSION['user_login'] == false){
+			echo '<script>alert("請先登入！")</script>';
+			return view('posts/user_login');
+		}
+
 		$data=
 			[
 				'title' => $this->request->getVar('title'),
@@ -84,7 +94,11 @@ class PostController extends BaseController
 	/*編輯頁面*/
 	public function dateedit()
 	{
-		
+		if($_SESSION['user_login'] == false){
+			echo '<script>alert("請先登入！")</script>';
+			return view('posts/user_login');
+		}
+
 		$model = new Date();
 		$data = [
 				'date' => $model->findall()
@@ -101,6 +115,11 @@ class PostController extends BaseController
 	/*編輯畫面跳轉到觀看畫面*/
 	public function dateview()
 	{
+		if($_SESSION['user_login'] == false){
+			echo '<script>alert("請先登入！")</script>';
+			return view('posts/user_login');
+		}
+
 		$model = new Date();
 		$data =
 			[
@@ -170,12 +189,6 @@ class PostController extends BaseController
 		return view('posts/high_post');
 	}
 
-	/* 測試頁面 */
-	public function test()
-	{
-		return view('posts/test');
-	}
-
 	/*匹配後台帳號*/
 	public function compare_user_account()
 	{
@@ -204,10 +217,11 @@ class PostController extends BaseController
 			$password = strcmp($data['password'], $users[$i]['password']);
 
 			if($email == 0 && $password == 0){
-				print_r($users[$i]['name']);
-				echo ' 歡迎登入！';
+				/*print_r($users[$i]['name']);
+				echo ' 歡迎登入！';*/
+				$_SESSION['user_login'] = true;
 				$check = 1;
-				break;
+				return view('posts/create');
 			}
 			else if($email == 0 && $password != 0){
 				echo '<script>alert("密碼輸入錯誤，請重新登入！")</script>';
@@ -241,11 +255,9 @@ class PostController extends BaseController
 		$users = $model->findAll(); //取得資料
 
 		$check = 0; //檢查是否匹配帳號
-
-		print_r($users);
 		
 		/* 檢查是否匹配帳號 */
-		/*for($i = 0; isset($users[$i]); $i++)
+		for($i = 0; isset($users[$i]); $i++)
 		{
 			$account = strcmp($data['account'], $users[$i]['account']);
 			$password = strcmp($data['password'], $users[$i]['password']);
@@ -265,7 +277,7 @@ class PostController extends BaseController
 		if($check == 0){
 			echo '<script>alert("帳號輸入錯誤，請重新登入！")</script>';
 			return view('posts/login');
-		}*/
+		}
 	}
 
 	/* 忘記密碼 */
