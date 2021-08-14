@@ -14,16 +14,12 @@
 	<style>
 		.c{text-align:center}
 		th {border-width : 1px;}
-        .window2{
-			width: 30vh;
-			height: 130vh;
-		}
 	</style>
 
 </head>
 
 <body>
-<input type="button" value="編輯" name="button" onclick= "location.href='/PostController/dateedit'"></input><br>
+<input type="button" value="編輯" name="button" onclick= "location.href='PostController/dateedit'"></input><br>
 <?php
     date_default_timezone_set('Asia/Taipei');
     echo date("Y-m-d H:i:s");
@@ -53,7 +49,7 @@
 
 
             echo '
-            <table border="1" class="c" style="border-style:solid; width: 1100px;">
+            <table border="1" class="c" style="border-style:solid">
             <tr>
                 <th>編號
                 <th>系統名稱

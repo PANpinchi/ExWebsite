@@ -90,7 +90,7 @@
                                                     <div id = "pass"><a href="/PostController/login"> </a></div>
                                                 </td>
 
-                                                <td rowspan = "15" style = "width: 1000px; background-color: white;">
+                                                <td rowspan = "15" style = "width: 1000px; background-color: yellow;">
                                                     <table>
                                                         <tbody>
                                                             <?= $this->renderSection('content') ?>
