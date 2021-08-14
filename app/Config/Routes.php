@@ -34,7 +34,7 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 $routes->get('/dateview','PostController::dateview');
-$routes->get('/PostController', 'PostController::show');
+$routes->get('/show', 'PostController::show');
 
 /*
  * --------------------------------------------------------------------

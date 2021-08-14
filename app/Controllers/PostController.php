@@ -34,6 +34,17 @@ class PostController extends BaseController
 		return view('posts/show', $data);
 	}
 
+	/*顯示公告的文章*/
+	public function show_front()
+	{
+		$model = new Post_post_page();
+		$data = 
+		[
+			'post_page' => $model->findAll()
+		];
+		return view('posts/show_front', $data);
+	}
+
 	/*顯示文章內容*/
 	public function show_content($post_page_id)
 	{
@@ -67,7 +78,7 @@ class PostController extends BaseController
 			'start' => substr($data['start'], 0, 10),
 			'end' => substr($data['end'], 0, 10)
 		]);
-		return redirect('PostController');
+		return redirect('show');
 	}
 
 	/*編輯頁面*/
