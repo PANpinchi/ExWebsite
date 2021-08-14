@@ -35,7 +35,10 @@ class Database extends Config
 		'hostname' => 'localhost',
 		'username' => '',
 		'password' => '',
-		'database' => WRITEPATH.'database/norcollege.db',
+<<<<<<< HEAD
+=======
+		'database' => WRITEPATH.'database/news.db',
+>>>>>>> master
 		'DBDriver' => 'SQLite3',
 		'DBPrefix' => '',
 		'pConnect' => false,
