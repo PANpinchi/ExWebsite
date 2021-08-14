@@ -1,7 +1,291 @@
-
-.c{
-    align-items: center;
+img {
+    display: collapse;
 }
 
-.table{border-spacing: 0px;}
-.td{border-width: 0px 0px 0px 0px;}
+#home a {
+    background: url("/person_img/form_top_04_home.jpg");/*預設顯示圖片*/
+    display: block;
+    height: 53px;/*圖片高度*/
+    width: 86px;/*圖片寬度*/
+}
+
+#apply a {
+    background: url("/person_img/form_top_05_star.jpg");/*預設顯示圖片*/
+    display: block;
+    height: 53px;/*圖片高度*/
+    width: 95px;/*圖片寬度*/
+}
+
+#u1 a {
+    background: url("/person_img/upbar_01.jpg");/*預設顯示圖片*/
+    display: block;
+    height: 41px;/*圖片高度*/
+    width: 102px;/*圖片寬度*/
+}
+
+#u2 a {
+    background: url("/person_img/upbar_02.jpg");/*預設顯示圖片*/
+    display: block;
+    height: 41px;/*圖片高度*/
+    width: 102px;/*圖片寬度*/
+}
+
+#u3 a {
+    background: url("/person_img/upbar_03.jpg");/*預設顯示圖片*/
+    display: block;
+    height: 41px;/*圖片高度*/
+    width: 102px;/*圖片寬度*/
+}
+
+#u4 a {
+    background: url("/person_img/upbar_04.jpg");/*預設顯示圖片*/
+    display: block;
+    height: 41px;/*圖片高度*/
+    width: 102px;/*圖片寬度*/
+}
+
+#u5 a {
+    background: url("/person_img/upbar_05.jpg");/*預設顯示圖片*/
+    display: block;
+    height: 41px;/*圖片高度*/
+    width: 102px;/*圖片寬度*/
+}
+
+#u6 a {
+    background: url("/person_img/upbar_06.jpg");/*預設顯示圖片*/
+    display: block;
+    height: 41px;/*圖片高度*/
+    width: 102px;/*圖片寬度*/
+}
+
+#u7 a {
+    background: url("/person_img/upbar_07.jpg");/*預設顯示圖片*/
+    display: block;
+    height: 41px;/*圖片高度*/
+    width: 102px;/*圖片寬度*/
+}
+
+#u8 a {
+    background: url("/person_img/upbar_08.jpg");/*預設顯示圖片*/
+    display: block;
+    height: 41px;/*圖片高度*/
+    width: 102px;/*圖片寬度*/
+}
+
+#u9 a {
+    background: url("/person_img/upbar_09.jpg");/*預設顯示圖片*/
+    display: block;
+    height: 41px;/*圖片高度*/
+    width: 102px;/*圖片寬度*/
+}
+
+#u10 a {
+    background: url("/person_img/upbar_10.jpg");/*預設顯示圖片*/
+    display: block;
+    height: 41px;/*圖片高度*/
+    width: 102px;/*圖片寬度*/
+}
+
+#pass a {
+    background: url("/person_img/personal_pass_bar.jpg");/*預設顯示圖片*/
+    display: block;
+    height: 40px;/*圖片高度*/
+    width: 146px;/*圖片寬度*/
+}
+
+#m1 a {
+    background: url("/person_img/main_menu_01.jpg");/*預設顯示圖片*/
+    display: block;
+    height: 40px;/*圖片高度*/
+    width: 146px;/*圖片寬度*/
+}
+
+#m2 a {
+    background: url("/person_img/main_menu_02.jpg");/*預設顯示圖片*/
+    display: block;
+    height: 40px;/*圖片高度*/
+    width: 146px;/*圖片寬度*/
+}
+
+#m3 a {
+    background: url("/person_img/main_menu_03.jpg");/*預設顯示圖片*/
+    display: block;
+    height: 40px;/*圖片高度*/
+    width: 146px;/*圖片寬度*/
+}
+
+#m4 a {
+    background: url("/person_img/main_menu_04.jpg");/*預設顯示圖片*/
+    display: block;
+    height: 40px;/*圖片高度*/
+    width: 146px;/*圖片寬度*/
+}
+
+#m5 a {
+    background: url("/person_img/main_menu_05.jpg");/*預設顯示圖片*/
+    display: block;
+    height: 40px;/*圖片高度*/
+    width: 146px;/*圖片寬度*/
+}
+
+#m6 a {
+    background: url("/person_img/main_menu_06.jpg");/*預設顯示圖片*/
+    display: block;
+    height: 40px;/*圖片高度*/
+    width: 146px;/*圖片寬度*/
+}
+
+#m7 a {
+    background: url("/person_img/main_menu_07.jpg");/*預設顯示圖片*/
+    display: block;
+    height: 40px;/*圖片高度*/
+    width: 146px;/*圖片寬度*/
+}
+
+#m8 a {
+    background: url("/person_img/main_menu_08.jpg");/*預設顯示圖片*/
+    display: block;
+    height: 40px;/*圖片高度*/
+    width: 146px;/*圖片寬度*/
+}
+
+#m9 a {
+    background: url("/person_img/main_menu_09.jpg");/*預設顯示圖片*/
+    display: block;
+    height: 40px;/*圖片高度*/
+    width: 146px;/*圖片寬度*/
+}
+
+#m10 a {
+    background: url("/person_img/main_menu_10.jpg");/*預設顯示圖片*/
+    display: block;
+    height: 40px;/*圖片高度*/
+    width: 146px;/*圖片寬度*/
+}
+
+
+#hs a {
+    background: url("/person_img/main_menu_fun_hs.jpg");/*預設顯示圖片*/
+    display: block;
+    height: 52px;/*圖片高度*/
+    width: 148px;/*圖片寬度*/
+}
+
+#col a {
+    background: url("/person_img/main_menu_fun_col.jpg");/*預設顯示圖片*/
+    display: block;
+    height: 52px;/*圖片高度*/
+    width: 148px;/*圖片寬度*/
+}
+
+#home a:hover{
+    background: url("/person_img/form_top_04_home_up.jpg");/*預設顯示圖片*/
+    display: block;
+}
+
+#apply a:hover{
+    background: url("/person_img/form_top_05_star_up.jpg");/*預設顯示圖片*/
+    display: block;
+}
+
+#u1 a:hover{
+    background: url("/person_img/upbar_01_up.jpg");
+    display: block;
+}
+
+#u2 a:hover{
+    background: url("/person_img/upbar_02_up.jpg");
+    display: block;
+}
+
+#u3 a:hover{
+    background: url("/person_img/upbar_03_up.jpg");
+    display: block;
+}
+
+#u4 a:hover{
+    background: url("/person_img/upbar_04_up.jpg");
+    display: block;
+}
+
+#u5 a:hover{
+    background: url("/person_img/upbar_05_up.jpg");
+    display: block;
+}
+
+#u6 a:hover{
+    background: url("/person_img/upbar_06_up.jpg");
+    display: block;
+}
+
+#u7 a:hover{
+    background: url("/person_img/upbar_07_up.jpg");
+    display: block;
+}
+
+#u8 a:hover{
+    background: url("/person_img/upbar_08_up.jpg");
+    display: block;
+}
+
+#u9 a:hover{
+    background: url("/person_img/upbar_09_up.jpg");
+    display: block;
+}
+
+#u10 a:hover{
+    background: url("/person_img/upbar_10_up.jpg");
+    display: block;
+}
+
+#m1 a:hover{
+    background: url("/person_img/main_menu_01_up.jpg");
+    display: block;
+}
+
+#m2 a:hover{
+    background: url("/person_img/main_menu_02_up.jpg");
+    display: block;
+}
+
+#m3 a:hover{
+    background: url("/person_img/main_menu_03_up.jpg");
+    display: block;
+}
+
+#m4 a:hover{
+    background: url("/person_img/main_menu_04_up.jpg");
+    display: block;
+}
+
+#m5 a:hover{
+    background: url("/person_img/main_menu_05_up.jpg");
+    display: block;
+}
+
+#m6 a:hover{
+    background: url("/person_img/main_menu_06_up.jpg");
+    display: block;
+}
+
+#m7 a:hover{
+    background: url("/person_img/main_menu_07_up.jpg");
+    display: block;
+}
+
+#m8 a:hover{
+    background: url("/person_img/main_menu_08_up.jpg");
+    display: block;
+}
+
+#m9 a:hover{
+    background: url("/person_img/main_menu_09_up.jpg");
+    display: block;
+    
+}
+
+#m10 a:hover{
+    background: url("/person_img/main_menu_10_up.jpg");
+    display: block;
+    
+}
