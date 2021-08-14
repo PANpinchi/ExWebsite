@@ -7,13 +7,10 @@ session_start();
 use App\Controllers\BaseController;
 use App\Models\Post_user_login;
 use App\Models\Post_login;
-<<<<<<< HEAD
 use App\Models\Norcollege;
 use App\Models\Norsenior;
-=======
 use App\Models\Post_post_page;
 use App\Models\Date;
->>>>>>> master
 
 class PostController extends BaseController
 {
@@ -22,12 +19,12 @@ class PostController extends BaseController
 		return view('posts/index');
 	}
 
-<<<<<<< HEAD
 	/*顯示關閉頁面*/
 	public function pageclose()
 	{
 		return view('posts/pageclose');
-=======
+	}
+
 	/*創建新的貼文*/
 	public function create()
 	{
@@ -79,23 +76,20 @@ class PostController extends BaseController
 			'end' => substr($data['end'], 0, 10)
 		]);
 		return redirect('PostController');
->>>>>>> master
 	}
 
 	/*編輯頁面*/
 	public function norcollegeedit()
 	{
 		
-<<<<<<< HEAD
 		$model = new Norcollege();
 		$data =
 			[
 				'norcollege' => $model->findall()
-=======
+			];
 		$model = new Date();
 		$data = [
 				'date' => $model->findall()
->>>>>>> master
 			];
 		return view('posts/norcollegeedit',$data);
 	}
@@ -162,7 +156,6 @@ class PostController extends BaseController
 
 		return redirect('PostController/norcollegeview');	
 	}
-<<<<<<< HEAD
 /*
 	public function norseniorstore()
 	{	
@@ -195,16 +188,8 @@ class PostController extends BaseController
 
 
 /* 後台登入頁面 */
-public function user_login()
-{
-	return view('posts/user_login');
-}
-=======
->>>>>>> master
-
-	/* 後台登入頁面 */
 	public function user_login()
-	{
+	{	
 		return view('posts/user_login');
 	}
 
