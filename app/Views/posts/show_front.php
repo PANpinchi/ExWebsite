@@ -14,10 +14,10 @@
         <title>show_post</title>
     </head>
 
-    <body>        
-        <img src="/img/information.jpg">
-        <br><img src="/img/newest.jpg"> 
-        
+    <body>       
+        <tr><img src="/img/information.jpg">
+        <tr><img src="/img/newest.jpg">
+
         <?php
         $temp = 0;
         $i = 0;

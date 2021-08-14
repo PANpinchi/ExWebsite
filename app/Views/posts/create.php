@@ -58,7 +58,7 @@
 
                         </div>
                         <div class="row pt-4">
-                            <button class="btn btn-primary content">發布</button>
+                            <button class="btn btn-primary">發布</button>
                         </div>
                     </div>
                 </div>
