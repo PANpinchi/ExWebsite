@@ -89,6 +89,17 @@ class PostController extends BaseController
 		return view('posts/norcollegeedit',$data);
 	}
 
+	public function starcollegeedit()
+	{
+		
+		$model = new Starcollege();
+		$data =
+			[
+				'starcollege' => $model->findall()
+			];
+		return view('posts/starcollegeedit',$data);
+	}
+
 	public function norsenioredit()
 	{
 		
@@ -109,6 +120,16 @@ class PostController extends BaseController
 				'norcollege' => $model->findall()
 			];
 		return view('posts/norcollegeview',$data);
+	}
+
+	public function starcollegeview()
+	{
+		$model = new Starcollege();
+		$data =
+			[
+				'starcollege' => $model->findall()
+			];
+		return view('posts/starcollegeview',$data);
 	}
 
 	public function norseniorview()
@@ -152,6 +173,23 @@ class PostController extends BaseController
 		return redirect('PostController/norcollegeview');	
 	}
 
+	public function starcollegestore()
+	{	
+		$model = new Starcollege();
+		$model->save(
+		[
+				'id'	=> 1,
+				'start1' => $this->request->getVar('start1'),	'end1' => $this->request->getVar('end1'),	'website1' => $this->request->getVar('website1'),	'instruction1' => $this->request->getVar('instruction1'),
+				'start2' => $this->request->getVar('start2'),	'end2' => $this->request->getVar('end2'),	'website2' => $this->request->getVar('website2'),	'instruction2' => $this->request->getVar('instruction2'),
+				'start3' => $this->request->getVar('start3'),	'end3' => $this->request->getVar('end3'),	'website3' => $this->request->getVar('website3'),	'instruction3' => $this->request->getVar('instruction3'),
+				'start4' => $this->request->getVar('start4'),	'end4' => $this->request->getVar('end4'),	'website4' => $this->request->getVar('website4'),	'instruction4' => $this->request->getVar('instruction4'),
+				'start5' => $this->request->getVar('start5'),	'end5' => $this->request->getVar('end5'),	'website5' => $this->request->getVar('website5'),	'instruction5' => $this->request->getVar('instruction5'),
+				'start6' => $this->request->getVar('start6'),	'end6' => $this->request->getVar('end6'),	'website6' => $this->request->getVar('website6'),	'instruction6' => $this->request->getVar('instruction6'),
+				'start7' => $this->request->getVar('start7'),	'end7' => $this->request->getVar('end7'),	'website7' => $this->request->getVar('website7'),	'instruction7' => $this->request->getVar('instruction7')
+		]);
+		return redirect('PostController/norcollegeview');	
+	}
+
 	public function norseniorstore()
 	{	
 		$model = new Norsenior();
@@ -181,7 +219,7 @@ class PostController extends BaseController
 	}
 
 
-/* 後台登入頁面 */
+	/* 後台登入頁面 */
 	public function user_login()
 	{	
 		return view('posts/user_login');
