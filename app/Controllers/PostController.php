@@ -8,7 +8,9 @@ use App\Controllers\BaseController;
 use App\Models\Post_user_login;
 use App\Models\Post_login;
 use App\Models\Norcollege;
+use App\Models\Starcollege;
 use App\Models\Norsenior;
+use App\Models\Starsenior;
 use App\Models\Post_post_page;
 
 class PostController extends BaseController
@@ -111,6 +113,17 @@ class PostController extends BaseController
 		return view('posts/norsenioredit',$data);
 	}
 
+	public function starsenioredit()
+	{
+		
+		$model = new Starsenior();
+		$data =
+			[
+				'starsenior' => $model->findall()
+			];
+		return view('posts/starsenioredit',$data);
+	}
+
 	/*編輯畫面跳轉到觀看畫面*/
 	public function norcollegeview()
 	{
@@ -140,6 +153,16 @@ class PostController extends BaseController
 				'norsenior' => $model->findall()
 			];
 		return view('posts/norseniorview',$data);
+	}
+
+	public function starseniorview()
+	{
+		$model = new Starsenior();
+		$data =
+			[
+				'starsenior' => $model->findall()
+			];
+		return view('posts/starseniorview',$data);
 	}
 
 	/*後台網頁開放時間網址與說明資料更新*/
@@ -187,7 +210,7 @@ class PostController extends BaseController
 				'start6' => $this->request->getVar('start6'),	'end6' => $this->request->getVar('end6'),	'website6' => $this->request->getVar('website6'),	'instruction6' => $this->request->getVar('instruction6'),
 				'start7' => $this->request->getVar('start7'),	'end7' => $this->request->getVar('end7'),	'website7' => $this->request->getVar('website7'),	'instruction7' => $this->request->getVar('instruction7')
 		]);
-		return redirect('PostController/norcollegeview');	
+		return redirect('PostController/starcollegeview');	
 	}
 
 	public function norseniorstore()
@@ -216,6 +239,31 @@ class PostController extends BaseController
 				'start18' => $this->request->getVar('start18'),	'end18' => $this->request->getVar('end18'),	'website18' => $this->request->getVar('website18'),	'instruction18' => $this->request->getVar('instruction18')
 		]);
 		return redirect('PostController/norseniorview');	
+	}
+
+	public function starseniorstore()
+	{	
+		$model = new Starsenior();
+		$model->save(
+		[
+				'id'	=> 1,
+				'start1' => $this->request->getVar('start1'),	'end1' => $this->request->getVar('end1'),	'website1' => $this->request->getVar('website1'),	'instruction1' => $this->request->getVar('instruction1'),
+				'start2' => $this->request->getVar('start2'),	'end2' => $this->request->getVar('end2'),	'website2' => $this->request->getVar('website2'),	'instruction2' => $this->request->getVar('instruction2'),
+				'start3' => $this->request->getVar('start3'),	'end3' => $this->request->getVar('end3'),	'website3' => $this->request->getVar('website3'),	'instruction3' => $this->request->getVar('instruction3'),
+				'start4' => $this->request->getVar('start4'),	'end4' => $this->request->getVar('end4'),	'website4' => $this->request->getVar('website4'),	'instruction4' => $this->request->getVar('instruction4'),
+				'start5' => $this->request->getVar('start5'),	'end5' => $this->request->getVar('end5'),	'website5' => $this->request->getVar('website5'),	'instruction5' => $this->request->getVar('instruction5'),
+				'start6' => $this->request->getVar('start6'),	'end6' => $this->request->getVar('end6'),	'website6' => $this->request->getVar('website6'),	'instruction6' => $this->request->getVar('instruction6'),
+				'start7' => $this->request->getVar('start7'),	'end7' => $this->request->getVar('end7'),	'website7' => $this->request->getVar('website7'),	'instruction7' => $this->request->getVar('instruction7'),
+				'start8' => $this->request->getVar('start8'),	'end8' => $this->request->getVar('end8'),	'website8' => $this->request->getVar('website8'),	'instruction8' => $this->request->getVar('instruction8'),
+				'start9' => $this->request->getVar('start9'),	'end9' => $this->request->getVar('end9'),	'website9' => $this->request->getVar('website9'),	'instruction9' => $this->request->getVar('instruction9'),
+				'start10' => $this->request->getVar('start10'),	'end10' => $this->request->getVar('end10'),	'website10' => $this->request->getVar('website10'),	'instruction10' => $this->request->getVar('instruction10'),
+				'start11' => $this->request->getVar('start11'),	'end11' => $this->request->getVar('end11'),	'website11' => $this->request->getVar('website11'),	'instruction11' => $this->request->getVar('instruction11'),
+				'start12' => $this->request->getVar('start12'),	'end12' => $this->request->getVar('end12'),	'website12' => $this->request->getVar('website12'),	'instruction12' => $this->request->getVar('instruction12'),
+				'start13' => $this->request->getVar('start13'),	'end13' => $this->request->getVar('end13'),	'website13' => $this->request->getVar('website13'),	'instruction13' => $this->request->getVar('instruction13'),
+				'start14' => $this->request->getVar('start14'),	'end14' => $this->request->getVar('end14'),	'website14' => $this->request->getVar('website14'),	'instruction14' => $this->request->getVar('instruction14'),
+				'start15' => $this->request->getVar('start15'),	'end15' => $this->request->getVar('end15'),	'website15' => $this->request->getVar('website15'),	'instruction15' => $this->request->getVar('instruction15')
+		]);
+		return redirect('PostController/starseniorview');	
 	}
 
 

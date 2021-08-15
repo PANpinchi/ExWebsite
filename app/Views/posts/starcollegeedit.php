@@ -1,4 +1,4 @@
-<?= $this->extend('templates\user_default') ?>
+<?= $this->extend('templates\user_login_default') ?>
 <?= $this->section('content') ?>
 
 
@@ -16,6 +16,10 @@
 	<style>
 		.c{text-align:center;}
 		th {border-width : 1px;}
+		.window2{
+			width: 30vh;
+			height: 130vh;
+		}
 	</style>
 
   </head>
@@ -25,9 +29,10 @@
     if (! empty($starcollege) && is_array($starcollege))  {
     foreach($starcollege as $starcollege_item){
     echo '
+	<div class="left">
     <form action="/PostController/starcollegestore" method="post">
 	<input type="submit" value="一鍵更改" name="submit"></input>
-    <table border="1" class="c" style="border-style:solid">
+    <table border="1" class="c" style="border-style:solid; width: 1100px;">
 	  <tr>
 		  <th>編號
 		  <th>系統名稱
@@ -143,6 +148,7 @@
 
         </table>
       </form>
+	  </div>
     ';
     }
     }

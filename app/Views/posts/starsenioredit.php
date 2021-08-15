@@ -1,4 +1,4 @@
-<?= $this->extend('templates\user_default') ?>
+<?= $this->extend('templates\user_login_default') ?>
 <?= $this->section('content') ?>
 
 
@@ -16,6 +16,10 @@
 	<style>
 		.c{text-align:center}
 		th {border-width : 1px;}
+		.window2{
+			width: 30vh;
+			height: 130vh;
+		}
 	</style>
 
   </head>
@@ -25,9 +29,10 @@
     if (! empty($starsenior) && is_array($starsenior))  {
     foreach($starsenior as $starsenior_item){
     echo '
+	<div class="left">
     <form action="/PostController/starseniorstore" method="post">
 	<input type="submit" value="一鍵更改" name="submit"></input>
-    <table border="1" class="c" style="border-style:solid">
+    <table border="1" class="c" style="border-style:solid; width: 1100px;">
 	  <tr>
 		  <th>編號
 		  <th>系統名稱
@@ -39,16 +44,16 @@
 		  <th>1 
 		  <th >各高中承辦人員聯絡資料維護暨繁星推薦108入學學生高一在校學業成績上傳作業軟體下載系統
 		  <th> <label for="bookdate"></label>
-          <input type="date" id="bookdate" name="start1" value='.$starcollege_item['start1'].'>
+          <input type="date" id="bookdate" name="start1" value='.$starsenior_item['start1'].'>
 		  <th> <label for="bookdate"></label>
-          <input type="date" id="bookdate" name="end1" value='.$starcollege_item['end1'].'>
+          <input type="date" id="bookdate" name="end1" value='.$starsenior_item['end1'].'>
 		  <th> <div class="mb-3">
    				 <label for="wedsite" class="form-label"></label>
-   				 <input type="website" class="form-control" id="website" name="website1" value='.$starcollege_item['website1'].'>
+   				 <input type="website" class="form-control" id="website" name="website1" value='.$starsenior_item['website1'].'>
  				 </div>
 		  <th> <div class="mb-3">
    				 <label for="help" class="form-label"></label>
-   				 <input type="help" class="form-control" id="help" name="instruction1" value='.$starcollege_item['instruction1'].'>
+   				 <input type="help" class="form-control" id="help" name="instruction1" value='.$starsenior_item['instruction1'].'>
  				 </div>
 	  <tr>
 		  <th>2
@@ -263,6 +268,7 @@
 
   </table>
   </form>
+  </div>
     ';
     }
     }

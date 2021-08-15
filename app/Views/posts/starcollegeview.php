@@ -1,4 +1,4 @@
-<?= $this->extend('templates\user_default') ?>
+<?= $this->extend('templates\user_login_default') ?>
 <?= $this->section('content') ?>
 
 
@@ -16,6 +16,10 @@
 	<style>
 		.c{text-align:center;}
 		th {border-width : 1px;}
+		.window2{
+			width: 30vh;
+			height: 130vh;
+		}
 	</style>
 
   </head>
@@ -25,7 +29,7 @@
   <?php
     date_default_timezone_set('Asia/Taipei');
     echo date("Y-m-d H:i:s");
-    print_r($starcollege);
+    
     if (! empty($starcollege) && is_array($starcollege))  {
         foreach($starcollege as $starcollege_item){
 
@@ -50,7 +54,7 @@
             }
     echo'
  
-  <table border="1" class="c" style="border-style:solid">
+  <table border="1" class="c" style="border-style:solid; width: 1100px;">
 	  <tr>
 		  <th>編號
 		  <th>系統名稱
@@ -171,8 +175,6 @@
 }
 
 ?>
-  <button class="btn btn-primary"> submmit </button>
-
 
     <!-- Optional JavaScript; choose one of the two! -->
 

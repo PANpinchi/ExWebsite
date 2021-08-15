@@ -15,6 +15,10 @@
 	<style>
 		.c{text-align:center}
 		th {border-width : 1px;}
+		.window2{
+			width: 30vh;
+			height: 130vh;
+		}
 	</style>
 
 </head>
@@ -22,13 +26,13 @@
 <body>
 
 <?php
-print_r($norcollege);
-if (! empty($norcollege) && is_array($norcollege))  {
+
 foreach($norcollege as $norcollege_item){
 echo '
+<div class="left">
 	<form action="/PostController/norcollegestore" method="post">
 	<input type="submit" value="一鍵更改" name="submit"></input>
-	<table border="1" class="c" style="border-style:solid">
+	<table border="1" class="c" style="border-style:solid; width: 1100px;">
 	  <tr>
 			<th>編號
 			<th>系統名稱
@@ -322,10 +326,10 @@ echo '
 					<input type="help" class="form-control" id="help" name="instruction19" value='.$norcollege_item['instruction19'].'>
 					</div>
   		</table>
-	</form>
+		</form>
+	</div>
 	';
   }
-}
 ?>
 
     <!-- Optional JavaScript; choose one of the two! -->
