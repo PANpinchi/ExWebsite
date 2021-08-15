@@ -44,9 +44,9 @@
 		  <th>1 
 		  <th >校系分則輸入作業
 		  <th> <label for="bookdate"></label>
-                <input type="date" id="bookdate" name="start1" value='.$starcollege_item['start1'].'>
+                <input type="datetime-local" id="bookdate" name="start1" value='.$starcollege_item['start1'].'>
 		  <th> <label for="bookdate"></label>
-                <input type="date" id="bookdate" name="end1" value='.$starcollege_item['end1'].'>
+                <input type="datetime-local" id="bookdate" name="end1" value='.$starcollege_item['end1'].'>
 		  <th> <div class="mb-3">
    				 <label for="wedsite" class="form-label"></label>
    				 <input type="website" class="form-control" id="website" name="website1" value='.$starcollege_item['website1'].'>
@@ -59,9 +59,9 @@
 		  <th>2
 		  <th>高中英語聽力測驗輸入系統
 		  <th> <label for="bookdate"></label>
-                <input type="date" id="bookdate" name="start2" value='.$starcollege_item['start2'].'>
+                <input type="datetime-local" id="bookdate" name="start2" value='.$starcollege_item['start2'].'>
 		  <th> <label for="bookdate"></label>
-                <input type="date" id="bookdate" name="end2" value='.$starcollege_item['end2'].'>
+                <input type="datetime-local" id="bookdate" name="end2" value='.$starcollege_item['end2'].'>
 		  <th> <div class="mb-3">
    				 <label for="wedsite" class="form-label"></label>
    				 <input type="website" class="form-control" id="website" name="website2" value='.$starcollege_item['website2'].'>
@@ -74,9 +74,9 @@
 		  <th>3
 		  <th>錄取(篩選)結果下載
 		  <th> <label for="bookdate"></label>
-                <input type="date" id="bookdate" name="start3" value='.$starcollege_item['start3'].'>
+                <input type="datetime-local" id="bookdate" name="start3" value='.$starcollege_item['start3'].'>
 		  <th> <label for="bookdate"></label>
-                <input type="date" id="bookdate" name="end3" value='.$starcollege_item['end3'].'>
+                <input type="datetime-local" id="bookdate" name="end3" value='.$starcollege_item['end3'].'>
 		  <th> <div class="mb-3">
    				 <label for="wedsite" class="form-label"></label>
    				 <input type="website" class="form-control" id="website" name="website3" value='.$starcollege_item['website3'].'>
@@ -89,9 +89,9 @@
 		  <th>4 
 		  <th >錄取生放棄入學名單下載(第一類至第七類學群)
 		  <th> <label for="bookdate"></label>
-                <input type="date" id="bookdate" name="start4" value='.$starcollege_item['start4'].'>
+                <input type="datetime-local" id="bookdate" name="start4" value='.$starcollege_item['start4'].'>
 		  <th> <label for="bookdate"></label>
-                <input type="date" id="bookdate" name="end4" value='.$starcollege_item['end4'].'>
+                <input type="datetime-local" id="bookdate" name="end4" value='.$starcollege_item['end4'].'>
 		  <th> <div class="mb-3">
    				 <label for="wedsite" class="form-label"></label>
    				 <input type="website" class="form-control" id="website" name="website4" value='.$starcollege_item['website4'].'>
@@ -104,9 +104,9 @@
 		  <th>5
 		  <th>第一類至第七類學群未錄取資料下載
 		  <th> <label for="bookdate"></label>
-                <input type="date" id="bookdate" name="start5" value='.$starcollege_item['start5'].'>
+                <input type="datetime-local" id="bookdate" name="start5" value='.$starcollege_item['start5'].'>
 		  <th> <label for="bookdate"></label>
-                <input type="date" id="bookdate" name="end5" value='.$starcollege_item['end5'].'>
+                <input type="datetime-local" id="bookdate" name="end5" value='.$starcollege_item['end5'].'>
 		  <th> <div class="mb-3">
    				 <label for="wedsite" class="form-label"></label>
    				 <input type="website" class="form-control" id="website" name="website5" value='.$starcollege_item['website5'].'>
@@ -119,9 +119,9 @@
 		  <th>6
 		  <th>分發錄取生之高三下成績下載
 		  <th> <label for="bookdate"></label>
-                <input type="date" id="bookdate" name="start6" value='.$starcollege_item['start6'].'>
+                <input type="datetime-local" id="bookdate" name="start6" value='.$starcollege_item['start6'].'>
 		  <th> <label for="bookdate"></label>
-                <input type="date" id="bookdate" name="end6" value='.$starcollege_item['end6'].'>
+                <input type="datetime-local" id="bookdate" name="end6" value='.$starcollege_item['end6'].'>
 		  <th> <div class="mb-3">
    				 <label for="wedsite" class="form-label"></label>
    				 <input type="website" class="form-control" id="website" name="website6" value='.$starcollege_item['website6'].'>
@@ -134,9 +134,9 @@
 		  <th>7
 		  <th>參加說明會、檢討會報名登錄
 		  <th> <label for="bookdate"></label>
-                <input type="date" id="bookdate" name="start7" value='.$starcollege_item['start7'].'>
+                <input type="datetime-local" id="bookdate" name="start7" value='.$starcollege_item['start7'].'>
 		  <th> <label for="bookdate"></label>
-                <input type="date" id="bookdate" name="end7" value='.$starcollege_item['end7'].'>
+                <input type="datetime-local" id="bookdate" name="end7" value='.$starcollege_item['end7'].'>
 		  <th> <div class="mb-3">
    				 <label for="wedsite" class="form-label"></label>
    				 <input type="website" class="form-control" id="website" name="website7" value='.$starcollege_item['website7'].'>
