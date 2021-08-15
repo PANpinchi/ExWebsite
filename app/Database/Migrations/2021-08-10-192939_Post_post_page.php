@@ -12,8 +12,8 @@ class Post_post_page extends Migration
 			'id'		=> [
 					'type'			=> 'INT',
 					'constraint'	=> 5,
-					'unsigned'		=> True,
-					'auto_increment'=> FALSE],
+					'unsigned'		=> TRUE,
+					'auto_increment'=> TRUE],
 			'title'		=> [
 					'type'			=> 'VARCHAR',
 					'constraint'	=> 100,
@@ -39,6 +39,7 @@ class Post_post_page extends Migration
 					'constraint'	=> 10,
 					'null'			=> true],
 	]);
+	$this->forge->addKey('id', TRUE);
 	$this->forge->createTable('post_page');
 	}
 
