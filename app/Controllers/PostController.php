@@ -48,7 +48,6 @@ class PostController extends BaseController
 		return view('posts/show', $data);
 	}
 
-<<<<<<< HEAD
 	/*顯示公告的文章*/
 	public function show_front_star()
 	{
@@ -60,8 +59,6 @@ class PostController extends BaseController
 		return view('posts/show_front_star', $data);
 	}
 
-=======
->>>>>>> master
 	/*顯示文章內容*/
 	public function show_content($post_page_id)
 	{
