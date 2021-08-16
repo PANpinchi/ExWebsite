@@ -3,7 +3,7 @@ body{
     height: 720px;
 }
 
-td {border-width : 1px;}
+td {border-width : 0;}
 
 .title{
     font: bold 40px 標楷體;
@@ -23,4 +23,8 @@ td {border-width : 1px;}
     width: auto;                
     justify-content: center; 
     align-items: center;
+}
+
+table {
+    display: collapse;
 }

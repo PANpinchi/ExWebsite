@@ -75,8 +75,8 @@ class PostController extends BaseController
 			'subtitle' => $data['subtitle'],
 			'subtitle2' => $data['subtitle2'],
 			'content' => $data['content'],
-			'start' => substr($data['start'], 0, 10),
-			'end' => substr($data['end'], 0, 10)
+			'start' => $data['start'],
+			'end' => $data['end']
 		]);
 		return redirect('show');
 	}
