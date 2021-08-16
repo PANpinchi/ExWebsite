@@ -28,6 +28,11 @@ class PostController extends BaseController
 		return view('posts/pageclose');
 	}
 
+	public function loginclose()
+	{
+		return view('posts/loginclose');
+	}
+
 	/*創建新的貼文*/
 	public function create()
 	{

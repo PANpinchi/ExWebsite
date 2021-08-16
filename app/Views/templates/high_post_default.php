@@ -93,7 +93,7 @@
                                                     if (strtotime($logindate_item['start1'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($logindate_item['end1']))
                                                         echo' "/PostController/login" ';
                                                     else{
-                                                        echo' "/PostController/pageclose" ';
+                                                        echo' "/PostController/loginclose" ';
                                                     }
                                                 }
                                                 ?>
