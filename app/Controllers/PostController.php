@@ -48,7 +48,7 @@ class PostController extends BaseController
 		return view('posts/show', $data);
 	}
 
-	/*顯示公告的文章*/
+	/*顯示前台繁星公告的文章*/
 	public function show_front_star()
 	{
 		$model = new Post_post_page();
