@@ -35,14 +35,14 @@ class PostController extends BaseController
 	}
 
 	/*顯示公告的文章*/
-	public function show_front()
+	public function show_front_star()
 	{
 		$model = new Post_post_page();
 		$data = 
 		[
 			'post_page' => $model->findAll()
 		];
-		return view('posts/show_front', $data);
+		return view('posts/show_front_star', $data);
 	}
 
 	/*顯示文章內容*/
