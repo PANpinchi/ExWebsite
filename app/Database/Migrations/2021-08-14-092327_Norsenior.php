@@ -4,7 +4,7 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class Date extends Migration
+class Norsenior extends Migration
 {
 	public function up()
 	{
@@ -375,33 +375,14 @@ class Date extends Migration
 				'constraint'	=>'300',
 				'null'			=> true
 			],
-			'start19'		=>[
-				'type'			=>'VARCHAR',
-				'constraint'	=>'20',
-				'null'			=> true
-			],
-			'end19'			=>[
-				'type'			=>'VARCHAR',
-				'constraint'	=>'20',
-				'null'			=> true
-			],
-			'website19'		=>[
-				'type'			=>'VARCHAR',
-				'constraint'	=>'300',
-				'null'			=> true
-			],
-			'instruction19'	=>[
-				'type'			=>'VARCHAR',
-				'constraint'	=>'300',
-				'null'			=> true
-			],
 		]);
 		$this->forge->addKey('id',true);
-		$this->forge->createTable('date');
+		$this->forge->createTable('norsenior');
+		
 	}
 
 	public function down()
 	{
-		$this->forge->dropTable('date');
+		$this->forge->dropTable('norsenior');
 	}
 }
