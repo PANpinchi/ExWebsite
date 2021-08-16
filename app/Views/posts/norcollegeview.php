@@ -368,4 +368,3 @@
 </html>
 
 <?= $this->endSection() ?>
-© 2021 GitHub, Inc.

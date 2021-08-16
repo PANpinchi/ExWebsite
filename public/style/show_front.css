@@ -1,0 +1,30 @@
+body{
+    width: auto;
+    height: 720px;
+}
+
+td {border-width : 0;}
+
+.title{
+    font: bold 40px 標楷體;
+}
+
+.content{
+    font: 30px 標楷體;              
+}
+
+.margin{
+    width: auto;
+    margin: 10px auto;
+}
+
+.container{
+    height: auto;
+    width: auto;                
+    justify-content: center; 
+    align-items: center;
+}
+
+table {
+    display: collapse;
+}

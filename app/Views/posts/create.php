@@ -1,3 +1,5 @@
+<?= $this->extend('templates\user_login_default') ?>
+<?= $this->section('content') ?>
 <!doctype html>
 <html lang="en">
     <head>
@@ -66,3 +68,4 @@
         </div>
     <body>
 </html>
+<?= $this->endSection() ?>

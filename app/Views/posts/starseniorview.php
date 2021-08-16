@@ -30,7 +30,7 @@
     date_default_timezone_set('Asia/Taipei');
     echo date("Y-m-d H:i:s");
     
-    if (! empty($starsenior) && is_array($starsenior))  {
+    //if (! empty($starsenior) && is_array($starsenior))  {
         foreach($starsenior as $starsenior_item){
 
             if (strtotime($starsenior_item['start1'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($starsenior_item['end1']))
@@ -290,7 +290,7 @@
   </table>
   ';
     
-}
+//}
 }
 
 ?>
