@@ -16,11 +16,11 @@
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="col-md-10">
-                    <table>
+                    <table cellpadding="0" cellspacing="0">
                         <tbody>
                             <tr>
                                 <td>
-                                    <table>
+                                    <table cellpadding="0" cellspacing="0">
                                         <tbody>
                                             <tr>
                                                 <td rowspan = "3" colspan = "4"> <img src="/img/form_top_01.jpg"> </td>
@@ -47,7 +47,7 @@
 
                             <tr colspan = "4">
                                 <td>
-                                    <table>
+                                    <table cellpadding="0" cellspacing="0">
                                         <tbody>
                                             <tr>
                                                 <td><img src="/img/upbar_left.jpg"></td>
@@ -75,7 +75,7 @@
 
                             <tr>
                                 <td>
-                                    <table>
+                                    <table cellpadding="0" cellspacing="0">
                                         <tbody>
                                             <tr>
                                                 <td rowspan = "15" style = "width: 70px; background-color: rgb(255, 231, 235);">
@@ -87,7 +87,17 @@
                                                 </td>
 
                                                 <td>
-                                                    <div id = "pass"><a href="/PostController/login"> </a></div>
+                                                <div id = "pass"><a href=
+                                                <?php
+                                                foreach($logindate as $logindate_item){
+                                                    if (strtotime($logindate_item['start1'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($logindate_item['end1']))
+                                                        echo' "/PostController/login" ';
+                                                    else{
+                                                        echo' "/PostController/pageclose" ';
+                                                    }
+                                                }
+                                                ?>
+                                                </a></div>
                                                 </td>
 
                                                 <td rowspan = "15" style = "width: 1000px; background-color: yellow;">
