@@ -27,7 +27,6 @@
   <body>
 
   <?php
-	if (! empty($norsenior) && is_array($norsenior))  {
     foreach($norsenior as $norsenior_item){
     echo '
 	<div class="left">
@@ -317,7 +316,7 @@
 	</div>
     ';
    }
- }
+
 ?>
     <!-- Optional JavaScript; choose one of the two! -->
 
