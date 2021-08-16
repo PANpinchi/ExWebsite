@@ -87,7 +87,17 @@
                                                 </td>
 
                                                 <td>
-                                                    <div id = "pass"><a href="/PostController/login"> </a></div>
+                                                <div id = "pass"><a href=
+                                                <?php
+                                                foreach($logindate as $logindate_item){
+                                                    if (strtotime($logindate_item['start1'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($logindate_item['end1']))
+                                                        echo' "/PostController/login" ';
+                                                    else{
+                                                        echo' "/PostController/loginclose" ';
+                                                    }
+                                                }
+                                                ?>
+                                                </a></div>
                                                 </td>
 
                                                 <td rowspan = "15" style = "width: 1000px;">

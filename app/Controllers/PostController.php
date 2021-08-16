@@ -28,6 +28,11 @@ class PostController extends BaseController
 		return view('posts/pageclose');
 	}
 
+	public function loginclose()
+	{
+		return view('posts/loginclose');
+	}
+
 	/*創建新的貼文*/
 	public function create()
 	{
@@ -349,7 +354,12 @@ class PostController extends BaseController
 	/* 高中前台頁面 */
 	public function high_post()
 	{
-		return view('posts/high_post');
+		$model = new Logindate();
+		$data = 
+		[
+			'logindate' => $model->findAll()
+		];
+		return view('posts/high_post',$data);
 	}
 
 	/*匹配後台帳號*/
