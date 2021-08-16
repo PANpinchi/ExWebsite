@@ -8,6 +8,7 @@ $_SESSION['user_login'] = false;
 use App\Controllers\BaseController;
 use App\Models\Post_user_login;
 use App\Models\Post_login;
+use App\Models\Logindate;
 use App\Models\Norcollege;
 use App\Models\Starcollege;
 use App\Models\Norsenior;
@@ -90,6 +91,16 @@ class PostController extends BaseController
 	}
 
 	/*編輯頁面*/
+	public function logindateset()
+	{
+		$model = new Logindate();
+		$data =
+			[
+				'logindate' => $model->findall()
+			];
+		return view('posts/logindateset',$data);
+	}
+
 	public function norcollegeedit()
 	{
 		
@@ -135,6 +146,16 @@ class PostController extends BaseController
 	}
 
 	/*編輯畫面跳轉到觀看畫面*/
+	public function logindateview()
+	{
+		$model = new Logindate();
+		$data =
+			[
+				'logindate' => $model->findall()
+			];
+		return view('posts/logindateview',$data);
+	}
+
 	public function norcollegeview()
 	{
 		$model = new Norcollege();
@@ -176,6 +197,19 @@ class PostController extends BaseController
 	}
 
 	/*後台網頁開放時間網址與說明資料更新*/
+	public function logindatestore()
+	{
+		$model = new Logindate();
+		$model->save(
+			[
+				'id'		=> 1,
+				'start1'	 => $this->request->getVar('start1'),
+				'end1' => $this->request->getVar('end1')
+			]
+		);
+		return redirect('PostController/logindateview');
+	}
+
 	public function norcollegestore()
 	{	
 		$model = new Norcollege();
