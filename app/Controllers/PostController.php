@@ -57,9 +57,12 @@ class PostController extends BaseController
 	/*顯示公告的文章*/
 	public function show_front_star()
 	{
+		$login = new Logindate();
 		$model = new Post_post_page();
+
 		$data = 
 		[
+			'logindate'=> $login->findAll(),
 			'post_page' => $model->findAll()
 		];
 		return view('posts/show_front_star', $data);
