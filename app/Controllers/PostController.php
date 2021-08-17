@@ -38,7 +38,7 @@ class PostController extends BaseController
 	}
 
 	/*顯示公告的文章*/
-	public function show()
+	public function show_back()
 	{
 		$model = new Post_post_page();
 		$data = 
@@ -59,15 +59,26 @@ class PostController extends BaseController
 		return view('posts/show_front_star', $data);
 	}
 
-	/*顯示文章內容*/
-	public function show_content($post_page_id)
+	/*後台點選進入文章內容*/
+	public function show_content_back_star($post_page_id)
 	{
 		$model = new Post_post_page();
 		$data = 
 		[
 			'post_page' => $model->find($post_page_id)
 		];
-		return view('posts/show_content', $data);
+		return view('posts/show_content_back_star', $data);
+	}
+
+	/*前台點選進入文章內容*/
+	public function show_content_front_star($post_page_id)
+	{
+		$model = new Post_post_page();
+		$data = 
+		[
+			'post_page' => $model->find($post_page_id)
+		];
+		return view('posts/show_content_front_star', $data);
 	}
 
 	/*儲存文章頁面*/
