@@ -83,7 +83,7 @@ class PostController extends BaseController
 	/*儲存文章頁面*/
 	public function store()
 	{
-		if($_SESSION['user_login'] == false){
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
 			echo '<script>alert("請先登入！")</script>';
 			return view('posts/user_login');
 		}
