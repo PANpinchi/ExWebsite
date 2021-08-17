@@ -75,9 +75,11 @@ class PostController extends BaseController
 	/*後台點選進入文章內容*/
 	public function show_content_back_star($post_page_id)
 	{
+		$login = new Logindate();
 		$model = new Post_post_page();
 		$data = 
 		[
+			'logindate'=> $login->findAll(),
 			'post_page' => $model->find($post_page_id)
 		];
 		return view('posts/show_content_back_star', $data);
@@ -86,9 +88,11 @@ class PostController extends BaseController
 	/*前台點選進入文章內容*/
 	public function show_content_front_star($post_page_id)
 	{
+		$login = new Logindate();
 		$model = new Post_post_page();
 		$data = 
 		[
+			'logindate'=> $login->findAll(),
 			'post_page' => $model->find($post_page_id)
 		];
 		return view('posts/show_content_front_star', $data);
@@ -121,7 +125,7 @@ class PostController extends BaseController
 			'start' => $data['start'],
 			'end' => $data['end']
 		]);
-		return redirect('PostController');
+		return redirect('PostController/show_back');
 	}
 
 	/*編輯頁面*/

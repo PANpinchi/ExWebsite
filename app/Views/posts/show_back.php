@@ -21,13 +21,12 @@
                 <thead>
                     <td style="width: 150px">日期<td style="width: 150px">分類<td style="width: 400px">主旨
                 </thead>            
-            <?php
+            <?php                
                 $temp = 0;
-                if(! empty($post_page) && is_array($post_page)){
-                    foreach($post_page as $post_page_item){             
-                    if (strtotime($post_page_item['start'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($post_page_item['end']))
+                if(! empty($post_page) && is_array($post_page)){                    
+                    foreach($post_page as $post_page_item){                              
                         $start = substr($post_page_item['start'], 0, 10);
-                        echo'                    
+                        echo'                  
                             <tr>
                             <td style="width: 150px"> '.$start.'
                             <td style="width: 150px"> '.$post_page_item['subtitle'].'

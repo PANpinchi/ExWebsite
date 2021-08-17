@@ -37,7 +37,7 @@ $routes->get('/PostController/norcollegeview','PostController::norcollegeview');
 $routes->get('/PostController/starcollegeview','PostController::starcollegeview');
 $routes->get('/PostController/norseniorview','PostController::norseniorview');
 $routes->get('/PostController/starseniorview','PostController::starseniorview');
-$routes->get('/PostController', 'PostController::show');
+$routes->get('/PostController/show_back', 'PostController::show_back');
 $routes->get('PostController/logindateview','PostController::logindateview');
 
 /*
