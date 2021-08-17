@@ -35,7 +35,7 @@ class PostController extends BaseController
 	/*創建新的貼文*/
 	public function create()
 	{
-		if($_SESSION['user_login'] != true){
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
 			echo '<script>alert("請先登入！")</script>';
 			return view('posts/user_login');
 		}
@@ -45,6 +45,11 @@ class PostController extends BaseController
 	/*顯示公告的文章*/
 	public function show()
 	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('posts/user_login');
+		}
+		
 		$model = new Post_post_page();
 		$data = 
 		[
@@ -151,7 +156,6 @@ class PostController extends BaseController
 
 	public function starsenioredit()
 	{
-		
 		$model = new Starsenior();
 		$data =
 			[
@@ -348,6 +352,14 @@ class PostController extends BaseController
 	public function change_password()
 	{
 		return view('posts/change_password');
+	}
+
+	/* 後台登出頁面 */
+	public function user_logout()
+	{
+		echo '<script>alert("已登出！")</script>';
+		session_destroy();
+		return view('posts/user_login');
 	}
 
 	/* 高中前台頁面 */
