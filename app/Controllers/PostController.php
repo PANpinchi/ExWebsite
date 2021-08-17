@@ -45,7 +45,7 @@ class PostController extends BaseController
 		[
 			'post_page' => $model->findAll()
 		];
-		return view('posts/show', $data);
+		return view('posts/show_back', $data);
 	}
 
 	/*顯示前台繁星公告的文章*/
