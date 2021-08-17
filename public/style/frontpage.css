@@ -68,3 +68,24 @@ img {
     width:387.539px;
 	height:514.058px;	
 }
+
+#star{	
+	position:absolute;
+	background: url("/front_img/star.png") 50% no-repeat;	
+	top:205px;
+	background-size: contain;	
+    display: block;	
+    width:220px;
+	height:80px;	
+}
+
+#person{	
+	position:absolute;
+	background: url("/front_img/person.png") 50% no-repeat;
+    background-size: contain;
+    display: block;
+	top:270px;	
+	margin:0px auto;	
+    width:220px;
+	height:80px;
+}
