@@ -30,7 +30,7 @@ img {
 
 #line{
 	background: url("/front_img/sep_line.png") repeat;	
-	top: 30px;
+	top: 50px;
 	width:100%;
 	height:15px;	
 } 
@@ -49,18 +49,21 @@ img {
 }
 
 #pic{	
-    position:relative;
-	background: url("/front_img/cac_main_pic.png") 50% no-repeat;
-    background-size: contain;	
-	margin:0px auto;;
+	position:absolute;
+	background: url("/front_img/cac_main_pic.png") 50% no-repeat;	
+	top:170px;
+    left:10px;
+	background-size: contain;		
     width:245.66px;
 	height:381.51px;		
 }
 
 #balloon{	
-    position:relative;
+	position:absolute;
 	background: url("/front_img/cac_main_balloon.png") 50% no-repeat;
     background-size: contain;
+    right:0px;
+	top:100px;	
 	margin:0px auto;	
     width:387.539px;
 	height:514.058px;	

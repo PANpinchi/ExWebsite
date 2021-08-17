@@ -14,14 +14,17 @@
                 <div id="portal_page_box">
                      <div class="texttop">大學招生委員會聯合會</div>
                      <div id="line"></div>
-                     <div id="logo"></div>
-
-                    <div class="row">
-                        <div id="pic"></div>
-                        <div id="balloon"></div>
+                     <div id="logo">
+                            <div class="row">
+                                <div id="pic"></div>
+                                <div id="balloon"></div>
+                            </div>
                      </div>
-                <br>
-                <br>
+                <br><br><br><br><br><br><br><br>
+                <br><br><br><br><br><br><br><br>
+                <br><br><br><br><br><br><br><br>
+            
+
                      <div class="textdown">建議瀏覽環境：Chrome、FireFox、IE10 以上</div>
                      <div id="line"></div>
                      <div class="textdown">
