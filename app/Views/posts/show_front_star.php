@@ -15,10 +15,10 @@
     </head>
 
     <body>       
-        <tr><img src="/img/information.jpg">
-        <br><tr><img src="/img/newest.jpg">
+        <tr><img src="/person_img/icon_17.jpg">
+        <br><tr><img src="/person_img/icon_16.jpg">
 
-        <table border = "1">
+        <table border = "1" class="center">
         <?php
         date_default_timezone_set('Asia/Taipei');
         echo date("Y-m-d H:i:s");
@@ -33,7 +33,7 @@
                         <tr>
                         <td style="width: 150px"> '.$start.'
                         <td style="width: 150px"> '.$post_page_item['subtitle'].'
-                        <td style="width: 400px"><a href="/PostController/show_content/'.$post_page_item['id'].'"> '.$post_page_item['title'].'</a>
+                        <td style="width: 400px"><a href="/PostController/show_content_front_star/'.$post_page_item['id'].'"> '.$post_page_item['title'].'</a>
                         ';
                         $temp++;
                 }
