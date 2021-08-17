@@ -3,7 +3,6 @@
 namespace App\Controllers;
 
 session_start();
-$_SESSION['user_login'] = false;
 
 use App\Controllers\BaseController;
 use App\Models\Post_user_login;
@@ -36,7 +35,7 @@ class PostController extends BaseController
 	/*創建新的貼文*/
 	public function create()
 	{
-		if($_SESSION['user_login'] == false){
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
 			echo '<script>alert("請先登入！")</script>';
 			return view('posts/user_login');
 		}
@@ -46,6 +45,11 @@ class PostController extends BaseController
 	/*顯示公告的文章*/
 	public function show()
 	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('posts/user_login');
+		}
+		
 		$model = new Post_post_page();
 		$data = 
 		[
@@ -54,7 +58,7 @@ class PostController extends BaseController
 		return view('posts/show', $data);
 	}
 
-	/*顯示公告的文章*/
+	/*顯示前台繁星公告的文章*/
 	public function show_front_star()
 	{
 		$login = new Logindate();
@@ -155,7 +159,6 @@ class PostController extends BaseController
 
 	public function starsenioredit()
 	{
-		
 		$model = new Starsenior();
 		$data =
 			[
@@ -256,7 +259,7 @@ class PostController extends BaseController
 				'start19' => $this->request->getVar('start19'),	'end19' => $this->request->getVar('end19'),	'website19' => $this->request->getVar('website19'),	'instruction19' => $this->request->getVar('instruction19')
 		]);
 
-		return redirect('PostController/norcollegeview');	
+		return redirect('PostController/norcollegeview');
 	}
 
 	public function starcollegestore()
@@ -273,7 +276,7 @@ class PostController extends BaseController
 				'start6' => $this->request->getVar('start6'),	'end6' => $this->request->getVar('end6'),	'website6' => $this->request->getVar('website6'),	'instruction6' => $this->request->getVar('instruction6'),
 				'start7' => $this->request->getVar('start7'),	'end7' => $this->request->getVar('end7'),	'website7' => $this->request->getVar('website7'),	'instruction7' => $this->request->getVar('instruction7')
 		]);
-		return redirect('PostController/starcollegeview');	
+		return redirect('PostController/starcollegeview');
 	}
 
 	public function norseniorstore()
@@ -354,6 +357,14 @@ class PostController extends BaseController
 		return view('posts/change_password');
 	}
 
+	/* 後台登出頁面 */
+	public function user_logout()
+	{
+		echo '<script>alert("已登出！")</script>';
+		session_destroy();
+		return view('posts/user_login');
+	}
+
 	/* 高中前台頁面 */
 	public function high_post()
 	{
@@ -383,8 +394,6 @@ class PostController extends BaseController
 		$model = new Post_user_login(); //開啟 account 資料庫
 		
 		$users = $model->findAll(); //取得資料
-
-		$check = 0; //檢查是否匹配帳號
 		
 		/* 檢查是否匹配帳號 */
 		for($i = 0; isset($users[$i]); $i++)
@@ -396,19 +405,18 @@ class PostController extends BaseController
 				/*print_r($users[$i]['name']);
 				echo ' 歡迎登入！';*/
 				$_SESSION['user_login'] = true;
-				$check = 1;
 				return view('posts/create');
 			}
 			else if($email == 0 && $password != 0){
+				$_SESSION['user_login'] = false;
 				echo '<script>alert("密碼輸入錯誤，請重新登入！")</script>';
 				return view('posts/user_login');
 			}
 		}
-
-		if($check == 0){
-			echo '<script>alert("帳號輸入錯誤，請重新登入！")</script>';
-			return view('posts/user_login');
-		}
+		
+		$_SESSION['user_login'] = false;
+		echo '<script>alert("帳號輸入錯誤，請重新登入！")</script>';
+		return view('posts/user_login');
 	}
 
 	/*匹配前台帳號*/
@@ -590,5 +598,9 @@ class PostController extends BaseController
 	public function person_web()
 	{
 		return view('posts/person_web');
+	}
+	public function frontpage()
+	{
+		return view('posts/frontpage');
 	}
 }

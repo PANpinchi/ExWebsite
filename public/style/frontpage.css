@@ -1,0 +1,91 @@
+img {
+    display: collapse;
+}
+
+#portal_page_box{
+  background: url("/front_img/background.jpg") repeat;
+  position:relative;
+  margin:0px auto;
+  width:100%;
+  height:754px;	
+}
+
+.texttop{
+    position:relative;
+    text-align:center;
+	color: white;
+	letter-spacing:2px;	
+    font-size:14px;	
+	top:8px;
+}
+
+.textdown{
+    position:relative;
+    text-align:center;
+	color: white;
+	letter-spacing:0px;	
+    font-size:6px;	
+	top:8px;
+}
+
+#line{
+	background: url("/front_img/sep_line.png") repeat;	
+	top: 50px;
+	width:100%;
+	height:15px;	
+} 
+
+#logo{	
+  position:relative; 
+  background-image: url("/front_img/cac_logo.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: contain;  
+  margin:0px auto;
+  top: 10px;	
+  width: 600.653px;
+  height: 68.7864px; 
+    		
+}
+
+#pic{	
+	position:absolute;
+	background: url("/front_img/cac_main_pic.png") 50% no-repeat;	
+	top:170px;
+    left:10px;
+	background-size: contain;		
+    width:245.66px;
+	height:381.51px;		
+}
+
+#balloon{	
+	position:absolute;
+	background: url("/front_img/cac_main_balloon.png") 50% no-repeat;
+    background-size: contain;
+    right:0px;
+	top:100px;	
+	margin:0px auto;	
+    width:387.539px;
+	height:514.058px;	
+}
+
+#star{	
+	position:absolute;
+	background: url("/front_img/star.png") 50% no-repeat;	
+	top:205px;
+	background-size: contain;	
+    display: block;	
+    width:220px;
+	height:80px;	
+}
+
+#person{	
+	position:absolute;
+	background: url("/front_img/person.png") 50% no-repeat;
+    background-size: contain;
+    display: block;
+	top:270px;	
+	margin:0px auto;	
+    width:220px;
+	height:80px;
+}

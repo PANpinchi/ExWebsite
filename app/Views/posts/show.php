@@ -1,3 +1,5 @@
+<?= $this->extend('templates\user_default') ?>
+<?= $this->section('content') ?>
 <!doctype html>
 
 <html lang="en">
@@ -39,3 +41,4 @@
         </div>
     <body>
 </html>
+<?= $this->endSection() ?>
