@@ -17,7 +17,7 @@
             <div id="logo">
                 <div class="row">
                     <div id="pic">
-                        <a href="/PostController/login"><div id = "star"></div></a>  
+                        <a href="/PostController/high_post"><div id = "star"></div></a>  
                         <a href="/PostController/person_web"> <div id = "person"> </div></a>  
                      </div> 
                     <div id="balloon"></div>
