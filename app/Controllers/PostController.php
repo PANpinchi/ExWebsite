@@ -584,4 +584,8 @@ class PostController extends BaseController
 	{
 		return view('posts/person_web');
 	}
+	public function frontpage()
+	{
+		return view('posts/frontpage');
+	}
 }
