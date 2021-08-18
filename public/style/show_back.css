@@ -7,6 +7,7 @@ td {border-width : 1px;}
 
 .title{
     font: bold 40px 標楷體;
+    text-align:center;
 }
 
 .content{
@@ -15,7 +16,7 @@ td {border-width : 1px;}
 
 .margin{
     width: auto;
-    margin-left: 10px auto;
+    margin: left 10px;;
 }
 
 .container{
@@ -23,4 +24,12 @@ td {border-width : 1px;}
     width: auto;                
     justify-content: center; 
     align-items: center;
+}
+
+a{
+    text-decoration:none;
+}
+
+a:hover{
+    text-decoration:underline;
 }

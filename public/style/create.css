@@ -10,7 +10,8 @@ body{
 }
 
 .title{
-    font: bold 40px 標楷體;
+    font: bold 50px 標楷體;
+    text-align:center;
 }
 
 .content{
@@ -27,4 +28,12 @@ body{
     display: flex;
     justify-content: center; 
     align-items: center;
+}
+
+a{
+    text-decoration:none;
+}
+
+a:hover{
+    text-decoration:underline;
 }
