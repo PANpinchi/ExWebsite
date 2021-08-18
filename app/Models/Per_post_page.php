@@ -4,10 +4,10 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class Post_post_page extends Model
+class Per_post_page extends Model
 {
 	protected $DBGroup              = 'default';
-	protected $table                = 'post_page';
+	protected $table                = 'per_post_page';
 	protected $primaryKey           = 'id';
 	protected $useAutoIncrement     = true;
 	protected $insertID             = 0;

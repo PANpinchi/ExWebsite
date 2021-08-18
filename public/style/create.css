@@ -20,11 +20,3 @@ body{
 .small_content{
     font: bold 10px 標楷體;
 }
-
-.container{
-    height: auto;
-    width: auto;
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-}
