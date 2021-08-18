@@ -24,7 +24,7 @@
         <div class="black window2 left twhite">
             <br><br>
             <a class = "back square" href = "/PostController/create"> <p class = "center"> 公告系統 </p> </a>
-            <a class = "back square" href = "/PostController/show"> <p class = "center"> 訊息公告 </p> </a>
+            <a class = "back square" href = "/PostController/show_back"> <p class = "center"> 訊息公告 </p> </a>
             <div class = "back square"> <p href = "#" class = "center"> 法令規章 </p> </div>
             <div class = "back square"> <p href = "#" class = "center"> 重要時程 </p> </div>
             <div class = "back square"> <p href = "#" class = "center"> 簡章發售 </p> </div>

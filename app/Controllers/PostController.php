@@ -43,7 +43,7 @@ class PostController extends BaseController
 	}
 
 	/*顯示公告的文章*/
-	public function show()
+	public function show_back()
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
 			echo '<script>alert("請先登入！")</script>';
@@ -55,7 +55,7 @@ class PostController extends BaseController
 		[
 			'post_page' => $model->findAll()
 		];
-		return view('posts/show', $data);
+		return view('posts/show_back', $data);
 	}
 
 	/*顯示前台繁星公告的文章*/
@@ -72,15 +72,30 @@ class PostController extends BaseController
 		return view('posts/show_front_star', $data);
 	}
 
-	/*顯示文章內容*/
-	public function show_content($post_page_id)
+	/*後台點選進入文章內容*/
+	public function show_content_back_star($post_page_id)
 	{
+		$login = new Logindate();
 		$model = new Post_post_page();
 		$data = 
 		[
+			'logindate'=> $login->findAll(),
 			'post_page' => $model->find($post_page_id)
 		];
-		return view('posts/show_content', $data);
+		return view('posts/show_content_back_star', $data);
+	}
+
+	/*前台點選進入文章內容*/
+	public function show_content_front_star($post_page_id)
+	{
+		$login = new Logindate();
+		$model = new Post_post_page();
+		$data = 
+		[
+			'logindate'=> $login->findAll(),
+			'post_page' => $model->find($post_page_id)
+		];
+		return view('posts/show_content_front_star', $data);
 	}
 
 	/*儲存文章頁面*/
@@ -110,7 +125,7 @@ class PostController extends BaseController
 			'start' => $data['start'],
 			'end' => $data['end']
 		]);
-		return redirect('PostController');
+		return redirect('PostController/show_back');
 	}
 
 	/*編輯頁面*/
