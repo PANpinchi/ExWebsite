@@ -1,4 +1,4 @@
-<?= $this->extend('templates\high_post_default') ?>
+<?= $this->extend('templates\person_web_default') ?>
 <?= $this->section('content') ?>
 <!doctype html>
 
@@ -25,15 +25,15 @@
         
         $temp = 0;
         $i = 0;
-            if(! empty($star_post_page) && is_array($star_post_page)){
-                foreach($star_post_page as $star_post_page_item){             
-                    if (strtotime($star_post_page_item['start'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($star_post_page_item['end'])){
-                        $start = substr($star_post_page_item['start'], 0, 10);
+            if(! empty($per_post_page) && is_array($per_post_page)){
+                foreach($per_post_page as $per_post_page_item){             
+                    if (strtotime($per_post_page_item['start'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($per_post_page_item['end'])){
+                        $start = substr($per_post_page_item['start'], 0, 10);
                         echo'                    
                             <tr>
                             <td style="width: 150px"> '.$start.'
-                            <td style="width: 150px"> '.$star_post_page_item['subtitle'].'
-                            <td style="width: 400px"><a href="/PostController/show_content_front_star/'.$star_post_page_item['id'].'"> '.$star_post_page_item['title'].'</a>
+                            <td style="width: 150px"> '.$per_post_page_item['subtitle'].'
+                            <td style="width: 400px"><a href="/PostController/show_content_front_per/'.$per_post_page_item['id'].'"> '.$per_post_page_item['title'].'</a>
                             ';
                             $temp++;
                     }
