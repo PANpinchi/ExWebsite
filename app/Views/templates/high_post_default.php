@@ -8,6 +8,26 @@
         <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="/style/high_post.css">
+
+        <script>
+            function toggle(obj1)
+            {
+                window.focus();
+
+                if(obj1.style.display == "none")
+                {
+                    obj1.style.display == "display";
+                }
+                else{
+                    obj1.style.display == "none";
+                }
+            }
+
+            function getElement(aID){
+                return (document.getElementById) ? document.getElementById(aID) : document.all[aID];
+            }
+        </script>
+
     </head>
 
     <body>
@@ -164,7 +184,30 @@
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <div id = "hs"><a href="#"> </a></div>
+                                                    <div id = "hs"><a onclick="toggle(getElement('sys1'))"> </a></div>
+                                                    <span style="display: none" id="sys1">
+                                                        <table width="146" border="0" aligin="center" cellpadding="0" cellspacing="0">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td img src="">
+                                                                            <table width="140" border="0px" aliign="center" cellpadding="6" cellspacing="0">
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td onclick="window.open(/PostController/pageclose)">
+
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td background="">
+
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </span>
                                                 </td>
                                             </tr>
                                             <tr>
