@@ -164,12 +164,17 @@
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <div id = "hs"><a href="#"> </a></div>
+                                                    <div id = "hs" onclick="open_hs();"><a href="#hs"> </a></div>
+                                                    <ul id="hs_menu" class="hide">
+                                                        <p> 項目1 </p>
+                                                        <p> 項目2 </p>
+                                                        <p> 項目3 </p>
+                                                    </ul>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <div id = "col"><a href="#"> </a></div>
+                                                    <div id = "col"><a href="#col"> </a></div>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -201,3 +206,16 @@
         </div>
     <body>
 </html>
+
+<script>
+    function open_hs() {
+        var menu = document.getElementById("hs_menu");
+        
+        if(menu.style.display == "none"){
+            menu.style.display = "block";
+        }
+        else{
+            menu.style.display = "none";
+        }
+    }
+</script>
