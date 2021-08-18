@@ -1,4 +1,7 @@
-body{
-    margin-left:50%;
-    margin-right:50%;
+.container{
+    display: block;
+    text-align: -webkit-center;
+}
+.text{
+	color: rgb(0, 0, 255);
 }

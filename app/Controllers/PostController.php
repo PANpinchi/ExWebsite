@@ -613,7 +613,8 @@ class PostController extends BaseController
 	public function person_web()
 	{
 		return view('posts/person_web');
-	}
+	}	
+
 	public function frontpage()
 	{
 		return view('posts/frontpage');

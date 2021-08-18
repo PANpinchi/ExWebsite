@@ -38,7 +38,7 @@
             ?>
             </table>
             <br>
-            <button><a href="/PostController/user_login">返回</button>
+            <button class="btn btn-primary"><a href="/PostController/user_login" style="color:white;">返回</button>
         </div>
     <body>
 </html>

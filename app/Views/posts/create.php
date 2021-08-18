@@ -17,7 +17,7 @@
         <div class="container">
             <form action="/PostController/store" enctype="multipart/form-data" method="post">
                 <div class="row">
-                    <div class="col-8 offset-2">
+                    <div class="col offset-0">
                         <div class="row">
                             <div class="title">建立貼文</div>
                         </div>

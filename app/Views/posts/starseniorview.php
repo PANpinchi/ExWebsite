@@ -20,6 +20,8 @@
 			width: 30vh;
 			height: 130vh;
 		}
+		a{text-decoration:none;}
+		a:hover{text-decoration:underline;}
 	</style>
 
   </head>

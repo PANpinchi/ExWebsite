@@ -15,16 +15,18 @@
 			width: 30vh;
 			height: 130vh;
 		}
+		a{text-decoration:none;}
+		a:hover{text-decoration:underline;}
 	</style>
 </head>
 <body>
-<h2>繁星推薦、個人申請個人密碼設定系統</h2>
+<h2 class="c">繁星推薦、個人申請個人密碼設定系統</h2>
 <?php
 	foreach($logindate as $logindate_item){
 	echo '
     <div class="left">
     	<form action="/PostController/logindatestore" method="post">
-    		<input type="submit" value="一鍵更改" name="submit"></input>
+    		<input type="submit" value="一鍵更改" name="submit" ></input>
     		<table border="1" class="c" style="border-style:solid; width: 1100px;">	
 	    		<tr>
 		   			<th>系統開始時間
