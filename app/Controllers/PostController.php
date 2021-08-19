@@ -462,6 +462,11 @@ class PostController extends BaseController
 	/* 更改密碼頁面 */
 	public function change_password()
 	{
+		if(!isset($_SESSION['change_password']) || $_SESSION['change_password'] != true){
+			echo '<script>alert("請輸入帳號及電子郵件！")</script>';
+			return view('posts/forget');
+		}
+
 		return view('posts/change_password');
 	}
 
@@ -602,14 +607,17 @@ class PostController extends BaseController
 				$_SESSION['email'] = $data['email'];
 				$_SESSION['id'] = $i + 1;
 				echo '<script>alert("帳號驗證成功，請設定新的密碼！")</script>';
+				$_SESSION['change_password'] = true;
 				return view('posts/change_password');
 			}
 			else if($account == 0 && $email != 0){
 				echo '<script>alert("電子郵件輸入錯誤，請重新輸入！")</script>';
+				$_SESSION['change_password'] = false;
 				return view('posts/forget');
 			}
 		}
 
+		$_SESSION['change_password'] = false;
 		echo '<script>alert("帳號輸入錯誤，請重新輸入！")</script>';
 		return view('posts/forget');
 	}
