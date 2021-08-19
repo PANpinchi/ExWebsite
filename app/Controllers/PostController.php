@@ -86,9 +86,13 @@ class PostController extends BaseController
 	{
 		$login = new Logindate();
 		$model = new Star_post_page();
+		$starsenior = new Starsenior();
+		$starcollege = new Starcollege();
 
 		$data = 
 		[
+			'starcollege' => $starcollege->findAll(),
+			'starsenior' => $starsenior->findAll(),
 			'logindate'=> $login->findAll(),
 			'star_post_page' => $model->findAll()
 		];
@@ -140,8 +144,13 @@ class PostController extends BaseController
 	{
 		$login = new Logindate();
 		$model = new Star_post_page();
+		$starsenior = new Starsenior();
+		$starcollege = new Starcollege();
+
 		$data = 
 		[
+			'starsenior' => $starsenior->findAll(),
+			'starcollege' => $starcollege->findAll(),
 			'logindate'=> $login->findAll(),
 			'star_post_page' => $model->find($star_post_page_id)
 		];
