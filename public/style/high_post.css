@@ -125,18 +125,26 @@ img {
     width: 148px;/*圖片寬度*/
 }
 
-#hs a {
+#hs{
     background: url("/img/main_menu_fun_hs.jpg");/*預設顯示圖片*/
     display: block;
     height: 52px;/*圖片高度*/
     width: 148px;/*圖片寬度*/
 }
 
-#col a {
+#hs:hover {
+    cursor: pointer;
+}
+
+#col{
     background: url("/img/main_menu_fun_col.jpg");/*預設顯示圖片*/
     display: block;
     height: 52px;/*圖片高度*/
     width: 148px;/*圖片寬度*/
+}
+
+#col:hover {
+    cursor: pointer;
 }
 
 #home a:hover{

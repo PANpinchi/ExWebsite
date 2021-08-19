@@ -44,7 +44,7 @@
                 }
             }
         </script>
-
+        <?php date_default_timezone_set('Asia/Taipei'); ?>
     </head>
 
     <body>
@@ -201,7 +201,7 @@
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <div id = "hs" onclick = "hs_open();"><a href="#hs"> </a></div>
+                                                    <div id = "hs" onclick = "hs_open()"></div>
                                                     <span id="hs_menu" class="hide list">
                                                         <table class="list">
                                                             <tr>
@@ -456,7 +456,7 @@
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <div id = "col" onclick = "col_open()"><a href="#col"> </a></div>
+                                                    <div id = "col" onclick = "col_open()"></div>
                                                     <span id="col_menu" class="hide">
                                                         <table class="list">
                                                             <tr>

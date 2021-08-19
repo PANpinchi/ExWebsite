@@ -104,9 +104,13 @@ class PostController extends BaseController
 	{
 		$login = new Logindate();
 		$model = new Per_post_page();
+		$norsenior = new Norsenior();
+		$norcollege = new Norcollege();
 
 		$data = 
 		[
+			'norsenior'=> $norsenior->findAll(),
+			'norcollege'=> $norcollege->findAll(),
 			'logindate'=> $login->findAll(),
 			'per_post_page' => $model->findAll()
 		];
@@ -162,8 +166,13 @@ class PostController extends BaseController
 	{
 		$login = new Logindate();
 		$model = new Per_post_page();
+		$norsenior = new Norsenior();
+		$norcollege = new Norcollege();
+
 		$data = 
 		[
+			'norsenior' => $norsenior->findAll(),
+			'norcollege' => $norcollege->findAll(),
 			'logindate'=> $login->findAll(),
 			'per_post_page' => $model->find($per_post_page_id)
 		];
