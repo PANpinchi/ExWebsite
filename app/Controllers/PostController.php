@@ -221,6 +221,20 @@ class PostController extends BaseController
 		return redirect('PostController/show_back');
 	}
 
+	/*刪除資料(繁星)*/
+	public function delete_star()
+	{
+		$id = $_SESSION['id'];
+		$model1 = new Logindate();
+		$model2 = new Star_post_page();
+		$data =
+			[
+				'logindate' => $model1->findall(),
+				'star_post_page' => $model2->findall()
+			];	
+		return view('posts/delete_star', $data);	
+	}
+
 	/*編輯頁面*/
 	public function logindateset()
 	{
