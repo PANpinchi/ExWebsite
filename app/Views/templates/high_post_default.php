@@ -134,12 +134,12 @@
                                                     }
                                                 }
                                                 ?>
-                                                </a></div>
+                                                ></a></div>
                                                 </td>
 
-                                                <td rowspan = "15" style = "width: 1000px;">
+                                                <td rowspan = "15" style = "width: 1000px;" valign="top">
                                                     <table width="900px" cellpadding="0" cellspacing="0">
-                                                        <tbody>
+                                                        <tbody>                                                            
                                                             <?= $this->renderSection('content') ?>
                                                         </tbody>
                                                     </table>

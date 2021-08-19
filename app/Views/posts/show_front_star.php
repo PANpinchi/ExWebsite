@@ -18,7 +18,6 @@
         <tr><img src="/person_img/icon_17.jpg">
         <br><tr><img src="/person_img/icon_16.jpg">
 
-        <table border = "1" class="center">
         <?php
         date_default_timezone_set('Asia/Taipei');
         echo date("Y-m-d H:i:s");
@@ -31,9 +30,10 @@
                         $start = substr($star_post_page_item['start'], 0, 10);
                         echo'                    
                             <tr>
-                            <td style="width: 150px"> '.$start.'
-                            <td style="width: 150px"> '.$star_post_page_item['subtitle'].'
-                            <td style="width: 400px"><a href="/PostController/show_content_front_star/'.$star_post_page_item['id'].'"> '.$star_post_page_item['title'].'</a>
+                                <td style="width: 150px"> '.$start.'
+                                <td style="width: 150px"> '.$star_post_page_item['subtitle'].'
+                                <td style="width: 400px"><a href="/PostController/show_content_front_star/'.$star_post_page_item['id'].'"> '.$star_post_page_item['title'].'</a>
+                            </tr>
                             ';
                             $temp++;
                     }
@@ -48,8 +48,8 @@
                 ';
             }*/
         ?>
-        </table>
         </div>
+
     <body>
 </html>
 <?= $this->endSection() ?>
