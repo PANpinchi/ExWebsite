@@ -14,8 +14,8 @@
       <div class="window">
         <div class="black window2 left twhite">
             <br><br>
-            <a class = "back square" href = "/PostController/create"> <p class = "center"> 公告系統 </p> </a>
-            <a class = "back square" href = "/PostController/show_back"> <p class = "center"> 訊息公告 </p> </a>
+            <a class = "square" style="color:white" href = "/PostController/create_new"> <p class = "center"> 公告系統 </p> </a>
+            <a class = "back square" style="color:white" href = "/PostController/show_back"> <p class = "center"> 訊息公告 </p> </a>
             <div class = "back square"> <p href = "#" class = "center"> 法令規章 </p> </div>
             <div class = "back square"> <p href = "#" class = "center"> 重要時程 </p> </div>
             <div class = "back square"> <p href = "#" class = "center"> 簡章發售 </p> </div>
@@ -28,10 +28,10 @@
             <div class = "back square"> <p href = "#" class = "center"> 大學作業資訊系統 </p> </div>
             <div class = "back square"> <p class = "center" onclick = "toggleMenu()"> 控制系統 </p> </div>
                 <ul id = "menu">
-                    <a href = "/PostController/norcollegeview" class = "back square center">大學個人申請<br></a>
-                    <a href = "/PostController/starcollegeview" class = "back square center">大學繁星推薦<br></a>
-                    <a href = "/PostController/norseniorview" class = "back square center">高中個人申請<br></a>
-                    <a href = "/PostController/starseniorview" class = "back square center">高中繁星推薦<br></a>
+                    <a href = "/PostController/norcollegeview" class = "back square center" style="color:white">大學個人申請<br></a>
+                    <a href = "/PostController/starcollegeview" class = "back square center"style="color:white">大學繁星推薦<br></a>
+                    <a href = "/PostController/norseniorview" class = "back square center" style="color:white">高中個人申請<br></a>
+                    <a href = "/PostController/starseniorview" class = "back square center" style="color:white">高中繁星推薦<br></a>
                 </u1>
             <a class = "back square" href = "/PostController/user_logout"><p class = "center"> 登出 </p></a>
         </div>

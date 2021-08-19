@@ -12,7 +12,8 @@ use App\Models\Norcollege;
 use App\Models\Starcollege;
 use App\Models\Norsenior;
 use App\Models\Starsenior;
-use App\Models\Post_post_page;
+use App\Models\Star_post_page;
+use App\Models\Per_post_page;
 
 class PostController extends BaseController
 {
@@ -32,14 +33,34 @@ class PostController extends BaseController
 		return view('posts/loginclose');
 	}
 
-	/*創建新的貼文*/
-	public function create()
+	/*創建新的貼文入口頁面*/
+	public function create_new()
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
 			echo '<script>alert("請先登入！")</script>';
 			return view('posts/user_login');
 		}
-		return view('posts/create');
+		return view('posts/create_new');
+	}
+
+	/*創建新的貼文(繁星)*/
+	public function create_star()
+	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('posts/user_login');
+		}
+		return view('posts/create_star');
+	}
+
+	/*創建新的貼文(個申)*/
+	public function create_per()
+	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('posts/user_login');
+		}
+		return view('posts/create_per');
 	}
 
 	/*顯示公告的文章*/
@@ -50,10 +71,12 @@ class PostController extends BaseController
 			return view('posts/user_login');
 		}
 		
-		$model = new Post_post_page();
+		$model1 = new Star_post_page();
+		$model2 = new Per_post_page();
 		$data = 
 		[
-			'post_page' => $model->findAll()
+			'star_post_page' => $model1->findAll(),
+			'per_post_page' => $model2->findAll()
 		];
 		return view('posts/show_back', $data);
 	}
@@ -62,44 +85,84 @@ class PostController extends BaseController
 	public function show_front_star()
 	{
 		$login = new Logindate();
-		$model = new Post_post_page();
+		$model = new Star_post_page();
 
 		$data = 
 		[
 			'logindate'=> $login->findAll(),
-			'post_page' => $model->findAll()
+			'star_post_page' => $model->findAll()
 		];
 		return view('posts/show_front_star', $data);
 	}
 
-	/*後台點選進入文章內容*/
-	public function show_content_back_star($post_page_id)
+	/*顯示前台個申公告的文章*/
+	public function show_front_per()
 	{
 		$login = new Logindate();
-		$model = new Post_post_page();
+		$model = new Per_post_page();
+
 		$data = 
 		[
 			'logindate'=> $login->findAll(),
-			'post_page' => $model->find($post_page_id)
+			'per_post_page' => $model->findAll()
+		];
+		return view('posts/show_front_per', $data);
+	}
+
+	/*後台點選進入文章內容(繁星)*/
+	public function show_content_back_star($star_post_page_id)
+	{
+		$login = new Logindate();
+		$model = new Star_post_page();
+		$data = 
+		[
+			'logindate'=> $login->findAll(),
+			'star_post_page' => $model->find($star_post_page_id)
 		];
 		return view('posts/show_content_back_star', $data);
 	}
 
-	/*前台點選進入文章內容*/
-	public function show_content_front_star($post_page_id)
+	/*後台點選進入文章內容(個申)*/
+	public function show_content_back_per($per_post_page_id)
 	{
 		$login = new Logindate();
-		$model = new Post_post_page();
+		$model = new Per_post_page();
 		$data = 
 		[
 			'logindate'=> $login->findAll(),
-			'post_page' => $model->find($post_page_id)
+			'per_post_page' => $model->find($per_post_page_id)
+		];
+		return view('posts/show_content_back_per', $data);
+	}
+
+	/*前台點選進入文章內容(繁星)*/
+	public function show_content_front_star($star_post_page_id)
+	{
+		$login = new Logindate();
+		$model = new Star_post_page();
+		$data = 
+		[
+			'logindate'=> $login->findAll(),
+			'star_post_page' => $model->find($star_post_page_id)
 		];
 		return view('posts/show_content_front_star', $data);
 	}
 
+	/*前台點選進入文章內容(個申)*/
+	public function show_content_front_per($per_post_page_id)
+	{
+		$login = new Logindate();
+		$model = new Per_post_page();
+		$data = 
+		[
+			'logindate'=> $login->findAll(),
+			'per_post_page' => $model->find($per_post_page_id)
+		];
+		return view('posts/show_content_front_per', $data);
+	}
+
 	/*儲存文章頁面*/
-	public function store()
+	public function store_star()
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
 			echo '<script>alert("請先登入！")</script>';
@@ -116,7 +179,37 @@ class PostController extends BaseController
 				'end' => $this->request->getVar('end')
 			];				
 
-		$model = new Post_post_page();
+		$model = new Star_post_page();
+		$model->save([
+			'title' => $data['title'],
+			'subtitle' => $data['subtitle'],
+			'subtitle2' => $data['subtitle2'],
+			'content' => $data['content'],
+			'start' => $data['start'],
+			'end' => $data['end']
+		]);
+		return redirect('PostController/show_back');
+	}
+
+	/*儲存文章頁面*/
+	public function store_per()
+	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('posts/user_login');
+		}
+
+		$data=
+			[
+				'title' => $this->request->getVar('title'),
+				'subtitle' => $this->request->getVar('subtitle'),
+				'subtitle2' => $this->request->getVar('subtitle2'),
+				'content' => $this->request->getVar('content'),
+				'start' => $this->request->getVar('start'),
+				'end' => $this->request->getVar('end')
+			];				
+
+		$model = new Per_post_page();
 		$model->save([
 			'title' => $data['title'],
 			'subtitle' => $data['subtitle'],
@@ -420,7 +513,7 @@ class PostController extends BaseController
 				/*print_r($users[$i]['name']);
 				echo ' 歡迎登入！';*/
 				$_SESSION['user_login'] = true;
-				return view('posts/create');
+				return view('posts/create_new');
 			}
 			else if($email == 0 && $password != 0){
 				$_SESSION['user_login'] = false;
@@ -613,7 +706,8 @@ class PostController extends BaseController
 	public function person_web()
 	{
 		return view('posts/person_web');
-	}
+	}	
+
 	public function frontpage()
 	{
 		return view('posts/frontpage');

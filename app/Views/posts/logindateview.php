@@ -15,10 +15,12 @@
 			width: 30vh;
 			height: 130vh;
 		}
+		a{text-decoration:none;}
+		a:hover{text-decoration:underline;}
 	</style>
 </head>
 <body>
-<h2>繁星推薦、個人申請個人密碼設定系統</h2>
+<h2 class="c">繁星推薦、個人申請個人密碼設定系統</h2>
 <input type="button" value="編輯" name="button" onclick= "location.href='/PostController/logindateset'"></input><br>
 <?php
 	foreach($logindate as $logindate_item){

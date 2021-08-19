@@ -34,7 +34,7 @@ form{
 
 .window2{
     width: 30vh;
-    height: 100vh;
+    height: 150vh;
 }
 
 .back:hover{
@@ -89,4 +89,13 @@ form{
 
 .hide{
     display:none;
+}
+
+a{
+    text-decoration:none;
+
+}
+
+a:hover{
+    text-decoration:underline;
 }

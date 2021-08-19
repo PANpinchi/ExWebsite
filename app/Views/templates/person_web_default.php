@@ -105,10 +105,10 @@
                                                     <div id = "pass"><a href="/PostController/login"> </a></div>
                                                 </td>
 
-                                                <td rowspan = "17" style = "width: 736px; background-color: yellow;">
+                                                <td rowspan = "17" style = "width: 1000px;">
                                                     <table cellpadding="0" cellspacing="0">
                                                         <tbody>
-                                                            <p> 貼文 </p>
+                                                            <?= $this->renderSection('content') ?>
                                                         </tbody>
                                                     </table>
                                                 </td>

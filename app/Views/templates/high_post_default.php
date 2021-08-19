@@ -184,6 +184,7 @@
                                             </tr>
                                             <tr>
                                                 <td>
+<<<<<<< HEAD
                                                     <div id = "hs"><a onclick="toggle(getElement('sys1'))"> </a></div>
                                                     <span style="display: none" id="sys1">
                                                         <table width="146" border="0" aligin="center" cellpadding="0" cellspacing="0">
@@ -208,11 +209,19 @@
                                                             </tbody>
                                                         </table>
                                                     </span>
+=======
+                                                    <div id = "hs" onclick="open_hs();"><a href="#hs"> </a></div>
+                                                    <ul id="hs_menu" class="hide">
+                                                        <p> 項目1 </p>
+                                                        <p> 項目2 </p>
+                                                        <p> 項目3 </p>
+                                                    </ul>
+>>>>>>> master
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <div id = "col"><a href="#"> </a></div>
+                                                    <div id = "col"><a href="#col"> </a></div>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -244,3 +253,16 @@
         </div>
     <body>
 </html>
+
+<script>
+    function open_hs() {
+        var menu = document.getElementById("hs_menu");
+        
+        if(menu.style.display == "none"){
+            menu.style.display = "block";
+        }
+        else{
+            menu.style.display = "none";
+        }
+    }
+</script>

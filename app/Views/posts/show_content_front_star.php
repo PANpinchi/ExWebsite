@@ -18,19 +18,19 @@
         <div class="content">
             <div class="title margin">公告內容</div>                            
             <?php
-                $start1 = substr($post_page['start'], 0, 10);
-                $start2 = substr($post_page['start'], 11, 16);
+                $start1 = substr($star_post_page['start'], 0, 10);
+                $start2 = substr($star_post_page['start'], 11, 16);
                 echo'
                 <table border="1" class="table-striped center">
                     <tr> 
                         <td style="width: 150px">標題
-                        <td style="width: 600px;">'.$post_page['title'].'
+                        <td style="width: 600px;">'.$star_post_page['title'].'
                     <tr> 
                         <td style="width: 150px">發布時間
                         <td style="width: 600px;">'.$start1.' '.$start2.'
                     <tr> 
                         <td style="width: 150px">內容
-                        <td style="width: 600px;">'.$post_page['content'].'
+                        <td style="width: 600px;">'.$star_post_page['content'].'
                 </table>
                 '
             ?> 

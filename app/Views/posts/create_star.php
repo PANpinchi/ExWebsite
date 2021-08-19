@@ -15,11 +15,11 @@
 
     <body>
         <div class="container">
-            <form action="/PostController/store" enctype="multipart/form-data" method="post">
+            <form action="/PostController/store_star" enctype="multipart/form-data" method="post">
                 <div class="row">
                     <div class="col-8 offset-2">
                         <div class="row">
-                            <div class="title">建立貼文</div>
+                            <div class="title">建立貼文<br>(繁星申請)</div>
                         </div>
                         <div class="form-group row content">
 
