@@ -13,22 +13,22 @@
             function hs_open() {
                 var menu = document.getElementById("hs_menu");
                 
-                if(menu.style.display == "none"){
-                    menu.style.display = "block";
+                if(menu.style.display == "block"){
+                    menu.style.display = "none";
                 }
                 else{
-                    menu.style.display = "none";
+                    menu.style.display = "block";
                 }
             }
 
             function col_open() {
                 var menu = document.getElementById("col_menu");
 
-                if(menu.style.display == "none"){
-                    menu.style.display = "block";
+                if(menu.style.display == "block"){
+                    menu.style.display = "none";
                 }
                 else{
-                    menu.style.display = "none";
+                    menu.style.display = "block";
                 }
             }
 
