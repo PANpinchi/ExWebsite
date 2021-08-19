@@ -29,10 +29,10 @@
                                             <tr>
                                                 <td style="width: 189px;"><img src="/img/form_top_03.jpg"></td>
                                                 <td>
-                                                    <div id = "home"><a href="#"> </a></div>
+                                                    <div id = "home"><a href="/PostController/frontpage"> </a></div>
                                                 </td>
                                                 <td>
-                                                    <div id = "apply"><a href="#"> </a></div>
+                                                    <div id = "apply"><a href="/PostController/frontpage"> </a></div>
                                                 </td>
                                                 <td><img src="/img/form_top_06.jpg"></td>
                                                 
@@ -78,7 +78,7 @@
                                     <table cellpadding="0" cellspacing="0">
                                         <tbody>
                                             <tr>
-                                                <td rowspan = "15" style = "width: 70px; background-color: rgb(255, 231, 235);">
+                                                <td rowspan = "15" style = "width: 68px; background-color: rgb(255, 231, 235);">
                                                     <table cellpadding="0" cellspacing="0">
                                                         <tbody>
 
@@ -100,15 +100,15 @@
                                                 </a></div>
                                                 </td>
 
-                                                <td rowspan = "15" style = "width: 1000px;">
-                                                    <table width="900px" cellpadding="0" cellspacing="0">
+                                                <td rowspan = "15" style = "width: 736px;">
+                                                    <table width="736px" cellpadding="0" cellspacing="0">
                                                         <tbody>
                                                             <?= $this->renderSection('content') ?>
                                                         </tbody>
                                                     </table>
                                                 </td>
 
-                                                <td rowspan = "15" style = "width: 70px; background-color: rgb(255, 231, 235);">
+                                                <td rowspan = "15" style = "width: 68px; background-color: rgb(255, 231, 235);">
                                                     <table cellpadding="0" cellspacing="0">
                                                         <tbody>
                                                             

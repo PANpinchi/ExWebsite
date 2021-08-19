@@ -708,6 +708,11 @@ class PostController extends BaseController
 		return view('posts/person_web');
 	}	
 
+	public function highpost()
+	{
+		return view('posts/highpost');
+	}
+
 	public function frontpage()
 	{
 		return view('posts/frontpage');

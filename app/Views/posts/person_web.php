@@ -29,10 +29,10 @@
                                             <tr>
                                                 <td style="width: 189px;"><img src="/person_img/form_top_03.jpg"></td>
                                                 <td>
-                                                    <div id = "home"><a href="#"> </a></div>
+                                                    <div id = "home"><a href="/PostController/frontpage"> </a></div>
                                                 </td>
                                                 <td>
-                                                    <div id = "apply"><a href="#"> </a></div>
+                                                    <div id = "apply"><a href="/PostController/frontpage"> </a></div>
                                                 </td>
                                                 <td><img src="/person_img/form_top_06.jpg"></td>
                                                 

@@ -15,10 +15,10 @@
     </head>
 
     <body>       
-        <tr><img src="/person_img/icon_17.jpg">
-        <br><tr><img src="/person_img/icon_16.jpg">
+        <tr><img src="/person_img/icon_17.jpg">1
+        <br><tr><img src="/person_img/icon_16.jpg">2
 
-        <table border = "1" class="center">
+        <table border = "1" class="center">3
         <?php
         date_default_timezone_set('Asia/Taipei');
         echo date("Y-m-d H:i:s");
@@ -30,10 +30,10 @@
                     if (strtotime($star_post_page_item['start'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($star_post_page_item['end'])){
                         $start = substr($star_post_page_item['start'], 0, 10);
                         echo'                    
-                            <tr>
-                            <td style="width: 150px"> '.$start.'
-                            <td style="width: 150px"> '.$star_post_page_item['subtitle'].'
-                            <td style="width: 400px"><a href="/PostController/show_content_front_star/'.$star_post_page_item['id'].'"> '.$star_post_page_item['title'].'</a>
+                            <tr>7
+                            <td style="width: 123px"> '.$start.'
+                            <td style="width: 123px"> '.$star_post_page_item['subtitle'].'
+                            <td style="width: 327px"><a href="/PostController/show_content_front_star/'.$star_post_page_item['id'].'"> '.$star_post_page_item['title'].'</a>
                             ';
                             $temp++;
                     }
