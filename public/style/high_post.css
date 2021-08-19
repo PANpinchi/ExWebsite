@@ -218,3 +218,26 @@ img {
     background: url("/img/main_menu_09_up.jpg");
     display: block;
 }
+
+.list{
+    width: 146px;
+    border: 0px;
+    box-align: center;
+    background:url("/img/main_menu_fun_02.jpg");
+}
+
+.button{
+    width: 140px;
+    border: 0px;
+    box-align: center;
+    padding-top: 6px;
+}
+
+.border{
+    border: 1px solid rgb(242,255,204);
+}
+
+.buttom{
+    height:"1";
+    background:"/img/main_menu_bg.jpg";
+}
