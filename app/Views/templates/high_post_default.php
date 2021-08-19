@@ -97,7 +97,7 @@
                                                     }
                                                 }
                                                 ?>
-                                                </a></div>
+                                                ></a></div>
                                                 </td>
 
                                                 <td rowspan = "15" style = "width: 736px;">
