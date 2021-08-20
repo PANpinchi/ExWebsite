@@ -52,7 +52,7 @@
             <br>
             <div class="row">
                 <div class="col-md-1"></div>
-                <div class="col-md-10">
+                <div class="col-md-10 text">
                     <table cellpadding="0" cellspacing="0">
                         <tbody>
                             <tr>
@@ -69,7 +69,7 @@
                                                     <div id = "home"><a href="/PostController/frontpage"> </a></div>
                                                 </td>
                                                 <td>
-                                                    <div id = "apply"><a href="/PostController/frontpage"> </a></div>
+                                                    <div id = "apply"><a href="/PostController/show_front_per"> </a></div>
                                                 </td>
                                                 <td><img src="/img/form_top_06.jpg"></td>
                                                 
@@ -115,7 +115,7 @@
                                     <table cellpadding="0" cellspacing="0">
                                         <tbody>
                                             <tr>
-                                                <td rowspan = "15" style = "width: 68px; background-color: rgb(255, 231, 235);">
+                                                <td rowspan = "15" style = "width: 60px; background-color: rgb(255, 231, 235);">
                                                     <table cellpadding="0" cellspacing="0">
                                                         <tbody>
 
@@ -137,15 +137,15 @@
                                                 ></a></div>
                                                 </td>
 
-                                                <td rowspan = "15" style = "width: 1000px;" valign="top">
-                                                    <table width="900px" cellpadding="0" cellspacing="0">
+                                                <td rowspan = "15" style = "width: 670px;" valign="top">
+                                                    <table width="670px" cellpadding="0" cellspacing="0">
                                                         <tbody>                                                            
                                                             <?= $this->renderSection('content') ?>
                                                         </tbody>
                                                     </table>
                                                 </td>
 
-                                                <td rowspan = "15" style = "width: 68px; background-color: rgb(255, 231, 235);">
+                                                <td rowspan = "15" style = "width: 60px; background-color: rgb(255, 231, 235);">
                                                     <table cellpadding="0" cellspacing="0">
                                                         <tbody>
                                                             
@@ -202,7 +202,7 @@
                                             <tr>
                                                 <td>
                                                     <div id = "hs" onclick = "hs_open()"></div>
-                                                    <span id="hs_menu" class="hide list">
+                                                    <span id="hs_menu" class="hide list text">
                                                         <table class="list">
                                                             <tr>
                                                                 <td>
@@ -457,7 +457,7 @@
                                             <tr>
                                                 <td>
                                                     <div id = "col" onclick = "col_open()"></div>
-                                                    <span id="col_menu" class="hide">
+                                                    <span id="col_menu" class="hide text">
                                                         <table class="list">
                                                             <tr>
                                                                 <td>

@@ -324,3 +324,8 @@ img {
     height:"1";
     background:"/person_img/main_menu_bg.jpg";
 }
+
+.text{
+    font-size:10px;	
+	top:8px;
+}
