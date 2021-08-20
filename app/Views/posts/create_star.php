@@ -25,13 +25,12 @@
 
                             <label for="title" class="col-md-4 col-form-label">
                                 標題</label>
-                            <input id="title" type="text" name="title"><br>
+                            <input id="title" type="text" name="title" required><br>
 
                             <label for="subtitle" class="col-md-4 col-form-label">
                                 副標題</label>
-                            <select name="subtitle" require=1>
-
-                            <option selected>請選擇副標題</option>
+                            <select name="subtitle" required>
+                            <option selected disabled="disabled" value="">請選擇副標題</option>
                             <option value="招生事務"><div class="small_content">招生事務</div></option>
                             <option value="甄選資訊"><div class="small_content">甄選資訊</div></option>
                             <option value="簡章訊息"><div class="small_content">簡章訊息</div></option>
@@ -39,8 +38,8 @@
 
                             <label for="subtitle2" class="col-md-4 col-form-label">
                                 子標題</label>
-                            <select name="subtitle2" require=1>
-                            <option selected>請選擇子標題</option>
+                            <select name="subtitle2" required>
+                            <option selected disabled="disabled" value="">請選擇子標題</option>
                             <option value="招生事務"><div class="small_content">招生事務</div></option>
                             <option value="甄選資訊"><div class="small_content">甄選資訊</div></option>
                             <option value="簡章訊息"><div class="small_content">簡章訊息</div></option>
@@ -48,15 +47,15 @@
 
                             <label for="content" class="col-md-4 col-form-label">
                                 內容</label>
-                            <textarea class="ckeditor" id="editor" name="content"></textarea>
+                            <textarea class="ckeditor" id="editor" name="content" required></textarea>
                             
                             <label for="start" class="col-md-4 col-form-label">
                                 起始時間</label>
-                            <input type="datetime-local" id="start" name="start">
+                            <input type="datetime-local" id="start" name="start" required>
 
                             <label for="end" class="col-md-4 col-form-label">
                                 結束時間</label>
-                            <input type="datetime-local" id="end" name="end">
+                            <input type="datetime-local" id="end" name="end" required>
 
                         </div>
                         <div class="row pt-4">

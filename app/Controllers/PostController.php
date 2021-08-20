@@ -63,6 +63,40 @@ class PostController extends BaseController
 		return view('posts/create_per');
 	}
 
+	/*修改貼文(繁星)*/
+	public function modify_star()
+	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('posts/user_login');
+		}
+
+		$model = new Star_post_page();
+
+		$data = [
+			'post' => $model->find($_SESSION['id'])
+		];
+
+		return view('posts/modify_star', $data);
+	}
+
+	/*修改貼文(個申)*/
+	public function modify_per()
+	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('posts/user_login');
+		}
+
+		$model = new Per_post_page();
+
+		$data = [
+			'post' => $model->find($_SESSION['id'])
+		];
+
+		return view('posts/modify_per', $data);
+	}
+
 	/*顯示公告的文章*/
 	public function show_back()
 	{
@@ -127,6 +161,7 @@ class PostController extends BaseController
 			'logindate'=> $login->findAll(),
 			'star_post_page' => $model->find($star_post_page_id)
 		];
+		$_SESSION['id'] = $star_post_page_id;
 		return view('posts/show_content_back_star', $data);
 	}
 
@@ -140,6 +175,7 @@ class PostController extends BaseController
 			'logindate'=> $login->findAll(),
 			'per_post_page' => $model->find($per_post_page_id)
 		];
+		$_SESSION['id'] = $per_post_page_id;
 		return view('posts/show_content_back_per', $data);
 	}
 
@@ -179,7 +215,7 @@ class PostController extends BaseController
 		return view('posts/show_content_front_per', $data);
 	}
 
-	/*儲存文章頁面*/
+	/*儲存文章頁面(繁星)*/
 	public function store_star()
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
@@ -195,7 +231,7 @@ class PostController extends BaseController
 				'content' => $this->request->getVar('content'),
 				'start' => $this->request->getVar('start'),
 				'end' => $this->request->getVar('end')
-			];				
+			];
 
 		$model = new Star_post_page();
 		$model->save([
@@ -209,7 +245,7 @@ class PostController extends BaseController
 		return redirect('PostController/show_back');
 	}
 
-	/*儲存文章頁面*/
+	/*儲存文章頁面(個人)*/
 	public function store_per()
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
@@ -239,18 +275,94 @@ class PostController extends BaseController
 		return redirect('PostController/show_back');
 	}
 
+	/*修改後儲存文章頁面(繁星)*/
+	public function restore_star()
+	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('posts/user_login');
+		}
+
+		$data=
+			[
+				'title' => $this->request->getVar('title'),
+				'subtitle' => $this->request->getVar('subtitle'),
+				'subtitle2' => $this->request->getVar('subtitle2'),
+				'content' => $this->request->getVar('content'),
+				'start' => $this->request->getVar('start'),
+				'end' => $this->request->getVar('end')
+			];
+
+		$model = new Star_post_page();
+		$model->save([
+			'id' => $_SESSION['id'],
+			'title' => $data['title'],
+			'subtitle' => $data['subtitle'],
+			'subtitle2' => $data['subtitle2'],
+			'content' => $data['content'],
+			'start' => $data['start'],
+			'end' => $data['end']
+		]);
+
+		unset($_SESSION['id']);
+		return redirect('PostController/show_back');
+	}
+
+	/*修改後儲存文章頁面(個人)*/
+	public function restore_per()
+	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('posts/user_login');
+		}
+
+		$data=
+			[
+				'title' => $this->request->getVar('title'),
+				'subtitle' => $this->request->getVar('subtitle'),
+				'subtitle2' => $this->request->getVar('subtitle2'),
+				'content' => $this->request->getVar('content'),
+				'start' => $this->request->getVar('start'),
+				'end' => $this->request->getVar('end')
+			];				
+
+		$model = new Per_post_page();
+		$model->save([
+			'id' => $_SESSION['id'],
+			'title' => $data['title'],
+			'subtitle' => $data['subtitle'],
+			'subtitle2' => $data['subtitle2'],
+			'content' => $data['content'],
+			'start' => $data['start'],
+			'end' => $data['end']
+		]);
+
+		unset($_SESSION['id']);
+		return redirect('PostController/show_back');
+	}
+
 	/*刪除資料(繁星)*/
 	public function delete_star()
 	{
-		$id = $_SESSION['id'];
-		$model1 = new Logindate();
-		$model2 = new Star_post_page();
-		$data =
-			[
-				'logindate' => $model1->findall(),
-				'star_post_page' => $model2->findall()
-			];	
-		return view('posts/delete_star', $data);	
+		$model = new Star_post_page();
+		
+		$model->where('id', $_SESSION['id'])->delete();
+
+		echo '<script>alert("公告已刪除！")</script>';
+
+		return redirect('PostController/show_back');
+	}
+
+	/*刪除資料(個人)*/
+	public function delete_per()
+	{
+		$model = new Per_post_page();
+		
+		$model->where('id', $_SESSION['id'])->delete();
+
+		echo '<script>alert("公告已刪除！")</script>';
+
+		return redirect('PostController/show_back');
 	}
 
 	/*編輯頁面*/
@@ -637,7 +749,7 @@ class PostController extends BaseController
 			if($account == 0 && $email == 0){
 				$_SESSION['account'] = $data['account'];
 				$_SESSION['email'] = $data['email'];
-				$_SESSION['id'] = $i + 1;
+				$_SESSION['account_id'] = $i + 1;
 				echo '<script>alert("帳號驗證成功，請設定新的密碼！")</script>';
 				$_SESSION['change_password'] = true;
 				return view('posts/change_password');
@@ -676,7 +788,7 @@ class PostController extends BaseController
 			$model = new Post_login(); //開啟 account 資料庫
 
 			$model->save([
-				'id' => $_SESSION['id'],
+				'id' => $_SESSION['account_id'],
 				'account' => $_SESSION['account'],
 				'password' => $data['password'],
 				'email' => $_SESSION['email']

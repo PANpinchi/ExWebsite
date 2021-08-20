@@ -21,7 +21,6 @@
                 $start1 = substr($star_post_page['start'], 0, 10);
                 $start2 = substr($star_post_page['start'], 11, 16);
                 echo'
-                <table border="1" class="table-striped center">
                     <tr> 
                         <td style="width: 150px">標題
                         <td style="width: 600px;">'.$star_post_page['title'].'
@@ -30,9 +29,7 @@
                         <td style="width: 600px;">'.$start1.' '.$start2.'
                     <tr> 
                         <td style="width: 150px">內容
-                        <td style="width: 600px;">'.$star_post_page['content'].'
-                </table>
-                '
+                        <td style="width: 600px;">'.$star_post_page['content'].'';
             ?> 
             <br>
             <button><a href="/PostController/show_front_star">返回</button>               

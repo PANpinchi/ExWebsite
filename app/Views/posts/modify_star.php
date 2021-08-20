@@ -10,22 +10,22 @@
         <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
         <link rel="stylesheet" href="/style/create.css">
-        <title>create_post</title>
+        <title>modify_post</title>
     </head>
 
     <body>
         <div class="container">
-            <form action="/PostController/store_per" enctype="multipart/form-data" method="post">
+            <form action="/PostController/restore_star" enctype="multipart/form-data" method="post">
                 <div class="row">
-                    <div class="col offset-0">
+                    <div class="col-8 offset-2">
                         <div class="row">
-                            <div class="title">建立貼文<br>(個人申請)</div>
+                            <div class="title">建立貼文<br>(繁星申請)</div>
                         </div>
                         <div class="form-group row content">
 
                             <label for="title" class="col-md-4 col-form-label">
                                 標題</label>
-                            <input id="title" type="text" name="title" required><br>
+                            <?php echo '<input id="title" type="text" name="title" value='.$post['title'].' required><br>'; ?>
 
                             <label for="subtitle" class="col-md-4 col-form-label">
                                 副標題</label>
@@ -47,15 +47,15 @@
 
                             <label for="content" class="col-md-4 col-form-label">
                                 內容</label>
-                            <textarea class="ckeditor" id="editor" name="content" required></textarea>
+                            <?php echo '<textarea class="ckeditor" id="editor" name="content" required>'.$post['content'].'</textarea>'; ?>
                             
                             <label for="start" class="col-md-4 col-form-label">
                                 起始時間</label>
-                            <input type="datetime-local" id="start" name="start" required>
+                            <?php echo '<input type="datetime-local" id="start" name="start" value='.$post['start'].' required>'; ?>
 
                             <label for="end" class="col-md-4 col-form-label">
                                 結束時間</label>
-                            <input type="datetime-local" id="end" name="end" required>
+                            <?php echo '<input type="datetime-local" id="end" name="end" value='.$post['end'].' required>'; ?>
 
                         </div>
                         <div class="row pt-4">

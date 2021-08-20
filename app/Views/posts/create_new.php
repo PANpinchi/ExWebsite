@@ -10,16 +10,39 @@
         <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
         <link rel="stylesheet" href="/style/create.css">
+        <style>
+            img{
+                border-color: black;
+            }
+
+            .container{
+                height: auto;
+                width: 500px;
+                display: flex;
+                justify-content: center; 
+                align-items: center;
+            }
+        </style>
         <title>create_post</title>
     </head>
 
     <body>
+        <br><br><br>
+
         <div class="container title">
             公告系統首頁                
         </div>
-        <div class="container">            
-            <a href="/PostController/create_star"><img src="/front_img/star.png" width = "100%"></a><br>
-            <a href="/PostController/create_per"><img src="/front_img/person.png" width = "100%"></a><br>    
+
+        <br><br><br>
+
+        <div class="container" align="center">
+            <a href="/PostController/create_star"><img src="/front_img/star.png" style="width: 100%; border-radius: 10px 10px 10px 10px;" border="2px"></a>
+        </div>
+
+        <br><br><br>
+
+        <div class="container" align="center">
+            <a href="/PostController/create_per"><img src="/front_img/person.png" style="width: 100%; border-radius: 10px 10px 10px 10px;" border="2px"></a>
         </div>
     <body>
 </html>
