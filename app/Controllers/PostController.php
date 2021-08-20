@@ -224,14 +224,43 @@ class PostController extends BaseController
 		}
 
 		$data=
-			[
-				'title' => $this->request->getVar('title'),
-				'subtitle' => $this->request->getVar('subtitle'),
-				'subtitle2' => $this->request->getVar('subtitle2'),
-				'content' => $this->request->getVar('content'),
-				'start' => $this->request->getVar('start'),
-				'end' => $this->request->getVar('end')
-			];
+		[
+			'title' => $this->request->getVar('title'),
+			'file' => $this->request->getVar('file'),
+			'subtitle' => $this->request->getVar('subtitle'),
+			'subtitle2' => $this->request->getVar('subtitle2'),
+			'content' => $this->request->getVar('content'),
+			'start' => $this->request->getVar('start'),
+			'end' => $this->request->getVar('end')
+		];
+
+		/* TEST */
+		/*echo '<script>alert("檔案名稱 : '.$_FILES['file']['name'].'<br>")</script>';
+		echo '檔案大小 : '.$_FILES['file']['size'].'<br>';
+		echo '檔案格式 : '.$_FILES['file']['type'].'<br>';
+		echo '暫存名稱 : '.$_FILES['file']['tmp_name'].'<br>';
+		echo '錯誤代碼 : '.$_FILES['file']['error'].'<br>';
+	
+		if($_FILES['file']['error'] >0 ) {
+			switch ($_FILES['file']['error'] ) {
+			case 1:die("檔案大小超出 php.ini:upload_max_filesize 限制 ");
+			case 2:die("檔案大小超出 MAX_FILE_SIZE 限制");
+			case 3:die("檔案大小僅被部份上傳");
+			case 4:die("檔案未被上傳");
+			}
+		}
+
+		if(is_uploaded_file($data['file'])){
+			$DestDIR = "upload";
+			if(!is_dir($DestDIR) || !is_writable($DestDIR)){
+				die("目錄不存在或無法存取檔案");
+			}
+
+			$File_Extension = explode(".", $data['title']);
+			$File_Extension = $File_Extension[count($File_Extension)-1];
+			$ServerFilename = date("YmdHis") . "." . $File_Extension;
+			move_uploaded_file($data['file'], $DestDIR . '/' . $ServerFilename);
+		}*/
 
 		$model = new Star_post_page();
 		$model->save([

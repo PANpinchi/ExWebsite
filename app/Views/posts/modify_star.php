@@ -7,6 +7,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <script src="//cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
+
         <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
         <link rel="stylesheet" href="/style/create.css">
@@ -14,9 +16,9 @@
     </head>
 
     <body>
-        <div class="container">
+        <div align="center" style="padding-right: 300px">
             <form action="/PostController/restore_star" enctype="multipart/form-data" method="post">
-                <div class="row">
+                <div class="row" style="width: 900px">
                     <div class="col-8 offset-2">
                         <div class="row">
                             <div class="title">建立貼文<br>(繁星申請)</div>
@@ -47,7 +49,7 @@
 
                             <label for="content" class="col-md-4 col-form-label">
                                 內容</label>
-                            <?php echo '<textarea class="ckeditor" id="editor" name="content" required>'.$post['content'].'</textarea>'; ?>
+                            <?php echo '<textarea class="ckeditor" id="editor" name="content">'.$post['content'].'</textarea>'; ?>
                             
                             <label for="start" class="col-md-4 col-form-label">
                                 起始時間</label>
@@ -68,3 +70,7 @@
     <body>
 </html>
 <?= $this->endSection() ?>
+
+<script>
+        CKEDITOR.replace( 'content' );
+</script>

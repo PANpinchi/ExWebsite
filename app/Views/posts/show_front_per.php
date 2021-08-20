@@ -37,15 +37,7 @@
                             $temp++;
                     }
                 }
-            }   
-
-            /*for($i = $temp; $i <= 25; $i++){
-                echo '
-                <table>
-                    <tr><br>
-                </table>
-                ';
-            }*/
+            }
         ?>
         </div>
     <body>
