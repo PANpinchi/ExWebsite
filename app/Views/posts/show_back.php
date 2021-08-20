@@ -1,4 +1,4 @@
-<?= $this->extend('templates\user_login_default') ?>
+<?= $this->extend('templates\user_default') ?>
 <?= $this->section('content') ?>
 <!doctype html>
 
@@ -16,9 +16,10 @@
     </head>
 
     <body>
+        <br><br><br>
         <div class="content margin">
-            <div class="title">繁星公告訊息</div>
-            <table border="1" class="center">
+            <div class="title">繁星公告訊息</div><br>
+            <table border="1" class="center" align="center">
                 <thead>
                     <td style="width: 150px">日期<td style="width: 150px">分類<td style="width: 400px">主旨
                 </thead>            
@@ -42,11 +43,10 @@
         </div>
 
         <div class="content margin">
-            <div class="title">個申公告訊息</div>
-            <table border="1" class="center">
+            <div class="title">個申公告訊息</div><br>
+            <table border="1" class="center" align="center">
                 <thead>
                     <td style="width: 150px">日期<td style="width: 150px">分類<td style="width: 400px">主旨
-                </thead>            
             <?php                
                 $temp = 0;
                 if(! empty($per_post_page) && is_array($per_post_page)){                    
@@ -63,8 +63,10 @@
                 }   
             ?>
             </table>
-            <br>
-            <button class="btn btn-primary"><a href="/PostController/user_login" style="color:white;">返回</button>
+            <div align="center">
+                <br>
+                <button class="btn btn-primary"><a href="/PostController/create_new" style="color:white;">返回</button>
+            </div>
         </div>
     <body>
 </html>

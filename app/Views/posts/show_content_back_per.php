@@ -16,7 +16,7 @@
 
     <body>
         <div class="content">
-            <div class="title margin">公告內容</div>                            
+            <div class="title margin" align="center">公告內容</div>                            
             <?php
                 
                 $_SESSION['id'] = $per_post_page['id'];
@@ -25,7 +25,7 @@
                 $end1 = substr($per_post_page['end'], 0, 10);
                 $end2 = substr($per_post_page['end'], 11, 16);
                 echo'
-                <table border="1" class="table-striped center">
+                <table border="1" class="table-striped center" align="center">
                     <tr> 
                         <td style="width: 150px">標題
                         <td style="width: 600px;">'.$per_post_page['title'].'
@@ -41,9 +41,15 @@
                 </table>
                 '
             ?> 
-            <br>
-            <button><a href="/PostController/show_back">返回</a></button>              
-            <a href="/PostController/delete_star"><button type="button" class="btn btn-danger">刪除此文章</button></a>
+
+            <div align="center">
+                <div>
+                    <br>
+                    <button class="btn btn-primary"><a href="/PostController/show_back" style="color:white;"> 返回 </button>
+                    <button class="btn btn-primary" style="background-color:orange; border-color:orange;"><a href="/PostController/modify_per" style="color:white;"> 修改公告 </a></button>
+                    <button class="btn btn-primary" style="background-color:red; border-color:red;"><a href="/PostController/delete_per" style="color:white;"> 刪除公告 </a></button>
+                </div>
+            </div>
         </div>
         
     <body>

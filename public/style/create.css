@@ -30,6 +30,10 @@ body{
     align-items: center;
 }
 
+.center{
+    float: center;
+}
+
 a{
     text-decoration:none;
 }

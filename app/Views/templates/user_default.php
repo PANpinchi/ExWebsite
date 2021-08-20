@@ -31,7 +31,7 @@
             <a class = "back square" style="color:white" href = "/PostController/norseniorview"><p class = "center">高中個人申請</p></a>
             <a class = "back square" style="color:white" href = "/PostController/starseniorview"><p class = "center">高中繁星推薦</p></a>
             <a class = "back square" style="color:white" href = "/PostController/logindateview"><p class = "center">前台登入設定</p></a>
-            <a class = "back square" href = "/PostController/user_logout"><p class = "center"> 登出 </p></a>
+            <a class = "back square" style="color:white" href = "/PostController/user_logout"><p class = "center"> 登出 </p></a>
         </div>
 
         <?= $this->renderSection('content') ?>
