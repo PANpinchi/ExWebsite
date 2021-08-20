@@ -20,6 +20,8 @@
             <?php
                 $start1 = substr($star_post_page['start'], 0, 10);
                 $start2 = substr($star_post_page['start'], 11, 16);
+                $end1 = substr($star_post_page['end'], 0, 10);
+                $end2 = substr($star_post_page['end'], 11, 16);
                 echo'
                 <table border="1" class="table-striped center">
                     <tr> 
@@ -28,6 +30,9 @@
                     <tr> 
                         <td style="width: 150px">發布時間
                         <td style="width: 600px;">'.$start1.' '.$start2.'
+                    <tr> 
+                        <td style="width: 150px">結束時間
+                        <td style="width: 600px;">'.$end1.' '.$end2.'
                     <tr> 
                         <td style="width: 150px">內容
                         <td style="width: 600px;">'.$star_post_page['content'].'

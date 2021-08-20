@@ -26,13 +26,11 @@
             <div class = "back square"> <p href = "#" class = "center"> 歷年資料 </p> </div>
             <div class = "back square"> <p href = "#" class = "center"> 高中作業資訊系統 </p> </div>
             <div class = "back square"> <p href = "#" class = "center"> 大學作業資訊系統 </p> </div>
-            <div class = "back square"> <p class = "center" onclick = "toggleMenu()"> 控制系統 </p> </div>
-                <ul id = "menu">
-                    <a href = "/PostController/norcollegeview" class = "back square center" style="color:white">大學個人申請<br></a>
-                    <a href = "/PostController/starcollegeview" class = "back square center"style="color:white">大學繁星推薦<br></a>
-                    <a href = "/PostController/norseniorview" class = "back square center" style="color:white">高中個人申請<br></a>
-                    <a href = "/PostController/starseniorview" class = "back square center" style="color:white">高中繁星推薦<br></a>
-                </u1>
+            <a class = "back square" style="color:white" href = "/PostController/norcollegeview"><p class = "center">大學個人申請</p></a>
+            <a class = "back square" style="color:white" href = "/PostController/starcollegeview"><p class = "center">大學繁星推薦</p></a>
+            <a class = "back square" style="color:white" href = "/PostController/norseniorview"><p class = "center">高中個人申請</p></a>
+            <a class = "back square" style="color:white" href = "/PostController/starseniorview"><p class = "center">高中繁星推薦</p></a>
+            <a class = "back square" style="color:white" href = "/PostController/logindateview"><p class = "center">前台登入設定</p></a>
             <a class = "back square" href = "/PostController/user_logout"><p class = "center"> 登出 </p></a>
         </div>
 

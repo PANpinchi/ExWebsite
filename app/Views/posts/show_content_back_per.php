@@ -18,8 +18,12 @@
         <div class="content">
             <div class="title margin">公告內容</div>                            
             <?php
+                
+                $_SESSION['id'] = $per_post_page['id'];
                 $start1 = substr($per_post_page['start'], 0, 10);
                 $start2 = substr($per_post_page['start'], 11, 16);
+                $end1 = substr($per_post_page['end'], 0, 10);
+                $end2 = substr($per_post_page['end'], 11, 16);
                 echo'
                 <table border="1" class="table-striped center">
                     <tr> 
@@ -29,13 +33,17 @@
                         <td style="width: 150px">發布時間
                         <td style="width: 600px;">'.$start1.' '.$start2.'
                     <tr> 
+                        <td style="width: 150px">結束時間
+                        <td style="width: 600px;">'.$end1.' '.$end2.'
+                    <tr> 
                         <td style="width: 150px">內容
                         <td style="width: 600px;">'.$per_post_page['content'].'
                 </table>
                 '
             ?> 
             <br>
-            <button><a href="/PostController/show_back">返回</button>               
+            <button><a href="/PostController/show_back">返回</a></button>              
+            <a href="/PostController/delete_star"><button type="button" class="btn btn-danger">刪除此文章</button></a>
         </div>
         
     <body>

@@ -86,9 +86,13 @@ class PostController extends BaseController
 	{
 		$login = new Logindate();
 		$model = new Star_post_page();
+		$starsenior = new Starsenior();
+		$starcollege = new Starcollege();
 
 		$data = 
 		[
+			'starcollege' => $starcollege->findAll(),
+			'starsenior' => $starsenior->findAll(),
 			'logindate'=> $login->findAll(),
 			'star_post_page' => $model->findAll()
 		];
@@ -100,9 +104,13 @@ class PostController extends BaseController
 	{
 		$login = new Logindate();
 		$model = new Per_post_page();
+		$norsenior = new Norsenior();
+		$norcollege = new Norcollege();
 
 		$data = 
 		[
+			'norsenior'=> $norsenior->findAll(),
+			'norcollege'=> $norcollege->findAll(),
 			'logindate'=> $login->findAll(),
 			'per_post_page' => $model->findAll()
 		];
@@ -140,8 +148,13 @@ class PostController extends BaseController
 	{
 		$login = new Logindate();
 		$model = new Star_post_page();
+		$starsenior = new Starsenior();
+		$starcollege = new Starcollege();
+
 		$data = 
 		[
+			'starsenior' => $starsenior->findAll(),
+			'starcollege' => $starcollege->findAll(),
 			'logindate'=> $login->findAll(),
 			'star_post_page' => $model->find($star_post_page_id)
 		];
@@ -153,8 +166,13 @@ class PostController extends BaseController
 	{
 		$login = new Logindate();
 		$model = new Per_post_page();
+		$norsenior = new Norsenior();
+		$norcollege = new Norcollege();
+
 		$data = 
 		[
+			'norsenior' => $norsenior->findAll(),
+			'norcollege' => $norcollege->findAll(),
 			'logindate'=> $login->findAll(),
 			'per_post_page' => $model->find($per_post_page_id)
 		];
@@ -219,6 +237,20 @@ class PostController extends BaseController
 			'end' => $data['end']
 		]);
 		return redirect('PostController/show_back');
+	}
+
+	/*刪除資料(繁星)*/
+	public function delete_star()
+	{
+		$id = $_SESSION['id'];
+		$model1 = new Logindate();
+		$model2 = new Star_post_page();
+		$data =
+			[
+				'logindate' => $model1->findall(),
+				'star_post_page' => $model2->findall()
+			];	
+		return view('posts/delete_star', $data);	
 	}
 
 	/*編輯頁面*/
@@ -462,6 +494,11 @@ class PostController extends BaseController
 	/* 更改密碼頁面 */
 	public function change_password()
 	{
+		if(!isset($_SESSION['change_password']) || $_SESSION['change_password'] != true){
+			echo '<script>alert("請輸入帳號及電子郵件！")</script>';
+			return view('posts/forget');
+		}
+
 		return view('posts/change_password');
 	}
 
@@ -602,14 +639,17 @@ class PostController extends BaseController
 				$_SESSION['email'] = $data['email'];
 				$_SESSION['id'] = $i + 1;
 				echo '<script>alert("帳號驗證成功，請設定新的密碼！")</script>';
+				$_SESSION['change_password'] = true;
 				return view('posts/change_password');
 			}
 			else if($account == 0 && $email != 0){
 				echo '<script>alert("電子郵件輸入錯誤，請重新輸入！")</script>';
+				$_SESSION['change_password'] = false;
 				return view('posts/forget');
 			}
 		}
 
+		$_SESSION['change_password'] = false;
 		echo '<script>alert("帳號輸入錯誤，請重新輸入！")</script>';
 		return view('posts/forget');
 	}

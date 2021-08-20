@@ -8,6 +8,43 @@
         <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="/style/person_web.css">
+
+        <script>
+            function hs_open() {
+                var menu = document.getElementById("hs_menu");
+                
+                if(menu.style.display == "block"){
+                    menu.style.display = "none";
+                }
+                else{
+                    menu.style.display = "block";
+                }
+            }
+
+            function col_open() {
+                var menu = document.getElementById("col_menu");
+
+                if(menu.style.display == "block"){
+                    menu.style.display = "none";
+                }
+                else{
+                    menu.style.display = "block";
+                }
+            }
+
+            function on(obj,status){
+                if(status == 'over'){
+                    obj.style.backgroundColor = '#E6E6FA';
+                    obj.style.border = '1px solid #0065CD';
+                    obj.style.cursor = 'pointer';
+                }
+                else{
+                    obj.style.background = '';
+                    obj.style.border = '1px solid #f4fdff';
+                }
+            }
+        </script>
+        <?php date_default_timezone_set('Asia/Taipei'); ?>
     </head>
 
     <body>
@@ -105,7 +142,7 @@
                                                     <div id = "pass"><a href="/PostController/login"> </a></div>
                                                 </td>
 
-                                                <td rowspan = "17" style = "width: 1000px;">
+                                                <td rowspan = "17" style = "width: 1000px;" valign="top">
                                                     <table cellpadding="0" cellspacing="0">
                                                         <tbody>
                                                             <?= $this->renderSection('content') ?>
@@ -175,12 +212,613 @@
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <div id = "hs"><a href="#"> </a></div>
+                                                    <div id = "hs" onclick=hs_open()></div>
+                                                    <span id="hs_menu" class="hide">
+                                                        <table class="list">
+                                                            <tr>
+                                                                <td>
+                                                                    <img src="/person_img/main_menu_fun_01.jpg">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <table class="button">
+                                                                        <tr>
+                                                                            <td onmouseover="on(this,'over')" onmouseout="on(this,'out')" onclick=
+                                                                                <?php
+                                                                                     foreach($norsenior as $norsenior_item){
+                                                                                        if (strtotime($norsenior_item['start1'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($norsenior_item['end1']))
+                                                                                            echo 'window.open("'.$norsenior_item['website1'].'")';
+                                                                                        else{
+                                                                                            echo' window.open("/PostController/pageclose") ';
+                                                                                        }
+                                                                                    }
+                                                                                ?>
+                                                                            style="border"> 
+                                                                                校系分則資料下載
+                                                                            </td>    
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td onmouseover="on(this,'over')" onmouseout="on(this,'out')" onclick=
+                                                                                <?php
+                                                                                     foreach($norsenior as $norsenior_item){
+                                                                                        if (strtotime($norsenior_item['start2'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($norsenior_item['end2']))
+                                                                                            echo 'window.open("'.$norsenior_item['website2'].'")';
+                                                                                        else{
+                                                                                            echo' window.open("/PostController/pageclose") ';
+                                                                                        }
+                                                                                    }
+                                                                                ?>
+                                                                            style="border"> 
+                                                                            「高中(職)在校成績證明統一上傳系統」軟體安裝及系統使用說明手冊下載
+                                                                            </td>    
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td onmouseover="on(this,'over')" onmouseout="on(this,'out')" onclick=
+                                                                                <?php
+                                                                                     foreach($norsenior as $norsenior_item){
+                                                                                        if (strtotime($norsenior_item['start3'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($norsenior_item['end3']))
+                                                                                            echo 'window.open("'.$norsenior_item['website3'].'")';
+                                                                                        else{
+                                                                                            echo' window.open("/PostController/pageclose") ';
+                                                                                        }
+                                                                                    }
+                                                                                ?>
+                                                                            style="border"> 
+                                                                            高中(職)在校成績證明檔案統一上傳作業系統
+                                                                            </td>    
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td onmouseover="on(this,'over')" onmouseout="on(this,'out')" onclick=
+                                                                                <?php
+                                                                                     foreach($norsenior as $norsenior_item){
+                                                                                        if (strtotime($norsenior_item['start4'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($norsenior_item['end4']))
+                                                                                            echo 'window.open("'.$norsenior_item['website4'].'")';
+                                                                                        else{
+                                                                                            echo' window.open("/PostController/pageclose") ';
+                                                                                        }
+                                                                                    }
+                                                                                ?>
+                                                                            style="border"> 
+                                                                            高中(職)下載未查詢「高中(職)在校成績證明」學生名單
+                                                                            </td>    
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td onmouseover="on(this,'over')" onmouseout="on(this,'out')" onclick=
+                                                                                <?php
+                                                                                    foreach($norsenior as $norsenior_item){
+                                                                                        if (strtotime($norsenior_item['start5'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($norsenior_item['end5']))
+                                                                                            echo 'window.open("'.$norsenior_item['website5'].'")';
+                                                                                        else{
+                                                                                            echo' window.open("/PostController/pageclose") ';
+                                                                                        }
+                                                                                    }
+                                                                                ?>
+                                                                            style="border"> 
+                                                                            登錄參加集體報名
+                                                                            </td>    
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td onmouseover="on(this,'over')" onmouseout="on(this,'out')" onclick=
+                                                                                <?php
+                                                                                     foreach($norsenior as $norsenior_item){
+                                                                                        if (strtotime($norsenior_item['start6'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($norsenior_item['end6']))
+                                                                                            echo 'window.open("'.$norsenior_item['website6'].'")';
+                                                                                        else{
+                                                                                            echo' window.open("/PostController/pageclose") ';
+                                                                                        }
+                                                                                    }
+                                                                                ?>
+                                                                            style="border"> 
+                                                                            個人申請集體報名作業
+                                                                            </td>    
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td onmouseover="on(this,'over')" onmouseout="on(this,'out')" onclick=
+                                                                                <?php
+                                                                                     foreach($norsenior as $norsenior_item){
+                                                                                        if (strtotime($norsenior_item['start7'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($norsenior_item['end7']))
+                                                                                            echo 'window.open("'.$norsenior_item['website7'].'")';
+                                                                                        else{
+                                                                                            echo' window.open("/PostController/pageclose") ';
+                                                                                        }
+                                                                                    }
+                                                                                ?>
+                                                                            style="border"> 
+                                                                            集報學校列印報名費收據
+                                                                            </td>    
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td onmouseover="on(this,'over')" onmouseout="on(this,'out')" onclick=
+                                                                                <?php
+                                                                                     foreach($norsenior as $norsenior_item){
+                                                                                        if (strtotime($norsenior_item['start8'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($norsenior_item['end8']))
+                                                                                            echo 'window.open("'.$norsenior_item['website8'].'")';
+                                                                                        else{
+                                                                                            echo' window.open("/PostController/pageclose") ';
+                                                                                        }
+                                                                                    }
+                                                                                ?>
+                                                                            style="border"> 
+                                                                            第一階段篩選結果下載
+                                                                            </td>    
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td onmouseover="on(this,'over')" onmouseout="on(this,'out')" onclick=
+                                                                                <?php
+                                                                                     foreach($norsenior as $norsenior_item){
+                                                                                        if (strtotime($norsenior_item['start9'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($norsenior_item['end9']))
+                                                                                            echo 'window.open("'.$norsenior_item['website9'].'")';
+                                                                                        else{
+                                                                                            echo' window.open("/PostController/pageclose") ';
+                                                                                        }
+                                                                                    }
+                                                                                ?>
+                                                                            style="border"> 
+                                                                            審查資料上傳各高中考生上傳情形查詢
+                                                                            </td>    
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td onmouseover="on(this,'over')" onmouseout="on(this,'out')" onclick=
+                                                                                <?php
+                                                                                     foreach($norsenior as $norsenior_item){
+                                                                                        if (strtotime($norsenior_item['start10'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($norsenior_item['end10']))
+                                                                                            echo 'window.open("'.$norsenior_item['website10'].'")';
+                                                                                        else{
+                                                                                            echo' window.open("/PostController/pageclose") ';
+                                                                                        }
+                                                                                    }
+                                                                                ?>
+                                                                            style="border"> 
+                                                                            集報考生個人密碼設定情形查詢系統
+                                                                            </td>    
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td onmouseover="on(this,'over')" onmouseout="on(this,'out')" onclick=
+                                                                                <?php
+                                                                                     foreach($norsenior as $norsenior_item){
+                                                                                        if (strtotime($norsenior_item['start11'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($norsenior_item['end11']))
+                                                                                            echo 'window.open("'.$norsenior_item['website11'].'")';
+                                                                                        else{
+                                                                                            echo' window.open("/PostController/pageclose") ';
+                                                                                        }
+                                                                                    }
+                                                                                ?>
+                                                                            style="border"> 
+                                                                            第二階段錄取結果下載
+                                                                            </td>    
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td onmouseover="on(this,'over')" onmouseout="on(this,'out')" onclick=
+                                                                                <?php
+                                                                                     foreach($norsenior as $norsenior_item){
+                                                                                        if (strtotime($norsenior_item['start12'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($norsenior_item['end12']))
+                                                                                            echo 'window.open("'.$norsenior_item['website12'].'")';
+                                                                                        else{
+                                                                                            echo' window.open("/PostController/pageclose") ';
+                                                                                        }
+                                                                                    }
+                                                                                ?>
+                                                                            style="border"> 
+                                                                            網路登記就讀志願序各高中考生登記情形查詢
+                                                                            </td>    
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td onmouseover="on(this,'over')" onmouseout="on(this,'out')" onclick=
+                                                                                <?php
+                                                                                     foreach($norsenior as $norsenior_item){
+                                                                                        if (strtotime($norsenior_item['start13'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($norsenior_item['end13']))
+                                                                                            echo 'window.open("'.$norsenior_item['website13'].'")';
+                                                                                        else{
+                                                                                            echo' window.open("/PostController/pageclose") ';
+                                                                                        }
+                                                                                    }
+                                                                                ?>
+                                                                            style="border"> 
+                                                                            統一分發結果下載
+                                                                            </td>    
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td onmouseover="on(this,'over')" onmouseout="on(this,'out')" onclick=
+                                                                                <?php
+                                                                                     foreach($norsenior as $norsenior_item){
+                                                                                        if (strtotime($norsenior_item['start14'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($norsenior_item['end14']))
+                                                                                            echo 'window.open("'.$norsenior_item['website14'].'")';
+                                                                                        else{
+                                                                                            echo' window.open("/PostController/pageclose") ';
+                                                                                        }
+                                                                                    }
+                                                                                ?>
+                                                                            style="border"> 
+                                                                            下載繁星及申請分發錄取且確定入學生名單(上傳高三下成績使用)
+                                                                            </td>    
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td onmouseover="on(this,'over')" onmouseout="on(this,'out')" onclick=
+                                                                                <?php
+                                                                                     foreach($norsenior as $norsenior_item){
+                                                                                        if (strtotime($norsenior_item['start15'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($norsenior_item['end15']))
+                                                                                            echo 'window.open("'.$norsenior_item['website15'].'")';
+                                                                                        else{
+                                                                                            echo' window.open("/PostController/pageclose") ';
+                                                                                        }
+                                                                                    }
+                                                                                ?>
+                                                                            style="border"> 
+                                                                            「分發錄取生之高三下學期在校成績證明檔案上傳系統」軟體安裝及系統使用說明手冊下載
+                                                                            </td>    
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td onmouseover="on(this,'over')" onmouseout="on(this,'out')" onclick=
+                                                                                <?php
+                                                                                     foreach($norsenior as $norsenior_item){
+                                                                                        if (strtotime($norsenior_item['start16'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($norsenior_item['end16']))
+                                                                                            echo 'window.open("'.$norsenior_item['website16'].'")';
+                                                                                        else{
+                                                                                            echo' window.open("/PostController/pageclose") ';
+                                                                                        }
+                                                                                    }
+                                                                                ?>
+                                                                            style="border"> 
+                                                                            分發錄取生之高三下學期在校成績證明檔案上傳系統
+                                                                            </td>    
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td onmouseover="on(this,'over')" onmouseout="on(this,'out')" onclick=
+                                                                                <?php
+                                                                                     foreach($norsenior as $norsenior_item){
+                                                                                        if (strtotime($norsenior_item['start17'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($norsenior_item['end17']))
+                                                                                            echo 'window.open("'.$norsenior_item['website17'].'")';
+                                                                                        else{
+                                                                                            echo' window.open("/PostController/pageclose") ';
+                                                                                        }
+                                                                                    }
+                                                                                ?>
+                                                                            style="border"> 
+                                                                            甄選入學意見調查作業
+                                                                            </td>    
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td onmouseover="on(this,'over')" onmouseout="on(this,'out')" onclick=
+                                                                                <?php
+                                                                                     foreach($norsenior as $norsenior_item){
+                                                                                        if (strtotime($norsenior_item['start18'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($norsenior_item['end18']))
+                                                                                            echo 'window.open("'.$norsenior_item['website18'].'")';
+                                                                                        else{
+                                                                                            echo' window.open("/PostController/pageclose") ';
+                                                                                        }
+                                                                                    }
+                                                                                ?>
+                                                                            style="border"> 
+                                                                            參加報名系統、成績證明檔案上傳系統說明會報名登錄
+                                                                            </td>    
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <img src="/img/main_menu_fun_03.jpg">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="buttom"></td>
+                                                            </tr>
+                                                        </table>
+                                                    </span>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <div id = "col"><a href="#"> </a></div>
+                                                    <div id = "col" onclick="col_open()"></div>
+                                                    <span id="col_menu" class="hide">
+                                                        <table class="list">
+                                                            <tr>
+                                                                <td>
+                                                                    <img src="/person_img/main_menu_fun_01.jpg">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <table class="button">
+                                                                        <tr>
+                                                                            <td onmouseover="on(this,'over')" onmouseout="on(this,'out')" onclick=
+                                                                                <?php
+                                                                                     foreach($norcollege as $norcollege_item){
+                                                                                        if (strtotime($norcollege_item['start1'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($norcollege_item['end1']))
+                                                                                            echo 'window.open("'.$norcollege_item['website1'].'")';
+                                                                                        else{
+                                                                                            echo' window.open("/PostController/pageclose") ';
+                                                                                        }
+                                                                                    }
+                                                                                ?>
+                                                                            style="border"> 
+                                                                            工作報告下載
+                                                                            </td>    
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td onmouseover="on(this,'over')" onmouseout="on(this,'out')" onclick=
+                                                                                <?php
+                                                                                     foreach($norcollege as $norcollege_item){
+                                                                                        if (strtotime($norcollege_item['start2'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($norcollege_item['end2']))
+                                                                                            echo 'window.open("'.$norcollege_item['website2'].'")';
+                                                                                        else{
+                                                                                            echo' window.open("/PostController/pageclose") ';
+                                                                                        }
+                                                                                    }
+                                                                                ?>
+                                                                            style="border"> 
+                                                                            校系分則輸入作業
+                                                                            </td>    
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td onmouseover="on(this,'over')" onmouseout="on(this,'out')" onclick=
+                                                                                <?php
+                                                                                     foreach($norcollege as $norcollege_item){
+                                                                                        if (strtotime($norcollege_item['start3'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($norcollege_item['end3']))
+                                                                                            echo 'window.open("'.$norcollege_item['website3'].'")';
+                                                                                        else{
+                                                                                            echo' window.open("/PostController/pageclose") ';
+                                                                                        }
+                                                                                    }
+                                                                                ?>
+                                                                            style="border"> 
+                                                                            參採學習歷程登錄
+                                                                            </td>    
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td onmouseover="on(this,'over')" onmouseout="on(this,'out')" onclick=
+                                                                                <?php
+                                                                                     foreach($norcollege as $norcollege_item){
+                                                                                        if (strtotime($norcollege_item['start4'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($norcollege_item['end4']))
+                                                                                            echo 'window.open("'.$norcollege_item['website4'].'")';
+                                                                                        else{
+                                                                                            echo' window.open("/PostController/pageclose") ';
+                                                                                        }
+                                                                                    }
+                                                                                ?>
+                                                                            style="border"> 
+                                                                            高中英語聽力測驗輸入系統
+                                                                            </td>    
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td onmouseover="on(this,'over')" onmouseout="on(this,'out')" onclick=
+                                                                                <?php
+                                                                                     foreach($norcollege as $norcollege_item){
+                                                                                        if (strtotime($norcollege_item['start5'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($norcollege_item['end5']))
+                                                                                            echo 'window.open("'.$norcollege_item['website5'].'")';
+                                                                                        else{
+                                                                                            echo' window.open("/PostController/pageclose") ';
+                                                                                        }
+                                                                                    }
+                                                                                ?>
+                                                                            style="border"> 
+                                                                            大學電腦IP登錄系統
+                                                                            </td>    
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td onmouseover="on(this,'over')" onmouseout="on(this,'out')" onclick=
+                                                                                <?php
+                                                                                     foreach($norcollege as $norcollege_item){
+                                                                                        if (strtotime($norcollege_item['start6'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($norcollege_item['end6']))
+                                                                                            echo 'window.open("'.$norcollege_item['website6'].'")';
+                                                                                        else{
+                                                                                            echo' window.open("/PostController/pageclose") ';
+                                                                                        }
+                                                                                    }
+                                                                                ?>
+                                                                            style="border"> 
+                                                                            特殊選才入學名單上傳
+                                                                            </td>    
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td onmouseover="on(this,'over')" onmouseout="on(this,'out')" onclick=
+                                                                                <?php
+                                                                                     foreach($norcollege as $norcollege_item){
+                                                                                        if (strtotime($norcollege_item['start7'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($norcollege_item['end7']))
+                                                                                            echo 'window.open("'.$norcollege_item['website7'].'")';
+                                                                                        else{
+                                                                                            echo' window.open("/PostController/pageclose") ';
+                                                                                        }
+                                                                                    }
+                                                                                ?>
+                                                                            style="border"> 
+                                                                            軟體下載說明(考生學習資料表輸入系統)
+                                                                            </td>    
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td onmouseover="on(this,'over')" onmouseout="on(this,'out')" onclick=
+                                                                                <?php
+                                                                                     foreach($norcollege as $norcollege_item){
+                                                                                        if (strtotime($norcollege_item['start8'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($norcollege_item['end8']))
+                                                                                            echo 'window.open("'.$norcollege_item['website8'].'")';
+                                                                                        else{
+                                                                                            echo' window.open("/PostController/pageclose") ';
+                                                                                        }
+                                                                                    }
+                                                                                ?>
+                                                                            style="border"> 
+                                                                            軟體下載說明(線上書審資訊系統)
+                                                                            </td>    
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td onmouseover="on(this,'over')" onmouseout="on(this,'out')" onclick=
+                                                                                <?php
+                                                                                     foreach($norcollege as $norcollege_item){
+                                                                                        if (strtotime($norcollege_item['start9'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($norcollege_item['end9']))
+                                                                                            echo 'window.open("'.$norcollege_item['website9'].'")';
+                                                                                        else{
+                                                                                            echo' window.open("/PostController/pageclose") ';
+                                                                                        }
+                                                                                    }
+                                                                                ?>
+                                                                            style="border"> 
+                                                                            第一階段篩選結果下載
+                                                                            </td>    
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td onmouseover="on(this,'over')" onmouseout="on(this,'out')" onclick=
+                                                                                <?php
+                                                                                     foreach($norcollege as $norcollege_item){
+                                                                                        if (strtotime($norcollege_item['start10'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($norcollege_item['end10']))
+                                                                                            echo 'window.open("'.$norcollege_item['website10'].'")';
+                                                                                        else{
+                                                                                            echo' window.open("/PostController/pageclose") ';
+                                                                                        }
+                                                                                    }
+                                                                                ?>
+                                                                            style="border"> 
+                                                                            第一階段篩選結果相片檔下載
+                                                                            </td>    
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td onmouseover="on(this,'over')" onmouseout="on(this,'out')" onclick=
+                                                                                <?php
+                                                                                     foreach($norcollege as $norcollege_item){
+                                                                                        if (strtotime($norcollege_item['start11'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($norcollege_item['end11']))
+                                                                                            echo 'window.open("'.$norcollege_item['website11'].'")';
+                                                                                        else{
+                                                                                            echo' window.open("/PostController/pageclose") ';
+                                                                                        }
+                                                                                    }
+                                                                                ?>
+                                                                            style="border"> 
+                                                                            類繁星資料下載
+                                                                            </td>    
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td onmouseover="on(this,'over')" onmouseout="on(this,'out')" onclick=
+                                                                                <?php
+                                                                                     foreach($norcollege as $norcollege_item){
+                                                                                        if (strtotime($norcollege_item['start12'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($norcollege_item['end12']))
+                                                                                            echo 'window.open("'.$norcollege_item['website12'].'")';
+                                                                                        else{
+                                                                                            echo' window.open("/PostController/pageclose") ';
+                                                                                        }
+                                                                                    }
+                                                                                ?>
+                                                                            style="border"> 
+                                                                            考生審查資料上傳狀態查詢
+                                                                            </td>    
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td onmouseover="on(this,'over')" onmouseout="on(this,'out')" onclick=
+                                                                                <?php
+                                                                                     foreach($norcollege as $norcollege_item){
+                                                                                        if (strtotime($norcollege_item['start13'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($norcollege_item['end13']))
+                                                                                            echo 'window.open("'.$norcollege_item['website13'].'")';
+                                                                                        else{
+                                                                                            echo' window.open("/PostController/pageclose") ';
+                                                                                        }
+                                                                                    }
+                                                                                ?>
+                                                                            style="border"> 
+                                                                            疫情勾稽名單下載
+                                                                            </td>    
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td onmouseover="on(this,'over')" onmouseout="on(this,'out')" onclick=
+                                                                                <?php
+                                                                                     foreach($norcollege as $norcollege_item){
+                                                                                        if (strtotime($norcollege_item['start14'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($norcollege_item['end14']))
+                                                                                            echo 'window.open("'.$norcollege_item['website14'].'")';
+                                                                                        else{
+                                                                                            echo' window.open("/PostController/pageclose") ';
+                                                                                        }
+                                                                                    }
+                                                                                ?>
+                                                                            style="border"> 
+                                                                            總成績處理系統
+                                                                            </td>    
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td onmouseover="on(this,'over')" onmouseout="on(this,'out')" onclick=
+                                                                                <?php
+                                                                                     foreach($norcollege as $norcollege_item){
+                                                                                        if (strtotime($norcollege_item['start15'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($norcollege_item['end15']))
+                                                                                            echo 'window.open("'.$norcollege_item['website15'].'")';
+                                                                                        else{
+                                                                                            echo' window.open("/PostController/pageclose") ';
+                                                                                        }
+                                                                                    }
+                                                                                ?>
+                                                                            style="border"> 
+                                                                            總成績處理系統(個案應變機制專用)
+                                                                            </td>    
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td onmouseover="on(this,'over')" onmouseout="on(this,'out')" onclick=
+                                                                                <?php
+                                                                                     foreach($norcollege as $norcollege_item){
+                                                                                        if (strtotime($norcollege_item['start16'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($norcollege_item['end16']))
+                                                                                            echo 'window.open("'.$norcollege_item['website16'].'")';
+                                                                                        else{
+                                                                                            echo' window.open("/PostController/pageclose") ';
+                                                                                        }
+                                                                                    }
+                                                                                ?>
+                                                                            style="border"> 
+                                                                            分發錄取生放棄入學名單下載(含繁星第8類)
+                                                                            </td>    
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td onmouseover="on(this,'over')" onmouseout="on(this,'out')" onclick=
+                                                                                <?php
+                                                                                     foreach($norcollege as $norcollege_item){
+                                                                                        if (strtotime($norcollege_item['start17'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($norcollege_item['end17']))
+                                                                                            echo 'window.open("'.$norcollege_item['website17'].'")';
+                                                                                        else{
+                                                                                            echo' window.open("/PostController/pageclose") ';
+                                                                                        }
+                                                                                    }
+                                                                                ?>
+                                                                            style="border"> 
+                                                                            未通過篩選名單下載
+                                                                            </td>    
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td onmouseover="on(this,'over')" onmouseout="on(this,'out')" onclick=
+                                                                                <?php
+                                                                                     foreach($norcollege as $norcollege_item){
+                                                                                        if (strtotime($norcollege_item['start18'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($norcollege_item['end18']))
+                                                                                            echo 'window.open("'.$norcollege_item['website18'].'")';
+                                                                                        else{
+                                                                                            echo' window.open("/PostController/pageclose") ';
+                                                                                        }
+                                                                                    }
+                                                                                ?>
+                                                                            style="border"> 
+                                                                            分發錄取生之高三下成績下載
+                                                                            </td>    
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td onmouseover="on(this,'over')" onmouseout="on(this,'out')" onclick=
+                                                                                <?php
+                                                                                     foreach($norcollege as $norcollege_item){
+                                                                                        if (strtotime($norcollege_item['start19'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($norcollege_item['end19']))
+                                                                                            echo 'window.open("'.$norcollege_item['website19'].'")';
+                                                                                        else{
+                                                                                            echo' window.open("/PostController/pageclose") ';
+                                                                                        }
+                                                                                    }
+                                                                                ?>
+                                                                            style="border"> 
+                                                                            參加說明會、檢討會報名登錄
+                                                                            </td>    
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <img src="/img/main_menu_fun_03.jpg">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="buttom"></td>
+                                                            </tr>
+                                                        </table>
+                                                    </span>
                                                 </td>
                                             </tr>
                                             <tr>

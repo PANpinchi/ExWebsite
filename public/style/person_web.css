@@ -1,3 +1,7 @@
+.hide {
+    display: none;
+}
+
 img {
     display: collapse;
 }
@@ -164,18 +168,26 @@ img {
 }
 
 
-#hs a {
+#hs{
     background: url("/person_img/main_menu_fun_hs.jpg");/*預設顯示圖片*/
     display: block;
     height: 52px;/*圖片高度*/
     width: 148px;/*圖片寬度*/
 }
 
-#col a {
+#hs:hover{
+    cursor: pointer;
+}
+
+#col{
     background: url("/person_img/main_menu_fun_col.jpg");/*預設顯示圖片*/
     display: block;
     height: 52px;/*圖片高度*/
     width: 148px;/*圖片寬度*/
+}
+
+#col:hover{
+    cursor: pointer;
 }
 
 #home a:hover{
@@ -288,4 +300,27 @@ img {
     background: url("/person_img/main_menu_10_up.jpg");
     display: block;
     
+}
+
+.list{
+    width: 146px;
+    border: 0px;
+    box-align: center;
+    background:url("/person_img/main_menu_fun_02.jpg");
+}
+
+.button{
+    width: 140px;
+    border: 0px;
+    box-align: center;
+    padding-top: 6px;
+}
+
+.border{
+    border: 1px solid rgb(242,255,204);
+}
+
+.buttom{
+    height:"1";
+    background:"/person_img/main_menu_bg.jpg";
 }

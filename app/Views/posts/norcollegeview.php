@@ -32,27 +32,6 @@
     
     if (! empty($norcollege) && is_array($norcollege))  {
         foreach($norcollege as $norcollege_item){
-
-            if (strtotime($norcollege_item['start1'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($norcollege_item['end1']))
-                echo'
-                    <input type="button" value="測試按鈕1" name="test1" onclick=test()></input>
-                    <script>
-                        function test(){
-                            window.open("'.$norcollege_item['website1'].'");
-                        }
-                    </script>
-                ';
-            else{
-                echo'
-                    <input type="button" value="測試按鈕1" name="test1" onclick=test()></input>
-                    <script>
-                        function test(){
-                            window.open("/PostController/pageclose");
-                        }
-                    </script>
-                ';
-            }
-
             echo ' 
             <table border="1" class="c" style="border-style:solid; width: 1100px;">
             <tr>
