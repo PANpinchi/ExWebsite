@@ -11,35 +11,32 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-    
-	<style>
-		.c{text-align:center}
-		th {border-width : 1px;}
-		a{text-decoration:none;}
-		a:hover{text-decoration:underline;}
-	</style>
+	<link rel="stylesheet" href="/style/table.css">
 
   </head>
 
   <body>
-  <input type="button" value="編輯" name="button" onclick= "location.href='/PostController/norsenioredit'"></input><br>
-
-  <?php
+	<table class="c" style="width: 1100px; border" frame=void>
+		<tr>
+			<th>
+  				<input class="btn btn-primary" type="button" value="編輯" name="button" onclick= "location.href='/PostController/norsenioredit'"></input><br>
+			<th>	
+				  <h2>高中個人申請開放日期設定</h2>
+	</table>
+	  <?php
     	date_default_timezone_set('Asia/Taipei');
-    	echo date("Y-m-d H:i:s");
 
     	if (! empty($norsenior) && is_array($norsenior))  {
         foreach($norsenior as $norsenior_item){
 			echo ' 
-			<table border="1" class="c" style="border-style:solid; width: 1100px;">
+			<table border="1" class="c table set" style="border-style:solid; width: 1100px;">
 			<tr>
-				<th>編號
-				<th>系統名稱
-				<th>系統開始時間
-				<th>系統結束時間
-				<th>網址
-				<th>說明
+				<th width="50px">編號
+				<th width="200px">系統名稱
+				<th width="300px">系統開始時間
+				<th width="300px">系統結束時間
+				<th width="200px">網址
+				<th width="200px">說明
 			<tr>
 				<th>1 
 				<th >校系分則資料下載

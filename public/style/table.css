@@ -1,0 +1,30 @@
+.c{
+    text-align:center;
+}
+
+th {
+    border-width : 1px;
+}
+
+a{
+    text-decoration:none;
+}
+
+a:hover{
+    text-decoration:underline;
+}
+
+.set{
+    position: relative;
+    margin-left  :auto;
+    margin-right :auto;
+    table-layout:fixed;
+    word-break:break-all;
+}
+
+.set2{
+    position: relative;
+    margin-left  :auto;
+    margin-right :auto;
+    width:auto;
+}

@@ -11,12 +11,7 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-    
-	<style>
-		.c{text-align:center}
-		th {border-width : 1px;}
-	</style>
+	<link rel="stylesheet" href="/style/table.css">
 
   </head>
 
@@ -27,15 +22,15 @@
     echo '
 	<div class="left">
     <form action="/PostController/starseniorstore" method="post">
-    <input type="submit" value="一鍵更改" name="submit"></input>
-    <table border="1" class="c" style="border-style:solid; width: 1100px;">
+    <input type="submit" value="一鍵更改" name="submit" class="btn btn-primary"></input>
+    <table border="1" class="c table" style="border-style:solid; width: 1100px;">
 	    <tr>
-		    <th>編號
-		    <th>系統名稱
-		    <th>系統開始時間
-		     <th>系統結束時間
-		    <th>網址
-		    <th>說明
+			<th width="50px">編號
+			<th width="200px">系統名稱
+			<th>系統開始時間
+			<th>系統結束時間
+			<th width="200px">網址
+			<th width="200px">說明
 	    <tr>
 		  <th>1 
 		  <th >各高中承辦人員聯絡資料維護暨繁星推薦108入學學生高一在校學業成績上傳作業軟體下載系統
