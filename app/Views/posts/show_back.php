@@ -66,7 +66,7 @@
             <div align="center">
                 <br>
                 <button class="btn btn-primary"><a href="/PostController/create_new" style="color:white;">返回</button>
-                <br><br><br>
+                <br><br>
             </div>
         </div>
     <body>

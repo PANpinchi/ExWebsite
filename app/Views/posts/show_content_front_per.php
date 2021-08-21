@@ -16,7 +16,7 @@
 
     <body>
     <tr>
-            <td align="center">
+            <td align="center" valign="middle">
                 <br>
                 <table class="table table-bordered" style="width: 700px; margin-right: 10px">
                     <tr>
@@ -24,7 +24,7 @@
                         <?php echo' <td style="width: 600px;"> <strong style="font-size: 20px">'.$per_post_page['title'].'</strong> </td> '; ?>
                     </tr>
                     <tr>
-                        <td align="center"> <strong> 發布日期 </strong> </td>
+                        <td align="center" valign="middle"> <strong> 發布日期 </strong> </td>
                         <?php 
                         $year = substr($per_post_page['start'], 0, 4);
                         $month = substr($per_post_page['start'], 5, 2);
@@ -34,7 +34,7 @@
                         ?>
                     </tr>
                     <tr>
-                        <td align="center"> <strong> 公告期間 </strong> </td>
+                        <td align="center" valign="middle"> <strong> 公告期間 </strong> </td>
                         <?php 
                         $end_year = substr($per_post_page['end'], 0, 4);
                         $end_month = substr($per_post_page['end'], 5, 2);
@@ -43,7 +43,7 @@
                         ?>
                     </tr>
                     <tr>
-                        <td align="center"> <strong> 內文 </strong> </td>
+                        <td align="center" valign="middle"> <strong> 內文 </strong> </td>
                         <?php echo' <td style="width: 600px;">'.$per_post_page['content'].'</td> '; ?>
                     </tr>
 
@@ -51,21 +51,21 @@
                     if($per_post_page['file'] != NULL){
                         echo '
                             <tr>
-                                <td align="center"> <strong> 附件 </strong> </td>
+                                <td align="center" valign="middle"> <strong> 附件 </strong> </td>
                                 <td><a href="/PostController/show_pdf/'.$per_post_page['file'].'">'.$per_post_page['file_name'].'</a>
                             </tr>';
                     }
                     else{
                         echo '
                             <tr>
-                                <td align="center"> <strong> 附件 </strong> </td>
+                                <td align="center" valign="middle"> <strong> 附件 </strong> </td>
                                 <td> -- </td>
                             </tr>';
                     }
                     ?>
                 </table>
 
-                <a class="btn btn-primary" href="/PostController/show_front_star" style="background-color: rgb(255, 174, 172); border-color: rgb(255, 174, 172);">返回</a>
+                <a class="btn btn-primary" href="/PostController/show_front_per" style="margin-right: 30px; background-color: rgb(224, 187, 255); border-color: rgb(224, 187, 255);">返回</a>
             </td>
         </tr>
     <body>

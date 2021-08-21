@@ -142,7 +142,19 @@
                                             <tr><td><img src="/img/main_menu_title.jpg"></tr>
                                             <tr>
                                                 <td>
-                                                    <div id = "m1"><a href="#"> </a></div>
+                                                    <div id = "m1">
+                                                        <a href="#" style="text-decoration:none;"> 
+                                                            <table class="layer" style="text-decoration:none;">
+                                                                <tbody>
+                                                                    <tr class="touch"><td style="width: 140px;">簡章訊息事項</td></tr>
+                                                                    <tr class="touch"><td style="width: 140px;">招生事務</td></tr>
+                                                                    <tr class="touch"><td style="width: 140px;">甄選資訊</td></tr>
+                                                                    <tr class="touch"><td style="width: 140px;">會議簡報</td></tr>
+                                                                    <tr class="touch"><td style="width: 140px;">其他事項</td></tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </a>
+                                                    </div>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -157,12 +169,34 @@
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <div id = "m4"><a href="#"> </a></div>
+                                                    <div id = "m4">
+                                                        <a href="#" style="text-decoration:none;"> 
+                                                            <table class="layer" style="text-decoration:none;">
+                                                                <tbody>
+                                                                    <tr class="touch"><td style="width: 140px;">發售辦法</td></tr>
+                                                                    <tr class="touch"><td style="width: 140px;">網路購買簡章</td></tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </a>
+                                                    </div>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <div id = "m5"><a href="#"> </a></div>
+                                                    <div id = "m5">
+                                                        <a href="#" style="text-decoration:none;"> 
+                                                            <table class="layer" style="text-decoration:none;">
+                                                                <tbody>
+                                                                    <tr class="touch"><td style="width: 140px;">簡章總則</td></tr>
+                                                                    <tr class="touch"><td style="width: 140px;">簡章附錄</td></tr>
+                                                                    <tr class="touch"><td style="width: 140px;">校系分則查詢</td></tr>
+                                                                    <tr class="touch"><td style="width: 140px;">其他事項</td></tr>
+                                                                    <tr class="touch"><td style="width: 140px;">簡章修正事項</td></tr>
+                                                                    <tr class="touch"><td style="width: 140px;">110參採科目簡表</td></tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </a>
+                                                    </div>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -172,12 +206,31 @@
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <div id = "m7"><a href="#"> </a></div>
+                                                    <div id = "m7">
+                                                        <a href="#" style="text-decoration:none;"> 
+                                                            <table class="layer" style="text-decoration:none;">
+                                                                <tbody>
+                                                                    <tr class="touch"><td style="width: 140px;">資料表件下載</td></tr>
+                                                                    <tr class="touch"><td style="width: 140px;">其他事項下載</td></tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </a>
+                                                    </div>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <div id = "m8"><a href="#"> </a></div>
+                                                    <div id = "m8">
+                                                        <a href="#" style="text-decoration:none;"> 
+                                                            <table class="layer" style="text-decoration:none;">
+                                                                <tbody>
+                                                                    <tr class="touch"><td style="width: 140px;">招生單位</td></tr>
+                                                                    <tr class="touch"><td style="width: 140px;">考試單位</td></tr>
+                                                                    <tr class="touch"><td style="width: 140px;">其他網站</td></tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </a>
+                                                    </div>
                                                 </td>
                                             </tr>
                                             <tr>
