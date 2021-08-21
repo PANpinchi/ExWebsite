@@ -34,10 +34,18 @@ class Per_post_page extends Migration
 					'type'			=> 'VARCHAR',
 					'constraint'	=> 10,
 					'null'			=> true],
-			'end'		=>[
+			'end'	=>[
 					'type'			=> 'VARCHAR',
 					'constraint'	=> 10,
 					'null'			=> true],
+			'file'	=>[
+					'type'			=> 'VARCHAR',
+					'constraint'	=> 100,
+					'null'			=> true],
+			'file_name'	=>[
+					'type'			=> 'VARCHAR',
+					'constraint'	=> 100,
+					'null'			=> true]
 	]);
 	$this->forge->addKey('id', TRUE);
 	$this->forge->createTable('per_post_page');

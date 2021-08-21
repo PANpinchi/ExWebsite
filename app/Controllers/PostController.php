@@ -154,6 +154,11 @@ class PostController extends BaseController
 	/*後台點選進入文章內容(繁星)*/
 	public function show_content_back_star($star_post_page_id)
 	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('posts/user_login');
+		}
+
 		$login = new Logindate();
 		$model = new Star_post_page();
 		$data = 
@@ -168,6 +173,11 @@ class PostController extends BaseController
 	/*後台點選進入文章內容(個申)*/
 	public function show_content_back_per($per_post_page_id)
 	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('posts/user_login');
+		}
+
 		$login = new Logindate();
 		$model = new Per_post_page();
 		$data = 
@@ -215,6 +225,13 @@ class PostController extends BaseController
 		return view('posts/show_content_front_per', $data);
 	}
 
+	/*顯示pdf*/
+	public function show_pdf($file_name)
+	{
+		$this->response->setHeader('Content-Type', 'application/pdf');
+		readfile("upload/".$file_name);
+	}
+
 	/*儲存文章頁面(繁星)*/
 	public function store_star()
 	{
@@ -226,41 +243,45 @@ class PostController extends BaseController
 		$data=
 		[
 			'title' => $this->request->getVar('title'),
-			'file' => $this->request->getVar('file'),
 			'subtitle' => $this->request->getVar('subtitle'),
 			'subtitle2' => $this->request->getVar('subtitle2'),
 			'content' => $this->request->getVar('content'),
 			'start' => $this->request->getVar('start'),
 			'end' => $this->request->getVar('end')
 		];
-
-		/* TEST */
-		/*echo '<script>alert("檔案名稱 : '.$_FILES['file']['name'].'<br>")</script>';
-		echo '檔案大小 : '.$_FILES['file']['size'].'<br>';
-		echo '檔案格式 : '.$_FILES['file']['type'].'<br>';
-		echo '暫存名稱 : '.$_FILES['file']['tmp_name'].'<br>';
-		echo '錯誤代碼 : '.$_FILES['file']['error'].'<br>';
 	
-		if($_FILES['file']['error'] >0 ) {
-			switch ($_FILES['file']['error'] ) {
+		if($_FILES['myfile']['error'] > 0 ) {
+			switch ($_FILES['myfile']['error'] ) {
 			case 1:die("檔案大小超出 php.ini:upload_max_filesize 限制 ");
 			case 2:die("檔案大小超出 MAX_FILE_SIZE 限制");
 			case 3:die("檔案大小僅被部份上傳");
-			case 4:die("檔案未被上傳");
 			}
 		}
 
-		if(is_uploaded_file($data['file'])){
+		if(is_uploaded_file($_FILES['myfile']['tmp_name'])){	
 			$DestDIR = "upload";
 			if(!is_dir($DestDIR) || !is_writable($DestDIR)){
 				die("目錄不存在或無法存取檔案");
 			}
 
-			$File_Extension = explode(".", $data['title']);
+			$File_Extension = explode(".", $_FILES['myfile']['name']);
 			$File_Extension = $File_Extension[count($File_Extension)-1];
-			$ServerFilename = date("YmdHis") . "." . $File_Extension;
-			move_uploaded_file($data['file'], $DestDIR . '/' . $ServerFilename);
-		}*/
+			$ServerFilename = date("YmdHis").".".$File_Extension;
+			move_uploaded_file($_FILES['myfile']['tmp_name'], $DestDIR.'/'.$ServerFilename);
+
+			$model = new Star_post_page();
+			$model->save([
+				'title' => $data['title'],
+				'subtitle' => $data['subtitle'],
+				'subtitle2' => $data['subtitle2'],
+				'content' => $data['content'],
+				'start' => $data['start'],
+				'end' => $data['end'],
+				'file' => $ServerFilename,
+				'file_name' => $_FILES['myfile']['name']
+			]);
+			return redirect('PostController/show_back');
+		}
 
 		$model = new Star_post_page();
 		$model->save([
@@ -290,7 +311,40 @@ class PostController extends BaseController
 				'content' => $this->request->getVar('content'),
 				'start' => $this->request->getVar('start'),
 				'end' => $this->request->getVar('end')
-			];				
+			];
+
+		if($_FILES['myfile']['error'] > 0 ) {
+			switch ($_FILES['myfile']['error'] ) {
+			case 1:die("檔案大小超出 php.ini:upload_max_filesize 限制 ");
+			case 2:die("檔案大小超出 MAX_FILE_SIZE 限制");
+			case 3:die("檔案大小僅被部份上傳");
+			}
+		}
+
+		if(is_uploaded_file($_FILES['myfile']['tmp_name'])){	
+			$DestDIR = "upload";
+			if(!is_dir($DestDIR) || !is_writable($DestDIR)){
+				die("目錄不存在或無法存取檔案");
+			}
+
+			$File_Extension = explode(".", $_FILES['myfile']['name']);
+			$File_Extension = $File_Extension[count($File_Extension)-1];
+			$ServerFilename = date("YmdHis").".".$File_Extension;
+			move_uploaded_file($_FILES['myfile']['tmp_name'], $DestDIR.'/'.$ServerFilename);
+
+			$model = new Per_post_page();
+			$model->save([
+				'title' => $data['title'],
+				'subtitle' => $data['subtitle'],
+				'subtitle2' => $data['subtitle2'],
+				'content' => $data['content'],
+				'start' => $data['start'],
+				'end' => $data['end'],
+				'file' => $ServerFilename,
+				'file_name' => $_FILES['myfile']['name']
+			]);
+			return redirect('PostController/show_back');
+		}	
 
 		$model = new Per_post_page();
 		$model->save([
@@ -322,7 +376,49 @@ class PostController extends BaseController
 				'end' => $this->request->getVar('end')
 			];
 
+		if($_FILES['myfile']['error'] > 0 ) {
+			switch ($_FILES['myfile']['error'] ) {
+			case 1:die("檔案大小超出 php.ini:upload_max_filesize 限制 ");
+			case 2:die("檔案大小超出 MAX_FILE_SIZE 限制");
+			case 3:die("檔案大小僅被部份上傳");
+			}
+		}
+
+		if(is_uploaded_file($_FILES['myfile']['tmp_name'])){	
+			$DestDIR = "upload";
+			if(!is_dir($DestDIR) || !is_writable($DestDIR)){
+				die("目錄不存在或無法存取檔案");
+			}
+
+			$File_Extension = explode(".", $_FILES['myfile']['name']);
+			$File_Extension = $File_Extension[count($File_Extension)-1];
+			$ServerFilename = date("YmdHis").".".$File_Extension;
+			move_uploaded_file($_FILES['myfile']['tmp_name'], $DestDIR.'/'.$ServerFilename);
+
+			$model = new Star_post_page();
+			$model->save([
+				'id' => $_SESSION['id'],
+				'title' => $data['title'],
+				'subtitle' => $data['subtitle'],
+				'subtitle2' => $data['subtitle2'],
+				'content' => $data['content'],
+				'start' => $data['start'],
+				'end' => $data['end'],
+				'file' => $ServerFilename,
+				'file_name' => $_FILES['myfile']['name']
+			]);
+			return redirect('PostController/show_back');
+		}	
+
 		$model = new Star_post_page();
+
+		$post = $model->find($_SESSION['id']);
+
+		if($post['file'] != NULL){
+			$file = 'upload/'.$post['file'];
+			unlink($file);
+		}
+		
 		$model->save([
 			'id' => $_SESSION['id'],
 			'title' => $data['title'],
@@ -353,7 +449,49 @@ class PostController extends BaseController
 				'content' => $this->request->getVar('content'),
 				'start' => $this->request->getVar('start'),
 				'end' => $this->request->getVar('end')
-			];				
+			];
+		
+		if($_FILES['myfile']['error'] > 0 ) {
+			switch ($_FILES['myfile']['error'] ) {
+			case 1:die("檔案大小超出 php.ini:upload_max_filesize 限制 ");
+			case 2:die("檔案大小超出 MAX_FILE_SIZE 限制");
+			case 3:die("檔案大小僅被部份上傳");
+			}
+		}
+
+		if(is_uploaded_file($_FILES['myfile']['tmp_name'])){
+			$DestDIR = "upload";
+			if(!is_dir($DestDIR) || !is_writable($DestDIR)){
+				die("目錄不存在或無法存取檔案");
+			}
+
+			$File_Extension = explode(".", $_FILES['myfile']['name']);
+			$File_Extension = $File_Extension[count($File_Extension)-1];
+			$ServerFilename = date("YmdHis").".".$File_Extension;
+			move_uploaded_file($_FILES['myfile']['tmp_name'], $DestDIR.'/'.$ServerFilename);
+
+			$model = new Per_post_page();
+
+			$post = $model->find($_SESSION['id']);
+
+			if($post['file'] != NULL){
+				$file = 'upload/'.$post['file'];
+				unlink($file);
+			}
+
+			$model->save([
+				'id' => $_SESSION['id'],
+				'title' => $data['title'],
+				'subtitle' => $data['subtitle'],
+				'subtitle2' => $data['subtitle2'],
+				'content' => $data['content'],
+				'start' => $data['start'],
+				'end' => $data['end'],
+				'file' => $ServerFilename,
+				'file_name' => $_FILES['myfile']['name']
+			]);
+			return redirect('PostController/show_back');
+		}	
 
 		$model = new Per_post_page();
 		$model->save([
@@ -373,7 +511,19 @@ class PostController extends BaseController
 	/*刪除資料(繁星)*/
 	public function delete_star()
 	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('posts/user_login');
+		}
+
 		$model = new Star_post_page();
+
+		$post = $model->find($_SESSION['id']);
+
+		if($post['file'] != NULL){
+			$file = 'upload/'.$post['file'];
+			unlink($file);
+		}
 		
 		$model->where('id', $_SESSION['id'])->delete();
 
@@ -385,7 +535,19 @@ class PostController extends BaseController
 	/*刪除資料(個人)*/
 	public function delete_per()
 	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('posts/user_login');
+		}
+
 		$model = new Per_post_page();
+
+		$post = $model->find($_SESSION['id']);
+
+		if($post['file'] != NULL){
+			$file = 'upload/'.$post['file'];
+			unlink($file);
+		}
 		
 		$model->where('id', $_SESSION['id'])->delete();
 
@@ -397,6 +559,11 @@ class PostController extends BaseController
 	/*編輯頁面*/
 	public function logindateset()
 	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('posts/user_login');
+		}
+
 		$model = new Logindate();
 		$data =
 			[
@@ -407,6 +574,10 @@ class PostController extends BaseController
 
 	public function norcollegeedit()
 	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('posts/user_login');
+		}
 		
 		$model = new Norcollege();
 		$data =
@@ -418,6 +589,10 @@ class PostController extends BaseController
 
 	public function starcollegeedit()
 	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('posts/user_login');
+		}
 		
 		$model = new Starcollege();
 		$data =
@@ -429,6 +604,10 @@ class PostController extends BaseController
 
 	public function norsenioredit()
 	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('posts/user_login');
+		}
 		
 		$model = new Norsenior();
 		$data =
@@ -440,6 +619,11 @@ class PostController extends BaseController
 
 	public function starsenioredit()
 	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('posts/user_login');
+		}
+
 		$model = new Starsenior();
 		$data =
 			[
@@ -451,6 +635,11 @@ class PostController extends BaseController
 	/*編輯畫面跳轉到觀看畫面*/
 	public function logindateview()
 	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('posts/user_login');
+		}
+
 		$model = new Logindate();
 		$data =
 			[
@@ -461,6 +650,11 @@ class PostController extends BaseController
 
 	public function norcollegeview()
 	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('posts/user_login');
+		}
+
 		$model = new Norcollege();
 		$data =
 			[
@@ -471,6 +665,11 @@ class PostController extends BaseController
 
 	public function starcollegeview()
 	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('posts/user_login');
+		}
+
 		$model = new Starcollege();
 		$data =
 			[
@@ -481,6 +680,11 @@ class PostController extends BaseController
 
 	public function norseniorview()
 	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('posts/user_login');
+		}
+
 		$model = new Norsenior();
 		$data =
 			[
@@ -491,6 +695,11 @@ class PostController extends BaseController
 
 	public function starseniorview()
 	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('posts/user_login');
+		}
+
 		$model = new Starsenior();
 		$data =
 			[
@@ -502,6 +711,11 @@ class PostController extends BaseController
 	/*後台網頁開放時間網址與說明資料更新*/
 	public function logindatestore()
 	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('posts/user_login');
+		}
+
 		$model = new Logindate();
 		$model->save(
 			[
@@ -514,7 +728,12 @@ class PostController extends BaseController
 	}
 
 	public function norcollegestore()
-	{	
+	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('posts/user_login');
+		}
+		
 		$model = new Norcollege();
 		$model->save(
 		[
@@ -544,7 +763,12 @@ class PostController extends BaseController
 	}
 
 	public function starcollegestore()
-	{	
+	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('posts/user_login');
+		}
+
 		$model = new Starcollege();
 		$model->save(
 		[
@@ -561,7 +785,12 @@ class PostController extends BaseController
 	}
 
 	public function norseniorstore()
-	{	
+	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('posts/user_login');
+		}
+
 		$model = new Norsenior();
 		$model->save(
 		[
@@ -589,7 +818,12 @@ class PostController extends BaseController
 	}
 
 	public function starseniorstore()
-	{	
+	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('posts/user_login');
+		}
+		
 		$model = new Starsenior();
 		$model->save(
 		[
@@ -616,8 +850,14 @@ class PostController extends BaseController
 
 	/* 後台登入頁面 */
 	public function user_login()
-	{	
-		return view('posts/user_login');
+	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			return view('posts/user_login');
+		}
+		else{
+			echo '<script>alert("'.$_SESSION['name'].' 您好 !")</script>';
+			return view('posts/create_new');
+		}
 	}
 
 	/* 前台登入頁面 */
@@ -688,8 +928,7 @@ class PostController extends BaseController
 			$password = strcmp($data['password'], $users[$i]['password']);
 
 			if($email == 0 && $password == 0){
-				/*print_r($users[$i]['name']);
-				echo ' 歡迎登入！';*/
+				$_SESSION['name'] = $users[$i]['name'];
 				$_SESSION['user_login'] = true;
 				return view('posts/create_new');
 			}

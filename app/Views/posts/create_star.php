@@ -16,10 +16,11 @@
     </head>
 
     <body>
-        <div align="center" style="padding-right: 300px">
+        <div style="padding-left: 100px">
             <form action="/PostController/store_star" enctype="multipart/form-data" method="post">
                 <div class="row" style="width: 900px">
                     <div class="col offset-0">
+                        <br>
                         <div class="row">
                             <div class="title">建立貼文<br>(繁星申請)</div>
                         </div>
@@ -28,9 +29,6 @@
                             <label for="title" class="col-md-2 col-form-label">
                                 標題</label>
                             <input id="title" type="text" name="title" required> <br>
-                            
-                            <label for="file" class="col-md-2 col-form-label"></label>
-                            <input id="file" type="file" name="file" accept=".pdf"> <br>
 
                             <label for="subtitle" class="col-md-2 col-form-label">
                                 副標題</label>
@@ -53,6 +51,10 @@
                             <label for="content" class="col-md-2 col-form-label">
                                 內容</label>
                             <textarea class="ckeditor" id="editor" name="content"></textarea>
+
+                            <label for="myfile" class="col-md-2 col-form-label">
+                                選擇檔案</label>
+                            <input id="myfile" type="file" name="myfile" accept=".pdf"> <br>
                             
                             <label for="start" class="col-md-2 col-form-label">
                                 起始時間</label>
@@ -66,6 +68,7 @@
                         <div class="row pt-4">
                             <button class="btn btn-primary">發布</button>
                         </div>
+                        <br><br>
                     </div>
                 </div>
             </form>            

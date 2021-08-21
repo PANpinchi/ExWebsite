@@ -20,7 +20,9 @@ class Per_post_page extends Model
 		'subtitle2',
 		'content',
 		'start',
-		'end'
+		'end',
+		'file',
+		'file_name'
 	];
 
 	// Dates

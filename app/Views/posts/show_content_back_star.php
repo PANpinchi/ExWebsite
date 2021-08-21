@@ -1,4 +1,4 @@
-<?= $this->extend('templates\user_login_default') ?>
+<?= $this->extend('templates\user_default') ?>
 <?= $this->section('content') ?>
 <!doctype html>
 
@@ -15,15 +15,17 @@
     </head>
 
     <body>
-        <div class="content">
-            <div class="title margin" align="center">公告內容</div>                            
+        <div class="content" style="margin-right: 100px">
+            <br>
+            <div class="title margin" align="center">公告內容</div> <br>
+            
+            <table border="1" class="table-striped center" align="center" style="width: 1000px">
             <?php
                 $start1 = substr($star_post_page['start'], 0, 10);
                 $start2 = substr($star_post_page['start'], 11, 16);
                 $end1 = substr($star_post_page['end'], 0, 10);
                 $end2 = substr($star_post_page['end'], 11, 16);
                 echo'
-                <table border="1" class="table-striped center" align="center">
                     <tr> 
                         <td style="width: 150px">標題
                         <td style="width: 600px;">'.$star_post_page['title'].'
@@ -36,18 +38,40 @@
                     <tr> 
                         <td style="width: 150px">內容
                         <td style="width: 600px;">'.$star_post_page['content'].'
-                </table>
-                '
-            ?> 
+                ';
+                
+                if($star_post_page['file'] != NULL){
+                    echo '
+                        <tr>
+                            <td align="center" valign="middle"> <strong> 附件 </strong> </td>
+                            <td><a href="/PostController/show_pdf/'.$star_post_page['file'].'">'.$star_post_page['file_name'].'</a>
+                        </tr>';
+                }
+                else{
+                    echo '
+                        <tr>
+                            <td align="center" valign="middle"> <strong> 附件 </strong> </td>
+                            <td> -- </td>
+                        </tr>';
+                }
+            ?>
+            </table>
 
             <div align="center">
                 <div>
                     <br>
-                    <button class="btn btn-primary"><a href="/PostController/show_back" style="color:white;"> 返回 </button>                    
-                    <button class="btn btn-primary" style="background-color:orange; border-color:orange;"><a href="/PostController/modify_star" style="color:white;"> 修改公告 </a></button>
-                    <button class="btn btn-primary" style="background-color:red; border-color:red;"><a href="/PostController/delete_star" style="color:white;"> 刪除公告 </a></button>
+                    <button class="btn btn-primary">
+                        <a href="/PostController/show_back" style="color:white; text-decoration:none;"> 返回 </a>
+                    </button>                    
+                    <button class="btn btn-primary" style="background-color:orange; border-color:orange;">
+                        <a href="/PostController/modify_star" style="color:white; text-decoration:none;"> 修改公告 </a>
+                    </button>
+                    <button class="btn btn-primary" style="background-color:red; border-color:red;">
+                        <a href="/PostController/delete_star" style="color:white; text-decoration:none;"> 刪除公告 </a>
+                    </button>
                 </div>
             </div>
+            <br>
         </div>
         
     <body>

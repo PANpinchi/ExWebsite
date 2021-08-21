@@ -19,7 +19,7 @@
             <td>
                 <table>
                     <tr>
-                        <td colspan="5"><img src="/person_img/icon_17.jpg"></td>
+                        <td colspan="5"><img src="/person_img/icon_17.jpg" style="width: 750px"></td>
                     </tr>
 
                     <tr>
@@ -49,8 +49,8 @@
                                     echo'
                                         <tr valign = "top">
                                             <td style="width: 30px;"> '.$year.'/'.$month.'/'.$day.' </td>
-                                            <td style="width: 100px; color: gray;"> ['.$star_post_page_item['subtitle'].'] </td>
-                                            <td style="width: 500px"><a href="/PostController/show_content_front_star/'.$star_post_page_item['id'].'"> '.$star_post_page_item['title'].'</a> </td>
+                                            <td style="width: 90px; color: gray;"> ['.$star_post_page_item['subtitle'].'] </td>
+                                            <td style="width: 500px;"><a href="/PostController/show_content_front_star/'.$star_post_page_item['id'].'"> '.$star_post_page_item['title'].'</a> </td>
                                             <td style="width: 20px"> </td>
                                         </tr>
                                     ';

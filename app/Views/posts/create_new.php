@@ -27,22 +27,24 @@
     </head>
 
     <body>
-        <br><br><br>
+        <div style="margin-right: 100px">
+            <br><br><br><br><br>
 
-        <div class="container title">
-            公告系統首頁                
-        </div>
+            <div class="container title">
+                公告系統首頁                
+            </div>
 
-        <br><br><br>
+            <br><br><br>
 
-        <div class="container" align="center">
-            <a href="/PostController/create_star"><img src="/front_img/star.png" style="width: 100%; border-radius: 10px 10px 10px 10px;" border="2px"></a>
-        </div>
+            <div class="container">
+                <a href="/PostController/create_star"><img src="/front_img/star.png" style="width: 100%; border-radius: 10px 10px 10px 10px;" border="2px"></a>
+            </div>
 
-        <br><br><br>
+            <br><br><br>
 
-        <div class="container" align="center">
-            <a href="/PostController/create_per"><img src="/front_img/person.png" style="width: 100%; border-radius: 10px 10px 10px 10px;" border="2px"></a>
+            <div class="container">
+                <a href="/PostController/create_per"><img src="/front_img/person.png" style="width: 100%; border-radius: 10px 10px 10px 10px;" border="2px"></a>
+            </div>
         </div>
     <body>
 </html>

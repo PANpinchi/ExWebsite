@@ -16,8 +16,8 @@
     </head>
 
     <body>
-        <br><br><br>
-        <div class="content margin">
+        <br><br>
+        <div class="content margin" style="margin-right: 60px">
             <div class="title">繁星公告訊息</div><br>
             <table border="1" class="center" align="center">
                 <thead>
@@ -32,17 +32,17 @@
                             <tr>
                             <td style="width: 150px"> '.$start.'
                             <td style="width: 150px"> '.$star_post_page_item['subtitle'].'
-                            <td style="width: 400px"><a href="/PostController/show_content_back_star/'.$star_post_page_item['id'].'"> '.$star_post_page_item['title'].'</a>
+                            <td style="width: 800px"><a href="/PostController/show_content_back_star/'.$star_post_page_item['id'].'"> '.$star_post_page_item['title'].'</a>
                             ';
                             $temp++;
                     }
-                }   
+                }
             ?>
             </table>
             <br>
         </div>
 
-        <div class="content margin">
+        <div class="content margin" style="margin-right: 100px">
             <div class="title">個申公告訊息</div><br>
             <table border="1" class="center" align="center">
                 <thead>
@@ -56,7 +56,7 @@
                             <tr>
                             <td style="width: 150px"> '.$start.'
                             <td style="width: 150px"> '.$per_post_page_item['subtitle'].'
-                            <td style="width: 400px"><a href="/PostController/show_content_back_per/'.$per_post_page_item['id'].'"> '.$per_post_page_item['title'].'</a>
+                            <td style="width: 800px"><a href="/PostController/show_content_back_per/'.$per_post_page_item['id'].'"> '.$per_post_page_item['title'].'</a>
                             ';
                             $temp++;
                     }
@@ -66,6 +66,7 @@
             <div align="center">
                 <br>
                 <button class="btn btn-primary"><a href="/PostController/create_new" style="color:white;">返回</button>
+                <br><br>
             </div>
         </div>
     <body>

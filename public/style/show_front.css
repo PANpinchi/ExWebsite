@@ -28,3 +28,12 @@ td {border-width : 0;}
 table {
     display: collapse;
 }
+
+a{
+    text-decoration:none;
+
+}
+
+a:hover{
+    text-decoration:underline;
+}

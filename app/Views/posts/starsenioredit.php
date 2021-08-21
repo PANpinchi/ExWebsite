@@ -11,19 +11,35 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<<<<<<< HEAD
 	<link rel="stylesheet" href="/style/table.css">
+=======
+
+    
+	<style>
+		.c{text-align:center}
+		th {border-width : 1px;}
+		a{text-decoration:none;}
+		a:hover{text-decoration:underline;}
+	</style>
+>>>>>>> pinchi
 
   </head>
 
   <body>
-
+  <br>
   <?php
     foreach($starsenior as $starsenior_item){
     echo '
 	<div class="left">
     <form action="/PostController/starseniorstore" method="post">
+<<<<<<< HEAD
     <input type="submit" value="一鍵更改" name="submit" class="btn btn-primary"></input>
     <table border="1" class="c table" style="border-style:solid; width: 1100px;">
+=======
+    <input type="submit" value="一鍵更改" name="submit"></input><br><br>
+    <table border="1" class="c" style="border-style:solid; width: 1100px;">
+>>>>>>> pinchi
 	    <tr>
 			<th width="50px">編號
 			<th width="200px">系統名稱
@@ -257,6 +273,7 @@
    				 <input type="help" class="form-control" id="help" name="instruction15" value='.$starsenior_item['instruction15'].'>
  				 </div>
         </table>
+		<br>
     </form>
 	</div>
     ';

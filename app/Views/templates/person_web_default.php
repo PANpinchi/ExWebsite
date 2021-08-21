@@ -52,7 +52,7 @@
             <br>
             <div class="row">
                 <div class="col-md-1"></div>
-                <div class="col-md-10">
+                <div class="col-md-10 text">
                     <table cellpadding="0" cellspacing="0">
                         <tbody>
                             <tr>
@@ -66,7 +66,7 @@
                                             <tr>
                                                 <td style="width: 189px;"><img src="/person_img/form_top_03.jpg"></td>
                                                 <td>
-                                                    <div id = "home"><a href="/PostController/login"> </a></div>
+                                                    <div id = "home"><a href="/PostController/frontpage"> </a></div>
                                                 </td>
                                                 <td>
                                                     <div id = "apply"><a href="/PostController/show_front_star"> </a></div>
@@ -142,8 +142,8 @@
                                                     <div id = "pass"><a href="/PostController/login"> </a></div>
                                                 </td>
 
-                                                <td rowspan = "17" style = "width: 670px;" valign="top">
-                                                    <table cellpadding="0" cellspacing="0">
+                                                <td rowspan = "17" style = "width: 752px;" valign="top">
+                                                    <table cellpadding="0" cellspacing="0" style="font-size: 15px;" align="center">
                                                         <tbody>
                                                             <?= $this->renderSection('content') ?>
                                                         </tbody>
@@ -162,7 +162,22 @@
                                             <tr><td><img src="/person_img/main_menu_title.jpg"></tr>
                                             <tr>
                                                 <td>
-                                                    <div id = "m1"><a href="#"> </a></div>
+                                                    <div id = "m1">
+                                                        <a href="#" style="text-decoration:none;"> 
+                                                            <table class="layer" style="text-decoration:none;">
+                                                                <tbody>
+                                                                    <tr class="touch"><td style="width: 140px;">簡章訊息事務</td></tr>
+                                                                    <tr class="touch"><td style="width: 140px;">招生事務</td></tr>
+                                                                    <tr class="touch"><td style="width: 140px;">甄選資訊</td></tr>
+                                                                    <tr class="touch"><td style="width: 140px;">會議簡報</td></tr>
+                                                                    <tr class="touch"><td style="width: 140px;">其他事項</td></tr>
+                                                                    <tr class="touch"><td style="width: 140px;">系統公告</td></tr>
+                                                                    <tr class="touch"><td style="width: 140px;">師資保送甄試</td></tr>
+                                                                    <tr class="touch"><td style="width: 140px;">醫師人員養成計畫</td></tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </a>
+                                                    </div>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -177,12 +192,34 @@
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <div id = "m4"><a href="#"> </a></div>
+                                                    <div id = "m4">
+                                                        <a href="#" style="text-decoration:none;"> 
+                                                            <table class="layer" style="text-decoration:none;">
+                                                                <tbody>
+                                                                    <tr class="touch"><td style="width: 140px;">發售辦法</td></tr>
+                                                                    <tr class="touch"><td style="width: 140px;">網路購買簡章</td></tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </a>
+                                                    </div>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <div id = "m5"><a href="#"> </a></div>
+                                                    <div id = "m5">
+                                                        <a href="#" style="text-decoration:none;"> 
+                                                            <table class="layer" style="text-decoration:none;">
+                                                                <tbody>
+                                                                    <tr class="touch"><td style="width: 140px;">簡章總則</td></tr>
+                                                                    <tr class="touch"><td style="width: 140px;">簡章附錄</td></tr>
+                                                                    <tr class="touch"><td style="width: 140px;">校系分則查詢</td></tr>
+                                                                    <tr class="touch"><td style="width: 140px;">其他事項</td></tr>
+                                                                    <tr class="touch"><td style="width: 140px;">簡章修正事項</td></tr>
+                                                                    <tr class="touch"><td style="width: 140px;">110參採科目簡表</td></tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </a>
+                                                    </div>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -197,12 +234,31 @@
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <div id = "m7"><a href="#"> </a></div>
+                                                    <div id = "m7">
+                                                        <a href="#" style="text-decoration:none;"> 
+                                                            <table class="layer" style="text-decoration:none;">
+                                                                <tbody>
+                                                                    <tr class="touch"><td style="width: 140px;">資料表件下載</td></tr>
+                                                                    <tr class="touch"><td style="width: 140px;">其他事項下載</td></tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </a>
+                                                    </div>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <div id = "m8"><a href="#"> </a></div>
+                                                    <div id = "m8">
+                                                        <a href="#" style="text-decoration:none;"> 
+                                                            <table class="layer" style="text-decoration:none;">
+                                                                <tbody>
+                                                                    <tr class="touch"><td style="width: 140px;">招生單位</td></tr>
+                                                                    <tr class="touch"><td style="width: 140px;">考試單位</td></tr>
+                                                                    <tr class="touch"><td style="width: 140px;">其他網站</td></tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </a>
+                                                    </div>
                                                 </td>
                                             </tr>
                                             <tr>

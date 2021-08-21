@@ -187,6 +187,27 @@ img {
     display: block;
 }
 
+.layer{
+    display: none;
+}
+
+#m1:hover .layer{
+    display: block;
+    position: relative;
+    top: 10px;
+    left: 150px;
+    width: 140px;
+    font-size: 16px;
+    color: black;
+    background-color: white;
+    border: 1px solid;
+    border-color: black;
+}
+
+.touch:hover{
+    background-color: rgb(255, 224, 243);
+}
+
 #m2 a:hover{
     background: url("/img/main_menu_02_up.jpg");
     display: block;
@@ -202,9 +223,35 @@ img {
     display: block;
 }
 
+#m4:hover .layer{
+    display: block;
+    position: relative;
+    top: 10px;
+    left: 150px;
+    width: 140px;
+    font-size: 16px;
+    color: black;
+    background-color: white;
+    border: 1px solid;
+    border-color: black;
+}
+
 #m5 a:hover{
     background: url("/img/main_menu_05_up.jpg");
     display: block;
+}
+
+#m5:hover .layer{
+    display: block;
+    position: relative;
+    top: 10px;
+    left: 150px;
+    width: 140px;
+    font-size: 16px;
+    color: black;
+    background-color: white;
+    border: 1px solid;
+    border-color: black;
 }
 
 #m6 a:hover{
@@ -217,9 +264,35 @@ img {
     display: block;
 }
 
+#m7:hover .layer{
+    display: block;
+    position: relative;
+    top: 10px;
+    left: 150px;
+    width: 140px;
+    font-size: 16px;
+    color: black;
+    background-color: white;
+    border: 1px solid;
+    border-color: black;
+}
+
 #m8 a:hover{
     background: url("/img/main_menu_08_up.jpg");
     display: block;
+}
+
+#m8:hover .layer{
+    display: block;
+    position: relative;
+    top: 10px;
+    left: 150px;
+    width: 140px;
+    font-size: 16px;
+    color: black;
+    background-color: white;
+    border: 1px solid;
+    border-color: black;
 }
 
 #m9 a:hover{
