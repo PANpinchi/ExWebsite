@@ -32,11 +32,11 @@
                             <tr>
                             <td style="width: 150px"> '.$start.'
                             <td style="width: 150px"> '.$star_post_page_item['subtitle'].'
-                            <td style="width: 400px"><a href="/PostController/show_content_back_star/'.$star_post_page_item['id'].'"> '.$star_post_page_item['title'].'</a>
+                            <td style="width: 800px"><a href="/PostController/show_content_back_star/'.$star_post_page_item['id'].'"> '.$star_post_page_item['title'].'</a>
                             ';
                             $temp++;
                     }
-                }   
+                }
             ?>
             </table>
             <br>
@@ -56,16 +56,17 @@
                             <tr>
                             <td style="width: 150px"> '.$start.'
                             <td style="width: 150px"> '.$per_post_page_item['subtitle'].'
-                            <td style="width: 400px"><a href="/PostController/show_content_back_per/'.$per_post_page_item['id'].'"> '.$per_post_page_item['title'].'</a>
+                            <td style="width: 800px"><a href="/PostController/show_content_back_per/'.$per_post_page_item['id'].'"> '.$per_post_page_item['title'].'</a>
                             ';
                             $temp++;
                     }
                 }   
             ?>
             </table>
-            <div align="center">
+            <div align="center" style="padding-left: 200px;">
                 <br>
                 <button class="btn btn-primary"><a href="/PostController/create_new" style="color:white;">返回</button>
+                <br><br><br>
             </div>
         </div>
     <body>

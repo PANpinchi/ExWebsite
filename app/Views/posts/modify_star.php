@@ -50,6 +50,10 @@
                             <label for="content" class="col-md-4 col-form-label">
                                 內容</label>
                             <?php echo '<textarea class="ckeditor" id="editor" name="content">'.$post['content'].'</textarea>'; ?>
+
+                            <label for="myfile" class="col-md-2 col-form-label">
+                                選擇檔案</label>
+                            <input id="myfile" type="file" name="myfile" accept=".pdf"> <br>
                             
                             <label for="start" class="col-md-4 col-form-label">
                                 起始時間</label>

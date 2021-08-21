@@ -15,26 +15,59 @@
     </head>
 
     <body>
-        <div class="content">
-            <div class="title margin">公告內容</div>                            
-            <?php
-                $start1 = substr($per_post_page['start'], 0, 10);
-                $start2 = substr($per_post_page['start'], 11, 16);
-                echo'
-                    <tr> 
-                        <td style="width: 150px">標題
-                        <td style="width: 600px;">'.$per_post_page['title'].'
-                    <tr> 
-                        <td style="width: 150px">發布時間
-                        <td style="width: 600px;">'.$start1.' '.$start2.'
-                    <tr> 
-                        <td style="width: 150px">內容
-                        <td style="width: 600px;">'.$per_post_page['content'].'';
-            ?> 
-            <br>
-            <button><a href="/PostController/show_front_per">返回</button>               
-        </div>
-        
+    <tr>
+            <td align="center">
+                <br>
+                <table class="table table-bordered" style="width: 700px; margin-right: 10px">
+                    <tr>
+                        <td style="width: 80px;" align="center"> <strong> 主旨 </strong> </td>
+                        <?php echo' <td style="width: 600px;"> <strong style="font-size: 20px">'.$per_post_page['title'].'</strong> </td> '; ?>
+                    </tr>
+                    <tr>
+                        <td align="center"> <strong> 發布日期 </strong> </td>
+                        <?php 
+                        $year = substr($per_post_page['start'], 0, 4);
+                        $month = substr($per_post_page['start'], 5, 2);
+                        $day = substr($per_post_page['start'], 8, 2);
+                        $time = substr($per_post_page['start'], 11, 5);
+                        echo' <td style="width: 600px;">'.$year.'/'.$month.'/'.$day.' '.$time.'</td> ';
+                        ?>
+                    </tr>
+                    <tr>
+                        <td align="center"> <strong> 公告期間 </strong> </td>
+                        <?php 
+                        $end_year = substr($per_post_page['end'], 0, 4);
+                        $end_month = substr($per_post_page['end'], 5, 2);
+                        $end_day = substr($per_post_page['end'], 8, 2);
+                        echo' <td style="width: 600px;">'.$year.'/'.$month.'/'.$day.' ~ '.$end_year.'/'.$end_month.'/'.$end_day.'</td> ';
+                        ?>
+                    </tr>
+                    <tr>
+                        <td align="center"> <strong> 內文 </strong> </td>
+                        <?php echo' <td style="width: 600px;">'.$per_post_page['content'].'</td> '; ?>
+                    </tr>
+
+                    <?php 
+                    if($per_post_page['file'] != NULL){
+                        echo '
+                            <tr>
+                                <td align="center"> <strong> 附件 </strong> </td>
+                                <td><a href="/PostController/show_pdf/'.$per_post_page['file'].'">'.$per_post_page['file_name'].'</a>
+                            </tr>';
+                    }
+                    else{
+                        echo '
+                            <tr>
+                                <td align="center"> <strong> 附件 </strong> </td>
+                                <td> -- </td>
+                            </tr>';
+                    }
+                    ?>
+                </table>
+
+                <a class="btn btn-primary" href="/PostController/show_front_star" style="background-color: rgb(255, 174, 172); border-color: rgb(255, 174, 172);">返回</a>
+            </td>
+        </tr>
     <body>
 </html>
 <?= $this->endSection() ?>

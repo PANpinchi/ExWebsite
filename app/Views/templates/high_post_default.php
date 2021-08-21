@@ -123,8 +123,8 @@
                                                 ></a></div>
                                                 </td>
 
-                                                <td rowspan = "15" style = "width: 670px;" valign="top">
-                                                    <table width="670px" cellpadding="0" cellspacing="0">
+                                                <td rowspan = "15" style = "width: 752px;" valign="top">
+                                                    <table width="670px" cellpadding="0" cellspacing="0" style="font-size: 15px;" align="center">
                                                         <tbody>                                                            
                                                             <?= $this->renderSection('content') ?>
                                                         </tbody>

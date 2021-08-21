@@ -52,7 +52,7 @@
             <br>
             <div class="row">
                 <div class="col-md-1"></div>
-                <div class="col-md-10">
+                <div class="col-md-10 text">
                     <table cellpadding="0" cellspacing="0">
                         <tbody>
                             <tr>
@@ -142,8 +142,8 @@
                                                     <div id = "pass"><a href="/PostController/login"> </a></div>
                                                 </td>
 
-                                                <td rowspan = "17" style = "width: 670px;" valign="top">
-                                                    <table cellpadding="0" cellspacing="0">
+                                                <td rowspan = "17" style = "width: 752px;" valign="top">
+                                                    <table cellpadding="0" cellspacing="0" style="font-size: 15px;" align="center">
                                                         <tbody>
                                                             <?= $this->renderSection('content') ?>
                                                         </tbody>
