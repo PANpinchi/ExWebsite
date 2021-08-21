@@ -17,11 +17,10 @@
     <body>       
         <tr><img src="/person_img/icon_17.jpg">
         <br><tr><img src="/person_img/icon_16.jpg">
-
-        <table border = "1" class="center">
+        
         <?php
         date_default_timezone_set('Asia/Taipei');
-        echo date("Y-m-d H:i:s");
+        //echo date("Y-m-d H:i:s");
         
         $temp = 0;
         $i = 0;
@@ -38,17 +37,8 @@
                             $temp++;
                     }
                 }
-            }   
-
-            /*for($i = $temp; $i <= 25; $i++){
-                echo '
-                <table>
-                    <tr><br>
-                </table>
-                ';
-            }*/
+            }
         ?>
-        </table>
         </div>
     <body>
 </html>

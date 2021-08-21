@@ -16,10 +16,6 @@
 	<style>
 		.c{text-align:center;}
 		th {border-width : 1px;}
-		.window2{
-			width: 30vh;
-			height: 130vh;
-		}
 		a{text-decoration:none;}
 		a:hover{text-decoration:underline;}
 	</style>

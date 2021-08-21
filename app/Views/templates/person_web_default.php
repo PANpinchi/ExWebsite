@@ -13,22 +13,22 @@
             function hs_open() {
                 var menu = document.getElementById("hs_menu");
                 
-                if(menu.style.display == "none"){
-                    menu.style.display = "block";
+                if(menu.style.display == "block"){
+                    menu.style.display = "none";
                 }
                 else{
-                    menu.style.display = "none";
+                    menu.style.display = "block";
                 }
             }
 
             function col_open() {
                 var menu = document.getElementById("col_menu");
 
-                if(menu.style.display == "none"){
-                    menu.style.display = "block";
+                if(menu.style.display == "block"){
+                    menu.style.display = "none";
                 }
                 else{
-                    menu.style.display = "none";
+                    menu.style.display = "block";
                 }
             }
 
@@ -66,10 +66,10 @@
                                             <tr>
                                                 <td style="width: 189px;"><img src="/person_img/form_top_03.jpg"></td>
                                                 <td>
-                                                    <div id = "home"><a href="#"> </a></div>
+                                                    <div id = "home"><a href="/PostController/login"> </a></div>
                                                 </td>
                                                 <td>
-                                                    <div id = "apply"><a href="#"> </a></div>
+                                                    <div id = "apply"><a href="/PostController/show_front_star"> </a></div>
                                                 </td>
                                                 <td><img src="/person_img/form_top_06.jpg"></td>
                                                 
@@ -130,7 +130,7 @@
                                     <table cellpadding="0" cellspacing="0">
                                         <tbody>
                                             <tr>
-                                                <td rowspan = "17" style = "width: 70px; background-color: rgb(232,230,254);">
+                                                <td rowspan = "17" style = "width: 62px; background-color: rgb(232,230,254);">
                                                     <table cellpadding="0" cellspacing="0">
                                                         <tbody>
 
@@ -142,7 +142,7 @@
                                                     <div id = "pass"><a href="/PostController/login"> </a></div>
                                                 </td>
 
-                                                <td rowspan = "17" style = "width: 1000px;">
+                                                <td rowspan = "17" style = "width: 670px;" valign="top">
                                                     <table cellpadding="0" cellspacing="0">
                                                         <tbody>
                                                             <?= $this->renderSection('content') ?>
@@ -150,7 +150,7 @@
                                                     </table>
                                                 </td>
 
-                                                <td rowspan = "17" style = "width: 70px; background-color: rgb(232,230,254);">
+                                                <td rowspan = "17" style = "width: 61px; background-color: rgb(232,230,254);">
                                                     <table cellpadding="0" cellspacing="0">
                                                         <tbody>
                                                             
@@ -213,7 +213,7 @@
                                             <tr>
                                                 <td>
                                                     <div id = "hs" onclick=hs_open()></div>
-                                                    <span id="hs_menu" class="hide">
+                                                    <span id="hs_menu" class="hide text">
                                                         <table class="list">
                                                             <tr>
                                                                 <td>
@@ -511,7 +511,7 @@
                                             <tr>
                                                 <td>
                                                     <div id = "col" onclick="col_open()"></div>
-                                                    <span id="col_menu" class="hide">
+                                                    <span id="col_menu" class="hide text">
                                                         <table class="list">
                                                             <tr>
                                                                 <td>

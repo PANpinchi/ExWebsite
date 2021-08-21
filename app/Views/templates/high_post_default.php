@@ -11,25 +11,11 @@
 
         <script>
             function hs_open() {
-                var menu = document.getElementById("hs_menu");
-                
-                if(menu.style.display == "none"){
-                    menu.style.display = "block";
-                }
-                else{
-                    menu.style.display = "none";
-                }
+                $("#hs_menu").toggle();
             }
 
             function col_open() {
-                var menu = document.getElementById("col_menu");
-
-                if(menu.style.display == "none"){
-                    menu.style.display = "block";
-                }
-                else{
-                    menu.style.display = "none";
-                }
+                $("#col_menu").toggle();
             }
 
             function on(obj,status){
@@ -52,7 +38,7 @@
             <br>
             <div class="row">
                 <div class="col-md-1"></div>
-                <div class="col-md-10">
+                <div class="col-md-10 text">
                     <table cellpadding="0" cellspacing="0">
                         <tbody>
                             <tr>
@@ -66,10 +52,10 @@
                                             <tr>
                                                 <td style="width: 189px;"><img src="/img/form_top_03.jpg"></td>
                                                 <td>
-                                                    <div id = "home"><a href="#"> </a></div>
+                                                    <div id = "home"><a href="/PostController/frontpage"> </a></div>
                                                 </td>
                                                 <td>
-                                                    <div id = "apply"><a href="#"> </a></div>
+                                                    <div id = "apply"><a href="/PostController/show_front_per"> </a></div>
                                                 </td>
                                                 <td><img src="/img/form_top_06.jpg"></td>
                                                 
@@ -115,7 +101,7 @@
                                     <table cellpadding="0" cellspacing="0">
                                         <tbody>
                                             <tr>
-                                                <td rowspan = "15" style = "width: 70px; background-color: rgb(255, 231, 235);">
+                                                <td rowspan = "15" style = "width: 60px; background-color: rgb(255, 231, 235);">
                                                     <table cellpadding="0" cellspacing="0">
                                                         <tbody>
 
@@ -134,18 +120,18 @@
                                                     }
                                                 }
                                                 ?>
-                                                </a></div>
+                                                ></a></div>
                                                 </td>
 
-                                                <td rowspan = "15" style = "width: 1000px;">
-                                                    <table width="900px" cellpadding="0" cellspacing="0">
-                                                        <tbody>
+                                                <td rowspan = "15" style = "width: 670px;" valign="top">
+                                                    <table width="670px" cellpadding="0" cellspacing="0">
+                                                        <tbody>                                                            
                                                             <?= $this->renderSection('content') ?>
                                                         </tbody>
                                                     </table>
                                                 </td>
 
-                                                <td rowspan = "15" style = "width: 70px; background-color: rgb(255, 231, 235);">
+                                                <td rowspan = "15" style = "width: 60px; background-color: rgb(255, 231, 235);">
                                                     <table cellpadding="0" cellspacing="0">
                                                         <tbody>
                                                             
@@ -202,7 +188,7 @@
                                             <tr>
                                                 <td>
                                                     <div id = "hs" onclick = "hs_open()"></div>
-                                                    <span id="hs_menu" class="hide list">
+                                                    <span id="hs_menu" class="hide list text">
                                                         <table class="list">
                                                             <tr>
                                                                 <td>
@@ -457,7 +443,7 @@
                                             <tr>
                                                 <td>
                                                     <div id = "col" onclick = "col_open()"></div>
-                                                    <span id="col_menu" class="hide">
+                                                    <span id="col_menu" class="hide text">
                                                         <table class="list">
                                                             <tr>
                                                                 <td>
@@ -614,5 +600,6 @@
             </div>
             <br>
         </div>
-    <body>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    </body>
 </html>

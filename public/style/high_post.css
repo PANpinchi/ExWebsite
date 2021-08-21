@@ -23,106 +23,106 @@ img {
 #u1 a {
     background: url("/img/upbar_01.jpg");/*預設顯示圖片*/
     display: block;
-    height: 40px;/*圖片高度*/
-    width: 150px;/*圖片寬度*/
+    height: 38px;/*圖片高度*/
+    width: 148px;/*圖片寬度*/
 }
 
 #u2 a {
     background: url("/img/upbar_02.jpg");/*預設顯示圖片*/
     display: block;
-    height: 40px;/*圖片高度*/
-    width: 150px;/*圖片寬度*/
+    height: 38px;/*圖片高度*/
+    width: 148px;/*圖片寬度*/
 }
 
 #u3 a {
     background: url("/img/upbar_03.jpg");/*預設顯示圖片*/
     display: block;
-    height: 40px;/*圖片高度*/
-    width: 150px;/*圖片寬度*/
+    height: 38px;/*圖片高度*/
+    width: 148px;/*圖片寬度*/
 }
 
 #u4 a {
     background: url("/img/upbar_04.jpg");/*預設顯示圖片*/
     display: block;
-    height: 40px;/*圖片高度*/
-    width: 150px;/*圖片寬度*/
+    height: 38px;/*圖片高度*/
+    width: 148px;/*圖片寬度*/
 }
 
 #u5 a {
     background: url("/img/upbar_05.jpg");/*預設顯示圖片*/
     display: block;
-    height: 40px;/*圖片高度*/
-    width: 150px;/*圖片寬度*/
+    height: 38px;/*圖片高度*/
+    width: 148px;/*圖片寬度*/
 }
 
 #pass a {
     background: url("/img/personal_pass_bar.jpg");/*預設顯示圖片*/
     display: block;
-    height: 43px;/*圖片高度*/
-    width: 148px;/*圖片寬度*/
+    height: 41px;/*圖片高度*/
+    width: 146px;/*圖片寬度*/
 }
 
 #m1 a {
     background: url("/img/main_menu_01.jpg");/*預設顯示圖片*/
     display: block;
-    height: 42px;/*圖片高度*/
-    width: 148px;/*圖片寬度*/
+    height: 40px;/*圖片高度*/
+    width: 152px;/*圖片寬度*/
 }
 
 #m2 a {
     background: url("/img/main_menu_02.jpg");/*預設顯示圖片*/
     display: block;
-    height: 42px;/*圖片高度*/
-    width: 148px;/*圖片寬度*/
+    height: 40px;/*圖片高度*/
+    width: 152px;/*圖片寬度*/
 }
 
 #m3 a {
     background: url("/img/main_menu_03.jpg");/*預設顯示圖片*/
     display: block;
-    height: 42px;/*圖片高度*/
-    width: 148px;/*圖片寬度*/
+    height: 40px;/*圖片高度*/
+    width: 152px;/*圖片寬度*/
 }
 
 #m4 a {
     background: url("/img/main_menu_04.jpg");/*預設顯示圖片*/
     display: block;
-    height: 42px;/*圖片高度*/
-    width: 148px;/*圖片寬度*/
+    height: 40px;/*圖片高度*/
+    width: 152px;/*圖片寬度*/
 }
 
 #m5 a {
     background: url("/img/main_menu_05.jpg");/*預設顯示圖片*/
     display: block;
-    height: 42px;/*圖片高度*/
-    width: 148px;/*圖片寬度*/
+    height: 40px;/*圖片高度*/
+    width: 152px;/*圖片寬度*/
 }
 
 #m6 a {
     background: url("/img/main_menu_06.jpg");/*預設顯示圖片*/
     display: block;
-    height: 42px;/*圖片高度*/
-    width: 148px;/*圖片寬度*/
+    height: 40px;/*圖片高度*/
+    width: 152px;/*圖片寬度*/
 }
 
 #m7 a {
     background: url("/img/main_menu_07.jpg");/*預設顯示圖片*/
     display: block;
-    height: 42px;/*圖片高度*/
-    width: 148px;/*圖片寬度*/
+    height: 40px;/*圖片高度*/
+    width: 152px;/*圖片寬度*/
 }
 
 #m8 a {
     background: url("/img/main_menu_08.jpg");/*預設顯示圖片*/
     display: block;
-    height: 42px;/*圖片高度*/
-    width: 148px;/*圖片寬度*/
+    height: 40px;/*圖片高度*/
+    width: 152px;/*圖片寬度*/
 }
 
 #m9 a {
     background: url("/img/main_menu_09.jpg");/*預設顯示圖片*/
     display: block;
-    height: 42px;/*圖片高度*/
-    width: 148px;/*圖片寬度*/
+    height: 40px;/*圖片高度*/
+    width: 152px;/*圖片寬度*/
 }
 
 #hs{
@@ -248,4 +248,8 @@ img {
 .buttom{
     height:"1";
     background:"/img/main_menu_bg.jpg";
+}
+
+.text{
+    font-size:10px;	
 }
