@@ -23,6 +23,7 @@
   </head>
 
   <body>
+  <br>
   <input type="button" value="編輯" name="button" onclick= "location.href='/PostController/starcollegeedit'"></input><br>
   <?php
     date_default_timezone_set('Asia/Taipei');
@@ -152,6 +153,8 @@
 }
 
 ?>
+
+<br>
 
     <!-- Optional JavaScript; choose one of the two! -->
 

@@ -154,6 +154,11 @@ class PostController extends BaseController
 	/*後台點選進入文章內容(繁星)*/
 	public function show_content_back_star($star_post_page_id)
 	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('posts/user_login');
+		}
+
 		$login = new Logindate();
 		$model = new Star_post_page();
 		$data = 
@@ -168,6 +173,11 @@ class PostController extends BaseController
 	/*後台點選進入文章內容(個申)*/
 	public function show_content_back_per($per_post_page_id)
 	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('posts/user_login');
+		}
+
 		$login = new Logindate();
 		$model = new Per_post_page();
 		$data = 
@@ -401,6 +411,14 @@ class PostController extends BaseController
 		}	
 
 		$model = new Star_post_page();
+
+		$post = $model->find($_SESSION['id']);
+
+		if($post['file'] != NULL){
+			$file = 'upload/'.$post['file'];
+			unlink($file);
+		}
+		
 		$model->save([
 			'id' => $_SESSION['id'],
 			'title' => $data['title'],
@@ -441,7 +459,7 @@ class PostController extends BaseController
 			}
 		}
 
-		if(is_uploaded_file($_FILES['myfile']['tmp_name'])){	
+		if(is_uploaded_file($_FILES['myfile']['tmp_name'])){
 			$DestDIR = "upload";
 			if(!is_dir($DestDIR) || !is_writable($DestDIR)){
 				die("目錄不存在或無法存取檔案");
@@ -453,6 +471,14 @@ class PostController extends BaseController
 			move_uploaded_file($_FILES['myfile']['tmp_name'], $DestDIR.'/'.$ServerFilename);
 
 			$model = new Per_post_page();
+
+			$post = $model->find($_SESSION['id']);
+
+			if($post['file'] != NULL){
+				$file = 'upload/'.$post['file'];
+				unlink($file);
+			}
+
 			$model->save([
 				'id' => $_SESSION['id'],
 				'title' => $data['title'],
@@ -485,7 +511,19 @@ class PostController extends BaseController
 	/*刪除資料(繁星)*/
 	public function delete_star()
 	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('posts/user_login');
+		}
+
 		$model = new Star_post_page();
+
+		$post = $model->find($_SESSION['id']);
+
+		if($post['file'] != NULL){
+			$file = 'upload/'.$post['file'];
+			unlink($file);
+		}
 		
 		$model->where('id', $_SESSION['id'])->delete();
 
@@ -497,7 +535,19 @@ class PostController extends BaseController
 	/*刪除資料(個人)*/
 	public function delete_per()
 	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('posts/user_login');
+		}
+
 		$model = new Per_post_page();
+
+		$post = $model->find($_SESSION['id']);
+
+		if($post['file'] != NULL){
+			$file = 'upload/'.$post['file'];
+			unlink($file);
+		}
 		
 		$model->where('id', $_SESSION['id'])->delete();
 
@@ -509,6 +559,11 @@ class PostController extends BaseController
 	/*編輯頁面*/
 	public function logindateset()
 	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('posts/user_login');
+		}
+
 		$model = new Logindate();
 		$data =
 			[
@@ -519,6 +574,10 @@ class PostController extends BaseController
 
 	public function norcollegeedit()
 	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('posts/user_login');
+		}
 		
 		$model = new Norcollege();
 		$data =
@@ -530,6 +589,10 @@ class PostController extends BaseController
 
 	public function starcollegeedit()
 	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('posts/user_login');
+		}
 		
 		$model = new Starcollege();
 		$data =
@@ -541,6 +604,10 @@ class PostController extends BaseController
 
 	public function norsenioredit()
 	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('posts/user_login');
+		}
 		
 		$model = new Norsenior();
 		$data =
@@ -552,6 +619,11 @@ class PostController extends BaseController
 
 	public function starsenioredit()
 	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('posts/user_login');
+		}
+
 		$model = new Starsenior();
 		$data =
 			[
@@ -563,6 +635,11 @@ class PostController extends BaseController
 	/*編輯畫面跳轉到觀看畫面*/
 	public function logindateview()
 	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('posts/user_login');
+		}
+
 		$model = new Logindate();
 		$data =
 			[
@@ -573,6 +650,11 @@ class PostController extends BaseController
 
 	public function norcollegeview()
 	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('posts/user_login');
+		}
+
 		$model = new Norcollege();
 		$data =
 			[
@@ -583,6 +665,11 @@ class PostController extends BaseController
 
 	public function starcollegeview()
 	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('posts/user_login');
+		}
+
 		$model = new Starcollege();
 		$data =
 			[
@@ -593,6 +680,11 @@ class PostController extends BaseController
 
 	public function norseniorview()
 	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('posts/user_login');
+		}
+
 		$model = new Norsenior();
 		$data =
 			[
@@ -603,6 +695,11 @@ class PostController extends BaseController
 
 	public function starseniorview()
 	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('posts/user_login');
+		}
+
 		$model = new Starsenior();
 		$data =
 			[
@@ -614,6 +711,11 @@ class PostController extends BaseController
 	/*後台網頁開放時間網址與說明資料更新*/
 	public function logindatestore()
 	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('posts/user_login');
+		}
+
 		$model = new Logindate();
 		$model->save(
 			[
@@ -626,7 +728,12 @@ class PostController extends BaseController
 	}
 
 	public function norcollegestore()
-	{	
+	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('posts/user_login');
+		}
+		
 		$model = new Norcollege();
 		$model->save(
 		[
@@ -656,7 +763,12 @@ class PostController extends BaseController
 	}
 
 	public function starcollegestore()
-	{	
+	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('posts/user_login');
+		}
+
 		$model = new Starcollege();
 		$model->save(
 		[
@@ -673,7 +785,12 @@ class PostController extends BaseController
 	}
 
 	public function norseniorstore()
-	{	
+	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('posts/user_login');
+		}
+
 		$model = new Norsenior();
 		$model->save(
 		[
@@ -701,7 +818,12 @@ class PostController extends BaseController
 	}
 
 	public function starseniorstore()
-	{	
+	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('posts/user_login');
+		}
+		
 		$model = new Starsenior();
 		$model->save(
 		[
@@ -728,8 +850,14 @@ class PostController extends BaseController
 
 	/* 後台登入頁面 */
 	public function user_login()
-	{	
-		return view('posts/user_login');
+	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			return view('posts/user_login');
+		}
+		else{
+			echo '<script>alert("'.$_SESSION['name'].' 您好 !")</script>';
+			return view('posts/create_new');
+		}
 	}
 
 	/* 前台登入頁面 */
@@ -800,8 +928,7 @@ class PostController extends BaseController
 			$password = strcmp($data['password'], $users[$i]['password']);
 
 			if($email == 0 && $password == 0){
-				/*print_r($users[$i]['name']);
-				echo ' 歡迎登入！';*/
+				$_SESSION['name'] = $users[$i]['name'];
 				$_SESSION['user_login'] = true;
 				return view('posts/create_new');
 			}

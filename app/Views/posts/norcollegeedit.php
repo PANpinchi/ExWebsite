@@ -14,6 +14,8 @@
 	<style>
 		.c{text-align:center}
 		th {border-width : 1px;}
+		a{text-decoration:none;}
+		a:hover{text-decoration:underline;}
 	</style>
 
 </head>
@@ -25,8 +27,9 @@
 foreach($norcollege as $norcollege_item){
 echo '
 <div class="left">
+	<br>
 	<form action="/PostController/norcollegestore" method="post">
-	<input type="submit" value="一鍵更改" name="submit"></input>
+	<input type="submit" value="一鍵更改" name="submit"></input><br><br>
 	<table border="1" class="c" style="border-style:solid; width: 1100px;">
 	  <tr>
 			<th>編號
@@ -321,11 +324,12 @@ echo '
 					<input type="help" class="form-control" id="help" name="instruction19" value='.$norcollege_item['instruction19'].'>
 					</div>
   		</table>
+		<br>
 		</form>
 	</div>
 	';
-  }
-?>
+  	}
+	?>
 
     <!-- Optional JavaScript; choose one of the two! -->
 

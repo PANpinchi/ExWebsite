@@ -23,7 +23,7 @@
   </head>
 
   <body>
-  <input type="button" value="編輯" name="button" onclick= "location.href='/PostController/norsenioredit'"></input><br>
+  <br><input type="button" value="編輯" name="button" onclick= "location.href='/PostController/norsenioredit'"></input><br>
 
   <?php
     	date_default_timezone_set('Asia/Taipei');
@@ -318,6 +318,8 @@
 }
 
 ?>
+
+<br>
 
 
 

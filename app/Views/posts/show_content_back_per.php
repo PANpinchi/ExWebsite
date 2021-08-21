@@ -15,10 +15,10 @@
     </head>
 
     <body>
-        <div class="content">
-            <div class="title margin" align="center">公告內容</div>                            
+        <div class="content" style="margin-right: 100px">
+            <br>
+            <div class="title margin" align="center">公告內容</div> <br>
             <?php
-                
                 $_SESSION['id'] = $per_post_page['id'];
                 $start1 = substr($per_post_page['start'], 0, 10);
                 $start2 = substr($per_post_page['start'], 11, 16);

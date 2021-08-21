@@ -1,4 +1,4 @@
-<?= $this->extend('templates\user_login_default') ?>
+<?= $this->extend('templates\user_default') ?>
 <?= $this->section('content') ?>
 
 <head>
@@ -16,8 +16,9 @@
 	</style>
 </head>
 <body>
+<br>
 <h2 class="c">繁星推薦、個人申請個人密碼設定系統</h2>
-<input type="button" value="編輯" name="button" onclick= "location.href='/PostController/logindateset'"></input><br>
+<input type="button" value="編輯" name="button" onclick= "location.href='/PostController/logindateset'"></input><br><br>
 <?php
 	foreach($logindate as $logindate_item){
 	echo '

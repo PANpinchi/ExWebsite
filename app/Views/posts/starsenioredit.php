@@ -16,18 +16,20 @@
 	<style>
 		.c{text-align:center}
 		th {border-width : 1px;}
+		a{text-decoration:none;}
+		a:hover{text-decoration:underline;}
 	</style>
 
   </head>
 
   <body>
-
+  <br>
   <?php
     foreach($starsenior as $starsenior_item){
     echo '
 	<div class="left">
     <form action="/PostController/starseniorstore" method="post">
-    <input type="submit" value="一鍵更改" name="submit"></input>
+    <input type="submit" value="一鍵更改" name="submit"></input><br><br>
     <table border="1" class="c" style="border-style:solid; width: 1100px;">
 	    <tr>
 		    <th>編號
@@ -262,6 +264,7 @@
    				 <input type="help" class="form-control" id="help" name="instruction15" value='.$starsenior_item['instruction15'].'>
  				 </div>
         </table>
+		<br>
     </form>
 	</div>
     ';

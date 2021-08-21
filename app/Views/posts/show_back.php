@@ -16,8 +16,8 @@
     </head>
 
     <body>
-        <br><br><br>
-        <div class="content margin">
+        <br><br>
+        <div class="content margin" style="margin-right: 60px">
             <div class="title">繁星公告訊息</div><br>
             <table border="1" class="center" align="center">
                 <thead>
@@ -42,7 +42,7 @@
             <br>
         </div>
 
-        <div class="content margin">
+        <div class="content margin" style="margin-right: 100px">
             <div class="title">個申公告訊息</div><br>
             <table border="1" class="center" align="center">
                 <thead>
@@ -63,7 +63,7 @@
                 }   
             ?>
             </table>
-            <div align="center" style="padding-left: 200px;">
+            <div align="center">
                 <br>
                 <button class="btn btn-primary"><a href="/PostController/create_new" style="color:white;">返回</button>
                 <br><br><br>

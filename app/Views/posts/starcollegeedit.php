@@ -16,18 +16,21 @@
 	<style>
 		.c{text-align:center;}
 		th {border-width : 1px;}
+		a{text-decoration:none;}
+		a:hover{text-decoration:underline;}
 	</style>
 
   </head>
 
   <body>
+  	<br>
     <?php
     if (! empty($starcollege) && is_array($starcollege))  {
     foreach($starcollege as $starcollege_item){
     echo '
 	<div class="left">
     <form action="/PostController/starcollegestore" method="post">
-	<input type="submit" value="一鍵更改" name="submit"></input>
+	<input type="submit" value="一鍵更改" name="submit"></input><br><br>
     <table border="1" class="c" style="border-style:solid; width: 1100px;">
 	  <tr>
 		  <th>編號
@@ -143,6 +146,7 @@
  				 </div>
 
         </table>
+		<br>
       </form>
 	  </div>
     ';
