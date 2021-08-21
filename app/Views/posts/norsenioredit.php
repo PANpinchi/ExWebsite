@@ -29,13 +29,8 @@
     echo '
 	<div class="left">
     <form action="/PostController/norseniorstore" method="post">
-<<<<<<< HEAD
     <input type="submit" value="一鍵更改" name="submit" class="btn btn-primary"></input>
     <table border="1" class="c table" style="border-style:solid; width: 1100px;">
-=======
-    <input type="submit" value="一鍵更改" name="submit"></input> <br><br>
-    <table border="1" class="c" style="border-style:solid; width: 1100px;">
->>>>>>> pinchi
 	    <tr>
 			<th width="50px">編號
 			<th width="200px">系統名稱

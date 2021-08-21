@@ -16,7 +16,6 @@
   </head>
 
   <body>
-<<<<<<< HEAD
   	<table class="c" style="width: 1100px; border" frame=void>
         <tr>
             <th>
@@ -24,10 +23,6 @@
             <th>
                 <h2>大學繁星推薦開放日期設定</h2>
     </table>
-=======
-  <br>
-  <input type="button" value="編輯" name="button" onclick= "location.href='/PostController/starcollegeedit'"></input><br>
->>>>>>> pinchi
   <?php
     date_default_timezone_set('Asia/Taipei');
     

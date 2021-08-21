@@ -16,7 +16,6 @@
   </head>
 
   <body>
-<<<<<<< HEAD
 	<table class="c" style="width: 1100px; border" frame=void>
 		<tr>
 			<th>
@@ -25,11 +24,6 @@
 				  <h2>高中個人申請開放日期設定</h2>
 	</table>
 	  <?php
-=======
-  <br><input type="button" value="編輯" name="button" onclick= "location.href='/PostController/norsenioredit'"></input><br>
-
-  <?php
->>>>>>> pinchi
     	date_default_timezone_set('Asia/Taipei');
 
     	if (! empty($norsenior) && is_array($norsenior))  {
