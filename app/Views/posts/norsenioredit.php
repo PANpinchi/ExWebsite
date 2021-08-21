@@ -12,14 +12,6 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<link rel="stylesheet" href="/style/table.css">
-    
-	<style>
-		.c{text-align:center}
-		th {border-width : 1px;}
-		a{text-decoration:none;}
-		a:hover{text-decoration:underline;}
-	</style>
-
   </head>
 
   <body>
@@ -28,8 +20,9 @@
     foreach($norsenior as $norsenior_item){
     echo '
 	<div class="left">
+	<br>
     <form action="/PostController/norseniorstore" method="post">
-    <input type="submit" value="一鍵更改" name="submit" class="btn btn-primary"></input>
+    <input type="submit" value="一鍵更改" name="submit" class="btn btn-primary"></input><br><br>
     <table border="1" class="c table" style="border-style:solid; width: 1100px;">
 	    <tr>
 			<th width="50px">編號

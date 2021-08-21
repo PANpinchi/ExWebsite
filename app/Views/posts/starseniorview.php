@@ -15,25 +15,27 @@
   </head>
 
   <body>
-  <table class="c" style="width: 1100px; border" frame=void>
+	<br>
+	<table class="c" style="width: 1100px;">
         <tr>
-            <th>
+            <td>
                 <input class="btn btn-primary" type="button" value="編輯" name="button" onclick= "location.href='/PostController/starsenioredit'"></input><br>
-            <th>
+            <td>
                 <h2>高中繁星推薦開放日期設定</h2>
     </table>
+	<br>
   <?php
     date_default_timezone_set('Asia/Taipei');
     
     if (! empty($starsenior) && is_array($starsenior))  {
         foreach($starsenior as $starsenior_item){
     		echo'
-				<table border="1" class="c table set" style="border-style:solid; width: 1100px;">
+				<table border="1" class="c table set" style="border-style:solid; width: 1100px; margin-right: 117px;">
 				<tr>
 					<th width="50px">編號
 					<th width="200px">系統名稱
-					<th width="300px">系統開始時間
-					<th width="300px">系統結束時間
+					<th width="200px">系統開始時間
+					<th width="200px">系統結束時間
 					<th width="200px">網址
 					<th width="200px">說明
 				<tr>

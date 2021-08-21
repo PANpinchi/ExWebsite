@@ -16,25 +16,27 @@
   </head>
 
   <body>
-	<table class="c" style="width: 1100px; border" frame=void>
+	<br>
+	<table class="c" style="width: 1100px;">
 		<tr>
-			<th>
+			<td>
   				<input class="btn btn-primary" type="button" value="編輯" name="button" onclick= "location.href='/PostController/norsenioredit'"></input><br>
-			<th>	
+			<td>	
 				  <h2>高中個人申請開放日期設定</h2>
 	</table>
-	  <?php
+	<br>
+	<?php
     	date_default_timezone_set('Asia/Taipei');
 
     	if (! empty($norsenior) && is_array($norsenior))  {
         foreach($norsenior as $norsenior_item){
 			echo ' 
-			<table border="1" class="c table set" style="border-style:solid; width: 1100px;">
+			<table border="1" class="c table set" style="border-style:solid; width: 1100px; margin-right: 100px;">
 			<tr>
 				<th width="50px">編號
 				<th width="200px">系統名稱
-				<th width="300px">系統開始時間
-				<th width="300px">系統結束時間
+				<th width="200px">系統開始時間
+				<th width="200px">系統結束時間
 				<th width="200px">網址
 				<th width="200px">說明
 			<tr>
