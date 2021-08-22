@@ -52,7 +52,7 @@
                                             <tr>
                                                 <td style="width: 189px;"><img src="/img/form_top_03.jpg"></td>
                                                 <td>
-                                                    <div id = "home"><a href="/PostController/frontpage"> </a></div>
+                                                    <div id = "home"><a href="/PostController/index"> </a></div>
                                                 </td>
                                                 <td>
                                                     <div id = "apply"><a href="/PostController/show_front_per"> </a></div>

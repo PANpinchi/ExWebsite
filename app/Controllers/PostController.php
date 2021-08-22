@@ -19,18 +19,18 @@ class PostController extends BaseController
 {
 	public function index()
 	{
-		return view('posts/index');
+		return view('show/frontpage');
 	}
 
 	/*顯示關閉頁面*/
 	public function pageclose()
 	{
-		return view('posts/pageclose');
+		return view('show/pageclose');
 	}
 
 	public function loginclose()
 	{
-		return view('posts/loginclose');
+		return view('login/loginclose');
 	}
 
 	/*創建新的貼文入口頁面*/
@@ -38,7 +38,7 @@ class PostController extends BaseController
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
 			echo '<script>alert("請先登入！")</script>';
-			return view('posts/user_login');
+			return view('login/user_login');
 		}
 		return view('posts/create_new');
 	}
@@ -48,7 +48,7 @@ class PostController extends BaseController
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
 			echo '<script>alert("請先登入！")</script>';
-			return view('posts/user_login');
+			return view('login/user_login');
 		}
 		return view('posts/create_star');
 	}
@@ -58,7 +58,7 @@ class PostController extends BaseController
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
 			echo '<script>alert("請先登入！")</script>';
-			return view('posts/user_login');
+			return view('login/user_login');
 		}
 		return view('posts/create_per');
 	}
@@ -68,7 +68,7 @@ class PostController extends BaseController
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
 			echo '<script>alert("請先登入！")</script>';
-			return view('posts/user_login');
+			return view('login/user_login');
 		}
 
 		$model = new Star_post_page();
@@ -85,7 +85,7 @@ class PostController extends BaseController
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
 			echo '<script>alert("請先登入！")</script>';
-			return view('posts/user_login');
+			return view('login/user_login');
 		}
 
 		$model = new Per_post_page();
@@ -102,7 +102,7 @@ class PostController extends BaseController
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
 			echo '<script>alert("請先登入！")</script>';
-			return view('posts/user_login');
+			return view('login/user_login');
 		}
 		
 		$model1 = new Star_post_page();
@@ -112,7 +112,7 @@ class PostController extends BaseController
 			'star_post_page' => $model1->findAll(),
 			'per_post_page' => $model2->findAll()
 		];
-		return view('posts/show_back', $data);
+		return view('show/show_back', $data);
 	}
 
 	/*顯示前台繁星公告的文章*/
@@ -130,7 +130,7 @@ class PostController extends BaseController
 			'logindate'=> $login->findAll(),
 			'star_post_page' => $model->findAll()
 		];
-		return view('posts/show_front_star', $data);
+		return view('show/show_front_star', $data);
 	}
 
 	/*顯示前台個申公告的文章*/
@@ -148,7 +148,7 @@ class PostController extends BaseController
 			'logindate'=> $login->findAll(),
 			'per_post_page' => $model->findAll()
 		];
-		return view('posts/show_front_per', $data);
+		return view('show/show_front_per', $data);
 	}
 
 	/*後台點選進入文章內容(繁星)*/
@@ -156,7 +156,7 @@ class PostController extends BaseController
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
 			echo '<script>alert("請先登入！")</script>';
-			return view('posts/user_login');
+			return view('login/user_login');
 		}
 
 		$login = new Logindate();
@@ -167,7 +167,7 @@ class PostController extends BaseController
 			'star_post_page' => $model->find($star_post_page_id)
 		];
 		$_SESSION['id'] = $star_post_page_id;
-		return view('posts/show_content_back_star', $data);
+		return view('show/show_content_back_star', $data);
 	}
 
 	/*後台點選進入文章內容(個申)*/
@@ -175,7 +175,7 @@ class PostController extends BaseController
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
 			echo '<script>alert("請先登入！")</script>';
-			return view('posts/user_login');
+			return view('login/user_login');
 		}
 
 		$login = new Logindate();
@@ -186,7 +186,7 @@ class PostController extends BaseController
 			'per_post_page' => $model->find($per_post_page_id)
 		];
 		$_SESSION['id'] = $per_post_page_id;
-		return view('posts/show_content_back_per', $data);
+		return view('show/show_content_back_per', $data);
 	}
 
 	/*前台點選進入文章內容(繁星)*/
@@ -204,7 +204,7 @@ class PostController extends BaseController
 			'logindate'=> $login->findAll(),
 			'star_post_page' => $model->find($star_post_page_id)
 		];
-		return view('posts/show_content_front_star', $data);
+		return view('show/show_content_front_star', $data);
 	}
 
 	/*前台點選進入文章內容(個申)*/
@@ -222,7 +222,7 @@ class PostController extends BaseController
 			'logindate'=> $login->findAll(),
 			'per_post_page' => $model->find($per_post_page_id)
 		];
-		return view('posts/show_content_front_per', $data);
+		return view('show/show_content_front_per', $data);
 	}
 
 	/*顯示pdf*/
@@ -237,7 +237,7 @@ class PostController extends BaseController
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
 			echo '<script>alert("請先登入！")</script>';
-			return view('posts/user_login');
+			return view('login/user_login');
 		}
 
 		$data=
@@ -300,7 +300,7 @@ class PostController extends BaseController
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
 			echo '<script>alert("請先登入！")</script>';
-			return view('posts/user_login');
+			return view('login/user_login');
 		}
 
 		$data=
@@ -363,7 +363,7 @@ class PostController extends BaseController
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
 			echo '<script>alert("請先登入！")</script>';
-			return view('posts/user_login');
+			return view('login/user_login');
 		}
 
 		$data=
@@ -438,7 +438,7 @@ class PostController extends BaseController
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
 			echo '<script>alert("請先登入！")</script>';
-			return view('posts/user_login');
+			return view('login/user_login');
 		}
 
 		$data=
@@ -513,7 +513,7 @@ class PostController extends BaseController
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
 			echo '<script>alert("請先登入！")</script>';
-			return view('posts/user_login');
+			return view('login/user_login');
 		}
 
 		$model = new Star_post_page();
@@ -537,7 +537,7 @@ class PostController extends BaseController
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
 			echo '<script>alert("請先登入！")</script>';
-			return view('posts/user_login');
+			return view('login/user_login');
 		}
 
 		$model = new Per_post_page();
@@ -561,7 +561,7 @@ class PostController extends BaseController
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
 			echo '<script>alert("請先登入！")</script>';
-			return view('posts/user_login');
+			return view('login/user_login');
 		}
 
 		$model = new Logindate();
@@ -569,14 +569,14 @@ class PostController extends BaseController
 			[
 				'logindate' => $model->findall()
 			];
-		return view('posts/logindateset',$data);
+		return view('control/logindateset',$data);
 	}
 
 	public function norcollegeedit()
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
 			echo '<script>alert("請先登入！")</script>';
-			return view('posts/user_login');
+			return view('login/user_login');
 		}
 		
 		$model = new Norcollege();
@@ -584,14 +584,14 @@ class PostController extends BaseController
 			[
 				'norcollege' => $model->findall()
 			];
-		return view('posts/norcollegeedit',$data);
+		return view('control/norcollegeedit',$data);
 	}
 
 	public function starcollegeedit()
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
 			echo '<script>alert("請先登入！")</script>';
-			return view('posts/user_login');
+			return view('login/user_login');
 		}
 		
 		$model = new Starcollege();
@@ -599,14 +599,14 @@ class PostController extends BaseController
 			[
 				'starcollege' => $model->findall()
 			];
-		return view('posts/starcollegeedit',$data);
+		return view('control/starcollegeedit',$data);
 	}
 
 	public function norsenioredit()
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
 			echo '<script>alert("請先登入！")</script>';
-			return view('posts/user_login');
+			return view('login/user_login');
 		}
 		
 		$model = new Norsenior();
@@ -614,14 +614,14 @@ class PostController extends BaseController
 			[
 				'norsenior' => $model->findall()
 			];
-		return view('posts/norsenioredit',$data);
+		return view('control/norsenioredit',$data);
 	}
 
 	public function starsenioredit()
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
 			echo '<script>alert("請先登入！")</script>';
-			return view('posts/user_login');
+			return view('login/user_login');
 		}
 
 		$model = new Starsenior();
@@ -629,7 +629,7 @@ class PostController extends BaseController
 			[
 				'starsenior' => $model->findall()
 			];
-		return view('posts/starsenioredit',$data);
+		return view('control/starsenioredit',$data);
 	}
 
 	/*編輯畫面跳轉到觀看畫面*/
@@ -637,7 +637,7 @@ class PostController extends BaseController
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
 			echo '<script>alert("請先登入！")</script>';
-			return view('posts/user_login');
+			return view('login/user_login');
 		}
 
 		$model = new Logindate();
@@ -645,14 +645,14 @@ class PostController extends BaseController
 			[
 				'logindate' => $model->findall()
 			];
-		return view('posts/logindateview',$data);
+		return view('control/logindateview',$data);
 	}
 
 	public function norcollegeview()
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
 			echo '<script>alert("請先登入！")</script>';
-			return view('posts/user_login');
+			return view('login/user_login');
 		}
 
 		$model = new Norcollege();
@@ -660,14 +660,14 @@ class PostController extends BaseController
 			[
 				'norcollege' => $model->findall()
 			];
-		return view('posts/norcollegeview',$data);
+		return view('control/norcollegeview',$data);
 	}
 
 	public function starcollegeview()
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
 			echo '<script>alert("請先登入！")</script>';
-			return view('posts/user_login');
+			return view('login/user_login');
 		}
 
 		$model = new Starcollege();
@@ -675,14 +675,14 @@ class PostController extends BaseController
 			[
 				'starcollege' => $model->findall()
 			];
-		return view('posts/starcollegeview',$data);
+		return view('control/starcollegeview',$data);
 	}
 
 	public function norseniorview()
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
 			echo '<script>alert("請先登入！")</script>';
-			return view('posts/user_login');
+			return view('login/user_login');
 		}
 
 		$model = new Norsenior();
@@ -690,14 +690,14 @@ class PostController extends BaseController
 			[
 				'norsenior' => $model->findall()
 			];
-		return view('posts/norseniorview',$data);
+		return view('control/norseniorview',$data);
 	}
 
 	public function starseniorview()
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
 			echo '<script>alert("請先登入！")</script>';
-			return view('posts/user_login');
+			return view('login/user_login');
 		}
 
 		$model = new Starsenior();
@@ -705,7 +705,7 @@ class PostController extends BaseController
 			[
 				'starsenior' => $model->findall()
 			];
-		return view('posts/starseniorview',$data);
+		return view('control/starseniorview',$data);
 	}
 
 	/*後台網頁開放時間網址與說明資料更新*/
@@ -713,7 +713,7 @@ class PostController extends BaseController
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
 			echo '<script>alert("請先登入！")</script>';
-			return view('posts/user_login');
+			return view('login/user_login');
 		}
 
 		$model = new Logindate();
@@ -731,7 +731,7 @@ class PostController extends BaseController
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
 			echo '<script>alert("請先登入！")</script>';
-			return view('posts/user_login');
+			return view('login/user_login');
 		}
 		
 		$model = new Norcollege();
@@ -766,7 +766,7 @@ class PostController extends BaseController
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
 			echo '<script>alert("請先登入！")</script>';
-			return view('posts/user_login');
+			return view('login/user_login');
 		}
 
 		$model = new Starcollege();
@@ -788,7 +788,7 @@ class PostController extends BaseController
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
 			echo '<script>alert("請先登入！")</script>';
-			return view('posts/user_login');
+			return view('login/user_login');
 		}
 
 		$model = new Norsenior();
@@ -821,7 +821,7 @@ class PostController extends BaseController
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
 			echo '<script>alert("請先登入！")</script>';
-			return view('posts/user_login');
+			return view('login/user_login');
 		}
 		
 		$model = new Starsenior();
@@ -852,7 +852,7 @@ class PostController extends BaseController
 	public function user_login()
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
-			return view('posts/user_login');
+			return view('login/user_login');
 		}
 		else{
 			echo '<script>alert("'.$_SESSION['name'].' 您好 !")</script>';
@@ -863,13 +863,13 @@ class PostController extends BaseController
 	/* 前台登入頁面 */
 	public function login()
 	{
-		return view('posts/login');
+		return view('login/login');
 	}
 
 	/* 忘記密碼頁面 */
 	public function forget()
 	{
-		return view('posts/forget');
+		return view('login/forget');
 	}
 
 	/* 更改密碼頁面 */
@@ -877,10 +877,10 @@ class PostController extends BaseController
 	{
 		if(!isset($_SESSION['change_password']) || $_SESSION['change_password'] != true){
 			echo '<script>alert("請輸入帳號及電子郵件！")</script>';
-			return view('posts/forget');
+			return view('login/forget');
 		}
 
-		return view('posts/change_password');
+		return view('login/change_password');
 	}
 
 	/* 後台登出頁面 */
@@ -888,18 +888,7 @@ class PostController extends BaseController
 	{
 		echo '<script>alert("已登出！")</script>';
 		session_destroy();
-		return view('posts/user_login');
-	}
-
-	/* 高中前台頁面 */
-	public function high_post()
-	{
-		$model = new Logindate();
-		$data = 
-		[
-			'logindate' => $model->findAll()
-		];
-		return view('posts/high_post',$data);
+		return view('login/user_login');
 	}
 
 	/*匹配後台帳號*/
@@ -914,7 +903,7 @@ class PostController extends BaseController
 
 		if($data['valicode'] != $_SESSION['code']){
 			echo '<script>alert("驗證碼輸入錯誤，請重新登入！")</script>';
-			return view('posts/user_login');
+			return view('login/user_login');
 		}
 
 		$model = new Post_user_login(); //開啟 account 資料庫
@@ -935,13 +924,13 @@ class PostController extends BaseController
 			else if($email == 0 && $password != 0){
 				$_SESSION['user_login'] = false;
 				echo '<script>alert("密碼輸入錯誤，請重新登入！")</script>';
-				return view('posts/user_login');
+				return view('login/user_login');
 			}
 		}
 		
 		$_SESSION['user_login'] = false;
 		echo '<script>alert("帳號輸入錯誤，請重新登入！")</script>';
-		return view('posts/user_login');
+		return view('login/user_login');
 	}
 
 	/*匹配前台帳號*/
@@ -956,7 +945,7 @@ class PostController extends BaseController
 
 		if($data['valicode'] != $_SESSION['code']){
 			echo '<script>alert("驗證碼輸入錯誤，請重新登入！")</script>';
-			return view('posts/login');
+			return view('login/login');
 		}
 
 		$model = new Post_login(); //開啟 account 資料庫
@@ -979,13 +968,13 @@ class PostController extends BaseController
 			}
 			else if($account == 0 && $password != 0){
 				echo '<script>alert("密碼輸入錯誤，請重新登入！")</script>';
-				return view('posts/login');
+				return view('login/login');
 			}
 		}
 
 		if($check == 0){
 			echo '<script>alert("帳號輸入錯誤，請重新登入！")</script>';
-			return view('posts/login');
+			return view('login/login');
 		}
 	}
 
@@ -1001,7 +990,7 @@ class PostController extends BaseController
 
 		if($data['valicode'] != $_SESSION['code']){
 			echo '<script>alert("驗證碼輸入錯誤，請重新登入！")</script>';
-			return view('posts/forget');
+			return view('login/forget');
 		}
 
 		$model = new Post_login(); //開啟 account 資料庫
@@ -1020,18 +1009,18 @@ class PostController extends BaseController
 				$_SESSION['account_id'] = $i + 1;
 				echo '<script>alert("帳號驗證成功，請設定新的密碼！")</script>';
 				$_SESSION['change_password'] = true;
-				return view('posts/change_password');
+				return view('login/change_password');
 			}
 			else if($account == 0 && $email != 0){
 				echo '<script>alert("電子郵件輸入錯誤，請重新輸入！")</script>';
 				$_SESSION['change_password'] = false;
-				return view('posts/forget');
+				return view('login/forget');
 			}
 		}
 
 		$_SESSION['change_password'] = false;
 		echo '<script>alert("帳號輸入錯誤，請重新輸入！")</script>';
-		return view('posts/forget');
+		return view('login/forget');
 	}
 
 	/* 更改密碼 */
@@ -1046,7 +1035,7 @@ class PostController extends BaseController
 
 		if($data['valicode'] != $_SESSION['code']){
 			echo '<script>alert("驗證碼輸入錯誤，請重新登入！")</script>';
-			return view('posts/change_password');
+			return view('login/change_password');
 		}
 
 		$same = strcmp($data['password'], $data['check']);
@@ -1064,11 +1053,11 @@ class PostController extends BaseController
 
 			echo '<script>alert("更改密碼成功，跳轉回登入頁面！")</script>';
 			session_destroy();
-			return view('posts/login');
+			return view('login/login');
 		}
 		else{
 			echo '<script>alert("兩次密碼不一致，請重新輸入！")</script>';
-			return view('posts/change_password');
+			return view('login/change_password');
 		}
 	}
 
@@ -1121,20 +1110,5 @@ class PostController extends BaseController
 		imagepng($im);
 		/*刪除圖片*/
 		imagedestroy($im);
-	}
-
-	public function person_web()
-	{
-		return view('posts/person_web');
-	}	
-
-	public function highpost()
-	{
-		return view('posts/highpost');
-	}
-
-	public function frontpage()
-	{
-		return view('posts/frontpage');
 	}
 }

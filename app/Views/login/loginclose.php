@@ -14,11 +14,20 @@
     </head>
 
     <body>
-        <form name = "accounts" action = "/PostController/compare_account" method="POST" style="border: 1px rgb(230, 215, 210) solid">
+        <form name = "accounts" action = "/PostController/index" method="POST" style="border: 1px rgb(230, 215, 210) solid">
             <div class="margin type2">
+                <br><br>
                 <div align="center">
-                   系統不開放!!
+                   <p class="type4">系統目前已關閉！</p>
                 </div>
+                <br>
+            </div>
+
+            <hr>
+
+            <div align = "center">
+                <button class="btn btn-primary" style="background-color: orange; border:0px"> 前往甄委會 </button>
+                <br><br>
             </div>
         </form>
     <body>
