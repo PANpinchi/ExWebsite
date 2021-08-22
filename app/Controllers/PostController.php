@@ -28,11 +28,6 @@ class PostController extends BaseController
 		return view('show/pageclose');
 	}
 
-	public function loginclose()
-	{
-		return view('login/loginclose');
-	}
-
 	/*創建新的貼文入口頁面*/
 	public function create_new()
 	{
@@ -863,7 +858,15 @@ class PostController extends BaseController
 	/* 前台登入頁面 */
 	public function login()
 	{
-		return view('login/login');
+		$login = new Logindate();
+
+		$time = $login->findAll();
+
+		if (strtotime($time[0]['start1'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($time[0]['end1']))
+			return view('login/login');
+		else{
+			return view('login/loginclose');
+		}
 	}
 
 	/* 忘記密碼頁面 */
