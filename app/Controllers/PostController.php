@@ -110,6 +110,90 @@ class PostController extends BaseController
 		return view('show/show_back', $data);
 	}
 
+	/* 前台分頁公告(繁星) */
+	public function star_page($num){
+		$login = new Logindate();
+		$model = new Star_post_page();
+		$starsenior = new Starsenior();
+		$starcollege = new Starcollege();
+
+		$data = [
+			'star_post_page' => $model->findAll()
+		];
+
+		$i = 0;
+
+		while(isset($data['star_post_page'][$i])){
+			$i++;
+		}
+
+		if($i <= 10){
+			$page_num = 1;
+		}
+		else{
+			$page_num = (int)($i / 10) + 1;
+			if($i % 10 == 0){
+				$page_num--;
+			}
+		}
+		
+		$_SESSION['head'] = ($num - 1) * 10;
+		$_SESSION['tail'] = ($num - 1) * 10 + 9;
+
+		$data = 
+		[
+			'starcollege' => $starcollege->findAll(),
+			'starsenior' => $starsenior->findAll(),
+			'logindate'=> $login->findAll(),
+			'star_post_page' => $model->findAll(),
+			'page_num' => $page_num,
+		];
+
+		return view('show/show_front_star', $data);
+	}
+
+	/* 前台全部公告(繁星) */
+	public function star_page_all(){
+		$login = new Logindate();
+		$model = new Star_post_page();
+		$starsenior = new Starsenior();
+		$starcollege = new Starcollege();
+
+		$data = [
+			'star_post_page' => $model->findAll()
+		];
+
+		$i = 0;
+
+		while(isset($data['star_post_page'][$i])){
+			$i++;
+		}
+
+		if($i <= 10){
+			$page_num = 1;
+		}
+		else{
+			$page_num = (int)($i / 10) + 1;
+			if($i % 10 == 0){
+				$page_num--;
+			}
+		}
+		
+		$_SESSION['head'] = 0;
+		$_SESSION['tail'] = $i;
+
+		$data = 
+		[
+			'starcollege' => $starcollege->findAll(),
+			'starsenior' => $starsenior->findAll(),
+			'logindate'=> $login->findAll(),
+			'star_post_page' => $model->findAll(),
+			'page_num' => $page_num,
+		];
+
+		return view('show/show_front_star', $data);
+	}
+
 	/*顯示前台繁星公告的文章*/
 	public function show_front_star()
 	{
@@ -118,14 +202,123 @@ class PostController extends BaseController
 		$starsenior = new Starsenior();
 		$starcollege = new Starcollege();
 
+		$data = [
+			'star_post_page' => $model->findAll()
+		];
+
+		$i = 0;
+
+		while(isset($data['star_post_page'][$i])){
+			$i++;
+		}
+
+		if($i <= 10){
+			$page_num = 1;
+		}
+		else{
+			$page_num = (int)($i / 10) + 1;
+			if($i % 10 == 0){
+				$page_num--;
+			}
+		}
+
+		$_SESSION['head'] = 0;
+		$_SESSION['tail'] = 9;
+
 		$data = 
 		[
 			'starcollege' => $starcollege->findAll(),
 			'starsenior' => $starsenior->findAll(),
 			'logindate'=> $login->findAll(),
-			'star_post_page' => $model->findAll()
+			'star_post_page' => $model->findAll(),
+			'page_num' => $page_num,
 		];
+
 		return view('show/show_front_star', $data);
+	}
+
+	/* 前台分頁(個申) */
+	public function per_page($num){
+		$login = new Logindate();
+		$model = new Per_post_page();
+		$norsenior = new Norsenior();
+		$norcollege = new Norcollege();
+
+		$data = [
+			'per_post_page' => $model->findAll()
+		];
+
+		$i = 0;
+
+		while(isset($data['per_post_page'][$i])){
+			$i++;
+		}
+
+		if($i <= 10){
+			$page_num = 1;
+		}
+		else{
+			$page_num = (int)($i / 10) + 1;
+			if($i % 10 == 0){
+				$page_num--;
+			}
+		}
+		
+		$_SESSION['head'] = ($num - 1) * 10;
+		$_SESSION['tail'] = ($num - 1) * 10 + 9;
+
+		$data = 
+		[
+			'norcollege' => $norcollege->findAll(),
+			'norsenior' => $norsenior->findAll(),
+			'logindate'=> $login->findAll(),
+			'per_post_page' => $model->findAll(),
+			'page_num' => $page_num,
+		];
+
+		return view('show/show_front_per', $data);
+	}
+
+	/* 前台全部公告(個申) */
+	public function per_page_all(){
+		$login = new Logindate();
+		$model = new Per_post_page();
+		$norsenior = new Norsenior();
+		$norcollege = new Norcollege();
+
+		$data = [
+			'per_post_page' => $model->findAll()
+		];
+
+		$i = 0;
+
+		while(isset($data['per_post_page'][$i])){
+			$i++;
+		}
+
+		if($i <= 10){
+			$page_num = 1;
+		}
+		else{
+			$page_num = (int)($i / 10) + 1;
+			if($i % 10 == 0){
+				$page_num--;
+			}
+		}
+		
+		$_SESSION['head'] = 0;
+		$_SESSION['tail'] = $i;
+
+		$data = 
+		[
+			'norcollege' => $norcollege->findAll(),
+			'norsenior' => $norsenior->findAll(),
+			'logindate'=> $login->findAll(),
+			'per_post_page' => $model->findAll(),
+			'page_num' => $page_num,
+		];
+
+		return view('show/show_front_per', $data);
 	}
 
 	/*顯示前台個申公告的文章*/
@@ -136,13 +329,38 @@ class PostController extends BaseController
 		$norsenior = new Norsenior();
 		$norcollege = new Norcollege();
 
-		$data = 
-		[
-			'norsenior'=> $norsenior->findAll(),
-			'norcollege'=> $norcollege->findAll(),
-			'logindate'=> $login->findAll(),
+		$data = [
 			'per_post_page' => $model->findAll()
 		];
+
+		$i = 0;
+
+		while(isset($data['per_post_page'][$i])){
+			$i++;
+		}
+
+		if($i <= 10){
+			$page_num = 1;
+		}
+		else{
+			$page_num = (int)($i / 10) + 1;
+			if($i % 10 == 0){
+				$page_num--;
+			}
+		}
+
+		$_SESSION['head'] = 0;
+		$_SESSION['tail'] = 9;
+
+		$data = 
+		[
+			'norcollege' => $norcollege->findAll(),
+			'norsenior' => $norsenior->findAll(),
+			'logindate'=> $login->findAll(),
+			'per_post_page' => $model->findAll(),
+			'page_num' => $page_num,
+		];
+
 		return view('show/show_front_per', $data);
 	}
 

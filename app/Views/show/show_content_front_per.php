@@ -66,6 +66,7 @@
                 </table>
 
                 <a class="btn btn-primary" href="/PostController/show_front_per" style="margin-right: 30px; background-color: rgb(224, 187, 255); border-color: rgb(224, 187, 255);">返回</a>
+                <br><br>
             </td>
         </tr>
     <body>

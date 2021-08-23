@@ -37,3 +37,8 @@ a{
 a:hover{
     text-decoration:underline;
 }
+
+marquee{
+    font-size: 16px;
+    color: red;
+}

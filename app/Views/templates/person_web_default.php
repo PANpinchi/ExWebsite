@@ -130,7 +130,7 @@
                                     <table cellpadding="0" cellspacing="0">
                                         <tbody>
                                             <tr>
-                                                <td rowspan = "17" style = "width: 62px; background-color: rgb(232,230,254);">
+                                                <td rowspan = "100" style = "width: 62px; background-color: rgb(232,230,254);">
                                                     <table cellpadding="0" cellspacing="0">
                                                         <tbody>
 
@@ -142,7 +142,7 @@
                                                     <div id = "pass"><a href="/PostController/login"> </a></div>
                                                 </td>
 
-                                                <td rowspan = "17" style = "width: 752px;" valign="top">
+                                                <td rowspan = "100" style = "width: 752px;" valign="top">
                                                     <table cellpadding="0" cellspacing="0" style="font-size: 15px;" align="center">
                                                         <tbody>
                                                             <?= $this->renderSection('content') ?>
@@ -150,7 +150,7 @@
                                                     </table>
                                                 </td>
 
-                                                <td rowspan = "17" style = "width: 61px; background-color: rgb(232,230,254);">
+                                                <td rowspan = "100" style = "width: 61px; background-color: rgb(232,230,254);">
                                                     <table cellpadding="0" cellspacing="0">
                                                         <tbody>
                                                             
@@ -878,7 +878,7 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>
+                                                <td rowspan = "100">
                                                     <div style="height: 80px;"> </div>
                                                 </td>
                                             </tr>

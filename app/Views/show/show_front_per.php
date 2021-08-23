@@ -26,6 +26,11 @@
                         <td></td>
                         <td></td>
                         <td><img src="/person_img/icon_16.jpg"></td>
+                        <td align="center" valign="bottom">
+                            <div style="margin-top: 9px">
+                                <marquee direction="left" width="570px" scrollamount="4">請留意！甄選委員會發送之簡訊，不會要求考生回撥及告知個人資料。聯絡專線：05-2721799。</marquee>
+                            </div>
+                        </td>
                     </tr>
                 </table>
             </td>
@@ -39,18 +44,17 @@
                     //echo date("Y-m-d H:i:s");
                     
                     $temp = 0;
-                    $i = 0;
                         if(! empty($per_post_page) && is_array($per_post_page)){
-                            foreach($per_post_page as $per_post_page_item){             
-                                if (strtotime($per_post_page_item['start'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($per_post_page_item['end'])){
-                                    $year = substr($per_post_page_item['start'], 0, 4);
-                                    $month = substr($per_post_page_item['start'], 5, 2);
-                                    $day = substr($per_post_page_item['start'], 8, 2);
+                            for($i = $_SESSION['head']; isset($per_post_page[$i]) && $i <= $_SESSION['tail']; $i++){             
+                                if (strtotime($per_post_page[$i]['start'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($per_post_page[$i]['end'])){
+                                    $year = substr($per_post_page[$i]['start'], 0, 4);
+                                    $month = substr($per_post_page[$i]['start'], 5, 2);
+                                    $day = substr($per_post_page[$i]['start'], 8, 2);
                                     echo'
                                         <tr valign = "top">
                                             <td style="width: 30px;"> '.$year.'/'.$month.'/'.$day.' </td>
-                                            <td style="width: 90px; color: gray;"> ['.$per_post_page_item['subtitle'].'] </td>
-                                            <td style="width: 500px;"><a href="/PostController/show_content_front_per/'.$per_post_page_item['id'].'"> '.$per_post_page_item['title'].'</a> </td>
+                                            <td style="width: 90px; color: gray;"> ['.$per_post_page[$i]['subtitle'].'] </td>
+                                            <td style="width: 500px;"><a href="/PostController/show_content_front_per/'.$per_post_page[$i]['id'].'"> '.$per_post_page[$i]['title'].'</a> </td>
                                             <td style="width: 20px"> </td>
                                         </tr>
                                     ';
@@ -60,6 +64,19 @@
                         }
                     ?>
                 </table>
+            </td>
+        </tr>
+
+        <tr>
+            <td align="center">
+                <p> 瀏覽頁數 : 
+                    <?php
+                    for($i=0;$i<$page_num;){
+                        echo '<a href="/PostController/per_page/'.++$i.'">&nbsp;['.$i.']&nbsp;</a>';
+                    }
+                    echo '<a href="/PostController/per_page_all">&nbsp;[全部]&nbsp;</a>';
+                    ?>
+                </p>
             </td>
         </tr>
     <body>
