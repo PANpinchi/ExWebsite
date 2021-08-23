@@ -37,7 +37,7 @@
                         <hr>
 
                         <div align = "center">
-                            <a href="/PostController/login" class="btn btn-primary" style="background-color: orange; border:0px; margin-right: 30px;" type="button"> 回上一頁 </a>
+                            <?php echo'<a href="/PostController/login/'.$_SESSION['type'].'" class="btn btn-primary" style="background-color: orange; border:0px; margin-right: 30px;" type="button"> 回上一頁 </a>'; ?>
                             <button class="btn btn-primary" style="background-color: orange; border:0px"> 送出 </button>
                             <br><br>
                         </div>

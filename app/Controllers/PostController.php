@@ -1126,17 +1126,19 @@ class PostController extends BaseController
 			return view('login/user_login');
 		}
 		else{
-			echo '<script>alert("'.$_SESSION['name'].' 您好 !")</script>';
+			echo '<script>alert("'.$_SESSION['user_name'].' 您好 !")</script>';
 			return view('posts/create_new');
 		}
 	}
 
 	/* 前台登入頁面 */
-	public function login()
+	public function login($type)
 	{
 		$login = new Logindate();
 
 		$time = $login->findAll();
+
+		$_SESSION['type'] = $type;
 
 		if (strtotime($time[0]['start1'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($time[0]['end1']))
 			return view('login/login');
@@ -1166,8 +1168,18 @@ class PostController extends BaseController
 	public function user_logout()
 	{
 		echo '<script>alert("已登出！")</script>';
-		session_destroy();
+		unset($_SESSION['user_name']);
+		unset($_SESSION['user_login']);
 		return view('login/user_login');
+	}
+
+	/* 前台登出頁面 */
+	public function logout()
+	{
+		echo '<script>alert("已登出！")</script>';
+		unset($_SESSION['name']);
+		unset($_SESSION['login']);
+		return view('login/login');
 	}
 
 	/*匹配後台帳號*/
@@ -1196,7 +1208,7 @@ class PostController extends BaseController
 			$password = strcmp($data['password'], $users[$i]['password']);
 
 			if($email == 0 && $password == 0){
-				$_SESSION['name'] = $users[$i]['name'];
+				$_SESSION['user_name'] = $users[$i]['name'];
 				$_SESSION['user_login'] = true;
 				return view('posts/create_new');
 			}
@@ -1240,18 +1252,26 @@ class PostController extends BaseController
 			$password = strcmp($data['password'], $users[$i]['password']);
 
 			if($account == 0 && $password == 0){
-				print_r($users[$i]['name']);
-				echo ' 歡迎登入！';
-				$check = 1;
-				break;
+				$_SESSION['name'] = $users[$i]['name'];
+				$_SESSION['login'] = true;
+				if($_SESSION['type'] == 'star'){
+					unset($_SESSION['type']);
+					return redirect('PostController/show_front_star');
+				}
+				else if($_SESSION['type'] == 'per'){
+					unset($_SESSION['type']);
+					return redirect('PostController/show_front_per');
+				}
 			}
 			else if($account == 0 && $password != 0){
+				$_SESSION['login'] = false;
 				echo '<script>alert("密碼輸入錯誤，請重新登入！")</script>';
 				return view('login/login');
 			}
 		}
 
 		if($check == 0){
+			$_SESSION['login'] = false;
 			echo '<script>alert("帳號輸入錯誤，請重新登入！")</script>';
 			return view('login/login');
 		}
@@ -1331,7 +1351,9 @@ class PostController extends BaseController
 			]);
 
 			echo '<script>alert("更改密碼成功，跳轉回登入頁面！")</script>';
-			session_destroy();
+			unset($_SESSION['account_id']);
+			unset($_SESSION['account']);
+			unset($_SESSION['email']);
 			return view('login/login');
 		}
 		else{

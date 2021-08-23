@@ -38,6 +38,8 @@ $routes->get('/PostController/starcollegeview','PostController::starcollegeview'
 $routes->get('/PostController/norseniorview','PostController::norseniorview');
 $routes->get('/PostController/starseniorview','PostController::starseniorview');
 $routes->get('/PostController/show_back', 'PostController::show_back');
+$routes->get('/PostController/show_front_star', 'PostController::show_front_star');
+$routes->get('/PostController/show_front_per', 'PostController::show_front_per');
 $routes->get('PostController/logindateview','PostController::logindateview');
 
 /*

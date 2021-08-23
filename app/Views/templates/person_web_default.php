@@ -49,7 +49,15 @@
 
     <body>
         <div class="container">
-            <br>
+            <?php
+            if(isset($_SESSION['login']) && $_SESSION['login'] == true){
+                echo '&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp';
+                echo ''.$_SESSION['name'].'同學 歡迎登入！';
+            }
+            else{
+                echo '<br>';
+            }
+            ?>
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="col-md-10 text">
@@ -139,7 +147,7 @@
                                                 </td>
 
                                                 <td>
-                                                    <div id = "pass"><a href="/PostController/login"> </a></div>
+                                                    <div id = "pass"><a href="/PostController/login/per"> </a></div>
                                                 </td>
 
                                                 <td rowspan = "100" style = "width: 752px;" valign="top">
