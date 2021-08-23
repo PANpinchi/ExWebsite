@@ -17,13 +17,14 @@
 
     <body>
         <br><br>
-        <div class="content margin" style="margin-right: 60px">
+        <div class="content margin" style="margin-right: 100px">
             <div class="title">繁星公告訊息</div><br>
             <table border="1" class="center" align="center">
                 <thead>
-                    <td style="width: 150px">日期<td style="width: 150px">分類<td style="width: 400px">主旨
+                    <td style="width: 150px">日期<td style="width: 150px">分類<td style="width: 400px">主旨<td style="width: 150px">狀態
                 </thead>            
-            <?php                
+            <?php
+                date_default_timezone_set('Asia/Taipei');       
                 $temp = 0;
                 if(! empty($star_post_page) && is_array($star_post_page)){                    
                     foreach($star_post_page as $star_post_page_item){                              
@@ -33,8 +34,14 @@
                             <td style="width: 150px"> '.$start.'
                             <td style="width: 150px"> '.$star_post_page_item['subtitle'].'
                             <td style="width: 800px"><a href="/PostController/show_content_back_star/'.$star_post_page_item['id'].'"> '.$star_post_page_item['title'].'</a>
-                            ';
-                            $temp++;
+                        ';
+                        if(strtotime($star_post_page_item['start'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($star_post_page_item['end'])){
+                            echo'<td style="width: 150px; color: green;">公告中</td>';
+                        }
+                        else{
+                            echo'<td style="width: 150px; color: red;">已超時</td>';
+                        }
+                        $temp++;
                     }
                 }
             ?>
@@ -46,7 +53,7 @@
             <div class="title">個申公告訊息</div><br>
             <table border="1" class="center" align="center">
                 <thead>
-                    <td style="width: 150px">日期<td style="width: 150px">分類<td style="width: 400px">主旨
+                    <td style="width: 150px">日期<td style="width: 150px">分類<td style="width: 400px">主旨<td style="width: 150px">狀態
             <?php                
                 $temp = 0;
                 if(! empty($per_post_page) && is_array($per_post_page)){                    
@@ -57,8 +64,14 @@
                             <td style="width: 150px"> '.$start.'
                             <td style="width: 150px"> '.$per_post_page_item['subtitle'].'
                             <td style="width: 800px"><a href="/PostController/show_content_back_per/'.$per_post_page_item['id'].'"> '.$per_post_page_item['title'].'</a>
-                            ';
-                            $temp++;
+                        ';
+                        if(strtotime($per_post_page_item['start'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($per_post_page_item['end'])){
+                            echo'<td style="width: 150px; color: green;">公告中</td>';
+                        }
+                        else{
+                            echo'<td style="width: 150px; color: red;">已超時</td>';
+                        }
+                        $temp++;
                     }
                 }   
             ?>

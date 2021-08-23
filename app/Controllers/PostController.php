@@ -4,6 +4,8 @@ namespace App\Controllers;
 
 session_start();
 
+date_default_timezone_set('Asia/Taipei');
+
 use App\Controllers\BaseController;
 use App\Models\Post_user_login;
 use App\Models\Post_login;
@@ -104,8 +106,8 @@ class PostController extends BaseController
 		$model2 = new Per_post_page();
 		$data = 
 		[
-			'star_post_page' => $model1->findAll(),
-			'per_post_page' => $model2->findAll()
+			'star_post_page' => $model1->orderBy('start', 'desc')->findAll(),
+			'per_post_page' => $model2->orderBy('start', 'desc')->findAll()
 		];
 		return view('show/show_back', $data);
 	}
@@ -118,13 +120,17 @@ class PostController extends BaseController
 		$starcollege = new Starcollege();
 
 		$data = [
-			'star_post_page' => $model->findAll()
+			'star_post_page' => $model->orderBy('start', 'desc')->findAll()
 		];
 
 		$i = 0;
+		$j = 0;
 
-		while(isset($data['star_post_page'][$i])){
-			$i++;
+		while(isset($data['star_post_page'][$j])){
+			if(strtotime($data['star_post_page'][$j]['start'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($data['star_post_page'][$j]['end'])){
+				$i++;
+			}
+			$j++;
 		}
 
 		if($i <= 10){
@@ -137,15 +143,32 @@ class PostController extends BaseController
 			}
 		}
 		
-		$_SESSION['head'] = ($num - 1) * 10;
-		$_SESSION['tail'] = ($num - 1) * 10 + 9;
+		$dist = ($num - 1) * 10;
+
+		$i = 0;
+		$j = 0;
+
+		while(isset($data['star_post_page'][$j])){
+			if(strtotime($data['star_post_page'][$j]['start'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($data['star_post_page'][$j]['end'])){
+				if($i == $dist){
+					break;
+				}
+				$i++;
+			}
+			$j++;
+		}
+
+		$_SESSION['head'] = $j;
+		$_SESSION['tail'] = $j + 9;
+
+		echo $_SESSION['head'];
 
 		$data = 
 		[
 			'starcollege' => $starcollege->findAll(),
 			'starsenior' => $starsenior->findAll(),
 			'logindate'=> $login->findAll(),
-			'star_post_page' => $model->findAll(),
+			'star_post_page' => $model->orderBy('start', 'desc')->findAll(),
 			'page_num' => $page_num,
 		];
 
@@ -160,13 +183,17 @@ class PostController extends BaseController
 		$starcollege = new Starcollege();
 
 		$data = [
-			'star_post_page' => $model->findAll()
+			'star_post_page' => $model->orderBy('start', 'desc')->findAll()
 		];
 
 		$i = 0;
+		$j = 0;
 
-		while(isset($data['star_post_page'][$i])){
-			$i++;
+		while(isset($data['star_post_page'][$j])){
+			if(strtotime($data['star_post_page'][$j]['start'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($data['star_post_page'][$j]['end'])){
+				$i++;
+			}
+			$j++;
 		}
 
 		if($i <= 10){
@@ -187,7 +214,7 @@ class PostController extends BaseController
 			'starcollege' => $starcollege->findAll(),
 			'starsenior' => $starsenior->findAll(),
 			'logindate'=> $login->findAll(),
-			'star_post_page' => $model->findAll(),
+			'star_post_page' => $model->orderBy('start', 'desc')->findAll(),
 			'page_num' => $page_num,
 		];
 
@@ -203,13 +230,17 @@ class PostController extends BaseController
 		$starcollege = new Starcollege();
 
 		$data = [
-			'star_post_page' => $model->findAll()
+			'star_post_page' => $model->orderBy('start', 'desc')->findAll()
 		];
 
 		$i = 0;
+		$j = 0;
 
-		while(isset($data['star_post_page'][$i])){
-			$i++;
+		while(isset($data['star_post_page'][$j])){
+			if(strtotime($data['star_post_page'][$j]['start'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($data['star_post_page'][$j]['end'])){
+				$i++;
+			}
+			$j++;
 		}
 
 		if($i <= 10){
@@ -230,14 +261,14 @@ class PostController extends BaseController
 			'starcollege' => $starcollege->findAll(),
 			'starsenior' => $starsenior->findAll(),
 			'logindate'=> $login->findAll(),
-			'star_post_page' => $model->findAll(),
+			'star_post_page' => $model->orderBy('start', 'desc')->findAll(),
 			'page_num' => $page_num,
 		];
 
 		return view('show/show_front_star', $data);
 	}
 
-	/* 前台分頁(個申) */
+	/* 前台分頁公告(個申) */
 	public function per_page($num){
 		$login = new Logindate();
 		$model = new Per_post_page();
@@ -245,13 +276,17 @@ class PostController extends BaseController
 		$norcollege = new Norcollege();
 
 		$data = [
-			'per_post_page' => $model->findAll()
+			'per_post_page' => $model->orderBy('start', 'desc')->findAll()
 		];
 
 		$i = 0;
+		$j = 0;
 
-		while(isset($data['per_post_page'][$i])){
-			$i++;
+		while(isset($data['per_post_page'][$j])){
+			if(strtotime($data['per_post_page'][$j]['start'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($data['per_post_page'][$j]['end'])){
+				$i++;
+			}
+			$j++;
 		}
 
 		if($i <= 10){
@@ -264,15 +299,30 @@ class PostController extends BaseController
 			}
 		}
 		
-		$_SESSION['head'] = ($num - 1) * 10;
-		$_SESSION['tail'] = ($num - 1) * 10 + 9;
+		$dist = ($num - 1) * 10;
+
+		$i = 0;
+		$j = 0;
+		
+		while(isset($data['per_post_page'][$j])){
+			if(strtotime($data['per_post_page'][$j]['start'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($data['per_post_page'][$j]['end'])){
+				if($i == $dist){
+					break;
+				}
+				$i++;
+			}
+			$j++;
+		}
+
+		$_SESSION['head'] = $j;
+		$_SESSION['tail'] = $j + 9;
 
 		$data = 
 		[
 			'norcollege' => $norcollege->findAll(),
 			'norsenior' => $norsenior->findAll(),
 			'logindate'=> $login->findAll(),
-			'per_post_page' => $model->findAll(),
+			'per_post_page' => $model->orderBy('start', 'desc')->findAll(),
 			'page_num' => $page_num,
 		];
 
@@ -287,13 +337,17 @@ class PostController extends BaseController
 		$norcollege = new Norcollege();
 
 		$data = [
-			'per_post_page' => $model->findAll()
+			'per_post_page' => $model->orderBy('start', 'desc')->findAll()
 		];
 
 		$i = 0;
+		$j = 0;
 
-		while(isset($data['per_post_page'][$i])){
-			$i++;
+		while(isset($data['per_post_page'][$j])){
+			if(strtotime($data['per_post_page'][$j]['start'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($data['per_post_page'][$j]['end'])){
+				$i++;
+			}
+			$j++;
 		}
 
 		if($i <= 10){
@@ -314,7 +368,7 @@ class PostController extends BaseController
 			'norcollege' => $norcollege->findAll(),
 			'norsenior' => $norsenior->findAll(),
 			'logindate'=> $login->findAll(),
-			'per_post_page' => $model->findAll(),
+			'per_post_page' => $model->orderBy('start', 'desc')->findAll(),
 			'page_num' => $page_num,
 		];
 
@@ -330,13 +384,17 @@ class PostController extends BaseController
 		$norcollege = new Norcollege();
 
 		$data = [
-			'per_post_page' => $model->findAll()
+			'per_post_page' => $model->orderBy('start', 'desc')->findAll()
 		];
 
 		$i = 0;
+		$j = 0;
 
-		while(isset($data['per_post_page'][$i])){
-			$i++;
+		while(isset($data['per_post_page'][$j])){
+			if(strtotime($data['per_post_page'][$j]['start'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($data['per_post_page'][$j]['end'])){
+				$i++;
+			}
+			$j++;
 		}
 
 		if($i <= 10){
@@ -357,7 +415,7 @@ class PostController extends BaseController
 			'norcollege' => $norcollege->findAll(),
 			'norsenior' => $norsenior->findAll(),
 			'logindate'=> $login->findAll(),
-			'per_post_page' => $model->findAll(),
+			'per_post_page' => $model->orderBy('start', 'desc')->findAll(),
 			'page_num' => $page_num,
 		];
 

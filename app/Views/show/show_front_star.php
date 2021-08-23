@@ -48,10 +48,9 @@
                     <?php
                     date_default_timezone_set('Asia/Taipei');
                     //echo date("Y-m-d H:i:s");
-                    
-                    $temp = 0;
-                        if(! empty($star_post_page) && is_array($star_post_page)){
-                            for($i = $_SESSION['head']; isset($star_post_page[$i]) && $i <= $_SESSION['tail']; $i++){
+                    $temp = $_SESSION['head'];
+                        if(!empty($star_post_page) && is_array($star_post_page)){
+                            for($i = $_SESSION['head']; isset($star_post_page[$i]) && $temp <= $_SESSION['tail']; $i++){
                                 if (strtotime($star_post_page[$i]['start'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($star_post_page[$i]['end'])){
                                     $year = substr($star_post_page[$i]['start'], 0, 4);
                                     $month = substr($star_post_page[$i]['start'], 5, 2);

@@ -24,6 +24,10 @@
                         <?php echo' <td style="width: 600px;"> <strong style="font-size: 20px">'.$star_post_page['title'].'</strong> </td> '; ?>
                     </tr>
                     <tr>
+                        <td style="width: 80px;" align="center" valign="middle"> <strong> 類別 </strong> </td>
+                        <?php echo' <td style="width: 600px;"> <strong>'.$star_post_page['subtitle'].'</strong> </td> '; ?>
+                    </tr>
+                    <tr>
                         <td align="center" valign="middle"> <strong> 發布日期 </strong> </td>
                         <?php 
                         $year = substr($star_post_page['start'], 0, 4);

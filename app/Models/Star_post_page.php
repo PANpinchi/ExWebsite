@@ -17,7 +17,6 @@ class Star_post_page extends Model
 	protected $allowedFields        = [
 		'title',
 		'subtitle',
-		'subtitle2',
 		'content',
 		'start',
 		'end',

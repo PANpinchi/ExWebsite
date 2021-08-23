@@ -22,10 +22,6 @@ class Per_post_page extends Migration
 					'type'			=> 'VARCHAR',
 					'constraint'	=> 100,
 					'null'			=> true],
-			'subtitle2'	=> [
-					'type'			=> 'VARCHAR',
-					'constraint'	=> 100,
-					'null'			=> true],
 			'content'	=> [
 					'type'			=> 'VARCHAR',
 					'constraint'	=> 200,

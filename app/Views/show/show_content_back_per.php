@@ -30,6 +30,9 @@
                     <tr> 
                         <td style="width: 150px">標題
                         <td style="width: 600px;">'.$per_post_page['title'].'
+                    <tr>
+                        <td style="width: 150px">副標題
+                        <td style="width: 600px;">'.$per_post_page['subtitle'].'
                     <tr> 
                         <td style="width: 150px">發布時間
                         <td style="width: 600px;">'.$start1.' '.$start2.'
@@ -39,7 +42,6 @@
                     <tr> 
                         <td style="width: 150px">內容
                         <td style="width: 600px;">'.$per_post_page['content'].'
-                
                 ';
 
                 if($per_post_page['file'] != NULL){
@@ -54,6 +56,21 @@
                         <tr>
                             <td align="center" valign="middle"> <strong> 附件 </strong> </td>
                             <td> -- </td>
+                        </tr>';
+                }
+
+                if(strtotime($per_post_page['start'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($per_post_page['end'])){
+                    echo'
+                        <tr>
+                            <td align="center" valign="middle"> <strong> 狀態 </strong> </td>
+                            <td style="width: 150px; color: green;">公告中</td>
+                        </tr>';
+                }
+                else{
+                    echo'
+                        <tr>
+                            <td align="center" valign="middle"> <strong> 狀態 </strong> </td>
+                            <td style="width: 150px; color: red;">已超時</td>
                         </tr>';
                 }
             ?>
@@ -73,6 +90,7 @@
                     </button>
                 </div>
             </div>
+            <br>
         </div>
         
     <body>

@@ -7,7 +7,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <script src="//cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
+        <script src="//cdn.ckeditor.com/4.16.2/full/ckeditor.js"></script>
 
         <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
@@ -33,19 +33,12 @@
                             <label for="subtitle" class="col-md-2 col-form-label">
                                 副標題</label>
                             <select name="subtitle" required>
-                            <option selected disabled="disabled" value="">請選擇副標題</option>
-                            <option value="招生事務"><div class="small_content">招生事務</div></option>
-                            <option value="甄選資訊"><div class="small_content">甄選資訊</div></option>
-                            <option value="簡章訊息"><div class="small_content">簡章訊息</div></option>
-                            </select>
-
-                            <label for="subtitle2" class="col-md-2 col-form-label">
-                                子標題</label>
-                            <select name="subtitle2" required>
-                            <option selected disabled="disabled" value="">請選擇子標題</option>
-                            <option value="招生事務"><div class="small_content">招生事務</div></option>
-                            <option value="甄選資訊"><div class="small_content">甄選資訊</div></option>
-                            <option value="簡章訊息"><div class="small_content">簡章訊息</div></option>
+                                <option selected disabled="disabled" value="">請選擇副標題</option>
+                                <option value="簡章訊息"><div class="small_content">簡章訊息</div></option>
+                                <option value="招生事務"><div class="small_content">招生事務</div></option>
+                                <option value="甄選資訊"><div class="small_content">甄選資訊</div></option>
+                                <option value="會議簡報"><div class="small_content">會議簡報</div></option>
+                                <option value="其他事項"><div class="small_content">其他事項</div></option>
                             </select>
 
                             <label for="content" class="col-md-2 col-form-label">
