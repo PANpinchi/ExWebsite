@@ -23,7 +23,7 @@
                     </tr>
 
                     <tr>
-                    <td></td>
+                        <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -33,8 +33,8 @@
                         <td></td>
                         <td><img src="/person_img/icon_16.jpg"></td>
                         <td align="center" valign="bottom">
-                            <div style="margin-top: 9px">
-                                <marquee direction="left" width="570px" scrollamount="4">請留意！甄選委員會發送之簡訊，不會要求考生回撥及告知個人資料。聯絡專線：05-2721799。</marquee>
+                            <div style="margin-top: 9px; margin-right: 12px">
+                                <marquee direction="left" width="560px" scrollamount="4" onMouseOver="this.stop()" onMouseOut="this.start()">請留意！甄選委員會發送之簡訊，不會要求考生回撥及告知個人資料。聯絡專線：05-2721799。</marquee>
                             </div>
                         </td>
                     </tr>
