@@ -19,10 +19,16 @@
             <td>
                 <table>
                     <tr>
-                        <td colspan="5"><img src="/person_img/icon_17.jpg" style="width: 750px"></td>
+                        <td colspan="10"><img src="/person_img/icon_17.jpg" style="width: 750px"></td>
                     </tr>
 
                     <tr>
+                    <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                         <td></td>
                         <td></td>
                         <td><img src="/person_img/icon_16.jpg"></td>
