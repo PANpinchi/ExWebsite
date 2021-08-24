@@ -61,9 +61,13 @@
                                                 <td style="width: 30px; font-size: 15px;"> '.$year.'/'.$month.'/'.$day.' </td>
                                                 <td style="width: 100px; color: gray;"> ['.$star_post_page[$i]['subtitle'].'] </td>
                                                 <td style="width: 500px;"><a href="/PostController/show_content_front_star/'.$star_post_page[$i]['id'].'"> '.$star_post_page[$i]['title'].'</a> </td>
-                                                <td style="width: 20px"> </td>
-                                            </tr>
                                         ';
+                                        if($star_post_page[$i]['file'] != NULL){
+                                            echo' <td style="width: 20px;"> <img src="/img/icon_pdf.gif"> </td> </tr>';
+                                        }
+                                        else{
+                                            echo' <td style="width: 20px;"> </td> </tr>';
+                                        }
                                         $temp++;
                                     }
                                     else{
@@ -76,9 +80,13 @@
                                                     <td style="width: 30px; font-size: 15px;"> '.$year.'/'.$month.'/'.$day.' </td>
                                                     <td style="width: 100px; color: gray;"> ['.$star_post_page[$i]['subtitle'].'] </td>
                                                     <td style="width: 500px;"><a href="/PostController/show_content_front_star/'.$star_post_page[$i]['id'].'"> '.$star_post_page[$i]['title'].'</a> </td>
-                                                    <td style="width: 20px"> </td>
-                                                </tr>
                                             ';
+                                            if($star_post_page[$i]['file'] != NULL){
+                                                echo' <td style="width: 20px;"> <img src="/img/icon_pdf.gif"> </td> </tr>';
+                                            }
+                                            else{
+                                                echo' <td style="width: 20px;"> </td> </tr>';
+                                            }
                                             $temp++;
                                         }
                                     }
