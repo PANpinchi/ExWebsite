@@ -171,7 +171,7 @@
                                             <tr>
                                                 <td>
                                                     <div id = "m1">
-                                                        <a href="#" style="text-decoration:none;"> 
+                                                        <a href="/PostController/show_front_per" style="text-decoration:none;"> 
                                                             <table class="layer" style="text-decoration:none;">
                                                                 <tbody>
                                                                     <tr id = "m1-1" class="touch">

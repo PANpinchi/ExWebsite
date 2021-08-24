@@ -110,9 +110,9 @@
                 <?php
                 if(!isset($post_type)){
                     for($i=0;$i<$page_num;){
-                        echo '<a href="/PostController/star_page/'.++$i.'">&nbsp;['.$i.']&nbsp;</a>';
+                        echo '<a href="/PostController/per_page/'.++$i.'">&nbsp;['.$i.']&nbsp;</a>';
                     }
-                    echo '<a href="/PostController/star_page_all">&nbsp;[全部] </a>';
+                    echo '<a href="/PostController/per_page_all">&nbsp;[全部] </a>';
                 }
                 ?>
             </td>
