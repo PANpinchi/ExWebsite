@@ -146,7 +146,7 @@
                                                                 <tbody>
                                                                     <tr id = "m1-1" class="touch">
                                                                         <td style="width: 140px;">
-                                                                            <a href="/PostController/star_page_type/簡章訊息事項" style="text-decoration:none;">簡章訊息事項</a>
+                                                                            <a href="/PostController/star_page_type/簡章訊息" style="text-decoration:none;">簡章訊息事項</a>
                                                                         </td>
                                                                     </tr>
                                                                     <tr id = "m1-1" class="touch">

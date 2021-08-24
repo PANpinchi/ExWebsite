@@ -174,14 +174,36 @@
                                                         <a href="#" style="text-decoration:none;"> 
                                                             <table class="layer" style="text-decoration:none;">
                                                                 <tbody>
-                                                                    <tr class="touch"><td style="width: 140px;">簡章訊息事務</td></tr>
-                                                                    <tr class="touch"><td style="width: 140px;">招生事務</td></tr>
-                                                                    <tr class="touch"><td style="width: 140px;">甄選資訊</td></tr>
-                                                                    <tr class="touch"><td style="width: 140px;">會議簡報</td></tr>
-                                                                    <tr class="touch"><td style="width: 140px;">其他事項</td></tr>
+                                                                    <tr id = "m1-1" class="touch">
+                                                                        <td style="width: 140px;">
+                                                                            <a href="/PostController/per_page_type/簡章訊息" style="text-decoration:none;">簡章訊息事項</a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr id = "m1-1" class="touch">
+                                                                        <td style="width: 140px;">
+                                                                            <a href="/PostController/per_page_type/招生事務" style="text-decoration:none;">招生事務</a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr id = "m1-1" class="touch">
+                                                                        <td style="width: 140px;">
+                                                                            <a href="/PostController/per_page_type/甄選資訊" style="text-decoration:none;">甄選資訊</a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr id = "m1-1" class="touch">
+                                                                        <td style="width: 140px;">
+                                                                            <a href="/PostController/per_page_type/會議簡報" style="text-decoration:none;">會議簡報</a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr id = "m1-1" class="touch">
+                                                                        <td style="width: 140px;">
+                                                                            <a href="/PostController/per_page_type/其他事項" style="text-decoration:none;">其他事項</a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <!--
                                                                     <tr class="touch"><td style="width: 140px;">系統公告</td></tr>
                                                                     <tr class="touch"><td style="width: 140px;">師資保送甄試</td></tr>
                                                                     <tr class="touch"><td style="width: 140px;">醫師人員養成計畫</td></tr>
+                                                                    -->
                                                                 </tbody>
                                                             </table>
                                                         </a>

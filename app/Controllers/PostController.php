@@ -466,6 +466,52 @@ class PostController extends BaseController
 		return view('show/show_front_per', $data);
 	}
 
+	/* 前台公告類型(個申) */
+	public function per_page_type($type){
+		$login = new Logindate();
+		$model = new Per_post_page();
+		$norsenior = new Norsenior();
+		$norcollege = new Norcollege();
+
+		$data = [
+			'per_post_page' => $model->orderBy('start', 'desc')->findAll()
+		];
+
+		$i = 0;
+		$j = 0;
+
+		while(isset($data['per_post_page'][$j])){
+			if(strtotime($data['per_post_page'][$j]['start'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($data['per_post_page'][$j]['end'])){
+				$i++;
+			}
+			$j++;
+		}
+
+		if($i <= 10){
+			$page_num = 1;
+		}
+		else{
+			$page_num = (int)($i / 10) + 1;
+			if($i % 10 == 0){
+				$page_num--;
+			}
+		}
+		
+		$_SESSION['head'] = 0;
+		$_SESSION['tail'] = $i;
+
+		$data = 
+		[
+			'norcollege' => $norcollege->findAll(),
+			'norsenior' => $norsenior->findAll(),
+			'logindate'=> $login->findAll(),
+			'per_post_page' => $model->orderBy('start', 'desc')->findAll(),
+			'post_type' => $type
+		];
+
+		return view('show/show_front_per', $data);
+	}
+
 	/*後台點選進入文章內容(繁星)*/
 	public function show_content_back_star($star_post_page_id)
 	{
