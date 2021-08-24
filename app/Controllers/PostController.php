@@ -94,7 +94,7 @@ class PostController extends BaseController
 		return view('posts/modify_per', $data);
 	}
 
-	/*顯示公告的文章*/
+	/*後台顯示公告的文章*/
 	public function show_back()
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
@@ -160,8 +160,6 @@ class PostController extends BaseController
 
 		$_SESSION['head'] = $j;
 		$_SESSION['tail'] = $j + 9;
-
-		echo $_SESSION['head'];
 
 		$data = 
 		[
@@ -263,6 +261,52 @@ class PostController extends BaseController
 			'logindate'=> $login->findAll(),
 			'star_post_page' => $model->orderBy('start', 'desc')->findAll(),
 			'page_num' => $page_num,
+		];
+
+		return view('show/show_front_star', $data);
+	}
+
+	/* 前台公告類型(繁星) */
+	public function star_page_type($type){
+		$login = new Logindate();
+		$model = new Star_post_page();
+		$starsenior = new Starsenior();
+		$starcollege = new Starcollege();
+
+		$data = [
+			'star_post_page' => $model->orderBy('start', 'desc')->findAll()
+		];
+
+		$i = 0;
+		$j = 0;
+
+		while(isset($data['star_post_page'][$j])){
+			if(strtotime($data['star_post_page'][$j]['start'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($data['star_post_page'][$j]['end'])){
+				$i++;
+			}
+			$j++;
+		}
+
+		if($i <= 10){
+			$page_num = 1;
+		}
+		else{
+			$page_num = (int)($i / 10) + 1;
+			if($i % 10 == 0){
+				$page_num--;
+			}
+		}
+		
+		$_SESSION['head'] = 0;
+		$_SESSION['tail'] = $i;
+
+		$data = 
+		[
+			'starcollege' => $starcollege->findAll(),
+			'starsenior' => $starsenior->findAll(),
+			'logindate'=> $login->findAll(),
+			'star_post_page' => $model->orderBy('start', 'desc')->findAll(),
+			'post_type' => $type
 		];
 
 		return view('show/show_front_star', $data);
@@ -1138,7 +1182,7 @@ class PostController extends BaseController
 
 		$time = $login->findAll();
 
-		$_SESSION['type'] = $type;
+		$_SESSION['login_type'] = $type;
 
 		if (strtotime($time[0]['start1'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($time[0]['end1']))
 			return view('login/login');
@@ -1254,12 +1298,12 @@ class PostController extends BaseController
 			if($account == 0 && $password == 0){
 				$_SESSION['name'] = $users[$i]['name'];
 				$_SESSION['login'] = true;
-				if($_SESSION['type'] == 'star'){
-					unset($_SESSION['type']);
+				if($_SESSION['login_type'] == 'star'){
+					unset($_SESSION['login_type']);
 					return redirect('PostController/show_front_star');
 				}
-				else if($_SESSION['type'] == 'per'){
-					unset($_SESSION['type']);
+				else if($_SESSION['login_type'] == 'per'){
+					unset($_SESSION['login_type']);
 					return redirect('PostController/show_front_per');
 				}
 			}

@@ -69,6 +69,14 @@ img {
     width: 152px;/*圖片寬度*/
 }
 
+#m1-1 a {
+    background: none;
+    display: block;
+    color: black;
+    height: 25px;
+    width: auto;
+}
+
 #m2 a {
     background: url("/img/main_menu_02.jpg");/*預設顯示圖片*/
     display: block;
@@ -185,6 +193,10 @@ img {
 #m1 a:hover{
     background: url("/img/main_menu_01_up.jpg");
     display: block;
+}
+
+#m1-1 a:hover {
+    background: none;
 }
 
 .layer{
