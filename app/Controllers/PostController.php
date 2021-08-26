@@ -24,6 +24,95 @@ class PostController extends BaseController
 		return view('show/frontpage');
 	}
 
+	public function test()
+	{
+		$path = 'labeled_images';
+		$_SESSION['file_name'] = scandir($path);
+
+		$model = new Post_user_login(); //開啟 user_account 資料庫
+		$users = $model->findAll(); //取得資料
+		for($i = 0; isset($users[$i]); $i++){
+			if($users[$i]['image'] != NULL){
+				$label['name'][$i] = $users[$i]['name'];
+				$label['image'][$i] = $users[$i]['image'];
+			}
+			else{
+				$label['name'][$i] = false;
+				$label['image'][$i] = false;
+			}
+		}
+		$data=[
+			'label' => $label
+		];
+		return view('show/test', $data);
+	}
+
+	public function set_face_id()
+	{
+		$model = new Post_user_login(); //開啟 user_account 資料庫
+		
+		$users = $model->where('id', $_SESSION['user_id'])->findAll(); //取得資料
+
+		if(isset($users[0]['image'])){
+			$_SESSION['image'] = $users[0]['image'];
+		}
+		else{
+			$_SESSION['image'] = NULL;
+		}
+
+		return view('show/set_face_id');
+	}
+
+	public function save_img()
+	{
+		$model = new Post_user_login();
+
+		if(is_uploaded_file($_FILES['img']['tmp_name'])){	
+			$DestDIR = "labeled_images/".$_SESSION['user_id'];
+			if(!is_dir($DestDIR) || !is_writable($DestDIR)){
+				mkdir($DestDIR);
+			}
+			
+			move_uploaded_file($_FILES['img']['tmp_name'], $DestDIR.'/1.jpg');
+		}
+
+		$data = [
+			'image' => $_FILES['img']['name'],
+		];
+
+		$_SESSION['image'] = $_FILES['img']['name'];
+
+		$model->update($_SESSION['user_id'], $data);
+		
+		echo '<script>alert("照片上傳成功！")</script>';
+		return view('show/set_face_id');
+	}
+
+	public function del_img()
+	{
+		$model = new Post_user_login();
+
+		$user = $model->find($_SESSION['user_id']);
+
+		if($user['image'] != NULL){
+			$file = 'labeled_images/'.$_SESSION['user_id'].'/1.jpg';
+			unlink($file);
+			$DestDIR = "labeled_images/".$_SESSION['user_id'];
+			rmdir($DestDIR);
+		}
+		
+		$data = [
+			'image' => NULL,
+		];
+
+		$_SESSION['image'] = NULL;
+
+		$model->update($_SESSION['user_id'], $data);
+
+		echo '<script>alert("已取消 Face ID 功能！")</script>';
+		return view('show/set_face_id');
+	}
+
 	/*顯示關閉頁面*/
 	public function pageclose()
 	{
@@ -33,6 +122,22 @@ class PostController extends BaseController
 	/*創建新的貼文入口頁面*/
 	public function create_new()
 	{
+		if(isset($_GET['id'])){
+			$model = new Post_user_login(); //開啟 user_account 資料庫
+			$user = $model->find($_GET['id']); //取得資料
+
+			$_SESSION['user_id'] = $_GET['id'];
+			if($user['image'] != NULL){
+				$_SESSION['image'] = $user['image'];
+			}
+			else{
+				$_SESSION['image'] = NULL;
+			}
+			$_SESSION['user_login'] = true;
+			$_SESSION['user_name'] = $user['name'];
+			unset($_GET['id']);
+		}
+
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
 			echo '<script>alert("請先登入！")</script>';
 			return view('login/user_login');
@@ -1208,10 +1313,13 @@ class PostController extends BaseController
 		return redirect('PostController/starseniorview');	
 	}
 
-
 	/* 後台登入頁面 */
 	public function user_login()
 	{
+		if(isset($_GET['value'])){
+			echo '<script>alert("身份驗證失敗，請重新再試！")</script>';
+		}
+
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
 			return view('login/user_login');
 		}
@@ -1287,7 +1395,7 @@ class PostController extends BaseController
 			return view('login/user_login');
 		}
 
-		$model = new Post_user_login(); //開啟 account 資料庫
+		$model = new Post_user_login(); //開啟 user_account 資料庫
 		
 		$users = $model->findAll(); //取得資料
 		
@@ -1299,6 +1407,7 @@ class PostController extends BaseController
 
 			if($email == 0 && $password == 0){
 				$_SESSION['user_name'] = $users[$i]['name'];
+				$_SESSION['user_id'] = $users[$i]['id'];
 				$_SESSION['user_login'] = true;
 				return view('posts/create_new');
 			}
@@ -1503,3 +1612,4 @@ class PostController extends BaseController
 		imagedestroy($im);
 	}
 }
+?>

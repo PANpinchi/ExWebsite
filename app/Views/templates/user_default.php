@@ -8,13 +8,6 @@
       <!-- Bootstrap CSS -->
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
       <link rel="stylesheet" href="/style/user_login.css">
-      <style>
-        #float {
-          position: fixed;
-          left: 0;
-          top: 0;
-        }
-      </style>
     </head>
     
     <body>
@@ -38,8 +31,8 @@
             <a class = "back square" style="color:white" href = "/PostController/norseniorview"><p class = "center">高中個人申請</p></a>
             <a class = "back square" style="color:white" href = "/PostController/starseniorview"><p class = "center">高中繁星推薦</p></a>
             <a class = "back square" style="color:white" href = "/PostController/logindateview"><p class = "center">前台登入設定</p></a>
-            <a class = "back square" href = "/PostController/show_front_star" style="color:white"> <p class = "center"> 繁星作業資訊系統 </p> </a>
-            <a class = "back square" href = "/PostController/show_front_per" style="color:white"> <p class = "center"> 個申作業資訊系統 </p> </a>
+            <a class = "back square" style="color:white" href = "/PostController/show_front_star"><p class = "center"> 繁星作業資訊系統 </p> </a>
+            <a class = "back square" style="color:white" href = "/PostController/show_front_per"><p class = "center"> 個申作業資訊系統 </p> </a>
             <a class = "back square" style="color:white" href = "/PostController/user_logout"><p class = "center"> 登出 </p></a>
         </div>
       </div>
@@ -49,8 +42,12 @@
           <?= $this->renderSection('content') ?>
         </div>
       </div>
-        <!-- Option 1: Bootstrap Bundle with Popper -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+      <div id="float2">
+        <div class="black window3 right twhite">
+          <a class = "back square" style="color:white" href = "/PostController/set_face_id"><p class = "center"> 設置 Face ID </p></a>
+        </div>
+      </div>
     </body>
 </html>
 

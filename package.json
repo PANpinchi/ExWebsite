@@ -1,0 +1,31 @@
+{
+  "name": "face-recognition",
+  "version": "1.0.0",
+  "description": "Face Recognition",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js -L -e js,html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PANpinchi/ExWebsite.git"
+  },
+  "author": "pinchi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PANpinchi/ExWebsite/issues"
+  },
+  "homepage": "https://github.com/PANpinchi/ExWebsite#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "face-api.js": "^0.22.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}

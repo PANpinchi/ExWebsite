@@ -32,6 +32,12 @@ class Post_user_login extends Migration
 				'constraint' => '200',
 				'null' => true
 			],
+
+			'image' => [
+				'type' => 'image',
+				'constraint' => '200',
+				'null' => true
+			],
 		]);
 		
 		$this->forge->createTable('user_account');

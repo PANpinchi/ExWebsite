@@ -14,7 +14,7 @@
     </head>
 
     <body>
-        <div class="window">
+        <div class="window" style="margin-right: 100px">
             <div class="container">
                     <br>
                     <p class="type1 margin-top">大學甄選入學委員會 - 系統登入</p>
@@ -44,6 +44,7 @@
                                 <p class="type3" style="width: 278px; text-align: left;"> * 區分英文大小寫及數字 </p>
                             </p>
 
+                            <a href="/PostController/test" class="btn btn-primary" type="button" style="margin-right: 30px; text-decoration:none;"> 快速登入 </a>
                             <button class="btn btn-primary" text-align="center"> 登入 </button>
                             
                             <br><br>
@@ -54,6 +55,5 @@
         </div>
     <body>
 </html>
-
 
 <?= $this->endSection() ?>

@@ -24,6 +24,10 @@ form{
     float: left;
 }
 
+.right{
+    float: right;
+}
+
 .black{
     background-color: rgb(25, 25, 25);
 }
@@ -35,6 +39,13 @@ form{
 .window2{
     width: 30vh;
     height: 100vh;
+}
+
+.window3{
+    width: 20vh;
+    height: 6.5vh;
+    opacity: 0.5;
+    border-radius: 10px 10px 10px 10px;
 }
 
 .back:hover{
@@ -97,4 +108,16 @@ a{
 
 a:hover{
     text-decoration:underline;
+}
+
+#float {
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+#float2 {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
 }
