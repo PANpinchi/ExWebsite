@@ -50,7 +50,18 @@
         const video = document.getElementById('videoInput')
         var time = 30;
 
-        if(typeof(faceapi) != "undefined" && faceapi != null){
+        try {
+            Promise.all([
+                faceapi.nets.faceRecognitionNet.loadFromUri("/models"),
+                faceapi.nets.faceLandmark68Net.loadFromUri("/models"),
+                faceapi.nets.ssdMobilenetv1.loadFromUri("/models") //heavier/accurate version of tiny face detector
+            ]).then(start)
+        }
+        catch(err) {
+            window.location.reload()
+        }
+
+        /*if(typeof(faceapi) != "undefined" && faceapi != null){
             alert("開始辨識！")
             Promise.all([
                 faceapi.nets.faceRecognitionNet.loadFromUri("/models"),
@@ -60,7 +71,7 @@
         }
         else{
             window.location.reload()
-        }
+        }*/
 
         function start() {
             //document.body.append("辨識中 ... ")
