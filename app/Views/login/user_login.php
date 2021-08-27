@@ -29,15 +29,15 @@
                             <p class="type2" style = "width: min-content; height: min-content; text-align: left;">
                                 <br>
                                 
-                                帳號 : <br> <input name = "email" style="font-family:serif; height: 38px" type = "email" placeholder = "請輸入電子郵件">
+                                帳號 : <br> <input name = "email" style="font-family:serif; font-size:24px; height: 35px; width: 300px; margin-left: 50px" type = "email" placeholder = "請輸入電子郵件">
                                 
                                 <br><br>
                                 
-                                密碼 : <br> <input name = "password" style="font-family:serif; height: 38px" type = "password" placeholder = "請輸入密碼">
+                                密碼 : <br> <input name = "password" style="font-family:serif; font-size:24px; height: 35px; width: 300px; margin-left: 50px" type = "password" placeholder = "請輸入密碼">
 
                                 <br><br><br>
 
-                                <input name="valicode" style="width: 170px; height: 38px" type="text" placeholder = "請輸入驗證碼" required>
+                                <input name="valicode" style="width: 170px; font-size:24px; height: 35px; margin-left: 50px" type="text" placeholder = "請輸入驗證碼" required>
 
                                 <img id="Img" src = "<?= base_url('PostController/verification_code') ?>" onclick="reImg();">
 

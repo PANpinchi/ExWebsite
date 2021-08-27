@@ -121,3 +121,8 @@ a:hover{
     right: 20px;
     bottom: 20px;
 }
+
+input::-webkit-input-placeholder{
+    font-size: 20px;  
+    color: d0d0d0;  
+}
