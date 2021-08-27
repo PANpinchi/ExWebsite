@@ -332,6 +332,8 @@ class PostController extends BaseController
 		$starsenior = new Starsenior();
 		$starcollege = new Starcollege();
 
+		$_SESSION['login_type'] = 'star';
+
 		$data = [
 			'star_post_page' => $model->orderBy('start', 'desc')->findAll()
 		];
@@ -531,6 +533,8 @@ class PostController extends BaseController
 		$model = new Per_post_page();
 		$norsenior = new Norsenior();
 		$norcollege = new Norcollege();
+
+		$_SESSION['login_type'] = 'per';
 
 		$data = [
 			'per_post_page' => $model->orderBy('start', 'desc')->findAll()
@@ -1330,13 +1334,11 @@ class PostController extends BaseController
 	}
 
 	/* 前台登入頁面 */
-	public function login($type)
+	public function login()
 	{
 		$login = new Logindate();
 
 		$time = $login->findAll();
-
-		$_SESSION['login_type'] = $type;
 
 		if (strtotime($time[0]['start1'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($time[0]['end1']))
 			return view('login/login');
@@ -1453,12 +1455,10 @@ class PostController extends BaseController
 			if($account == 0 && $password == 0){
 				$_SESSION['name'] = $users[$i]['name'];
 				$_SESSION['login'] = true;
-				if($_SESSION['login_type'] == 'star'){
-					unset($_SESSION['login_type']);
+				if(!isset($_SESSION['login_type']) || $_SESSION['login_type'] == 'star'){
 					return redirect('PostController/show_front_star');
 				}
 				else if($_SESSION['login_type'] == 'per'){
-					unset($_SESSION['login_type']);
 					return redirect('PostController/show_front_per');
 				}
 			}
