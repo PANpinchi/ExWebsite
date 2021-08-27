@@ -38,7 +38,7 @@
                                 <br><br><br>
 
                                 <input name="valicode" style="width: 170px; font-size:24px; height: 35px; margin-left: 50px" type="text" placeholder = "請輸入驗證碼" required>
-
+                                
                                 <img id="Img" src = "<?= base_url('PostController/verification_code') ?>" onclick="reImg();">
 
                                 <p class="type3" style="width: 278px; text-align: left;"> * 區分英文大小寫及數字 </p>
