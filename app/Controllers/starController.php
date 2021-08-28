@@ -237,37 +237,7 @@ class starController extends BaseController
 			];
 		return view('control/starsenioredit',$data);
 	}
-
-	public function logindateset()
-	{
-		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
-			echo '<script>alert("請先登入！")</script>';
-			return view('login/user_login');
-		}
-
-		$model = new Logindate();
-		$data =
-			[
-				'logindate' => $model->findall()
-			];
-		return view('control/logindateset',$data);
-	}
-
-	public function logindateview()
-	{
-		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
-			echo '<script>alert("請先登入！")</script>';
-			return view('login/user_login');
-		}
-
-		$model = new Logindate();
-		$data =
-			[
-				'logindate' => $model->findall()
-			];
-		return view('control/logindateview',$data);
-	}
-
+	
 	public function starcollegeview()
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
@@ -299,23 +269,6 @@ class starController extends BaseController
 	}
 
 	/*後台網頁開放時間網址與說明資料更新*/
-	public function logindatestore()
-	{
-		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
-			echo '<script>alert("請先登入！")</script>';
-			return view('login/user_login');
-		}
-
-		$model = new Logindate();
-		$model->save(
-			[
-				'id'		=> 1,
-				'start1'	 => $this->request->getVar('start1'),
-				'end1' => $this->request->getVar('end1')
-			]
-		);
-		return redirect('loginController/logindateview');
-	}
 
 	public function starcollegestore()
 	{
