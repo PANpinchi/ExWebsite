@@ -177,12 +177,12 @@
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <div id = "m2"><a href="#"> </a></div>
+                                                    <div id = "m2"><a href="/PostController/regulation_star" style="text-decoration:none;"> </a></div>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <div id = "m3"><a href="#"> </a></div>
+                                                    <div id = "m3"><a href="/PostController/schedule_star"> </a></div>
                                                 </td>
                                             </tr>
                                             <tr>
