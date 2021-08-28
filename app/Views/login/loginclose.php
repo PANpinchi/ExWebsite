@@ -14,7 +14,7 @@
     </head>
 
     <body>
-        <form name = "accounts" action = "/PostController/index" method="POST" style="border: 1px rgb(230, 215, 210) solid">
+        <form name = "accounts" action = "/viewController/index" method="POST" style="border: 1px rgb(230, 215, 210) solid">
             <div class="margin type2">
                 <br><br>
                 <div align="center">

@@ -23,7 +23,7 @@
             <br><br><br>
 
             <div class="container">
-                <form name = "accounts" action = "/PostController/compare_user_account" method="POST" class="box" style="box-shadow: 4px 4px 20px 1px #505050">
+                <form name = "accounts" action = "/loginController/compare_user_account" method="POST" class="box" style="box-shadow: 4px 4px 20px 1px #505050">
                     <div class="margin">
                         <div align="center">
                             <p class="type2" style = "width: min-content; height: min-content; text-align: left;">
@@ -38,13 +38,13 @@
                                 <br><br><br>
 
                                 <input name="valicode" style="width: 170px; font-size:24px; height: 35px; margin-left: 50px" type="text" placeholder = "請輸入驗證碼" required>
-                                
-                                <img id="Img" src = "<?= base_url('PostController/verification_code') ?>" onclick="reImg();">
+
+                                <img id="Img" src = "<?= base_url('loginController/verification_code') ?>" onclick="reImg();">
 
                                 <p class="type3" style="width: 278px; text-align: left;"> * 區分英文大小寫及數字 </p>
                             </p>
 
-                            <a href="/PostController/test" class="btn btn-primary" type="button" style="margin-right: 30px; text-decoration:none;"> 快速登入 </a>
+                            <a href="/loginController/test" class="btn btn-primary" type="button" style="margin-right: 30px; text-decoration:none;"> 快速登入 </a>
                             <button class="btn btn-primary" text-align="center"> 登入 </button>
                             
                             <br><br>

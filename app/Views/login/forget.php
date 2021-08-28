@@ -14,7 +14,7 @@
     </head>
 
     <body>
-        <form name = "accounts" action = "/PostController/forget_account" method="POST" style="border: 1px rgb(230, 215, 210) solid">
+        <form name = "accounts" action = "/loginController/forget_account" method="POST" style="border: 1px rgb(230, 215, 210) solid">
             <div class="margin type2">
                 <div align="center" style = "color: rgb(160, 5, 0)">
                     <p style = "color: rgb(160, 5, 0); width: min-content; text-align: left;">
@@ -28,7 +28,7 @@
                     <div>
                         <input name="valicode" style="width: 180px;" type="text" placeholder = "請輸入驗證碼" required>
 
-                        <img id="Img" src = "<?= base_url('PostController/verification_code') ?>" onclick="reImg();">
+                        <img id="Img" src = "<?= base_url('loginController/verification_code') ?>" onclick="reImg();">
 
                         <br>
 
@@ -37,7 +37,7 @@
                         <hr>
 
                         <div align = "center">
-                            <?php echo'<a href="/PostController/login" class="btn btn-primary" style="background-color: orange; border:0px; margin-right: 30px;" type="button"> 回上一頁 </a>'; ?>
+                            <?php echo'<a href="/loginController/login" class="btn btn-primary" style="background-color: orange; border:0px; margin-right: 30px;" type="button"> 回上一頁 </a>'; ?>
                             <button class="btn btn-primary" style="background-color: orange; border:0px"> 送出 </button>
                             <br><br>
                         </div>

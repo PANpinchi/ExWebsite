@@ -56,7 +56,7 @@
                         echo '
                             <tr>
                                 <td align="center" valign="middle"> <strong> 附件 </strong> </td>
-                                <td><a href="/PostController/show_pdf/'.$per_post_page['file'].'">'.$per_post_page['file_name'].'</a>
+                                <td><a href="/viewController/show_pdf/'.$per_post_page['file'].'">'.$per_post_page['file_name'].'</a>
                             </tr>';
                     }
                     else{
@@ -69,7 +69,7 @@
                     ?>
                 </table>
 
-                <a class="btn btn-primary" href="/PostController/show_front_per" style="margin-right: 30px; background-color: rgb(224, 187, 255); border-color: rgb(224, 187, 255);">返回</a>
+                <a class="btn btn-primary" href="/viewController/show_front_per" style="margin-right: 30px; background-color: rgb(224, 187, 255); border-color: rgb(224, 187, 255);">返回</a>
                 <br><br>
             </td>
         </tr>

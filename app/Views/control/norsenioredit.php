@@ -21,7 +21,7 @@
     echo '
 	<div class="left">
 	<br>
-    <form action="/PostController/norseniorstore" method="post">
+    <form action="/applyController/norseniorstore" method="post">
     <input type="submit" value="一鍵更改" name="submit" class="btn btn-primary"></input><br><br>
     <table border="1" class="c table" style="border-style:solid; width: 1100px;">
 	    <tr>

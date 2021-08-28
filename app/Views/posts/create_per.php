@@ -17,7 +17,7 @@
 
     <body>
         <div style="padding-left: 100px">
-            <form action="/PostController/store_per" enctype="multipart/form-data" method="post">
+            <form action="/applyController/store_per" enctype="multipart/form-data" method="post">
                 <div class="row" style="width: 900px">
                     <div class="col offset-0">
                         <br>

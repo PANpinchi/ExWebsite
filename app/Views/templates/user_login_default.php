@@ -14,8 +14,8 @@
       <div id="float" class="window">
         <div class="black window2 left twhite">
             <br><br>
-            <a class = "square" style="color:white" href = "/PostController/create_new"> <p class = "center"> 公告系統 </p> </a>
-            <a class = "back square" style="color:white" href = "/PostController/show_back"> <p class = "center"> 訊息公告 </p> </a>
+            <a class = "square" style="color:white" href = "/applyController/create_new"> <p class = "center"> 公告系統 </p> </a>
+            <a class = "back square" style="color:white" href = "/viewController/show_back"> <p class = "center"> 訊息公告 </p> </a>
             <!--
             <div class = "back square"> <p href = "#" class = "center"> 法令規章 </p> </div>
             <div class = "back square"> <p href = "#" class = "center"> 重要時程 </p> </div>
@@ -26,13 +26,13 @@
             <div class = "back square"> <p href = "#" class = "center"> 相關網站 </p> </div>
             <div class = "back square"> <p href = "#" class = "center"> 歷年資料 </p> </div>
             -->
-            <a class = "back square" style="color:white" href = "/PostController/norcollegeview"><p class = "center">大學個人申請</p></a>
-            <a class = "back square" style="color:white" href = "/PostController/starcollegeview"><p class = "center">大學繁星推薦</p></a>
-            <a class = "back square" style="color:white" href = "/PostController/norseniorview"><p class = "center">高中個人申請</p></a>
-            <a class = "back square" style="color:white" href = "/PostController/starseniorview"><p class = "center">高中繁星推薦</p></a>
-            <a class = "back square" style="color:white" href = "/PostController/logindateview"><p class = "center">前台登入設定</p></a>
-            <a class = "back square" href = "/PostController/show_front_star" style="color:white"> <p class = "center"> 繁星作業資訊系統 </p> </a>
-            <a class = "back square" href = "/PostController/show_front_per" style="color:white"> <p class = "center"> 個申作業資訊系統 </p> </a>
+            <a class = "back square" style="color:white" href = "/applyController/norcollegeview"><p class = "center">大學個人申請</p></a>
+            <a class = "back square" style="color:white" href = "/starController/starcollegeview"><p class = "center">大學繁星推薦</p></a>
+            <a class = "back square" style="color:white" href = "/applyController/norseniorview"><p class = "center">高中個人申請</p></a>
+            <a class = "back square" style="color:white" href = "/starController/starseniorview"><p class = "center">高中繁星推薦</p></a>
+            <a class = "back square" style="color:white" href = "/loginController/logindateview"><p class = "center">前台登入設定</p></a>
+            <a class = "back square" href = "/viewController/show_front_star" style="color:white"> <p class = "center"> 繁星作業資訊系統 </p> </a>
+            <a class = "back square" href = "/viewController/show_front_per" style="color:white"> <p class = "center"> 個申作業資訊系統 </p> </a>
         </div>
       </div>
 
@@ -47,7 +47,7 @@
 
 <script type="text/javascript">  
     function reImg(){  
-        var img = document.getElementById("Img").src = "<?= base_url('PostController/verification_code') ?>";
+        var img = document.getElementById("Img").src = "<?= base_url('loginController/verification_code') ?>";
         img.src = "Img?rnd=" + Math.random();  
     }  
 </script>
