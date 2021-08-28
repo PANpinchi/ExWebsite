@@ -20,7 +20,7 @@
   	<table class="c" style="width: 1100px;">
         <tr>
             <td>
-                <input class="btn btn-primary" type="button" value="編輯" name="button" onclick= "location.href='/PostController/starcollegeedit'"></input><br>
+                <input class="btn btn-primary" type="button" value="編輯" name="button" onclick= "location.href='/starController/starcollegeedit'"></input><br>
             <td>
                 <h2>大學繁星推薦開放日期設定</h2>
     </table>

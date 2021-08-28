@@ -14,7 +14,7 @@
     </head>
 
     <body>
-        <form name = "accounts" action = "/PostController/change_pass" method="POST" style="border: 1px rgb(230, 215, 210) solid">
+        <form name = "accounts" action = "/loginController/change_pass" method="POST" style="border: 1px rgb(230, 215, 210) solid">
             <div class="margin type2">
                 <div align="center">
                     <p style = "color: rgb(160, 5, 0); width: min-content; text-align: left;">
@@ -28,7 +28,7 @@
                     <div>
                         <input name="valicode" style="width: 180px;" type="text" placeholder = "請輸入驗證碼" required>
                         
-                        <img id="Img" src = "<?= base_url('PostController/verification_code') ?>" onclick="reImg();">
+                        <img id="Img" src = "<?= base_url('loginController/verification_code') ?>" onclick="reImg();">
 
                         <br>
 

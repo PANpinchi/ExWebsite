@@ -18,7 +18,7 @@
 	foreach($logindate as $logindate_item){
 	echo '
     <div class="left">
-    	<form action="/PostController/logindatestore" method="post">
+    	<form action="/loginController/logindatestore" method="post">
     		<input type="submit" value="一鍵更改" name="submit" class="btn btn-primary"></input><br><br>
     		<table border="1" class="c table set" style="border-style:solid; width: 1100px;">	
 	    		<tr>

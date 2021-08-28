@@ -14,7 +14,7 @@
 <body>
 <br>
 <h2 class="c">繁星推薦、個人申請個人密碼設定系統</h2>
-<input class="btn btn-primary" type="button" value="編輯" name="button" onclick= "location.href='/PostController/logindateset'"></input><br><br>
+<input class="btn btn-primary" type="button" value="編輯" name="button" onclick= "location.href='/loginController/logindateset'"></input><br><br>
 <?php
 	foreach($logindate as $logindate_item){
 	echo '
