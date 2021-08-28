@@ -23,7 +23,7 @@
             <br><br><br>
 
             <div class="container">
-                <form name = "accounts" action = "/PostController/compare_user_account" method="POST" class="box" style="box-shadow: 4px 4px 20px 1px #505050">
+                <form name = "accounts" action = "/loginController/compare_user_account" method="POST" class="box" style="box-shadow: 4px 4px 20px 1px #505050">
                     <div class="margin">
                         <div align="center">
                             <div class="type2" style = "width: min-content; height: min-content; text-align: left;">
@@ -44,7 +44,7 @@
                                 <p class="type3" style="width: 278px; text-align: left;"> * 區分英文大小寫及數字 </p>
                             </div>
 
-                            <a href="/PostController/test" class="btn btn-primary" type="button" style="margin-right: 30px; text-decoration:none;"> 快速登入 </a>
+                            <a href="/loginController/test" class="btn btn-primary" type="button" style="margin-right: 30px; text-decoration:none;"> 快速登入 </a>
                             <button class="btn btn-primary" text-align="center"> 登入 </button>
                             
                             <br><br>

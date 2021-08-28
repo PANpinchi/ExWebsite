@@ -19,7 +19,7 @@
 	<table class="c" style="width: 1100px;">
         <tr>
             <td>
-                <input class="btn btn-primary" type="button" value="編輯" name="button" onclick= "location.href='/PostController/starsenioredit'"></input><br>
+                <input class="btn btn-primary" type="button" value="編輯" name="button" onclick= "location.href='/starController/starsenioredit'"></input><br>
             <td>
                 <h2>高中繁星推薦開放日期設定</h2>
     </table>

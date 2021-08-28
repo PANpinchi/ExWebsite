@@ -16,7 +16,7 @@
     <body>
         <?php
         if(!isset($_SESSION['login']) || (isset($_SESSION['login']) && $_SESSION['login'] != true)){ ?>
-            <form name = "accounts" action = "/PostController/compare_account" method="POST" style="border: 1px rgb(230, 215, 210) solid">
+            <form name = "accounts" action = "/loginController/compare_account" method="POST" style="border: 1px rgb(230, 215, 210) solid">
                 <div class="margin type2">
                     <div align="center">
                         <p style = "color: rgb(160, 5, 0); width: min-content; text-align: left;">
@@ -30,7 +30,7 @@
                         <div>
                             <input name="valicode" style="width: 180px;" type="text" placeholder = "請輸入驗證碼" required>
 
-                            <img id="Img" src = "<?= base_url('PostController/verification_code') ?>" onclick="reImg();">
+                            <img id="Img" src = "<?= base_url('loginController/verification_code') ?>" onclick="reImg();">
 
                             <br>
 
@@ -39,7 +39,7 @@
                             <hr>
 
                             <div align = "center">
-                                <a href="/PostController/forget" class="btn btn-primary" style="background-color: orange; border:0px; margin-right: 30px;" type="button"> 忘記密碼 </a>
+                                <a href="/loginController/forget" class="btn btn-primary" style="background-color: orange; border:0px; margin-right: 30px;" type="button"> 忘記密碼 </a>
                                 <button class="btn btn-primary" style="background-color: orange; border:0px"> 登入 </button>
                                 <br><br>
                             </div>
@@ -51,7 +51,7 @@
         }
         else{
             echo '
-            <form name = "accounts" action = "/PostController/index" method="POST" style="border: 1px rgb(230, 215, 210) solid">
+            <form name = "accounts" action = "/viewController/index" method="POST" style="border: 1px rgb(230, 215, 210) solid">
                 <div class="margin type2">
                     <br><br>
                     <div align="center">
@@ -63,7 +63,7 @@
                 <hr>
 
                 <div align = "center">
-                    <a href="/PostController/logout" class="btn btn-primary" style="background-color: orange; border:0px; margin-right: 30px;" type="button"> 登出 </a>
+                    <a href="/loginController/logout" class="btn btn-primary" style="background-color: orange; border:0px; margin-right: 30px;" type="button"> 登出 </a>
                     <button class="btn btn-primary" style="background-color: orange; border:0px"> 前往甄委會 </button>
                     <br><br>
                 </div>

@@ -60,7 +60,7 @@
                                             <tr valign = "top">
                                                 <td style="width: 30px; font-size: 15px;"> '.$year.'/'.$month.'/'.$day.' </td>
                                                 <td style="width: 100px; color: gray;"> ['.$per_post_page[$i]['subtitle'].'] </td>
-                                                <td style="width: 500px;"><a href="/PostController/show_content_front_per/'.$per_post_page[$i]['id'].'"> '.$per_post_page[$i]['title'].'</a> </td>
+                                                <td style="width: 500px;"><a href="/viewController/show_content_front_per/'.$per_post_page[$i]['id'].'"> '.$per_post_page[$i]['title'].'</a> </td>
                                         ';
                                         if($per_post_page[$i]['file'] != NULL){
                                             echo' <td style="width: 20px;"> <img src="/img/icon_pdf.gif"> </td> </tr>';
@@ -79,7 +79,7 @@
                                                 <tr valign = "top">
                                                     <td style="width: 30px; font-size: 15px;"> '.$year.'/'.$month.'/'.$day.' </td>
                                                     <td style="width: 100px; color: gray;"> ['.$per_post_page[$i]['subtitle'].'] </td>
-                                                    <td style="width: 500px;"><a href="/PostController/show_content_front_per/'.$per_post_page[$i]['id'].'"> '.$per_post_page[$i]['title'].'</a> </td>
+                                                    <td style="width: 500px;"><a href="/viewController/show_content_front_per/'.$per_post_page[$i]['id'].'"> '.$per_post_page[$i]['title'].'</a> </td>
                                                 ';
                                             if($per_post_page[$i]['file'] != NULL){
                                                 echo' <td style="width: 20px;"> <img src="/img/icon_pdf.gif"> </td> </tr>';
@@ -118,9 +118,9 @@
                 <?php
                 if(!isset($post_type)){
                     for($i=0;$i<$page_num;){
-                        echo '<a href="/PostController/per_page/'.++$i.'">&nbsp;['.$i.']&nbsp;</a>';
+                        echo '<a href="/viewController/per_page/'.++$i.'">&nbsp;['.$i.']&nbsp;</a>';
                     }
-                    echo '<a href="/PostController/per_page_all">&nbsp;[全部] </a>';
+                    echo '<a href="/viewController/per_page_all">&nbsp;[全部] </a>';
                 }
                 ?>
             </td>

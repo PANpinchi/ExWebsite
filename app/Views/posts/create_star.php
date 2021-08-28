@@ -17,7 +17,7 @@
 
     <body>
         <div style="padding-left: 100px">
-            <form name="create" action="/PostController/store_star" enctype="multipart/form-data" method="post">
+            <form name="create" action="/starController/store_star" enctype="multipart/form-data" method="post">
                 <div class="row" style="width: 900px">
                     <div class="col offset-0">
                         <br>
