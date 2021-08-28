@@ -37,13 +37,13 @@
             <br><br><br>
 
             <div class="container">
-                <a href="/PostController/create_star"><img src="/front_img/star.png" style="width: 100%; border-radius: 10px 10px 10px 10px;" border="2px"></a>
+                <a href="/starController/create_star"><img src="/front_img/star.png" style="width: 100%; border-radius: 10px 10px 10px 10px;" border="2px"></a>
             </div>
 
             <br><br><br>
 
             <div class="container">
-                <a href="/PostController/create_per"><img src="/front_img/person.png" style="width: 100%; border-radius: 10px 10px 10px 10px;" border="2px"></a>
+                <a href="/applyController/create_per"><img src="/front_img/person.png" style="width: 100%; border-radius: 10px 10px 10px 10px;" border="2px"></a>
             </div>
         </div>
     <body>

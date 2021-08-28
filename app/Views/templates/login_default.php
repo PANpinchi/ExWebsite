@@ -63,7 +63,7 @@
 
 <script type="text/javascript">  
     function reImg(){  
-        var img = document.getElementById("Img").src = "<?= base_url('PostController/verification_code') ?>";
+        var img = document.getElementById("Img").src = "<?= base_url('loginController/verification_code') ?>";
         img.src = "Img?rnd=" + Math.random();  
     }  
 </script>  

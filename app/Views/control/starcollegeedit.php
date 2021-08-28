@@ -22,7 +22,7 @@
     foreach($starcollege as $starcollege_item){
     echo '
 	<div class="left">
-    <form action="/PostController/starcollegestore" method="post">
+    <form action="/starController/starcollegestore" method="post">
 	<input type="submit" value="一鍵更改" name="submit" class="btn btn-primary"></input><br><br>
     <table border="1" class="c table" style="border-style:solid; width: 1100px;">
 		<tr>

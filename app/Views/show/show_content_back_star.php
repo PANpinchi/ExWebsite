@@ -47,7 +47,7 @@
                     echo '
                         <tr>
                             <td align="center" valign="middle"> <strong> 附件 </strong> </td>
-                            <td><a href="/PostController/show_pdf/'.$star_post_page['file'].'">'.$star_post_page['file_name'].'</a>
+                            <td><a href="/viewController/show_pdf/'.$star_post_page['file'].'">'.$star_post_page['file_name'].'</a>
                         </tr>';
                 }
                 else{
@@ -79,13 +79,13 @@
                 <div>
                     <br>
                     <button class="btn btn-primary">
-                        <a href="/PostController/show_back" style="color:white; text-decoration:none;"> 返回 </a>
+                        <a href="/viewController/show_back" style="color:white; text-decoration:none;"> 返回 </a>
                     </button>                    
                     <button class="btn btn-primary" style="background-color:orange; border-color:orange;">
-                        <a href="/PostController/modify_star" style="color:white; text-decoration:none;"> 修改公告 </a>
+                        <a href="/starController/modify_star" style="color:white; text-decoration:none;"> 修改公告 </a>
                     </button>
                     <button class="btn btn-primary" style="background-color:red; border-color:red;">
-                        <a href="/PostController/delete_star" style="color:white; text-decoration:none;"> 刪除公告 </a>
+                        <a href="/starController/delete_star" style="color:white; text-decoration:none;"> 刪除公告 </a>
                     </button>
                 </div>
             </div>

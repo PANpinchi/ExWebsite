@@ -60,10 +60,10 @@
                                             <tr>
                                                 <td style="width: 189px;"><img src="/img/form_top_03.jpg"></td>
                                                 <td>
-                                                    <div id = "home"><a href="/PostController/index"> </a></div>
+                                                    <div id = "home"><a href="/viewController/index"> </a></div>
                                                 </td>
                                                 <td>
-                                                    <div id = "apply"><a href="/PostController/show_front_per"> </a></div>
+                                                    <div id = "apply"><a href="/viewController/show_front_per"> </a></div>
                                                 </td>
                                                 <td><img src="/img/form_top_06.jpg"></td>
                                                 
@@ -118,7 +118,7 @@
                                                 </td>
 
                                                 <td>
-                                                    <div id = "pass"><a href="/PostController/login/star"> </a></div>
+                                                    <div id = "pass"><a href="/loginController/login/star"> </a></div>
                                                 </td>
 
                                                 <td rowspan = "100" style = "width: 752px;" valign="top">
@@ -141,32 +141,32 @@
                                             <tr>
                                                 <td>
                                                     <div id = "m1">
-                                                        <a href="/PostController/show_front_star" style="text-decoration:none;"> 
+                                                        <a href="/viewController/show_front_star" style="text-decoration:none;"> 
                                                             <table class="layer" style="text-decoration:none;">
                                                                 <tbody>
                                                                     <tr id = "m1-1" class="touch">
                                                                         <td style="width: 140px;">
-                                                                            <a href="/PostController/star_page_type/簡章訊息" style="text-decoration:none;">簡章訊息事項</a>
+                                                                            <a href="/viewController/star_page_type/簡章訊息" style="text-decoration:none;">簡章訊息事項</a>
                                                                         </td>
                                                                     </tr>
                                                                     <tr id = "m1-1" class="touch">
                                                                         <td style="width: 140px;">
-                                                                            <a href="/PostController/star_page_type/招生事務" style="text-decoration:none;">招生事務</a>
+                                                                            <a href="/viewController/star_page_type/招生事務" style="text-decoration:none;">招生事務</a>
                                                                         </td>
                                                                     </tr>
                                                                     <tr id = "m1-1" class="touch">
                                                                         <td style="width: 140px;">
-                                                                            <a href="/PostController/star_page_type/甄選資訊" style="text-decoration:none;">甄選資訊</a>
+                                                                            <a href="/viewController/star_page_type/甄選資訊" style="text-decoration:none;">甄選資訊</a>
                                                                         </td>
                                                                     </tr>
                                                                     <tr id = "m1-1" class="touch">
                                                                         <td style="width: 140px;">
-                                                                            <a href="/PostController/star_page_type/會議簡報" style="text-decoration:none;">會議簡報</a>
+                                                                            <a href="/viewController/star_page_type/會議簡報" style="text-decoration:none;">會議簡報</a>
                                                                         </td>
                                                                     </tr>
                                                                     <tr id = "m1-1" class="touch">
                                                                         <td style="width: 140px;">
-                                                                            <a href="/PostController/star_page_type/其他事項" style="text-decoration:none;">其他事項</a>
+                                                                            <a href="/viewController/star_page_type/其他事項" style="text-decoration:none;">其他事項</a>
                                                                         </td>
                                                                     </tr>
                                                                 </tbody>
@@ -277,7 +277,7 @@
                                                                                         if (strtotime($starsenior_item['start1'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($starsenior_item['end1']))
                                                                                             echo 'window.open("'.$starsenior_item['website1'].'")';
                                                                                         else{
-                                                                                            echo' window.open("/PostController/pageclose") ';
+                                                                                            echo' window.open("/viewController/pageclose") ';
                                                                                         }
                                                                                     }
                                                                                 ?>
@@ -292,7 +292,7 @@
                                                                                         if (strtotime($starsenior_item['start2'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($starsenior_item['end2']))
                                                                                             echo 'window.open("'.$starsenior_item['website2'].'")';
                                                                                         else{
-                                                                                            echo' window.open("/PostController/pageclose") ';
+                                                                                            echo' window.open("/viewController/pageclose") ';
                                                                                         }
                                                                                     }
                                                                                 ?>
@@ -307,7 +307,7 @@
                                                                                         if (strtotime($starsenior_item['start3'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($starsenior_item['end3']))
                                                                                             echo 'window.open("'.$starsenior_item['website3'].'")';
                                                                                         else{
-                                                                                            echo' window.open("/PostController/pageclose") ';
+                                                                                            echo' window.open("/viewController/pageclose") ';
                                                                                         }
                                                                                     }
                                                                                 ?>
@@ -322,7 +322,7 @@
                                                                                         if (strtotime($starsenior_item['start4'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($starsenior_item['end4']))
                                                                                             echo 'window.open("'.$starsenior_item['website4'].'")';
                                                                                         else{
-                                                                                            echo' window.open("/PostController/pageclose") ';
+                                                                                            echo' window.open("/viewController/pageclose") ';
                                                                                         }
                                                                                     }
                                                                                 ?>
@@ -337,7 +337,7 @@
                                                                                         if (strtotime($starsenior_item['start5'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($starsenior_item['end5']))
                                                                                             echo 'window.open("'.$starsenior_item['website5'].'")';
                                                                                         else{
-                                                                                            echo' window.open("/PostController/pageclose") ';
+                                                                                            echo' window.open("/viewController/pageclose") ';
                                                                                         }
                                                                                     }
                                                                                 ?>
@@ -352,7 +352,7 @@
                                                                                         if (strtotime($starsenior_item['start6'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($starsenior_item['end6']))
                                                                                             echo 'window.open("'.$starsenior_item['website6'].'")';
                                                                                         else{
-                                                                                            echo' window.open("/PostController/pageclose") ';
+                                                                                            echo' window.open("/viewController/pageclose") ';
                                                                                         }
                                                                                     }
                                                                                 ?>
@@ -367,7 +367,7 @@
                                                                                         if (strtotime($starsenior_item['start7'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($starsenior_item['end7']))
                                                                                             echo 'window.open("'.$starsenior_item['website7'].'")';
                                                                                         else{
-                                                                                            echo' window.open("/PostController/pageclose") ';
+                                                                                            echo' window.open("/viewController/pageclose") ';
                                                                                         }
                                                                                     }
                                                                                 ?>
@@ -382,7 +382,7 @@
                                                                                         if (strtotime($starsenior_item['start8'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($starsenior_item['end8']))
                                                                                             echo 'window.open("'.$starsenior_item['website8'].'")';
                                                                                         else{
-                                                                                            echo' window.open("/PostController/pageclose") ';
+                                                                                            echo' window.open("/viewController/pageclose") ';
                                                                                         }
                                                                                     }
                                                                                 ?>
@@ -397,7 +397,7 @@
                                                                                         if (strtotime($starsenior_item['start9'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($starsenior_item['end9']))
                                                                                             echo 'window.open("'.$starsenior_item['website9'].'")';
                                                                                         else{
-                                                                                            echo' window.open("/PostController/pageclose") ';
+                                                                                            echo' window.open("/viewController/pageclose") ';
                                                                                         }
                                                                                     }
                                                                                 ?>
@@ -412,7 +412,7 @@
                                                                                         if (strtotime($starsenior_item['start10'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($starsenior_item['end10']))
                                                                                             echo 'window.open("'.$starsenior_item['website10'].'")';
                                                                                         else{
-                                                                                            echo' window.open("/PostController/pageclose") ';
+                                                                                            echo' window.open("/viewController/pageclose") ';
                                                                                         }
                                                                                     }
                                                                                 ?>
@@ -427,7 +427,7 @@
                                                                                         if (strtotime($starsenior_item['start11'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($starsenior_item['end11']))
                                                                                             echo 'window.open("'.$starsenior_item['website11'].'")';
                                                                                         else{
-                                                                                            echo' window.open("/PostController/pageclose") ';
+                                                                                            echo' window.open("/viewController/pageclose") ';
                                                                                         }
                                                                                     }
                                                                                 ?>
@@ -442,7 +442,7 @@
                                                                                         if (strtotime($starsenior_item['start12'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($starsenior_item['end12']))
                                                                                             echo 'window.open("'.$starsenior_item['website12'].'")';
                                                                                         else{
-                                                                                            echo' window.open("/PostController/pageclose") ';
+                                                                                            echo' window.open("/viewController/pageclose") ';
                                                                                         }
                                                                                     }
                                                                                 ?>
@@ -457,7 +457,7 @@
                                                                                         if (strtotime($starsenior_item['start13'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($starsenior_item['end13']))
                                                                                             echo 'window.open("'.$starsenior_item['website13'].'")';
                                                                                         else{
-                                                                                            echo' window.open("/PostController/pageclose") ';
+                                                                                            echo' window.open("/viewController/pageclose") ';
                                                                                         }
                                                                                     }
                                                                                 ?>
@@ -472,7 +472,7 @@
                                                                                         if (strtotime($starsenior_item['start14'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($starsenior_item['end14']))
                                                                                             echo 'window.open("'.$starsenior_item['website14'].'")';
                                                                                         else{
-                                                                                            echo' window.open("/PostController/pageclose") ';
+                                                                                            echo' window.open("/viewController/pageclose") ';
                                                                                         }
                                                                                     }
                                                                                 ?>
@@ -487,7 +487,7 @@
                                                                                         if (strtotime($starsenior_item['start15'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($starsenior_item['end15']))
                                                                                             echo 'window.open("'.$starsenior_item['website15'].'")';
                                                                                         else{
-                                                                                            echo' window.open("/PostController/pageclose") ';
+                                                                                            echo' window.open("/viewController/pageclose") ';
                                                                                         }
                                                                                     }
                                                                                 ?>
@@ -531,7 +531,7 @@
                                                                                         if (strtotime($starcollege_item['start1'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($starcollege_item['end1']))
                                                                                             echo 'window.open("'.$starcollege_item['website1'].'")';
                                                                                         else{
-                                                                                            echo' window.open("/PostController/pageclose") ';
+                                                                                            echo' window.open("/viewController/pageclose") ';
                                                                                         }
                                                                                     }
                                                                                 ?>
@@ -546,7 +546,7 @@
                                                                                         if (strtotime($starcollege_item['start2'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($starcollege_item['end2']))
                                                                                             echo 'window.open("'.$starcollege_item['website2'].'")';
                                                                                         else{
-                                                                                            echo' window.open("/PostController/pageclose") ';
+                                                                                            echo' window.open("/viewController/pageclose") ';
                                                                                         }
                                                                                     }
                                                                                 ?>
@@ -561,7 +561,7 @@
                                                                                         if (strtotime($starcollege_item['start3'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($starcollege_item['end3']))
                                                                                             echo 'window.open("'.$starcollege_item['website3'].'")';
                                                                                         else{
-                                                                                            echo' window.open("/PostController/pageclose") ';
+                                                                                            echo' window.open("/viewController/pageclose") ';
                                                                                         }
                                                                                     }
                                                                                 ?>
@@ -576,7 +576,7 @@
                                                                                         if (strtotime($starcollege_item['start4'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($starcollege_item['end4']))
                                                                                             echo 'window.open("'.$starcollege_item['website4'].'")';
                                                                                         else{
-                                                                                            echo' window.open("/PostController/pageclose") ';
+                                                                                            echo' window.open("/viewController/pageclose") ';
                                                                                         }
                                                                                     }
                                                                                 ?>
@@ -591,7 +591,7 @@
                                                                                         if (strtotime($starcollege_item['start5'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($starcollege_item['end5']))
                                                                                             echo 'window.open("'.$starcollege_item['website5'].'")';
                                                                                         else{
-                                                                                            echo' window.open("/PostController/pageclose") ';
+                                                                                            echo' window.open("/viewController/pageclose") ';
                                                                                         }
                                                                                     }
                                                                                 ?>
@@ -606,7 +606,7 @@
                                                                                         if (strtotime($starcollege_item['start6'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($starcollege_item['end6']))
                                                                                             echo 'window.open("'.$starcollege_item['website6'].'")';
                                                                                         else{
-                                                                                            echo' window.open("/PostController/pageclose") ';
+                                                                                            echo' window.open("/viewController/pageclose") ';
                                                                                         }
                                                                                     }
                                                                                 ?>
@@ -621,7 +621,7 @@
                                                                                         if (strtotime($starcollege_item['start7'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($starcollege_item['end7']))
                                                                                             echo 'window.open("'.$starcollege_item['website7'].'")';
                                                                                         else{
-                                                                                            echo' window.open("/PostController/pageclose") ';
+                                                                                            echo' window.open("/viewController/pageclose") ';
                                                                                         }
                                                                                     }
                                                                                 ?>

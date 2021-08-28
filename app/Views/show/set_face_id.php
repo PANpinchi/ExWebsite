@@ -29,7 +29,7 @@
             echo '<br><br><p style="font-size: 30px"><strong>您目前使用的照片</strong></p>'; 
         }
         ?>
-        <form name = "accounts" action = "/PostController/save_img" enctype="multipart/form-data"  method="post" style="width: 650px;">
+        <form name = "accounts" action = "/loginController/save_img" enctype="multipart/form-data"  method="post" style="width: 650px;">
             <?php 
             if($_SESSION['image'] == NULL){
                 echo '<p style="font-size: 30px"><strong> 您尚未啟用 Face ID 功能 </strong></p>';
@@ -49,7 +49,7 @@
             else{
                 echo '
                 <button id="capture" type="button" class="btn btn-secondary" onclick="img.click()">選擇檔案</button><br><br>
-                <a href="/PostController/del_img"><button id="capture" type="button" class="btn btn-primary">取消 Face ID </button></a>
+                <a href="/loginController/del_img"><button id="capture" type="button" class="btn btn-primary">取消 Face ID </button></a>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <button id="capture" type="submit" class="btn btn-primary"">使用此張照片</button>'; 
             }
