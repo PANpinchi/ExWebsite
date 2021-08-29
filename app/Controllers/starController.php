@@ -291,6 +291,57 @@ class starController extends BaseController
 		return view('show/star_history',$data);
 	}
 
+	/*聽障生免英聽檢定頁面*/
+	public function freetelc()
+	{
+		$login = new Logindate();;
+		$starsenior = new Starsenior();
+		$starcollege = new Starcollege();
+
+		$data = 
+		[
+			'starcollege' => $starcollege->findAll(),
+			'starsenior' => $starsenior->findAll(),
+			'logindate'=> $login->findAll(),
+		];
+
+		return view('show/star_freetelc',$data);
+	}
+
+	/*錄取(篩選)結果查詢頁面*/
+	public function dispense()
+	{
+		$login = new Logindate();;
+		$starsenior = new Starsenior();
+		$starcollege = new Starcollege();
+
+		$data = 
+		[
+			'starcollege' => $starcollege->findAll(),
+			'starsenior' => $starsenior->findAll(),
+			'logindate'=> $login->findAll(),
+		];
+
+		return view('show/star_dispense',$data);
+	}
+
+	/*網路聲明放棄頁面*/
+	public function abandon()
+	{
+		$login = new Logindate();;
+		$starsenior = new Starsenior();
+		$starcollege = new Starcollege();
+
+		$data = 
+		[
+			'starcollege' => $starcollege->findAll(),
+			'starsenior' => $starsenior->findAll(),
+			'logindate'=> $login->findAll(),
+		];
+
+		return view('show/star_abandon',$data);
+	}
+
 	/*創建新的貼文(繁星)*/
 	public function create_star()
 	{

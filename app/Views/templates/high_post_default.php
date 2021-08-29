@@ -83,19 +83,19 @@
                                             <tr>
                                                 <td><img src="/img/upbar_left.jpg"></td>
                                                 <td>
-                                                    <div id = "u1"><a href="#"> </a></div>
+                                                    <div id = "u1"><a href="/starController/query"> </a></div>
                                                 </td>
                                                 <td>
-                                                    <div id = "u2"><a href="#"> </a></div>
+                                                    <div id = "u2"><a href="/starController/purchase2"> </a></div>
                                                 </td>
                                                 <td>
-                                                    <div id = "u3"><a href="#"> </a></div>
+                                                    <div id = "u3"><a href="/starController/freetelc"> </a></div>
                                                 </td>
                                                 <td>
-                                                    <div id = "u4"><a href="#"> </a></div>
+                                                    <div id = "u4"><a href="/starController/dispense"> </a></div>
                                                 </td>
                                                 <td>
-                                                    <div id = "u5"><a href="#"> </a></div>
+                                                    <div id = "u5"><a href="/starController/abandon"> </a></div>
                                                 </td>
                                                 <td><img src="/img/upbar_right.jpg"></td>
                                             </tr>
