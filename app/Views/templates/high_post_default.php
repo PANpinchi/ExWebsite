@@ -83,19 +83,19 @@
                                             <tr>
                                                 <td><img src="/img/upbar_left.jpg"></td>
                                                 <td>
-                                                    <div id = "u1"><a href="#"> </a></div>
+                                                    <div id = "u1"><a href="/starController/query"> </a></div>
                                                 </td>
                                                 <td>
-                                                    <div id = "u2"><a href="#"> </a></div>
+                                                    <div id = "u2"><a href="/starController/purchase2"> </a></div>
                                                 </td>
                                                 <td>
-                                                    <div id = "u3"><a href="#"> </a></div>
+                                                    <div id = "u3"><a href="/starController/freetelc"> </a></div>
                                                 </td>
                                                 <td>
-                                                    <div id = "u4"><a href="#"> </a></div>
+                                                    <div id = "u4"><a href="/starController/dispense"> </a></div>
                                                 </td>
                                                 <td>
-                                                    <div id = "u5"><a href="#"> </a></div>
+                                                    <div id = "u5"><a href="/starController/abandon"> </a></div>
                                                 </td>
                                                 <td><img src="/img/upbar_right.jpg"></td>
                                             </tr>
@@ -177,22 +177,30 @@
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <div id = "m2"><a href="#"> </a></div>
+                                                    <div id = "m2"><a href="/starController/regulation" style="text-decoration:none;"> </a></div>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <div id = "m3"><a href="#"> </a></div>
+                                                    <div id = "m3"><a href="/starController/schedule" style="text-decoration:none;"> </a></div>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>
                                                     <div id = "m4">
-                                                        <a href="#" style="text-decoration:none;"> 
+                                                        <a style="text-decoration:none;"> 
                                                             <table class="layer" style="text-decoration:none;">
                                                                 <tbody>
-                                                                    <tr class="touch"><td style="width: 140px;">發售辦法</td></tr>
-                                                                    <tr class="touch"><td style="width: 140px;">網路購買簡章</td></tr>
+                                                                    <tr id="m4-1" class="touch">
+                                                                        <td style="width: 140px;">
+                                                                            <a href="/starController/purchase1" style="text-decoration:none;">發售辦法</a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr id="m4-1" class="touch">
+                                                                        <td style="width: 140px;">
+                                                                            <a href="/starController/purchase2" style="text-decoration:none;">網路購買簡章</a>
+                                                                        </td>
+                                                                    </tr>
                                                                 </tbody>
                                                             </table>
                                                         </a>
@@ -202,15 +210,39 @@
                                             <tr>
                                                 <td>
                                                     <div id = "m5">
-                                                        <a href="#" style="text-decoration:none;"> 
+                                                        <a style="text-decoration:none;"> 
                                                             <table class="layer" style="text-decoration:none;">
                                                                 <tbody>
-                                                                    <tr class="touch"><td style="width: 140px;">簡章總則</td></tr>
-                                                                    <tr class="touch"><td style="width: 140px;">簡章附錄</td></tr>
-                                                                    <tr class="touch"><td style="width: 140px;">校系分則查詢</td></tr>
-                                                                    <tr class="touch"><td style="width: 140px;">其他事項</td></tr>
-                                                                    <tr class="touch"><td style="width: 140px;">簡章修正事項</td></tr>
-                                                                    <tr class="touch"><td style="width: 140px;">110參採科目簡表</td></tr>
+                                                                    <tr id="m5-1" class="touch">
+                                                                        <td style="width: 140px;">
+                                                                            <a href="/starController/appform1" style="text-decoration:none;">簡章總則</a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr id="m5-1" class="touch">
+                                                                        <td style="width: 140px;">
+                                                                            <a href="/starController/appform2" style="text-decoration:none;">簡章附錄</a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr id="m5-1" class="touch">
+                                                                        <td style="width: 140px;">
+                                                                            <a href="/starController/query" style="text-decoration:none;">校系分則查詢</a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr id="m5-1" class="touch">
+                                                                        <td style="width: 140px;">
+                                                                            <a href="/starController/appform3" style="text-decoration:none;">其他事項</a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr id="m5-1" class="touch">
+                                                                        <td style="width: 140px;">
+                                                                            <a href="/starController/appform4" style="text-decoration:none;">簡章修正事項</a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr id="m5-1" class="touch">
+                                                                        <td style="width: 140px;">
+                                                                            <a href="/starController/query" style="text-decoration:none;">110參採科目簡表</a>
+                                                                        </td>
+                                                                    </tr>
                                                                 </tbody>
                                                             </table>
                                                         </a>
@@ -219,17 +251,25 @@
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <div id = "m6"><a href="#"> </a></div>
+                                                    <div id = "m6"><a href="/starController/statis" style="text-decoration:none;"> </a></div>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>
                                                     <div id = "m7">
-                                                        <a href="#" style="text-decoration:none;"> 
+                                                        <a style="text-decoration:none;"> 
                                                             <table class="layer" style="text-decoration:none;">
                                                                 <tbody>
-                                                                    <tr class="touch"><td style="width: 140px;">資料表件下載</td></tr>
-                                                                    <tr class="touch"><td style="width: 140px;">其他事項下載</td></tr>
+                                                                    <tr id="m7-1" class="touch">
+                                                                        <td style="width: 140px;">
+                                                                            <a href="/starController/download1" style="text-decoration:none;">資料表件下載</a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr id="m7-1" class="touch">
+                                                                        <td style="width: 140px;">
+                                                                            <a href="/starController/download2" style="text-decoration:none;">其他事項下載</a>
+                                                                        </td>
+                                                                    </tr>
                                                                 </tbody>
                                                             </table>
                                                         </a>
@@ -239,12 +279,24 @@
                                             <tr>
                                                 <td>
                                                     <div id = "m8">
-                                                        <a href="#" style="text-decoration:none;"> 
+                                                        <a style="text-decoration:none;"> 
                                                             <table class="layer" style="text-decoration:none;">
                                                                 <tbody>
-                                                                    <tr class="touch"><td style="width: 140px;">招生單位</td></tr>
-                                                                    <tr class="touch"><td style="width: 140px;">考試單位</td></tr>
-                                                                    <tr class="touch"><td style="width: 140px;">其他網站</td></tr>
+                                                                    <tr id="m8-1" class="touch">
+                                                                        <td style="width: 140px;">
+                                                                            <a href="/starController/site1" style="text-decoration:none;">招生單位</a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr id="m8-1" class="touch">
+                                                                        <td style="width: 140px;">
+                                                                            <a href="/starController/site2" style="text-decoration:none;">考試單位</a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr id="m8-1" class="touch">
+                                                                        <td style="width: 140px;">
+                                                                            <a href="/starController/site3" style="text-decoration:none;">其他網站</a>
+                                                                        </td>
+                                                                    </tr>
                                                                 </tbody>
                                                             </table>
                                                         </a>
@@ -253,7 +305,7 @@
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <div id = "m9"><a href="#"> </a></div>
+                                                    <div id = "m9"><a href="/starController/history" style="text-decoration:none;"> </a></div>
                                                 </td>
                                             </tr>
                                             <tr>

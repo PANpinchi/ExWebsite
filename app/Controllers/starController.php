@@ -19,6 +19,329 @@ use App\Models\Per_post_page;
 
 class starController extends BaseController
 {
+	/*法令規章頁面*/
+	public function regulation()
+	{
+		$login = new Logindate();;
+		$starsenior = new Starsenior();
+		$starcollege = new Starcollege();
+
+		$data = 
+		[
+			'starcollege' => $starcollege->findAll(),
+			'starsenior' => $starsenior->findAll(),
+			'logindate'=> $login->findAll(),
+		];
+
+		return view('show/star_regulation',$data);
+	}
+
+	/*重要時程頁面*/
+	public function schedule()
+	{
+		$login = new Logindate();;
+		$starsenior = new Starsenior();
+		$starcollege = new Starcollege();
+
+		$data = 
+		[
+			'starcollege' => $starcollege->findAll(),
+			'starsenior' => $starsenior->findAll(),
+			'logindate'=> $login->findAll(),
+		];
+
+		return view('show/star_schedule',$data);
+	}
+
+	/*發售辦法頁面*/
+	public function purchase1()
+	{
+		$login = new Logindate();;
+		$starsenior = new Starsenior();
+		$starcollege = new Starcollege();
+
+		$data = 
+		[
+			'starcollege' => $starcollege->findAll(),
+			'starsenior' => $starsenior->findAll(),
+			'logindate'=> $login->findAll(),
+		];
+
+		return view('show/star_purchase1',$data);
+	}
+
+	/*網路購買簡章頁面*/
+	public function purchase2()
+	{
+		$login = new Logindate();;
+		$starsenior = new Starsenior();
+		$starcollege = new Starcollege();
+
+		$data = 
+		[
+			'starcollege' => $starcollege->findAll(),
+			'starsenior' => $starsenior->findAll(),
+			'logindate'=> $login->findAll(),
+		];
+
+		return view('show/star_purchase2',$data);
+	}
+
+	/*簡章總則頁面*/
+	public function appform1()
+	{
+		$login = new Logindate();;
+		$starsenior = new Starsenior();
+		$starcollege = new Starcollege();
+
+		$data = 
+		[
+			'starcollege' => $starcollege->findAll(),
+			'starsenior' => $starsenior->findAll(),
+			'logindate'=> $login->findAll(),
+		];
+
+		return view('show/star_appform1',$data);
+	}
+
+	/*簡章附錄頁面*/
+	public function appform2()
+	{
+		$login = new Logindate();;
+		$starsenior = new Starsenior();
+		$starcollege = new Starcollege();
+
+		$data = 
+		[
+			'starcollege' => $starcollege->findAll(),
+			'starsenior' => $starsenior->findAll(),
+			'logindate'=> $login->findAll(),
+		];
+
+		return view('show/star_appform2',$data);
+	}
+
+	/*校系分則查詢頁面*/
+	public function query()
+	{
+		$login = new Logindate();;
+		$starsenior = new Starsenior();
+		$starcollege = new Starcollege();
+
+		$data = 
+		[
+			'starcollege' => $starcollege->findAll(),
+			'starsenior' => $starsenior->findAll(),
+			'logindate'=> $login->findAll(),
+		];
+
+		return view('show/star_query',$data);
+	}
+
+	/*其他事項頁面*/
+	public function appform3()
+	{
+		$login = new Logindate();;
+		$starsenior = new Starsenior();
+		$starcollege = new Starcollege();
+
+		$data = 
+		[
+			'starcollege' => $starcollege->findAll(),
+			'starsenior' => $starsenior->findAll(),
+			'logindate'=> $login->findAll(),
+		];
+
+		return view('show/star_appform3',$data);
+	}
+
+	/*簡章修正事項頁面*/
+	public function appform4()
+	{
+		$login = new Logindate();;
+		$starsenior = new Starsenior();
+		$starcollege = new Starcollege();
+
+		$data = 
+		[
+			'starcollege' => $starcollege->findAll(),
+			'starsenior' => $starsenior->findAll(),
+			'logindate'=> $login->findAll(),
+		];
+
+		return view('show/star_appform4',$data);
+	}
+
+	/*統計資料頁面*/
+	public function statis()
+	{
+		$login = new Logindate();;
+		$starsenior = new Starsenior();
+		$starcollege = new Starcollege();
+
+		$data = 
+		[
+			'starcollege' => $starcollege->findAll(),
+			'starsenior' => $starsenior->findAll(),
+			'logindate'=> $login->findAll(),
+		];
+
+		return view('show/star_statis',$data);
+	}
+
+	/*資料表件下載頁面*/
+	public function download1()
+	{
+		$login = new Logindate();;
+		$starsenior = new Starsenior();
+		$starcollege = new Starcollege();
+
+		$data = 
+		[
+			'starcollege' => $starcollege->findAll(),
+			'starsenior' => $starsenior->findAll(),
+			'logindate'=> $login->findAll(),
+		];
+
+		return view('show/star_download1',$data);
+	}
+
+	/*其他事項下載頁面*/
+	public function download2()
+	{
+		$login = new Logindate();;
+		$starsenior = new Starsenior();
+		$starcollege = new Starcollege();
+
+		$data = 
+		[
+			'starcollege' => $starcollege->findAll(),
+			'starsenior' => $starsenior->findAll(),
+			'logindate'=> $login->findAll(),
+		];
+
+		return view('show/star_download2',$data);
+	}
+
+	/*招生單位頁面*/
+	public function site1()
+	{
+		$login = new Logindate();;
+		$starsenior = new Starsenior();
+		$starcollege = new Starcollege();
+
+		$data = 
+		[
+			'starcollege' => $starcollege->findAll(),
+			'starsenior' => $starsenior->findAll(),
+			'logindate'=> $login->findAll(),
+		];
+
+		return view('show/star_site1',$data);
+	}
+
+	/*考試單位頁面*/
+	public function site2()
+	{
+		$login = new Logindate();;
+		$starsenior = new Starsenior();
+		$starcollege = new Starcollege();
+
+		$data = 
+		[
+			'starcollege' => $starcollege->findAll(),
+			'starsenior' => $starsenior->findAll(),
+			'logindate'=> $login->findAll(),
+		];
+
+		return view('show/star_site2',$data);
+	}
+
+	/*其他網站頁面*/
+	public function site3()
+	{
+		$login = new Logindate();;
+		$starsenior = new Starsenior();
+		$starcollege = new Starcollege();
+
+		$data = 
+		[
+			'starcollege' => $starcollege->findAll(),
+			'starsenior' => $starsenior->findAll(),
+			'logindate'=> $login->findAll(),
+		];
+
+		return view('show/star_site3',$data);
+	}
+
+	/*歷年資料頁面*/
+	public function history()
+	{
+		$login = new Logindate();;
+		$starsenior = new Starsenior();
+		$starcollege = new Starcollege();
+
+		$data = 
+		[
+			'starcollege' => $starcollege->findAll(),
+			'starsenior' => $starsenior->findAll(),
+			'logindate'=> $login->findAll(),
+		];
+
+		return view('show/star_history',$data);
+	}
+
+	/*聽障生免英聽檢定頁面*/
+	public function freetelc()
+	{
+		$login = new Logindate();;
+		$starsenior = new Starsenior();
+		$starcollege = new Starcollege();
+
+		$data = 
+		[
+			'starcollege' => $starcollege->findAll(),
+			'starsenior' => $starsenior->findAll(),
+			'logindate'=> $login->findAll(),
+		];
+
+		return view('show/star_freetelc',$data);
+	}
+
+	/*錄取(篩選)結果查詢頁面*/
+	public function dispense()
+	{
+		$login = new Logindate();;
+		$starsenior = new Starsenior();
+		$starcollege = new Starcollege();
+
+		$data = 
+		[
+			'starcollege' => $starcollege->findAll(),
+			'starsenior' => $starsenior->findAll(),
+			'logindate'=> $login->findAll(),
+		];
+
+		return view('show/star_dispense',$data);
+	}
+
+	/*網路聲明放棄頁面*/
+	public function abandon()
+	{
+		$login = new Logindate();;
+		$starsenior = new Starsenior();
+		$starcollege = new Starcollege();
+
+		$data = 
+		[
+			'starcollege' => $starcollege->findAll(),
+			'starsenior' => $starsenior->findAll(),
+			'logindate'=> $login->findAll(),
+		];
+
+		return view('show/star_abandon',$data);
+	}
+
 	/*創建新的貼文(繁星)*/
 	public function create_star()
 	{
@@ -208,6 +531,7 @@ class starController extends BaseController
 		return redirect('viewController/show_back');
 	}
 
+	/*大學繁星相關連結調整開放日期頁面*/
 	public function starcollegeedit()
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
@@ -223,21 +547,6 @@ class starController extends BaseController
 		return view('control/starcollegeedit',$data);
 	}
 
-	public function starsenioredit()
-	{
-		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
-			echo '<script>alert("請先登入！")</script>';
-			return view('login/user_login');
-		}
-
-		$model = new Starsenior();
-		$data =
-			[
-				'starsenior' => $model->findall()
-			];
-		return view('control/starsenioredit',$data);
-	}
-	
 	public function starcollegeview()
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
@@ -251,6 +560,22 @@ class starController extends BaseController
 				'starcollege' => $model->findall()
 			];
 		return view('control/starcollegeview',$data);
+	}
+
+	/*高中繁星相關連結調整開放日期頁面*/
+	public function starsenioredit()
+	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('login/user_login');
+		}
+
+		$model = new Starsenior();
+		$data =
+			[
+				'starsenior' => $model->findall()
+			];
+		return view('control/starsenioredit',$data);
 	}
 
 	public function starseniorview()
@@ -268,8 +593,7 @@ class starController extends BaseController
 		return view('control/starseniorview',$data);
 	}
 
-	/*後台網頁開放時間網址與說明資料更新*/
-
+	/*儲存大學繁星連結開放之相關資料*/
 	public function starcollegestore()
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
@@ -292,6 +616,7 @@ class starController extends BaseController
 		return redirect('starController/starcollegeview');
 	}
 
+	/*儲存高中繁星連結開放之相關資料*/
 	public function starseniorstore()
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){

@@ -41,3 +41,7 @@ marquee{
     font-size: 16px;
     color: red;
 }
+
+.hide{
+    display:none;
+}

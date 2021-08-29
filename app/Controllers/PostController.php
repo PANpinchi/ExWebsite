@@ -24,6 +24,40 @@ class PostController extends BaseController
 		return view('show/frontpage');
 	}
 
+	/*法令規章頁面*/
+	public function regulation_star()
+	{
+		$login = new Logindate();;
+		$starsenior = new Starsenior();
+		$starcollege = new Starcollege();
+
+		$data = 
+		[
+			'starcollege' => $starcollege->findAll(),
+			'starsenior' => $starsenior->findAll(),
+			'logindate'=> $login->findAll(),
+		];
+
+		return view('show/regulation_star',$data);
+	}
+
+	/*重要時程頁面*/
+	public function schedule_star()
+	{
+		$login = new Logindate();;
+		$starsenior = new Starsenior();
+		$starcollege = new Starcollege();
+
+		$data = 
+		[
+			'starcollege' => $starcollege->findAll(),
+			'starsenior' => $starsenior->findAll(),
+			'logindate'=> $login->findAll(),
+		];
+
+		return view('show/schedule_star',$data);
+	}
+
 	public function test()
 	{
 		$path = 'labeled_images';
