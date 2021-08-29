@@ -44,7 +44,7 @@
                                 <p class="type3" style="width: 278px; text-align: left;"> * 區分英文大小寫及數字 </p>
                             </div>
 
-                            <a href="/loginController/test" class="btn btn-primary" type="button" style="margin-right: 30px; text-decoration:none;"> 快速登入 </a>
+                            <a href="/loginController/face_recognition" class="btn btn-primary" type="button" style="margin-right: 30px; text-decoration:none;"> 快速登入 </a>
                             <button class="btn btn-primary" text-align="center"> 登入 </button>
                             
                             <br><br>

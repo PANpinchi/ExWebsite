@@ -118,7 +118,7 @@
                             //document.body.append(result.toString()[0])
                             if (result.toString()[result.toString().length-3] <= 3) {
                                 const id = result.toString()[0];
-                                window.location.href="create_new?id="+id;
+                                window.location.href="/applyController/create_new?id="+id;
                             }
 
                             if (time > 0){

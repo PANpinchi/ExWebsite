@@ -20,7 +20,7 @@ use App\Models\Per_post_page;
 class loginController extends BaseController
 {
 
-	public function test()
+	public function face_recognition()
 	{
 		$path = 'labeled_images';
 		$_SESSION['file_name'] = scandir($path);
@@ -40,7 +40,7 @@ class loginController extends BaseController
 		$data=[
 			'label' => $label
 		];
-		return view('show/test', $data);
+		return view('show/face_recognition', $data);
 	}
 
 	public function set_face_id()
