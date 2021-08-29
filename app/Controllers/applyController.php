@@ -234,6 +234,7 @@ class applyController extends BaseController
 		return redirect('viewController/show_back');
 	}
 
+	/*大學個申相關連結調整開放日期頁面*/
 	public function norcollegeedit()
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
@@ -247,21 +248,6 @@ class applyController extends BaseController
 				'norcollege' => $model->findall()
 			];
 		return view('control/norcollegeedit',$data);
-	}
-
-	public function norsenioredit()
-	{
-		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
-			echo '<script>alert("請先登入！")</script>';
-			return view('login/user_login');
-		}
-		
-		$model = new Norsenior();
-		$data =
-			[
-				'norsenior' => $model->findall()
-			];
-		return view('control/norsenioredit',$data);
 	}
 
 	public function norcollegeview()
@@ -279,6 +265,21 @@ class applyController extends BaseController
 		return view('control/norcollegeview',$data);
 	}
 
+	/*高中個申相關連結調整開放日期頁面*/
+	public function norsenioredit()
+	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('login/user_login');
+		}
+		
+		$model = new Norsenior();
+		$data =
+			[
+				'norsenior' => $model->findall()
+			];
+		return view('control/norsenioredit',$data);
+	}
 
 	public function norseniorview()
 	{
@@ -295,6 +296,7 @@ class applyController extends BaseController
 		return view('control/norseniorview',$data);
 	}
 
+	/*儲存大學個申連結開放之相關資料*/
 	public function norcollegestore()
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
@@ -330,6 +332,7 @@ class applyController extends BaseController
 		return redirect('applyController/norcollegeview');
 	}
 
+	/*儲存高中個申連結開放之相關資料*/
 	public function norseniorstore()
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){

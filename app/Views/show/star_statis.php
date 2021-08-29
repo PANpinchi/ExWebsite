@@ -9,7 +9,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" href="/style/show_front.css">
-    <title>大學甄選入學委員會-重要時程</title>
+    <title>大學甄選入學委員會-統計資料</title>
 </head>
 
 <body>
@@ -17,7 +17,7 @@
             <td>
                 <table>
                     <tr>
-                        <td colspan="10"><img src="\img\subtitle03.jpg" style="width: 750px"></td>
+                        <td colspan="10"><img src="\img\subtitle06.jpg" style="width: 750px"></td>
                     </tr>
                 </table>
             </td>
@@ -25,7 +25,12 @@
         <tr>
             <td>
                 <table style="table table-hover" align="center">
-                    <tr><td style="width:690px;">目前尚無資料</td></tr>
+                    <br>
+                    <tr onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor=''">
+                        <td style="width:690px;">
+                            <font color="#CCCCCC">目前尚無資料</font>
+                        </td>
+                    </tr>
                 </table>
             </td>
         </tr>

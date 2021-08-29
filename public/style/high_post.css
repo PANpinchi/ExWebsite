@@ -98,11 +98,27 @@ img {
     width: 152px;/*圖片寬度*/
 }
 
+#m4-1 a {
+    background: none;
+    display: block;
+    color: black;
+    height: 25px;
+    width: auto;
+}
+
 #m5 a {
     background: url("/img/main_menu_05.jpg");/*預設顯示圖片*/
     display: block;
     height: 40px;/*圖片高度*/
     width: 152px;/*圖片寬度*/
+}
+
+#m5-1 a {
+    background: none;
+    display: block;
+    color: black;
+    height: 25px;
+    width: auto;
 }
 
 #m6 a {
@@ -119,11 +135,27 @@ img {
     width: 152px;/*圖片寬度*/
 }
 
+#m7-1 a {
+    background: none;
+    display: block;
+    color: black;
+    height: 25px;
+    width: auto;
+}
+
 #m8 a {
     background: url("/img/main_menu_08.jpg");/*預設顯示圖片*/
     display: block;
     height: 40px;/*圖片高度*/
     width: 152px;/*圖片寬度*/
+}
+
+#m8-1 a {
+    background: none;
+    display: block;
+    color: black;
+    height: 25px;
+    width: auto;
 }
 
 #m9 a {
@@ -235,6 +267,10 @@ img {
     display: block;
 }
 
+#m4-1 a:hover {
+    background: none;
+}
+
 #m4:hover .layer{
     display: block;
     position: relative;
@@ -251,6 +287,10 @@ img {
 #m5 a:hover{
     background: url("/img/main_menu_05_up.jpg");
     display: block;
+}
+
+#m5-1 a:hover {
+    background: none;
 }
 
 #m5:hover .layer{
@@ -276,6 +316,10 @@ img {
     display: block;
 }
 
+#m7-1 a:hover {
+    background: none;
+}
+
 #m7:hover .layer{
     display: block;
     position: relative;
@@ -292,6 +336,10 @@ img {
 #m8 a:hover{
     background: url("/img/main_menu_08_up.jpg");
     display: block;
+}
+
+#m8-1 a:hover {
+    background: none;
 }
 
 #m8:hover .layer{
