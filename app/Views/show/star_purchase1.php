@@ -41,9 +41,8 @@
         </tr>
         <tr>
             <td>
-                <table style="table table-hover width:700px;" align="center">
-                    <br>
-                    <tr onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor=''">
+                <table class="table table-hover" align="center" style="width:700px;">
+                    <tr>
                         <td style="width:690px; color:#CCCCCC;">
                             目前尚無資料
                         </td>

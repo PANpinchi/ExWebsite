@@ -45,3 +45,7 @@ marquee{
 .hide{
     display:none;
 }
+
+.pointer{
+    cursor: pointer;
+}

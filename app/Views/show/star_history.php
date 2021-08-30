@@ -32,108 +32,164 @@
         </tr>
         <tr>
             <td>
-                <table class="table table-hover" style="width:700px;" align="center">
-                    <br>
+                <table class="table" align="center" style="width:700px;">
                     <tr>
                         <td style="width:690px;">
-                            <div onclick=toggleMenu(109) onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor=''">
+                            <div class="pointer btnFollow" onclick=toggleMenu(109) onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor=''">
                                 <b>109學年度  </b><img id="arrow109" style="vertical-align:middle" src="\img\arrow_right.png">
                             </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
                             <span id="menu-109" class="hide">
-                                <table style="width:675px;">
-                                    <tr><td align="right" height="2"></td></tr>
-                                    <tr onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor=''">
+                                <table class="table table-hover" align="center">
+                                    <tr>
                                         <td style="width:690px;">
                                             <font color="#CCCCCC">目前尚無資料</font>
                                         </td>
                                     </tr>
                                 </table>
                             </span>
-                            <div onclick=toggleMenu(108) onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor=''">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width:690px;">
+                            <div class="pointer" onclick=toggleMenu(108) onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor=''">
                                 <b>108學年度  </b><img id="arrow108" style="vertical-align:middle" src="\img\arrow_right.png">
                             </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
                             <span id="menu-108" class="hide">
-                                <table style="width:675px;">
-                                    <tr><td align="right" height="2"></td></tr>
-                                    <tr onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor=''">
+                                <table class="table table-hover" style="width:675px;">
+                                    <tr>
                                         <td style="width:690px;">
                                             <font color="#CCCCCC">目前尚無資料</font>
                                         </td>
                                     </tr>
                                 </table>
                             </span>
-                            <div onclick=toggleMenu(107) onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor=''">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width:690px;">
+                            <div class="pointer" onclick=toggleMenu(107) onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor=''">
                                 <b>107學年度  </b><img id="arrow107" style="vertical-align:middle" src="\img\arrow_right.png">
                             </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
                             <span id="menu-107" class="hide">
-                                <table style="width:675px;">
-                                    <tr><td align="right" height="2"></td></tr>
-                                    <tr onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor=''">
+                                <table class="table table-hover" style="width:675px;">
+                                    <tr>
                                         <td style="width:690px;">
                                             <font color="#CCCCCC">目前尚無資料</font>
                                         </td>
                                     </tr>
                                 </table>
                             </span>
-                            <div onclick=toggleMenu(106) onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor=''">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width:690px;">
+                            <div class="pointer" onclick=toggleMenu(106) onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor=''">
                                 <b>106學年度  </b><img id="arrow106" style="vertical-align:middle" src="\img\arrow_right.png">
                             </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
                             <span id="menu-106" class="hide">
-                                <table style="width:675px;">
-                                    <tr><td align="right" height="2"></td></tr>
-                                    <tr onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor=''">
+                                <table class="table table-hover" style="width:675px;">
+                                    <tr>
                                         <td style="width:690px;">
                                             <font color="#CCCCCC">目前尚無資料</font>
                                         </td>
                                     </tr>
                                 </table>
                             </span>
-                            <div onclick=toggleMenu(105) onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor=''">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width:690px;">
+                            <div class="pointer" onclick=toggleMenu(105) onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor=''">
                                 <b>105學年度  </b><img id="arrow109" style="vertical-align:middle" src="\img\arrow_right.png">
                             </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
                             <span id="menu-105" class="hide">
-                                <table style="width:675px;">
-                                    <tr><td align="right" height="2"></td></tr>
-                                    <tr onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor=''">
+                                <table class="table table-hover" style="width:675px;">
+                                    <tr>
                                         <td style="width:690px;">
                                             <font color="#CCCCCC">目前尚無資料</font>
                                         </td>
                                     </tr>
                                 </table>
                             </span>
-                            <div onclick=toggleMenu(104) onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor=''">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width:690px;">
+                            <div class="pointer" onclick=toggleMenu(104) onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor=''">
                                 <b>104學年度  </b><img id="arrow104" style="vertical-align:middle" src="\img\arrow_right.png">
                             </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
                             <span id="menu-104" class="hide">
-                                <table style="width:675px;">
-                                    <tr><td align="right" height="2"></td></tr>
-                                    <tr onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor=''">
+                                <table class="table table-hover" style="width:675px;">
+                                    <tr>
                                         <td style="width:690px;">
                                             <font color="#CCCCCC">目前尚無資料</font>
                                         </td>
                                     </tr>
                                 </table>
                             </span>
-                            <div onclick=toggleMenu(103) onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor=''">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width:690px;">
+                            <div class="pointer" onclick=toggleMenu(103) onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor=''">
                                 <b>103學年度  </b><img id="arrow103" style="vertical-align:middle" src="\img\arrow_right.png">
                             </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
                             <span id="menu-103" class="hide">
-                                <table style="width:675px;">
-                                    <tr><td align="right" height="2"></td></tr>
-                                    <tr onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor=''">
+                                <table class="table table-hover" style="width:675px;">
+                                    <tr>
                                         <td style="width:690px;">
                                             <font color="#CCCCCC">目前尚無資料</font>
                                         </td>
                                     </tr>
                                 </table>
                             </span>
-                            <div onclick=toggleMenu(102) onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor=''">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width:690px;">
+                            <div class="pointer" onclick=toggleMenu(102) onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor=''">
                                 <b>102學年度  </b><img id="arrow102" style="vertical-align:middle" src="\img\arrow_right.png">
                             </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
                             <span id="menu-102" class="hide">
-                                <table style="width:675px;">
-                                    <tr><td align="right" height="2"></td></tr>
-                                    <tr onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor=''">
+                                <table class="table table-hover" style="width:675px;">
+                                    <tr>
+                                        <td style="width:690px;">
+                                            <font color="#CCCCCC">目前尚無資料</font>
+                                        </td>
+                                    </tr>
+                                    <tr>
                                         <td style="width:690px;">
                                             <font color="#CCCCCC">目前尚無資料</font>
                                         </td>

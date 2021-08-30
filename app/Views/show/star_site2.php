@@ -41,26 +41,22 @@
         </tr>
         <tr>
             <td>
-                <table style="table table-hover" align="center">
-                    <br>
+                <table class="table table-hover" align="center" style="width:700px;">
                     <tr>
-                        <td style="width:690px;" onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor=''">
+                        <td style="width:690px;">
                             <a href="http://www.ceec.edu.tw">大學入學考試中心</a>
                         </td>
                     </tr>
-                    <tr><td align="right" height="2"></td></tr>
                     <tr>
-                        <td style="width:690px;" onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor=''">
+                        <td style="width:690px;">
                             <a href="http://www.cape.edu.tw/">大學術科考試委員會聯合會</a>
                         </td>
                     </tr>
-                    <tr><td align="right" height="2"></td></tr>
                     <tr>
-                        <td style="width:690px;" onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor=''">
+                        <td style="width:690px;">
                             <a href="https://www.tcte.edu.tw/">技專院校入學測驗中心</a>
                         </td>
                     </tr>
-                    <tr><td align="right" height="2"></td></tr>
                 </table>
             </td>
         </tr>

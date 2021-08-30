@@ -37,32 +37,27 @@
                         <td colspan="10"><img src="\img\icon_01.jpg"></td>
                     </tr>
                 </table>
-                <table style="table table-hover" align="center">
-                    <br>
+                <table class="table table-hover" align="center" style="width:700px;">
                     <tr>
-                        <td style="width:690px;" onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor=''">
+                        <td style="width:690px;">
                             <a href="http://www.jbcrc.edu.tw">大學招生委員會聯合會</a>
                         </td>
                     </tr>
-                    <tr><td align="right" height="2"></td></tr>
                     <tr>
-                        <td style="width:690px;" onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor=''">
+                        <td style="width:690px;">
                             <a href="https://www.uac.edu.tw">大學考試入學分發委員會</a>
                         </td>
                     </tr>
-                    <tr><td align="right" height="2"></td></tr>
                     <tr>
-                        <td style="width:690px;" onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor=''">
+                        <td style="width:690px;">
                             <a href="http://www.jbcrc.edu.tw">大學招生委員會聯合會</a>
                         </td>
                     </tr>
-                    <tr><td align="right" height="2"></td></tr>
                     <tr>
-                        <td style="width:690px;" onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor=''">
+                        <td style="width:690px;">
                             <a href="http://www.jbcrc.edu.tw">大學招生委員會聯合會</a>
                         </td>
                     </tr>
-                    <tr><td align="right" height="2"></td></tr>
                 </table>
             </td>
         </tr>
