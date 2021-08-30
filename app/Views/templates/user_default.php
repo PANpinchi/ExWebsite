@@ -38,7 +38,7 @@
       </div>
 
       <div style="margin-left: 300px" align="center">
-        <div style="text-align: left;">
+        <div>
           <?= $this->renderSection('content') ?>
         </div>
       </div>

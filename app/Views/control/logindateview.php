@@ -13,13 +13,13 @@
 </head>
 <body>
 <br>
-<h2 class="c">繁星推薦、個人申請個人密碼設定系統</h2>
-<input class="btn btn-primary" type="button" value="編輯" name="button" onclick= "location.href='/loginController/logindateset'"></input><br><br>
+<h2 class="center" align="center">繁星推薦、個人申請個人密碼設定系統</h2>
+<input class="btn btn-primary center" align="center" type="button" value="編輯" name="button" onclick= "location.href='/loginController/logindateset'"></input><br><br>
 <?php
 	foreach($logindate as $logindate_item){
 	echo '
-    <div class="left">
-    		<table border="1" class="c table set" style="border-style:solid; width: 1100px;">
+		<form>
+    		<table border="1" class="center" align="center" style="border-style:solid;">
 	    		<tr>
 		   			<th>系統開始時間
 		   			<th>系統結束時間
@@ -30,7 +30,6 @@
                 		'.$logindate_item['end1'].'
 			</table>
 		</form>			
-	</div>
 	';
 	}
 ?>

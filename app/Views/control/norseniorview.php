@@ -17,12 +17,11 @@
 
   <body>
 	<br>
-	<table class="c" style="width: 1100px;">
+	<input class="btn btn-primary" style="margin-left:-36%;" type="button" value="編輯" name="button" onclick= "location.href='/applyController/norsenioredit'"></input><br>
+	<table class="center" align="center">
 		<tr>
 			<td>
-  				<input class="btn btn-primary" type="button" value="編輯" name="button" onclick= "location.href='/applyController/norsenioredit'"></input><br>
-			<td>	
-				  <h2>高中個人申請開放日期設定</h2>
+				<h2>高中個人申請開放日期設定</h2>
 	</table>
 	<br>
 	<?php
@@ -31,7 +30,7 @@
     	if (! empty($norsenior) && is_array($norsenior))  {
         foreach($norsenior as $norsenior_item){
 			echo ' 
-			<table border="1" class="c table set" style="border-style:solid; width: 1100px; margin-right: 100px;">
+			<table border="1" class="center" align="center" style="border-style:solid;">
 			<tr>
 				<th width="50px">編號
 				<th width="200px">系統名稱
