@@ -14,8 +14,10 @@ use App\Models\Norcollege;
 use App\Models\Starcollege;
 use App\Models\Norsenior;
 use App\Models\Starsenior;
-use App\Models\Star_post_page;
-use App\Models\Per_post_page;
+use App\Models\Starsen_post_page;
+use App\Models\Starcol_post_page;
+use App\Models\Persen_post_page;
+use App\Models\Percol_post_page;
 
 class applyController extends BaseController
 {
@@ -45,35 +47,62 @@ class applyController extends BaseController
 		return view('posts/create_new');
 	}
 
-	/*創建新的貼文(個申)*/
-	public function create_per()
+	/*創建新的貼文(高中個申)*/
+	public function create_persen()
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
 			echo '<script>alert("請先登入！")</script>';
 			return view('login/user_login');
 		}
-		return view('posts/create_per');
+		return view('posts/create_persen');
 	}
 
-	/*修改貼文(個申)*/
-	public function modify_per()
+	/*創建新的貼文(大學個申)*/
+	public function create_percol()
+	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('login/user_login');
+		}
+		return view('posts/create_percol');
+	}
+
+	/*修改貼文(高中個申)*/
+	public function modify_persen()
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
 			echo '<script>alert("請先登入！")</script>';
 			return view('login/user_login');
 		}
 
-		$model = new Per_post_page();
+		$model = new Persen_post_page();
 
 		$data = [
 			'post' => $model->find($_SESSION['id'])
 		];
 
-		return view('posts/modify_per', $data);
+		return view('posts/modify_persen', $data);
 	}
 
-	/*儲存文章頁面(個人)*/
-	public function store_per()
+	/*修改貼文(大學個申)*/
+	public function modify_percol()
+	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('login/user_login');
+		}
+
+		$model = new Percol_post_page();
+
+		$data = [
+			'post' => $model->find($_SESSION['id'])
+		];
+
+		return view('posts/modify_percol', $data);
+	}
+
+	/*儲存文章頁面(高中個人)*/
+	public function store_persen()
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
 			echo '<script>alert("請先登入！")</script>';
@@ -109,7 +138,7 @@ class applyController extends BaseController
 			$ServerFilename = date("YmdHis").".".$File_Extension;
 			move_uploaded_file($_FILES['myfile']['tmp_name'], $DestDIR.'/'.$ServerFilename);
 
-			$model = new Per_post_page();
+			$model = new Persen_post_page();
 			$model->save([
 				'title' => $data['title'],
 				'subtitle' => $data['subtitle'],
@@ -123,7 +152,7 @@ class applyController extends BaseController
 			return redirect('view/show_back');
 		}	
 
-		$model = new Per_post_page();
+		$model = new Persen_post_page();
 		$model->save([
 			'title' => $data['title'],
 			'subtitle' => $data['subtitle'],
@@ -135,8 +164,71 @@ class applyController extends BaseController
 		return redirect('viewController/show_back');
 	}
 
-	/*修改後儲存文章頁面(個人)*/
-	public function restore_per()
+	/*儲存文章頁面(大學個人)*/
+	public function store_percol()
+	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('login/user_login');
+		}
+
+		$data=
+			[
+				'title' => $this->request->getVar('title'),
+				'subtitle' => $this->request->getVar('subtitle'),
+				'subtitle2' => $this->request->getVar('subtitle2'),
+				'content' => $this->request->getVar('content'),
+				'start' => $this->request->getVar('start'),
+				'end' => $this->request->getVar('end')
+			];
+
+		if($_FILES['myfile']['error'] > 0 ) {
+			switch ($_FILES['myfile']['error'] ) {
+			case 1:die("檔案大小超出 php.ini:upload_max_filesize 限制 ");
+			case 2:die("檔案大小超出 MAX_FILE_SIZE 限制");
+			case 3:die("檔案大小僅被部份上傳");
+			}
+		}
+
+		if(is_uploaded_file($_FILES['myfile']['tmp_name'])){	
+			$DestDIR = "upload";
+			if(!is_dir($DestDIR) || !is_writable($DestDIR)){
+				die("目錄不存在或無法存取檔案");
+			}
+
+			$File_Extension = explode(".", $_FILES['myfile']['name']);
+			$File_Extension = $File_Extension[count($File_Extension)-1];
+			$ServerFilename = date("YmdHis").".".$File_Extension;
+			move_uploaded_file($_FILES['myfile']['tmp_name'], $DestDIR.'/'.$ServerFilename);
+
+			$model = new Percol_post_page();
+			$model->save([
+				'title' => $data['title'],
+				'subtitle' => $data['subtitle'],
+				'subtitle2' => $data['subtitle2'],
+				'content' => $data['content'],
+				'start' => $data['start'],
+				'end' => $data['end'],
+				'file' => $ServerFilename,
+				'file_name' => $_FILES['myfile']['name']
+			]);
+			return redirect('view/show_back');
+		}	
+
+		$model = new Percol_post_page();
+		$model->save([
+			'title' => $data['title'],
+			'subtitle' => $data['subtitle'],
+			'subtitle2' => $data['subtitle2'],
+			'content' => $data['content'],
+			'start' => $data['start'],
+			'end' => $data['end']
+		]);
+		return redirect('viewController/show_back');
+	}
+
+	/*修改後儲存文章頁面(高中個人)*/
+	public function restore_persen()
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
 			echo '<script>alert("請先登入！")</script>';
@@ -172,7 +264,7 @@ class applyController extends BaseController
 			$ServerFilename = date("YmdHis").".".$File_Extension;
 			move_uploaded_file($_FILES['myfile']['tmp_name'], $DestDIR.'/'.$ServerFilename);
 
-			$model = new Per_post_page();
+			$model = new Persen_post_page();
 
 			$post = $model->find($_SESSION['id']);
 
@@ -195,7 +287,7 @@ class applyController extends BaseController
 			return redirect('viewController/show_back');
 		}	
 
-		$model = new Per_post_page();
+		$model = new Persen_post_page();
 		$model->save([
 			'id' => $_SESSION['id'],
 			'title' => $data['title'],
@@ -210,15 +302,114 @@ class applyController extends BaseController
 		return redirect('viewController/show_back');
 	}
 
-	/*刪除資料(個人)*/
-	public function delete_per()
+	/*修改後儲存文章頁面(大學個人)*/
+	public function restore_percol()
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
 			echo '<script>alert("請先登入！")</script>';
 			return view('login/user_login');
 		}
 
-		$model = new Per_post_page();
+		$data=
+			[
+				'title' => $this->request->getVar('title'),
+				'subtitle' => $this->request->getVar('subtitle'),
+				'subtitle2' => $this->request->getVar('subtitle2'),
+				'content' => $this->request->getVar('content'),
+				'start' => $this->request->getVar('start'),
+				'end' => $this->request->getVar('end')
+			];
+		
+		if($_FILES['myfile']['error'] > 0 ) {
+			switch ($_FILES['myfile']['error'] ) {
+			case 1:die("檔案大小超出 php.ini:upload_max_filesize 限制 ");
+			case 2:die("檔案大小超出 MAX_FILE_SIZE 限制");
+			case 3:die("檔案大小僅被部份上傳");
+			}
+		}
+
+		if(is_uploaded_file($_FILES['myfile']['tmp_name'])){
+			$DestDIR = "upload";
+			if(!is_dir($DestDIR) || !is_writable($DestDIR)){
+				die("目錄不存在或無法存取檔案");
+			}
+
+			$File_Extension = explode(".", $_FILES['myfile']['name']);
+			$File_Extension = $File_Extension[count($File_Extension)-1];
+			$ServerFilename = date("YmdHis").".".$File_Extension;
+			move_uploaded_file($_FILES['myfile']['tmp_name'], $DestDIR.'/'.$ServerFilename);
+
+			$model = new Percol_post_page();
+
+			$post = $model->find($_SESSION['id']);
+
+			if($post['file'] != NULL){
+				$file = 'upload/'.$post['file'];
+				unlink($file);
+			}
+
+			$model->save([
+				'id' => $_SESSION['id'],
+				'title' => $data['title'],
+				'subtitle' => $data['subtitle'],
+				'subtitle2' => $data['subtitle2'],
+				'content' => $data['content'],
+				'start' => $data['start'],
+				'end' => $data['end'],
+				'file' => $ServerFilename,
+				'file_name' => $_FILES['myfile']['name']
+			]);
+			return redirect('viewController/show_back');
+		}	
+
+		$model = new Percol_post_page();
+		$model->save([
+			'id' => $_SESSION['id'],
+			'title' => $data['title'],
+			'subtitle' => $data['subtitle'],
+			'subtitle2' => $data['subtitle2'],
+			'content' => $data['content'],
+			'start' => $data['start'],
+			'end' => $data['end']
+		]);
+
+		unset($_SESSION['id']);
+		return redirect('viewController/show_back');
+	}
+
+	/*刪除資料(高中個人)*/
+	public function delete_persen()
+	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('login/user_login');
+		}
+
+		$model = new Persen_post_page();
+
+		$post = $model->find($_SESSION['id']);
+
+		if($post['file'] != NULL){
+			$file = 'upload/'.$post['file'];
+			unlink($file);
+		}
+		
+		$model->where('id', $_SESSION['id'])->delete();
+
+		echo '<script>alert("公告已刪除！")</script>';
+
+		return redirect('viewController/show_back');
+	}
+
+	/*刪除資料(大學個人)*/
+	public function delete_percol()
+	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('login/user_login');
+		}
+
+		$model = new Percol_post_page();
 
 		$post = $model->find($_SESSION['id']);
 

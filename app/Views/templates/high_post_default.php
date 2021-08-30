@@ -63,7 +63,7 @@
                                                     <div id = "home"><a href="/viewController/index"> </a></div>
                                                 </td>
                                                 <td>
-                                                    <div id = "apply"><a href="/viewController/show_front_per"> </a></div>
+                                                    <div id = "apply"><a href="/viewController/show_front_persen"> </a></div>
                                                 </td>
                                                 <td><img src="/img/form_top_06.jpg"></td>
                                                 
@@ -141,9 +141,20 @@
                                             <tr>
                                                 <td>
                                                     <div id = "m1">
-                                                        <a href="/viewController/show_front_star" style="text-decoration:none;"> 
+                                                        <a href="/viewController/show_front_starsen" style="text-decoration:none;"> 
                                                             <table class="layer" style="text-decoration:none;">
                                                                 <tbody>
+                                                                    <tr id = "m1-1" class="touch">
+                                                                        <td style="width: 140px;">
+                                                                            <a href="/viewController/show_front_starsen" style="text-decoration:none;">高中部繁星申請</a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr id = "m1-1" class="touch">
+                                                                        <td style="width: 140px;">
+                                                                            <a href="/viewController/show_front_starcol" style="text-decoration:none;">大學部繁星申請</a>
+                                                                        </td>
+                                                                    </tr>                                                                    
+                                                                    <!--
                                                                     <tr id = "m1-1" class="touch">
                                                                         <td style="width: 140px;">
                                                                             <a href="/viewController/star_page_type/簡章訊息" style="text-decoration:none;">簡章訊息事項</a>
@@ -169,6 +180,7 @@
                                                                             <a href="/viewController/star_page_type/其他事項" style="text-decoration:none;">其他事項</a>
                                                                         </td>
                                                                     </tr>
+                                                                    -->
                                                                 </tbody>
                                                             </table>
                                                         </a>

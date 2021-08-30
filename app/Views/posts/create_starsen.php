@@ -17,18 +17,18 @@
 
     <body>
         <div style="padding-left: 100px">
-            <form action="/applyController/store_per" enctype="multipart/form-data" method="post">
+            <form name="create" action="/starController/store_star" enctype="multipart/form-data" method="post">
                 <div class="row" style="width: 900px">
                     <div class="col offset-0">
                         <br>
                         <div class="row">
-                            <div class="title">建立貼文<br>(個人申請)</div>
+                            <div class="title">建立貼文<br>(繁星申請)</div>
                         </div>
                         <div class="form-group row content">
 
                             <label for="title" class="col-md-2 col-form-label">
                                 標題</label>
-                            <input id="title" type="text" name="title" required><br>
+                            <input id="title" type="text" name="title" required> <br>
 
                             <label for="subtitle" class="col-md-2 col-form-label">
                                 副標題</label>

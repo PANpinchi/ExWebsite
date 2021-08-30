@@ -37,13 +37,35 @@
             <br><br><br>
 
             <div class="container">
-                <a href="/starController/create_star"><img src="/front_img/star.png" style="width: 100%; border-radius: 10px 10px 10px 10px;" border="2px"></a>
+                <img src="/front_img/star.png" style="width: 100%; border-radius: 10px 10px 10px 10px;" border="2px">
+            </div>
+
+            <br>
+
+            <div class="container">
+                <table>
+                    <tr>
+                        <td><a href="/starController/create_starsen"><img src="/img/main_menu_fun_hs.jpg" style="width: 100%; border-radius: 10px 10px 10px 10px;" border="2px"></a>
+                        <td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                        <td><a href="/starController/create_starcol"><img src="/img/main_menu_fun_col.jpg" style="width: 100%; border-radius: 10px 10px 10px 10px;" border="2px"></a>
+                </table>
             </div>
 
             <br><br><br>
 
             <div class="container">
-                <a href="/applyController/create_per"><img src="/front_img/person.png" style="width: 100%; border-radius: 10px 10px 10px 10px;" border="2px"></a>
+                <img src="/front_img/person.png" style="width: 100%; border-radius: 10px 10px 10px 10px;" border="2px">
+            </div>
+
+            <br>
+
+            <div class="container">
+                <table>
+                    <tr>
+                        <td><a href="/applyController/create_persen"><img src="/img/main_menu_fun_hs.jpg" style="width: 100%; border-radius: 10px 10px 10px 10px;" border="2px"></a>
+                        <td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                        <td><a href="/applyController/create_percol"><img src="/img/main_menu_fun_col.jpg" style="width: 100%; border-radius: 10px 10px 10px 10px;" border="2px"></a>
+                </table>
             </div>
         </div>
     <body>

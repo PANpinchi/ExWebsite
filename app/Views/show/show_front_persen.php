@@ -49,20 +49,20 @@
                     date_default_timezone_set('Asia/Taipei');
                     //echo date("Y-m-d H:i:s");
                     $temp = $_SESSION['head'];
-                        if(!empty($per_post_page) && is_array($per_post_page)){
-                            for($i = $_SESSION['head']; isset($per_post_page[$i]) && $temp <= $_SESSION['tail']; $i++){             
-                                if (strtotime($per_post_page[$i]['start'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($per_post_page[$i]['end'])){
+                        if(!empty($persen_post_page) && is_array($persen_post_page)){
+                            for($i = $_SESSION['head']; isset($persen_post_page[$i]) && $temp <= $_SESSION['tail']; $i++){             
+                                if (strtotime($persen_post_page[$i]['start'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($persen_post_page[$i]['end'])){
                                     if(!isset($post_type)){
-                                        $year = substr($per_post_page[$i]['start'], 0, 4);
-                                        $month = substr($per_post_page[$i]['start'], 5, 2);
-                                        $day = substr($per_post_page[$i]['start'], 8, 2);
+                                        $year = substr($persen_post_page[$i]['start'], 0, 4);
+                                        $month = substr($persen_post_page[$i]['start'], 5, 2);
+                                        $day = substr($persen_post_page[$i]['start'], 8, 2);
                                         echo'
                                             <tr valign = "top">
                                                 <td style="width: 30px; font-size: 15px;"> '.$year.'/'.$month.'/'.$day.' </td>
-                                                <td style="width: 100px; color: gray;"> ['.$per_post_page[$i]['subtitle'].'] </td>
-                                                <td style="width: 500px;"><a href="/viewController/show_content_front_per/'.$per_post_page[$i]['id'].'"> '.$per_post_page[$i]['title'].'</a> </td>
+                                                <td style="width: 100px; color: gray;"> ['.$persen_post_page[$i]['subtitle'].'] </td>
+                                                <td style="width: 500px;"><a href="/viewController/show_content_front_per/'.$persen_post_page[$i]['id'].'"> '.$persen_post_page[$i]['title'].'</a> </td>
                                         ';
-                                        if($per_post_page[$i]['file'] != NULL){
+                                        if($persen_post_page[$i]['file'] != NULL){
                                             echo' <td style="width: 20px;"> <img src="/img/icon_pdf.gif"> </td> </tr>';
                                         }
                                         else{
@@ -71,17 +71,17 @@
                                         $temp++;
                                     }
                                     else{
-                                        if($per_post_page[$i]['subtitle'] == $post_type){
-                                            $year = substr($per_post_page[$i]['start'], 0, 4);
-                                            $month = substr($per_post_page[$i]['start'], 5, 2);
-                                            $day = substr($per_post_page[$i]['start'], 8, 2);
+                                        if($persen_post_page[$i]['subtitle'] == $post_type){
+                                            $year = substr($persen_post_page[$i]['start'], 0, 4);
+                                            $month = substr($persen_post_page[$i]['start'], 5, 2);
+                                            $day = substr($persen_post_page[$i]['start'], 8, 2);
                                             echo'
                                                 <tr valign = "top">
                                                     <td style="width: 30px; font-size: 15px;"> '.$year.'/'.$month.'/'.$day.' </td>
-                                                    <td style="width: 100px; color: gray;"> ['.$per_post_page[$i]['subtitle'].'] </td>
-                                                    <td style="width: 500px;"><a href="/viewController/show_content_front_per/'.$per_post_page[$i]['id'].'"> '.$per_post_page[$i]['title'].'</a> </td>
+                                                    <td style="width: 100px; color: gray;"> ['.$persen_post_page[$i]['subtitle'].'] </td>
+                                                    <td style="width: 500px;"><a href="/viewController/show_content_front_per/'.$persen_post_page[$i]['id'].'"> '.$persen_post_page[$i]['title'].'</a> </td>
                                                 ';
-                                            if($per_post_page[$i]['file'] != NULL){
+                                            if($persen_post_page[$i]['file'] != NULL){
                                                 echo' <td style="width: 20px;"> <img src="/img/icon_pdf.gif"> </td> </tr>';
                                             }
                                             else{
@@ -118,9 +118,9 @@
                 <?php
                 if(!isset($post_type)){
                     for($i=0;$i<$page_num;){
-                        echo '<a href="/viewController/per_page/'.++$i.'">&nbsp;['.$i.']&nbsp;</a>';
+                        echo '<a href="/viewController/per_page_sen/'.++$i.'">&nbsp;['.$i.']&nbsp;</a>';
                     }
-                    echo '<a href="/viewController/per_page_all">&nbsp;[全部] </a>';
+                    echo '<a href="/viewController/per_page_all_sen">&nbsp;[全部] </a>';
                 }
                 ?>
             </td>

@@ -4,10 +4,10 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class Star_post_page extends Model
+class Starsen_post_page extends Model
 {
 	protected $DBGroup              = 'default';
-	protected $table                = 'star_post_page';
+	protected $table                = 'starsen_post_page';
 	protected $primaryKey           = 'id';
 	protected $useAutoIncrement     = true;
 	protected $insertID             = 0;

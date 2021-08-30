@@ -4,7 +4,7 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class Star_post_page extends Migration
+class Persen_post_page extends Migration
 {
 	public function up()
 	{
@@ -44,11 +44,11 @@ class Star_post_page extends Migration
 					'null'			=> true]
 	]);
 	$this->forge->addKey('id', TRUE);
-	$this->forge->createTable('star_post_page');
+	$this->forge->createTable('persen_post_page');
 	}
 
 	public function down()
 	{
-		$this->forge->dropTable('star_post_page');
+		$this->forge->dropTable('persen_post_page');
 	}
 }

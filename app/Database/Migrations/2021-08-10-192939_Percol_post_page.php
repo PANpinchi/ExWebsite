@@ -4,7 +4,7 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class Per_post_page extends Migration
+class Percol_post_page extends Migration
 {
 	public function up()
 	{
@@ -44,11 +44,11 @@ class Per_post_page extends Migration
 					'null'			=> true]
 	]);
 	$this->forge->addKey('id', TRUE);
-	$this->forge->createTable('per_post_page');
+	$this->forge->createTable('percol_post_page');
 	}
 
 	public function down()
 	{
-		$this->forge->dropTable('per_post_page');
+		$this->forge->dropTable('percol_post_page');
 	}
 }

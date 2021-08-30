@@ -77,7 +77,7 @@
                                                     <div id = "home"><a href="/viewController/index"> </a></div>
                                                 </td>
                                                 <td>
-                                                    <div id = "apply"><a href="/viewController/show_front_star"> </a></div>
+                                                    <div id = "apply"><a href="/viewController/show_front_starsen"> </a></div>
                                                 </td>
                                                 <td><img src="/person_img/form_top_06.jpg"></td>
                                                 
@@ -171,9 +171,20 @@
                                             <tr>
                                                 <td>
                                                     <div id = "m1">
-                                                        <a href="/viewController/show_front_per" style="text-decoration:none;"> 
+                                                        <a href="/viewController/show_front_persen" style="text-decoration:none;"> 
                                                             <table class="layer" style="text-decoration:none;">
                                                                 <tbody>
+                                                                    <tr id = "m1-1" class="touch">
+                                                                        <td style="width: 140px;">
+                                                                            <a href="/viewController/show_front_persen" style="text-decoration:none;">高中部個人申請</a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr id = "m1-1" class="touch">
+                                                                        <td style="width: 140px;">
+                                                                            <a href="/viewController/show_front_percol" style="text-decoration:none;">大學部個人申請</a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <!--
                                                                     <tr id = "m1-1" class="touch">
                                                                         <td style="width: 140px;">
                                                                             <a href="/viewController/per_page_type/簡章訊息" style="text-decoration:none;">簡章訊息事項</a>
@@ -199,6 +210,8 @@
                                                                             <a href="/viewController/per_page_type/其他事項" style="text-decoration:none;">其他事項</a>
                                                                         </td>
                                                                     </tr>
+                                                                    -->
+
                                                                     <!--
                                                                     <tr class="touch"><td style="width: 140px;">系統公告</td></tr>
                                                                     <tr class="touch"><td style="width: 140px;">師資保送甄試</td></tr>

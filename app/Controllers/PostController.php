@@ -14,8 +14,10 @@ use App\Models\Norcollege;
 use App\Models\Starcollege;
 use App\Models\Norsenior;
 use App\Models\Starsenior;
-use App\Models\Star_post_page;
-use App\Models\Per_post_page;
+use App\Models\Starsen_post_page;
+use App\Models\Starcol_post_page;
+use App\Models\Persen_post_page;
+use App\Models\Percol_post_page;
 
 class PostController extends BaseController
 {
@@ -179,58 +181,112 @@ class PostController extends BaseController
 		return view('posts/create_new');
 	}
 
-	/*創建新的貼文(繁星)*/
-	public function create_star()
+	/*創建新的貼文(高中繁星)*/
+	public function create_starsen()
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
 			echo '<script>alert("請先登入！")</script>';
 			return view('login/user_login');
 		}
-		return view('posts/create_star');
+		return view('posts/create_starsen');
 	}
 
-	/*創建新的貼文(個申)*/
-	public function create_per()
+	/*創建新的貼文(大學繁星)*/
+	public function create_starcol()
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
 			echo '<script>alert("請先登入！")</script>';
 			return view('login/user_login');
 		}
-		return view('posts/create_per');
+		return view('posts/create_starcol');
 	}
 
-	/*修改貼文(繁星)*/
-	public function modify_star()
+	/*創建新的貼文(高中個申)*/
+	public function create_persen()
+	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('login/user_login');
+		}
+		return view('posts/create_persen');
+	}
+
+	/*創建新的貼文(大學個申)*/
+	public function create_percol()
+	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('login/user_login');
+		}
+		return view('posts/create_percol');
+	}
+
+	/*修改貼文(高中繁星)*/
+	public function modify_starsen()
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
 			echo '<script>alert("請先登入！")</script>';
 			return view('login/user_login');
 		}
 
-		$model = new Star_post_page();
+		$model = new Starsen_post_page();
 
 		$data = [
 			'post' => $model->find($_SESSION['id'])
 		];
 
-		return view('posts/modify_star', $data);
+		return view('posts/modify_starsen', $data);
 	}
 
-	/*修改貼文(個申)*/
-	public function modify_per()
+	/*修改貼文(大學繁星)*/
+	public function modify_starcol()
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
 			echo '<script>alert("請先登入！")</script>';
 			return view('login/user_login');
 		}
 
-		$model = new Per_post_page();
+		$model = new Starcol_post_page();
 
 		$data = [
 			'post' => $model->find($_SESSION['id'])
 		];
 
-		return view('posts/modify_per', $data);
+		return view('posts/modify_starcol', $data);
+	}
+
+	/*修改貼文(高中個申)*/
+	public function modify_persen()
+	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('login/user_login');
+		}
+
+		$model = new Persen_post_page();
+
+		$data = [
+			'post' => $model->find($_SESSION['id'])
+		];
+
+		return view('posts/modify_persen', $data);
+	}
+
+	/*修改貼文(大學個申)*/
+	public function modify_percol()
+	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('login/user_login');
+		}
+
+		$model = new Percol_post_page();
+
+		$data = [
+			'post' => $model->find($_SESSION['id'])
+		];
+
+		return view('posts/modify_percol', $data);
 	}
 
 	/*後台顯示公告的文章*/
@@ -241,8 +297,8 @@ class PostController extends BaseController
 			return view('login/user_login');
 		}
 		
-		$model1 = new Star_post_page();
-		$model2 = new Per_post_page();
+		$model1 = new Starsen_post_page();
+		$model2 = new Persen_post_page();
 		$data = 
 		[
 			'star_post_page' => $model1->orderBy('start', 'desc')->findAll(),
@@ -251,10 +307,10 @@ class PostController extends BaseController
 		return view('show/show_back', $data);
 	}
 
-	/* 前台分頁公告(繁星) */
-	public function star_page($num){
+	/* 前台分頁公告(高中繁星) */
+	public function star_page_sen($num){
 		$login = new Logindate();
-		$model = new Star_post_page();
+		$model = new Starsen_post_page();
 		$starsenior = new Starsenior();
 		$starcollege = new Starcollege();
 
@@ -309,13 +365,74 @@ class PostController extends BaseController
 			'page_num' => $page_num,
 		];
 
-		return view('show/show_front_star', $data);
+		return view('show/show_front_starsen', $data);
 	}
 
-	/* 前台全部公告(繁星) */
-	public function star_page_all(){
+	/* 前台分頁公告(大學繁星) */
+	public function star_page_col($num){
 		$login = new Logindate();
-		$model = new Star_post_page();
+		$model = new Starcol_post_page();
+		$starsenior = new Starsenior();
+		$starcollege = new Starcollege();
+
+		$data = [
+			'star_post_page' => $model->orderBy('start', 'desc')->findAll()
+		];
+
+		$i = 0;
+		$j = 0;
+
+		while(isset($data['star_post_page'][$j])){
+			if(strtotime($data['star_post_page'][$j]['start'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($data['star_post_page'][$j]['end'])){
+				$i++;
+			}
+			$j++;
+		}
+
+		if($i <= 10){
+			$page_num = 1;
+		}
+		else{
+			$page_num = (int)($i / 10) + 1;
+			if($i % 10 == 0){
+				$page_num--;
+			}
+		}
+		
+		$dist = ($num - 1) * 10;
+
+		$i = 0;
+		$j = 0;
+
+		while(isset($data['star_post_page'][$j])){
+			if(strtotime($data['star_post_page'][$j]['start'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($data['star_post_page'][$j]['end'])){
+				if($i == $dist){
+					break;
+				}
+				$i++;
+			}
+			$j++;
+		}
+
+		$_SESSION['head'] = $j;
+		$_SESSION['tail'] = $j + 9;
+
+		$data = 
+		[
+			'starcollege' => $starcollege->findAll(),
+			'starsenior' => $starsenior->findAll(),
+			'logindate'=> $login->findAll(),
+			'star_post_page' => $model->orderBy('start', 'desc')->findAll(),
+			'page_num' => $page_num,
+		];
+
+		return view('show/show_front_starcol', $data);
+	}
+
+	/* 前台全部公告(高中繁星) */
+	public function star_page_all_sen(){
+		$login = new Logindate();
+		$model = new Starsen_post_page();
 		$starsenior = new Starsenior();
 		$starcollege = new Starcollege();
 
@@ -355,14 +472,60 @@ class PostController extends BaseController
 			'page_num' => $page_num,
 		];
 
-		return view('show/show_front_star', $data);
+		return view('show/show_front_starsen', $data);
 	}
 
-	/*顯示前台繁星公告的文章*/
-	public function show_front_star()
+	/* 前台全部公告(大學繁星) */
+	public function star_page_all_col(){
+		$login = new Logindate();
+		$model = new Starcol_post_page();
+		$starsenior = new Starsenior();
+		$starcollege = new Starcollege();
+
+		$data = [
+			'star_post_page' => $model->orderBy('start', 'desc')->findAll()
+		];
+
+		$i = 0;
+		$j = 0;
+
+		while(isset($data['star_post_page'][$j])){
+			if(strtotime($data['star_post_page'][$j]['start'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($data['star_post_page'][$j]['end'])){
+				$i++;
+			}
+			$j++;
+		}
+
+		if($i <= 10){
+			$page_num = 1;
+		}
+		else{
+			$page_num = (int)($i / 10) + 1;
+			if($i % 10 == 0){
+				$page_num--;
+			}
+		}
+		
+		$_SESSION['head'] = 0;
+		$_SESSION['tail'] = $i;
+
+		$data = 
+		[
+			'starcollege' => $starcollege->findAll(),
+			'starsenior' => $starsenior->findAll(),
+			'logindate'=> $login->findAll(),
+			'star_post_page' => $model->orderBy('start', 'desc')->findAll(),
+			'page_num' => $page_num,
+		];
+
+		return view('show/show_front_starcol', $data);
+	}
+
+	/*顯示前台高中繁星公告的文章*/
+	public function show_front_starsen()
 	{
 		$login = new Logindate();
-		$model = new Star_post_page();
+		$model = new Starsen_post_page();
 		$starsenior = new Starsenior();
 		$starcollege = new Starcollege();
 
@@ -404,13 +567,62 @@ class PostController extends BaseController
 			'page_num' => $page_num,
 		];
 
-		return view('show/show_front_star', $data);
+		return view('show/show_front_starsen', $data);
 	}
 
-	/* 前台公告類型(繁星) */
-	public function star_page_type($type){
+	/*顯示前台大學繁星公告的文章*/
+	public function show_front_starcol()
+	{
 		$login = new Logindate();
-		$model = new Star_post_page();
+		$model = new Starcol_post_page();
+		$starsenior = new Starsenior();
+		$starcollege = new Starcollege();
+
+		$_SESSION['login_type'] = 'star';
+
+		$data = [
+			'star_post_page' => $model->orderBy('start', 'desc')->findAll()
+		];
+
+		$i = 0;
+		$j = 0;
+
+		while(isset($data['star_post_page'][$j])){
+			if(strtotime($data['star_post_page'][$j]['start'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($data['star_post_page'][$j]['end'])){
+				$i++;
+			}
+			$j++;
+		}
+
+		if($i <= 10){
+			$page_num = 1;
+		}
+		else{
+			$page_num = (int)($i / 10) + 1;
+			if($i % 10 == 0){
+				$page_num--;
+			}
+		}
+
+		$_SESSION['head'] = 0;
+		$_SESSION['tail'] = 9;
+
+		$data = 
+		[
+			'starcollege' => $starcollege->findAll(),
+			'starsenior' => $starsenior->findAll(),
+			'logindate'=> $login->findAll(),
+			'star_post_page' => $model->orderBy('start', 'desc')->findAll(),
+			'page_num' => $page_num,
+		];
+
+		return view('show/show_front_starcol', $data);
+	}
+
+	/* 前台公告類型(高中繁星) */
+	public function star_page_type_sen($type){
+		$login = new Logindate();
+		$model = new Starsen_post_page();
 		$starsenior = new Starsenior();
 		$starcollege = new Starcollege();
 
@@ -450,13 +662,59 @@ class PostController extends BaseController
 			'post_type' => $type
 		];
 
-		return view('show/show_front_star', $data);
+		return view('show/show_front_starsen', $data);
 	}
 
-	/* 前台分頁公告(個申) */
-	public function per_page($num){
+	/* 前台公告類型(大學繁星) */
+	public function star_page_type_col($type){
 		$login = new Logindate();
-		$model = new Per_post_page();
+		$model = new Starcol_post_page();
+		$starsenior = new Starsenior();
+		$starcollege = new Starcollege();
+
+		$data = [
+			'star_post_page' => $model->orderBy('start', 'desc')->findAll()
+		];
+
+		$i = 0;
+		$j = 0;
+
+		while(isset($data['star_post_page'][$j])){
+			if(strtotime($data['star_post_page'][$j]['start'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($data['star_post_page'][$j]['end'])){
+				$i++;
+			}
+			$j++;
+		}
+
+		if($i <= 10){
+			$page_num = 1;
+		}
+		else{
+			$page_num = (int)($i / 10) + 1;
+			if($i % 10 == 0){
+				$page_num--;
+			}
+		}
+		
+		$_SESSION['head'] = 0;
+		$_SESSION['tail'] = $i;
+
+		$data = 
+		[
+			'starcollege' => $starcollege->findAll(),
+			'starsenior' => $starsenior->findAll(),
+			'logindate'=> $login->findAll(),
+			'star_post_page' => $model->orderBy('start', 'desc')->findAll(),
+			'post_type' => $type
+		];
+
+		return view('show/show_front_starcol', $data);
+	}
+
+	/* 前台分頁公告(高中個申) */
+	public function per_page_sen($num){
+		$login = new Logindate();
+		$model = new Persen_post_page();
 		$norsenior = new Norsenior();
 		$norcollege = new Norcollege();
 
@@ -511,13 +769,74 @@ class PostController extends BaseController
 			'page_num' => $page_num,
 		];
 
-		return view('show/show_front_per', $data);
+		return view('show/show_front_persen', $data);
 	}
 
-	/* 前台全部公告(個申) */
-	public function per_page_all(){
+	/* 前台分頁公告(大學個申) */
+	public function per_page_col($num){
 		$login = new Logindate();
-		$model = new Per_post_page();
+		$model = new Percol_post_page();
+		$norsenior = new Norsenior();
+		$norcollege = new Norcollege();
+
+		$data = [
+			'per_post_page' => $model->orderBy('start', 'desc')->findAll()
+		];
+
+		$i = 0;
+		$j = 0;
+
+		while(isset($data['per_post_page'][$j])){
+			if(strtotime($data['per_post_page'][$j]['start'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($data['per_post_page'][$j]['end'])){
+				$i++;
+			}
+			$j++;
+		}
+
+		if($i <= 10){
+			$page_num = 1;
+		}
+		else{
+			$page_num = (int)($i / 10) + 1;
+			if($i % 10 == 0){
+				$page_num--;
+			}
+		}
+		
+		$dist = ($num - 1) * 10;
+
+		$i = 0;
+		$j = 0;
+		
+		while(isset($data['per_post_page'][$j])){
+			if(strtotime($data['per_post_page'][$j]['start'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($data['per_post_page'][$j]['end'])){
+				if($i == $dist){
+					break;
+				}
+				$i++;
+			}
+			$j++;
+		}
+
+		$_SESSION['head'] = $j;
+		$_SESSION['tail'] = $j + 9;
+
+		$data = 
+		[
+			'norcollege' => $norcollege->findAll(),
+			'norsenior' => $norsenior->findAll(),
+			'logindate'=> $login->findAll(),
+			'per_post_page' => $model->orderBy('start', 'desc')->findAll(),
+			'page_num' => $page_num,
+		];
+
+		return view('show/show_front_percol', $data);
+	}
+
+	/* 前台全部公告(高中個申) */
+	public function per_page_all_sen(){
+		$login = new Logindate();
+		$model = new Persen_post_page();
 		$norsenior = new Norsenior();
 		$norcollege = new Norcollege();
 
@@ -557,14 +876,60 @@ class PostController extends BaseController
 			'page_num' => $page_num,
 		];
 
-		return view('show/show_front_per', $data);
+		return view('show/show_front_persen', $data);
 	}
 
-	/*顯示前台個申公告的文章*/
-	public function show_front_per()
+	/* 前台全部公告(大學個申) */
+	public function per_page_all_col(){
+		$login = new Logindate();
+		$model = new Percol_post_page();
+		$norsenior = new Norsenior();
+		$norcollege = new Norcollege();
+
+		$data = [
+			'per_post_page' => $model->orderBy('start', 'desc')->findAll()
+		];
+
+		$i = 0;
+		$j = 0;
+
+		while(isset($data['per_post_page'][$j])){
+			if(strtotime($data['per_post_page'][$j]['start'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($data['per_post_page'][$j]['end'])){
+				$i++;
+			}
+			$j++;
+		}
+
+		if($i <= 10){
+			$page_num = 1;
+		}
+		else{
+			$page_num = (int)($i / 10) + 1;
+			if($i % 10 == 0){
+				$page_num--;
+			}
+		}
+		
+		$_SESSION['head'] = 0;
+		$_SESSION['tail'] = $i;
+
+		$data = 
+		[
+			'norcollege' => $norcollege->findAll(),
+			'norsenior' => $norsenior->findAll(),
+			'logindate'=> $login->findAll(),
+			'per_post_page' => $model->orderBy('start', 'desc')->findAll(),
+			'page_num' => $page_num,
+		];
+
+		return view('show/show_front_percol', $data);
+	}
+
+	/*顯示前台高中個申公告的文章*/
+	public function show_front_persen()
 	{
 		$login = new Logindate();
-		$model = new Per_post_page();
+		$model = new Persen_post_page();
 		$norsenior = new Norsenior();
 		$norcollege = new Norcollege();
 
@@ -606,13 +971,62 @@ class PostController extends BaseController
 			'page_num' => $page_num,
 		];
 
-		return view('show/show_front_per', $data);
+		return view('show/show_front_persen', $data);
 	}
 
-	/* 前台公告類型(個申) */
-	public function per_page_type($type){
+	/*顯示前台大學個申公告的文章*/
+	public function show_front_percol()
+	{
 		$login = new Logindate();
-		$model = new Per_post_page();
+		$model = new Percol_post_page();
+		$norsenior = new Norsenior();
+		$norcollege = new Norcollege();
+
+		$_SESSION['login_type'] = 'per';
+
+		$data = [
+			'per_post_page' => $model->orderBy('start', 'desc')->findAll()
+		];
+
+		$i = 0;
+		$j = 0;
+
+		while(isset($data['per_post_page'][$j])){
+			if(strtotime($data['per_post_page'][$j]['start'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($data['per_post_page'][$j]['end'])){
+				$i++;
+			}
+			$j++;
+		}
+
+		if($i <= 10){
+			$page_num = 1;
+		}
+		else{
+			$page_num = (int)($i / 10) + 1;
+			if($i % 10 == 0){
+				$page_num--;
+			}
+		}
+
+		$_SESSION['head'] = 0;
+		$_SESSION['tail'] = 9;
+
+		$data = 
+		[
+			'norcollege' => $norcollege->findAll(),
+			'norsenior' => $norsenior->findAll(),
+			'logindate'=> $login->findAll(),
+			'per_post_page' => $model->orderBy('start', 'desc')->findAll(),
+			'page_num' => $page_num,
+		];
+
+		return view('show/show_front_percol', $data);
+	}
+
+	/* 前台公告類型(高中個申) */
+	public function per_page_type_sen($type){
+		$login = new Logindate();
+		$model = new Persen_post_page();
 		$norsenior = new Norsenior();
 		$norcollege = new Norcollege();
 
@@ -652,11 +1066,57 @@ class PostController extends BaseController
 			'post_type' => $type
 		];
 
-		return view('show/show_front_per', $data);
+		return view('show/show_front_persen', $data);
 	}
 
-	/*後台點選進入文章內容(繁星)*/
-	public function show_content_back_star($star_post_page_id)
+	/* 前台公告類型(大學個申) */
+	public function per_page_type_col($type){
+		$login = new Logindate();
+		$model = new Percol_post_page();
+		$norsenior = new Norsenior();
+		$norcollege = new Norcollege();
+
+		$data = [
+			'per_post_page' => $model->orderBy('start', 'desc')->findAll()
+		];
+
+		$i = 0;
+		$j = 0;
+
+		while(isset($data['per_post_page'][$j])){
+			if(strtotime($data['per_post_page'][$j]['start'])<strtotime(date("Y-m-d H:i:s")) && strtotime(date("Y-m-d H:i:s"))<strtotime($data['per_post_page'][$j]['end'])){
+				$i++;
+			}
+			$j++;
+		}
+
+		if($i <= 10){
+			$page_num = 1;
+		}
+		else{
+			$page_num = (int)($i / 10) + 1;
+			if($i % 10 == 0){
+				$page_num--;
+			}
+		}
+		
+		$_SESSION['head'] = 0;
+		$_SESSION['tail'] = $i;
+
+		$data = 
+		[
+			'norcollege' => $norcollege->findAll(),
+			'norsenior' => $norsenior->findAll(),
+			'logindate'=> $login->findAll(),
+			'per_post_page' => $model->orderBy('start', 'desc')->findAll(),
+			'post_type' => $type
+		];
+
+		return view('show/show_front_percol', $data);
+	}
+
+	/*後台點選進入文章內容(高中繁星)*/
+	public function show_content_back_starsen($starsen_post_page_id)
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
 			echo '<script>alert("請先登入！")</script>';
@@ -664,18 +1124,18 @@ class PostController extends BaseController
 		}
 
 		$login = new Logindate();
-		$model = new Star_post_page();
+		$model = new Starsen_post_page();
 		$data = 
 		[
 			'logindate'=> $login->findAll(),
-			'star_post_page' => $model->find($star_post_page_id)
+			'star_post_page' => $model->find($starsen_post_page_id)
 		];
-		$_SESSION['id'] = $star_post_page_id;
-		return view('show/show_content_back_star', $data);
+		$_SESSION['id'] = $starsen_post_page_id;
+		return view('show/show_content_back_starsen', $data);
 	}
 
-	/*後台點選進入文章內容(個申)*/
-	public function show_content_back_per($per_post_page_id)
+	/*後台點選進入文章內容(大學繁星)*/
+	public function show_content_back_starcol($starcol_post_page_id)
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
 			echo '<script>alert("請先登入！")</script>';
@@ -683,21 +1143,59 @@ class PostController extends BaseController
 		}
 
 		$login = new Logindate();
-		$model = new Per_post_page();
+		$model = new Starcol_post_page();
+		$data = 
+		[
+			'logindate'=> $login->findAll(),
+			'star_post_page' => $model->find($starcol_post_page_id)
+		];
+		$_SESSION['id'] = $starcol_post_page_id;
+		return view('show/show_content_back_starcol', $data);
+	}
+
+	/*後台點選進入文章內容(高中個申)*/
+	public function show_content_back_persen($persen_post_page_id)
+	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('login/user_login');
+		}
+
+		$login = new Logindate();
+		$model = new Persen_post_page();
+		$data = 
+		[
+			'logindate'=> $login->findAll(),
+			'per_post_page' => $model->find($persen_post_page_id)
+		];
+		$_SESSION['id'] = $persen_post_page_id;
+		return view('show/show_content_back_persen', $data);
+	}
+
+	/*後台點選進入文章內容(大學個申)*/
+	public function show_content_back_percol($percol_post_page_id)
+	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('login/user_login');
+		}
+
+		$login = new Logindate();
+		$model = new Percol_post_page();
 		$data = 
 		[
 			'logindate'=> $login->findAll(),
 			'per_post_page' => $model->find($per_post_page_id)
 		];
-		$_SESSION['id'] = $per_post_page_id;
-		return view('show/show_content_back_per', $data);
+		$_SESSION['id'] = $percol_post_page_id;
+		return view('show/show_content_back_percol', $data);
 	}
 
-	/*前台點選進入文章內容(繁星)*/
-	public function show_content_front_star($star_post_page_id)
+	/*前台點選進入文章內容(高中繁星)*/
+	public function show_content_front_starsen($starsen_post_page_id)
 	{
 		$login = new Logindate();
-		$model = new Star_post_page();
+		$model = new Starsen_post_page();
 		$starsenior = new Starsenior();
 		$starcollege = new Starcollege();
 
@@ -706,16 +1204,34 @@ class PostController extends BaseController
 			'starsenior' => $starsenior->findAll(),
 			'starcollege' => $starcollege->findAll(),
 			'logindate'=> $login->findAll(),
-			'star_post_page' => $model->find($star_post_page_id)
+			'star_post_page' => $model->find($starsen_post_page_id)
 		];
-		return view('show/show_content_front_star', $data);
+		return view('show/show_content_front_starsen', $data);
 	}
 
-	/*前台點選進入文章內容(個申)*/
-	public function show_content_front_per($per_post_page_id)
+	/*前台點選進入文章內容(大學繁星)*/
+	public function show_content_front_starcol($starcol_post_page_id)
 	{
 		$login = new Logindate();
-		$model = new Per_post_page();
+		$model = new Starcol_post_page();
+		$starsenior = new Starsenior();
+		$starcollege = new Starcollege();
+
+		$data = 
+		[
+			'starsenior' => $starsenior->findAll(),
+			'starcollege' => $starcollege->findAll(),
+			'logindate'=> $login->findAll(),
+			'star_post_page' => $model->find($starcol_post_page_id)
+		];
+		return view('show/show_content_front_starcol', $data);
+	}
+
+	/*前台點選進入文章內容(高中個申)*/
+	public function show_content_front_persen($persen_post_page_id)
+	{
+		$login = new Logindate();
+		$model = new Persen_post_page();
 		$norsenior = new Norsenior();
 		$norcollege = new Norcollege();
 
@@ -724,9 +1240,27 @@ class PostController extends BaseController
 			'norsenior' => $norsenior->findAll(),
 			'norcollege' => $norcollege->findAll(),
 			'logindate'=> $login->findAll(),
-			'per_post_page' => $model->find($per_post_page_id)
+			'per_post_page' => $model->find($persen_post_page_id)
 		];
-		return view('show/show_content_front_per', $data);
+		return view('show/show_content_front_persen', $data);
+	}
+
+	/*前台點選進入文章內容(大學個申)*/
+	public function show_content_front_percol($percol_post_page_id)
+	{
+		$login = new Logindate();
+		$model = new Percol_post_page();
+		$norsenior = new Norsenior();
+		$norcollege = new Norcollege();
+
+		$data = 
+		[
+			'norsenior' => $norsenior->findAll(),
+			'norcollege' => $norcollege->findAll(),
+			'logindate'=> $login->findAll(),
+			'per_post_page' => $model->find($percol_post_page_id)
+		];
+		return view('show/show_content_front_percol', $data);
 	}
 
 	/*顯示pdf*/
@@ -736,8 +1270,8 @@ class PostController extends BaseController
 		readfile("upload/".$file_name);
 	}
 
-	/*儲存文章頁面(繁星)*/
-	public function store_star()
+	/*儲存文章頁面(高中繁星)*/
+	public function store_starsen()
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
 			echo '<script>alert("請先登入！")</script>';
@@ -773,7 +1307,7 @@ class PostController extends BaseController
 			$ServerFilename = date("YmdHis").".".$File_Extension;
 			move_uploaded_file($_FILES['myfile']['tmp_name'], $DestDIR.'/'.$ServerFilename);
 
-			$model = new Star_post_page();
+			$model = new Starsen_post_page();
 			$model->save([
 				'title' => $data['title'],
 				'subtitle' => $data['subtitle'],
@@ -787,7 +1321,7 @@ class PostController extends BaseController
 			return redirect('PostController/show_back');
 		}
 
-		$model = new Star_post_page();
+		$model = new Starsen_post_page();
 		$model->save([
 			'title' => $data['title'],
 			'subtitle' => $data['subtitle'],
@@ -799,8 +1333,71 @@ class PostController extends BaseController
 		return redirect('PostController/show_back');
 	}
 
-	/*儲存文章頁面(個人)*/
-	public function store_per()
+	/*儲存文章頁面(大學繁星)*/
+	public function store_starcol()
+	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('login/user_login');
+		}
+
+		$data=
+		[
+			'title' => $this->request->getVar('title'),
+			'subtitle' => $this->request->getVar('subtitle'),
+			'subtitle2' => $this->request->getVar('subtitle2'),
+			'content' => $this->request->getVar('content'),
+			'start' => $this->request->getVar('start'),
+			'end' => $this->request->getVar('end')
+		];
+	
+		if($_FILES['myfile']['error'] > 0 ) {
+			switch ($_FILES['myfile']['error'] ) {
+			case 1:die("檔案大小超出 php.ini:upload_max_filesize 限制 ");
+			case 2:die("檔案大小超出 MAX_FILE_SIZE 限制");
+			case 3:die("檔案大小僅被部份上傳");
+			}
+		}
+
+		if(is_uploaded_file($_FILES['myfile']['tmp_name'])){	
+			$DestDIR = "upload";
+			if(!is_dir($DestDIR) || !is_writable($DestDIR)){
+				die("目錄不存在或無法存取檔案");
+			}
+
+			$File_Extension = explode(".", $_FILES['myfile']['name']);
+			$File_Extension = $File_Extension[count($File_Extension)-1];
+			$ServerFilename = date("YmdHis").".".$File_Extension;
+			move_uploaded_file($_FILES['myfile']['tmp_name'], $DestDIR.'/'.$ServerFilename);
+
+			$model = new Starcol_post_page();
+			$model->save([
+				'title' => $data['title'],
+				'subtitle' => $data['subtitle'],
+				'subtitle2' => $data['subtitle2'],
+				'content' => $data['content'],
+				'start' => $data['start'],
+				'end' => $data['end'],
+				'file' => $ServerFilename,
+				'file_name' => $_FILES['myfile']['name']
+			]);
+			return redirect('PostController/show_back');
+		}
+
+		$model = new Starcol_post_page();
+		$model->save([
+			'title' => $data['title'],
+			'subtitle' => $data['subtitle'],
+			'subtitle2' => $data['subtitle2'],
+			'content' => $data['content'],
+			'start' => $data['start'],
+			'end' => $data['end']
+		]);
+		return redirect('PostController/show_back');
+	}
+
+	/*儲存文章頁面(高中個人)*/
+	public function store_persen()
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
 			echo '<script>alert("請先登入！")</script>';
@@ -836,7 +1433,7 @@ class PostController extends BaseController
 			$ServerFilename = date("YmdHis").".".$File_Extension;
 			move_uploaded_file($_FILES['myfile']['tmp_name'], $DestDIR.'/'.$ServerFilename);
 
-			$model = new Per_post_page();
+			$model = new Persen_post_page();
 			$model->save([
 				'title' => $data['title'],
 				'subtitle' => $data['subtitle'],
@@ -850,7 +1447,70 @@ class PostController extends BaseController
 			return redirect('PostController/show_back');
 		}	
 
-		$model = new Per_post_page();
+		$model = new Persen_post_page();
+		$model->save([
+			'title' => $data['title'],
+			'subtitle' => $data['subtitle'],
+			'subtitle2' => $data['subtitle2'],
+			'content' => $data['content'],
+			'start' => $data['start'],
+			'end' => $data['end']
+		]);
+		return redirect('PostController/show_back');
+	}
+
+	/*儲存文章頁面(大學個人)*/
+	public function store_percol()
+	{
+		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
+			echo '<script>alert("請先登入！")</script>';
+			return view('login/user_login');
+		}
+
+		$data=
+			[
+				'title' => $this->request->getVar('title'),
+				'subtitle' => $this->request->getVar('subtitle'),
+				'subtitle2' => $this->request->getVar('subtitle2'),
+				'content' => $this->request->getVar('content'),
+				'start' => $this->request->getVar('start'),
+				'end' => $this->request->getVar('end')
+			];
+
+		if($_FILES['myfile']['error'] > 0 ) {
+			switch ($_FILES['myfile']['error'] ) {
+			case 1:die("檔案大小超出 php.ini:upload_max_filesize 限制 ");
+			case 2:die("檔案大小超出 MAX_FILE_SIZE 限制");
+			case 3:die("檔案大小僅被部份上傳");
+			}
+		}
+
+		if(is_uploaded_file($_FILES['myfile']['tmp_name'])){	
+			$DestDIR = "upload";
+			if(!is_dir($DestDIR) || !is_writable($DestDIR)){
+				die("目錄不存在或無法存取檔案");
+			}
+
+			$File_Extension = explode(".", $_FILES['myfile']['name']);
+			$File_Extension = $File_Extension[count($File_Extension)-1];
+			$ServerFilename = date("YmdHis").".".$File_Extension;
+			move_uploaded_file($_FILES['myfile']['tmp_name'], $DestDIR.'/'.$ServerFilename);
+
+			$model = new Percol_post_page();
+			$model->save([
+				'title' => $data['title'],
+				'subtitle' => $data['subtitle'],
+				'subtitle2' => $data['subtitle2'],
+				'content' => $data['content'],
+				'start' => $data['start'],
+				'end' => $data['end'],
+				'file' => $ServerFilename,
+				'file_name' => $_FILES['myfile']['name']
+			]);
+			return redirect('PostController/show_back');
+		}	
+
+		$model = new Percol_post_page();
 		$model->save([
 			'title' => $data['title'],
 			'subtitle' => $data['subtitle'],

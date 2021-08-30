@@ -4,10 +4,10 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class Per_post_page extends Model
+class Starcol_post_page extends Model
 {
 	protected $DBGroup              = 'default';
-	protected $table                = 'per_post_page';
+	protected $table                = 'starcol_post_page';
 	protected $primaryKey           = 'id';
 	protected $useAutoIncrement     = true;
 	protected $insertID             = 0;

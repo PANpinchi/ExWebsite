@@ -342,7 +342,7 @@ class starController extends BaseController
 		return view('show/star_abandon',$data);
 	}
 
-	/*創建新的貼文(繁星)*/
+	/*高中(繁星)創建新的貼文*/
 	public function create_star()
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
@@ -352,7 +352,7 @@ class starController extends BaseController
 		return view('posts/create_star');
 	}
 
-	/*修改貼文(繁星)*/
+	/*高中(繁星)修改貼文*/
 	public function modify_star()
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
@@ -360,7 +360,7 @@ class starController extends BaseController
 			return view('login/user_login');
 		}
 
-		$model = new Star_post_page();
+		$model = new Starsen_post_page();
 
 		$data = [
 			'post' => $model->find($_SESSION['id'])
@@ -369,7 +369,7 @@ class starController extends BaseController
 		return view('posts/modify_star', $data);
 	}
 
-	/*儲存文章頁面(繁星)*/
+	/*高中(繁星)儲存文章頁面*/
 	public function store_star()
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
@@ -420,7 +420,7 @@ class starController extends BaseController
 			return redirect('viewController/show_back');
 		}
 
-		$model = new Star_post_page();
+		$model = new Starsen_post_page();
 		$model->save([
 			'title' => $data['title'],
 			'subtitle' => $data['subtitle'],
@@ -432,7 +432,7 @@ class starController extends BaseController
 		return redirect('viewController/show_back');
 	}
 
-	/*修改後儲存文章頁面(繁星)*/
+	/*高中(繁星)修改後儲存文章頁面*/
 	public function restore_star()
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
@@ -484,7 +484,7 @@ class starController extends BaseController
 			return redirect('viewController/show_back');
 		}	
 
-		$model = new Star_post_page();
+		$model = new Starsen_post_page();
 
 		$post = $model->find($_SESSION['id']);
 
@@ -507,7 +507,7 @@ class starController extends BaseController
 		return redirect('viewController/show_back');
 	}
 
-	/*刪除資料(繁星)*/
+	/*高中(繁星)刪除資料*/
 	public function delete_star()
 	{
 		if(!isset($_SESSION['user_login']) || $_SESSION['user_login'] != true){
@@ -515,7 +515,7 @@ class starController extends BaseController
 			return view('login/user_login');
 		}
 
-		$model = new Star_post_page();
+		$model = new Starsen_post_page();
 
 		$post = $model->find($_SESSION['id']);
 
