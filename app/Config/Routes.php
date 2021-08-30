@@ -33,14 +33,14 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
-$routes->get('/PostController/norcollegeview','PostController::norcollegeview');
-$routes->get('/PostController/starcollegeview','PostController::starcollegeview');
-$routes->get('/PostController/norseniorview','PostController::norseniorview');
-$routes->get('/PostController/starseniorview','PostController::starseniorview');
-$routes->get('/PostController/show_back', 'PostController::show_back');
-$routes->get('/PostController/show_front_star', 'PostController::show_front_star');
-$routes->get('/PostController/show_front_per', 'PostController::show_front_per');
-$routes->get('PostController/logindateview','PostController::logindateview');
+$routes->get('/applyController/norcollegeview','applyController::norcollegeview');
+$routes->get('/applyController/starcollegeview','applyController::starcollegeview');
+$routes->get('/applyController/norseniorview','applyController::norseniorview');
+$routes->get('/applyController/starseniorview','applyController::starseniorview');
+$routes->get('/viewController/show_back', 'viewController::show_back');
+$routes->get('/viewController/show_front_star', 'viewController::show_front_star');
+$routes->get('/viewController/show_front_per', 'viewController::show_front_per');
+$routes->get('/loginController/logindateview','loginController::logindateview');
 
 /*
  * --------------------------------------------------------------------
