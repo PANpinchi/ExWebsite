@@ -41,56 +41,47 @@
         </tr>
         <tr>
             <td>
-                <table style="table table-hover" align="center">
-                    <br>
+                <table class="table table-hover" align="center" style="width:700px;">
                     <tr>
-                        <td style="width:690px;" onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor=''">
+                        <td style="width:690px;">
                             <a href="https://www.edu.tw">教育部</a>
                         </td>
                     </tr>
-                    <tr><td align="right" height="2"></td></tr>
                     <tr>
-                        <td style="width:690px;" onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor=''">
+                        <td style="width:690px;">
                             <a href="https://depart.moe.edu.tw/ED2200/">教育部高教司</a>
                         </td>
                     </tr>
-                    <tr><td align="right" height="2"></td></tr>
                     <tr>
-                        <td style="width:690px;" onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor=''">
+                        <td style="width:690px;">
                             <a href="https://www.ccu.edu.tw">國立中正大學</a>
                         </td>
                     </tr>
-                    <tr><td align="right" height="2"></td></tr>
                     <tr>
-                        <td style="width:690px;" onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor=''">
+                        <td style="width:690px;">
                             <a href="https://collego.edu.tw/">ColleGo!大學選才與高中育才輔助系統</a>
                         </td>
                     </tr>
-                    <tr><td align="right" height="2"></td></tr>
                     <tr>
-                        <td style="width:690px;" onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor=''">
+                        <td style="width:690px;">
                             <a href="http://nsdua.moe.edu.tw/">大學多元入學升學網</a>
                         </td>
                     </tr>
-                    <tr><td align="right" height="2"></td></tr>
                     <tr>
-                        <td style="width:690px;" onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor=''">
+                        <td style="width:690px;">
                             <a href="https://www.testnews.com.tw/shibao/">大學網路博覽會</a>
                         </td>
                     </tr>
-                    <tr><td align="right" height="2"></td></tr>
                     <tr>
-                        <td style="width:690px;" onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor=''">
+                        <td style="width:690px;">
                             <a href="https://techexpo.moe.edu.tw/search/">技訊網</a>
                         </td>
                     </tr>
-                    <tr><td align="right" height="2"></td></tr>
                     <tr>
-                        <td style="width:690px;" onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor=''">
+                        <td style="width:690px;">
                             <a href="https://apcs.csie.ntnu.edu.tw/">大學程式設計先修檢測(APCS)</a>
                         </td>
                     </tr>
-                    <tr><td align="right" height="2"></td></tr>
                 </table>
             </td>
         </tr>
