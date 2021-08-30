@@ -19,6 +19,424 @@ use App\Models\Per_post_page;
 
 class applyController extends BaseController
 {
+	/*校細分則查詢*/ 
+	public function query()
+	{
+		$login = new Logindate();;
+		$norsenior = new Norsenior();
+		$norcollege = new Norcollege();
+
+		$data = 
+		[
+			'norcollege' => $norcollege->findAll(),
+			'norsenior' => $norsenior->findAll(),
+			'logindate'=> $login->findAll(),
+		];
+
+		return view('apply_content/query',$data);
+	}
+
+	/*網路購買簡章*/ 
+	public function online()
+	{
+		$login = new Logindate();;
+		$norsenior = new Norsenior();
+		$norcollege = new Norcollege();
+
+		$data = 
+		[
+			'norcollege' => $norcollege->findAll(),
+			'norsenior' => $norsenior->findAll(),
+			'logindate'=> $login->findAll(),
+		];
+
+		return view('apply_content/online',$data);
+	}
+
+	/*網路報名系統*/ 
+	public function apply()
+	{
+		$login = new Logindate();;
+		$norsenior = new Norsenior();
+		$norcollege = new Norcollege();
+
+		$data = 
+		[
+			'norcollege' => $norcollege->findAll(),
+			'norsenior' => $norsenior->findAll(),
+			'logindate'=> $login->findAll(),
+		];
+
+		return view('apply_content/apply',$data);
+	}
+	/* 聽障生免英聽檢定*/
+	public function	freetelc()
+	{
+		$login = new Logindate();;
+		$norsenior = new Norsenior();
+		$norcollege = new Norcollege();
+
+		$data = 
+		[
+			'norcollege' => $norcollege->findAll(),
+			'norsenior' => $norsenior->findAll(),
+			'logindate'=> $login->findAll(),
+		];
+
+		return view('apply_content/freetelc',$data);
+	}
+
+	/*篩選結果查詢*/
+	public function	result()
+	{
+		$login = new Logindate();;
+		$norsenior = new Norsenior();
+		$norcollege = new Norcollege();
+
+		$data = 
+		[
+			'norcollege' => $norcollege->findAll(),
+			'norsenior' => $norsenior->findAll(),
+			'logindate'=> $login->findAll(),
+		];
+
+		return view('apply_content/result',$data);
+	}
+
+	/*審查資料上傳*/
+	public function	dataupload()
+	{
+		$login = new Logindate();;
+		$norsenior = new Norsenior();
+		$norcollege = new Norcollege();
+
+		$data = 
+		[
+			'norcollege' => $norcollege->findAll(),
+			'norsenior' => $norsenior->findAll(),
+			'logindate'=> $login->findAll(),
+		];
+
+		return view('apply_content/dataupload',$data);
+	}
+
+	/*各校榜單連結*/
+	public function	list()
+	{
+		$login = new Logindate();;
+		$norsenior = new Norsenior();
+		$norcollege = new Norcollege();
+
+		$data = 
+		[
+			'norcollege' => $norcollege->findAll(),
+			'norsenior' => $norsenior->findAll(),
+			'logindate'=> $login->findAll(),
+		];
+
+		return view('apply_content/list',$data);
+	}
+
+	/*網路登記志願*/
+	public function	rank()
+	{
+		$login = new Logindate();;
+		$norsenior = new Norsenior();
+		$norcollege = new Norcollege();
+
+		$data = 
+		[
+			'norcollege' => $norcollege->findAll(),
+			'norsenior' => $norsenior->findAll(),
+			'logindate'=> $login->findAll(),
+		];
+
+		return view('apply_content/rank',$data);
+	}
+
+	/*分發結果查詢*/
+	public function	dispense()
+	{
+		$login = new Logindate();;
+		$norsenior = new Norsenior();
+		$norcollege = new Norcollege();
+
+		$data = 
+		[
+			'norcollege' => $norcollege->findAll(),
+			'norsenior' => $norsenior->findAll(),
+			'logindate'=> $login->findAll(),
+		];
+
+		return view('apply_content/dispense',$data);
+	}
+
+	/*網路聲明放棄*/
+	public function	abandon()
+	{
+		$login = new Logindate();;
+		$norsenior = new Norsenior();
+		$norcollege = new Norcollege();
+
+		$data = 
+		[
+			'norcollege' => $norcollege->findAll(),
+			'norsenior' => $norsenior->findAll(),
+			'logindate'=> $login->findAll(),
+		];
+
+		return view('apply_content/abandon',$data);
+	}
+
+	/*法令規章*/
+	public function	regulation()
+	{
+		$login = new Logindate();;
+		$norsenior = new Norsenior();
+		$norcollege = new Norcollege();
+
+		$data = 
+		[
+			'norcollege' => $norcollege->findAll(),
+			'norsenior' => $norsenior->findAll(),
+			'logindate'=> $login->findAll(),
+		];
+
+		return view('apply_content/regulation',$data);
+	}
+
+	/*重要時程*/
+	public function	schedule()
+	{
+		$login = new Logindate();;
+		$norsenior = new Norsenior();
+		$norcollege = new Norcollege();
+
+		$data = 
+		[
+			'norcollege' => $norcollege->findAll(),
+			'norsenior' => $norsenior->findAll(),
+			'logindate'=> $login->findAll(),
+		];
+
+		return view('apply_content/schedule',$data);
+	}
+
+	/*扶弱措施*/
+	public function	help_vulnerable()
+	{
+		$login = new Logindate();;
+		$norsenior = new Norsenior();
+		$norcollege = new Norcollege();
+
+		$data = 
+		[
+			'norcollege' => $norcollege->findAll(),
+			'norsenior' => $norsenior->findAll(),
+			'logindate'=> $login->findAll(),
+		];
+
+		return view('apply_content/help_vulnerable',$data);
+	}
+
+	/*統計資料*/
+	public function	statis()
+	{
+		$login = new Logindate();;
+		$norsenior = new Norsenior();
+		$norcollege = new Norcollege();
+
+		$data = 
+		[
+			'norcollege' => $norcollege->findAll(),
+			'norsenior' => $norsenior->findAll(),
+			'logindate'=> $login->findAll(),
+		];
+
+		return view('apply_content/statis',$data);
+	}
+
+	/*歷年資料*/
+	public function	history()
+	{
+		$login = new Logindate();;
+		$norsenior = new Norsenior();
+		$norcollege = new Norcollege();
+
+		$data = 
+		[
+			'norcollege' => $norcollege->findAll(),
+			'norsenior' => $norsenior->findAll(),
+			'logindate'=> $login->findAll(),
+		];
+
+		return view('apply_content/history',$data);
+	}
+
+	/*歷年資料*/
+	public function	purchase()
+	{
+		$login = new Logindate();;
+		$norsenior = new Norsenior();
+		$norcollege = new Norcollege();
+
+		$data = 
+		[
+			'norcollege' => $norcollege->findAll(),
+			'norsenior' => $norsenior->findAll(),
+			'logindate'=> $login->findAll(),
+		];
+
+		return view('apply_content/purchase',$data);
+	}
+
+	/*簡章公告*/
+	public function	appform1()
+	{
+		$login = new Logindate();;
+		$norsenior = new Norsenior();
+		$norcollege = new Norcollege();
+
+		$data = 
+		[
+			'norcollege' => $norcollege->findAll(),
+			'norsenior' => $norsenior->findAll(),
+			'logindate'=> $login->findAll(),
+		];
+
+		return view('apply_content/appform1',$data);
+	}
+
+	public function	appform2()
+	{
+		$login = new Logindate();;
+		$norsenior = new Norsenior();
+		$norcollege = new Norcollege();
+
+		$data = 
+		[
+			'norcollege' => $norcollege->findAll(),
+			'norsenior' => $norsenior->findAll(),
+			'logindate'=> $login->findAll(),
+		];
+
+		return view('apply_content/appform2',$data);
+	}
+	
+	public function	appform3()
+	{
+		$login = new Logindate();;
+		$norsenior = new Norsenior();
+		$norcollege = new Norcollege();
+
+		$data = 
+		[
+			'norcollege' => $norcollege->findAll(),
+			'norsenior' => $norsenior->findAll(),
+			'logindate'=> $login->findAll(),
+		];
+
+		return view('apply_content/appform3',$data);
+	}
+
+	public function	appform4()
+	{
+		$login = new Logindate();;
+		$norsenior = new Norsenior();
+		$norcollege = new Norcollege();
+
+		$data = 
+		[
+			'norcollege' => $norcollege->findAll(),
+			'norsenior' => $norsenior->findAll(),
+			'logindate'=> $login->findAll(),
+		];
+
+		return view('apply_content/appform4',$data);
+	}
+
+	/*下載*/
+	public function	download1()
+	{
+		$login = new Logindate();;
+		$norsenior = new Norsenior();
+		$norcollege = new Norcollege();
+
+		$data = 
+		[
+			'norcollege' => $norcollege->findAll(),
+			'norsenior' => $norsenior->findAll(),
+			'logindate'=> $login->findAll(),
+		];
+
+		return view('apply_content/download1',$data);
+	}
+
+	public function	download2()
+	{
+		$login = new Logindate();;
+		$norsenior = new Norsenior();
+		$norcollege = new Norcollege();
+
+		$data = 
+		[
+			'norcollege' => $norcollege->findAll(),
+			'norsenior' => $norsenior->findAll(),
+			'logindate'=> $login->findAll(),
+		];
+
+		return view('apply_content/download2',$data);
+	}
+
+	/*相關網站*/
+	public function	site1()
+	{
+		$login = new Logindate();;
+		$norsenior = new Norsenior();
+		$norcollege = new Norcollege();
+
+		$data = 
+		[
+			'norcollege' => $norcollege->findAll(),
+			'norsenior' => $norsenior->findAll(),
+			'logindate'=> $login->findAll(),
+		];
+
+		return view('apply_content/site1',$data);
+	}
+
+	public function	site2()
+	{
+		$login = new Logindate();;
+		$norsenior = new Norsenior();
+		$norcollege = new Norcollege();
+
+		$data = 
+		[
+			'norcollege' => $norcollege->findAll(),
+			'norsenior' => $norsenior->findAll(),
+			'logindate'=> $login->findAll(),
+		];
+
+		return view('apply_content/site2',$data);
+	}
+	
+	public function	site3()
+	{
+		$login = new Logindate();;
+		$norsenior = new Norsenior();
+		$norcollege = new Norcollege();
+
+		$data = 
+		[
+			'norcollege' => $norcollege->findAll(),
+			'norsenior' => $norsenior->findAll(),
+			'logindate'=> $login->findAll(),
+		];
+
+		return view('apply_content/site3',$data);
+	}
+	
 	/*創建新的貼文入口頁面*/
 	public function create_new()
 	{

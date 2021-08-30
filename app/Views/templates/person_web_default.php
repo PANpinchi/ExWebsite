@@ -97,34 +97,34 @@
                                             <tr>
                                                 <td><img src="/person_img/upbar_left.jpg"></td>
                                                 <td>
-                                                    <div id = "u1"><a href="#"> </a></div>
+                                                    <div id = "u1"><a href="/applyController/query"> </a></div>
                                                 </td>
                                                 <td>
-                                                    <div id = "u2"><a href="#"> </a></div>
+                                                    <div id = "u2"><a href="/applyController/online"> </a></div>
                                                 </td>
                                                 <td>
-                                                    <div id = "u3"><a href="#"> </a></div>
+                                                    <div id = "u3"><a href="/applyController/apply"> </a></div>
                                                 </td>
                                                 <td>
-                                                    <div id = "u4"><a href="#"> </a></div>
+                                                    <div id = "u4"><a href="/applyController/freetelc"> </a></div>
                                                 </td>
                                                 <td>
-                                                    <div id = "u5"><a href="#"> </a></div>
+                                                    <div id = "u5"><a href="/applyController/result"> </a></div>
                                                 </td>
                                                 <td>
-                                                    <div id = "u6"><a href="#"> </a></div>
+                                                    <div id = "u6"><a href="/applyController/dataupload"> </a></div>
                                                 </td>
                                                 <td>
-                                                    <div id = "u7"><a href="#"> </a></div>
+                                                    <div id = "u7"><a href="/applyController/list"> </a></div>
                                                 </td>
                                                 <td>
-                                                    <div id = "u8"><a href="#"> </a></div>
+                                                    <div id = "u8"><a href="/applyController/rank"> </a></div>
                                                 </td>
                                                 <td>
-                                                    <div id = "u9"><a href="#"> </a></div>
+                                                    <div id = "u9"><a href="/applyController/dispense"> </a></div>
                                                 </td>
                                                 <td>
-                                                    <div id = "u10"><a href="#"> </a></div>
+                                                    <div id = "u10"><a href="/applyController/abandon"> </a></div>
                                                 </td>
                                                 <td><img src="/person_img/upbar_right.jpg"></td>
                                             </tr>
@@ -212,64 +212,103 @@
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <div id = "m2"><a href="#"> </a></div>
+                                                    <div id = "m2"><a href="/applyController/regulation"> </a></div>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <div id = "m3"><a href="#"> </a></div>
+                                                    <div id = "m3"><a href="/applyController/schedule"> </a></div>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>
                                                     <div id = "m4">
-                                                        <a href="#" style="text-decoration:none;"> 
-                                                            <table class="layer" style="text-decoration:none;">
-                                                                <tbody>
-                                                                    <tr class="touch"><td style="width: 140px;">發售辦法</td></tr>
-                                                                    <tr class="touch"><td style="width: 140px;">網路購買簡章</td></tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </a>
+                                                        <a style="text-decoration:none;"> 
+                                                                <table class="layer" style="text-decoration:none;">
+                                                                    <tbody>
+                                                                        <tr id="m4-1" class="touch">
+                                                                            <td style="width: 140px;">
+                                                                                <a href="/applyController/purchase" style="text-decoration:none;">發售辦法</a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr id="m4-1" class="touch">
+                                                                            <td style="width: 140px;">
+                                                                                <a href="/applyController/online" style="text-decoration:none;">網路購買簡章</a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </a>
                                                     </div>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>
                                                     <div id = "m5">
-                                                        <a href="#" style="text-decoration:none;"> 
-                                                            <table class="layer" style="text-decoration:none;">
+                                                        <a style="text-decoration:none;"> 
+                                                             <table class="layer" style="text-decoration:none;">
                                                                 <tbody>
-                                                                    <tr class="touch"><td style="width: 140px;">簡章總則</td></tr>
-                                                                    <tr class="touch"><td style="width: 140px;">簡章附錄</td></tr>
-                                                                    <tr class="touch"><td style="width: 140px;">校系分則查詢</td></tr>
-                                                                    <tr class="touch"><td style="width: 140px;">其他事項</td></tr>
-                                                                    <tr class="touch"><td style="width: 140px;">簡章修正事項</td></tr>
-                                                                    <tr class="touch"><td style="width: 140px;">110參採科目簡表</td></tr>
+                                                                    <tr id="m5-1" class="touch">
+                                                                        <td style="width: 140px;">
+                                                                            <a href="/applyController/appform1" style="text-decoration:none;">簡章總則</a>
+                                                                        </td>
+                                                                    </tr>
+                                                                        <tr id="m5-1" class="touch">
+                                                                        <td style="width: 140px;">
+                                                                            <a href="/applyController/appform2" style="text-decoration:none;">簡章附錄</a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr id="m5-1" class="touch">
+                                                                        <td style="width: 140px;">
+                                                                            <a href="/applyController/query" style="text-decoration:none;">校系分則查詢</a>
+                                                                            </td>
+                                                                    </tr>
+                                                                    <tr id="m5-1" class="touch">
+                                                                        <td style="width: 140px;">
+                                                                            <a href="/applyController/appform3" style="text-decoration:none;">其他事項</a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr id="m5-1" class="touch">
+                                                                        <td style="width: 140px;">
+                                                                            <a href="/applyController/appform4" style="text-decoration:none;">簡章修正事項</a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr id="m5-1" class="touch">
+                                                                        <td style="width: 140px;">
+                                                                        <a href="/applyController/query" style="text-decoration:none;">110參採科目簡表</a>
+                                                                            </td>
+                                                                    </tr>
                                                                 </tbody>
-                                                            </table>
-                                                        </a>
+                                                             </table                                                            </a>
                                                     </div>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <div id = "m10"><a href="#"> </a></div>
+                                                    <div id = "m10"><a href="/applyController/help_vulnerable"> </a></div>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <div id = "m6"><a href="#"> </a></div>
+                                                    <div id = "m6"><a href="/applyController/statis"> </a></div>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>
                                                     <div id = "m7">
-                                                        <a href="#" style="text-decoration:none;"> 
+                                                        <a style="text-decoration:none;"> 
                                                             <table class="layer" style="text-decoration:none;">
                                                                 <tbody>
-                                                                    <tr class="touch"><td style="width: 140px;">資料表件下載</td></tr>
-                                                                    <tr class="touch"><td style="width: 140px;">其他事項下載</td></tr>
+                                                                    <tr id="m7-1" class="touch">
+                                                                        <td style="width: 140px;">
+                                                                            <a href="/applyController/download1" style="text-decoration:none;">資料表件下載</a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr id="m7-1" class="touch">
+                                                                        <td style="width: 140px;">
+                                                                            <a href="/applyController/download2" style="text-decoration:none;">其他事項下載</a>
+                                                                        </td>
+                                                                    </tr>
                                                                 </tbody>
                                                             </table>
                                                         </a>
@@ -279,12 +318,24 @@
                                             <tr>
                                                 <td>
                                                     <div id = "m8">
-                                                        <a href="#" style="text-decoration:none;"> 
+                                                        <a style="text-decoration:none;"> 
                                                             <table class="layer" style="text-decoration:none;">
                                                                 <tbody>
-                                                                    <tr class="touch"><td style="width: 140px;">招生單位</td></tr>
-                                                                    <tr class="touch"><td style="width: 140px;">考試單位</td></tr>
-                                                                    <tr class="touch"><td style="width: 140px;">其他網站</td></tr>
+                                                                    <tr id="m8-1" class="touch">
+                                                                        <td style="width: 140px;">
+                                                                            <a href="/applyController/site1" style="text-decoration:none;">招生單位</a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr id="m8-1" class="touch">
+                                                                        <td style="width: 140px;">
+                                                                            <a href="/applyController/site2" style="text-decoration:none;">考試單位</a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr id="m8-1" class="touch">
+                                                                        <td style="width: 140px;">
+                                                                            <a href="/applyController/site3" style="text-decoration:none;">其他網站</a>
+                                                                        </td>
+                                                                    </tr>
                                                                 </tbody>
                                                             </table>
                                                         </a>
@@ -293,7 +344,7 @@
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <div id = "m9"><a href="#"> </a></div>
+                                                    <div id = "m9"><a href="/applyController/history"> </a></div>
                                                 </td>
                                             </tr>
                                             <tr>
