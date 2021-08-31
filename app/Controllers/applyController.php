@@ -436,6 +436,24 @@ class applyController extends BaseController
 
 		return view('apply_content/site3',$data);
 	}
+
+	/*相關網站*/
+	public function	covid19()
+	{
+		$login = new Logindate();;
+		$norsenior = new Norsenior();
+		$norcollege = new Norcollege();
+
+		$data = 
+		[
+			'norcollege' => $norcollege->findAll(),
+			'norsenior' => $norsenior->findAll(),
+			'logindate'=> $login->findAll(),
+		];
+
+		return view('apply_content/covid19',$data);
+	}
+
 	
 	/*創建新的貼文入口頁面*/
 	public function create_new()

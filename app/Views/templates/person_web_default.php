@@ -166,7 +166,7 @@
                                                     </table>
                                                 </td>
                                             </tr>
-                                            <tr><td><img src="/person_img/covid_19_response.jpg"></tr>
+                                            <tr><td><div id = "covid"><a href="/applyController/covid19"> </a></div></tr>
                                             <tr><td><img src="/person_img/main_menu_title.jpg"></tr>
                                             <tr>
                                                 <td>

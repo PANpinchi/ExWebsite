@@ -1,4 +1,4 @@
-<?= $this->extend('templates\high_post_default') ?>
+<?= $this->extend('templates\person_web_default') ?>
 <?= $this->section('content') ?>
 
 <head>
@@ -9,7 +9,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" href="/style/show_front.css">
-    <title>大學甄選入學委員會-網路購買簡章</title>
+    <title>防疫應變專區</title>
 </head>
 
 <body>
@@ -17,15 +17,16 @@
             <td>
                 <table>
                     <tr>
-                        <td colspan="10"><img src="\img\subtitle11.jpg" style="width: 750px"></td>
+                        <td colspan="10"><img src="\person_img\subtitle23.jpg" style="width: 750px"></td>
                     </tr>
                 </table>
             </td>
         </tr>
         <tr>
             <td>
-                <table class="table table-hover" align="center" style="width:700px;">
-                    <tr>
+                <table style="table table-hover" align="center">
+                    <br>
+                    <tr onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor=''">
                         <td style="width:690px;">
                             <font color="#CCCCCC">目前尚無資料</font>
                         </td>
