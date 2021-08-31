@@ -8,28 +8,15 @@
         <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="/style/person_web.css">
-
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+            integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
         <script>
             function hs_open() {
-                var menu = document.getElementById("hs_menu");
-                
-                if(menu.style.display == "block"){
-                    menu.style.display = "none";
-                }
-                else{
-                    menu.style.display = "block";
-                }
+                $("#hs_menu").toggle();
             }
 
             function col_open() {
-                var menu = document.getElementById("col_menu");
-
-                if(menu.style.display == "block"){
-                    menu.style.display = "none";
-                }
-                else{
-                    menu.style.display = "block";
-                }
+                $("#col_menu").toggle();
             }
 
             function on(obj,status){
@@ -349,8 +336,8 @@
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <div id = "hs" onclick=hs_open()></div>
-                                                    <span id="hs_menu" class="hide text">
+                                                    <div id = "hs" onclick= "hs_open()"></div>
+                                                    <span id="hs_menu" class="hide list text">
                                                         <table class="list">
                                                             <tr>
                                                                 <td>

@@ -41,7 +41,7 @@
         </tr>
         <tr>
             <td>
-                <table class="table" align="center" style="width:700px;">
+                <table class="table table-hover" align="center" style="width:700px;">
                     <tr>
                         <td style="width:690px;">
                             <div class="pointer" onclick=toggleMenu(109) onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor=''">
@@ -50,16 +50,14 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>
-                            <span id="menu-109" class="hide">
-                                <table class="table table-hover" align="center">
+                        <td id="menu-109" class="hide">
+                                <table align="center">
                                     <tr>
                                         <td style="width:690px;">
                                             <font color="#CCCCCC">目前尚無資料</font>
                                         </td>
                                     </tr>
                                 </table>
-                            </span>
                         </td>
                     </tr>
                     <tr>
@@ -70,16 +68,14 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>
-                            <span id="menu-108" class="hide">
-                                <table class="table table-hover" style="width:675px;">
-                                    <tr>
-                                        <td style="width:690px;">
-                                            <font color="#CCCCCC">目前尚無資料</font>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </span>
+                        <td id="menu-108" class="hide">
+                            <table style="width:675px;">
+                                <tr>
+                                    <td style="width:690px;">
+                                        <font color="#CCCCCC">目前尚無資料</font>
+                                    </td>
+                                </tr>
+                            </table>
                         </td>
                     </tr>
                     <tr>
@@ -90,16 +86,14 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>
-                            <span id="menu-107" class="hide">
-                                <table class="table table-hover" style="width:675px;">
-                                    <tr>
-                                        <td style="width:690px;">
-                                            <font color="#CCCCCC">目前尚無資料</font>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </span>
+                        <td id="menu-107" class="hide">
+                            <table style="width:675px;">
+                                <tr>
+                                    <td style="width:690px;">
+                                        <font color="#CCCCCC">目前尚無資料</font>
+                                    </td>
+                                </tr>
+                            </table>
                         </td>
                     </tr>
                     <tr>
@@ -110,16 +104,14 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>
-                            <span id="menu-106" class="hide">
-                                <table class="table table-hover" style="width:675px;">
-                                    <tr>
-                                        <td style="width:690px;">
-                                            <font color="#CCCCCC">目前尚無資料</font>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </span>
+                        <td id="menu-106" class="hide">
+                            <table style="width:675px;">
+                                <tr>
+                                    <td style="width:690px;">
+                                        <font color="#CCCCCC">目前尚無資料</font>
+                                    </td>
+                                </tr>
+                            </table>
                         </td>
                     </tr>
                     <tr>
@@ -130,16 +122,14 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>
-                            <span id="menu-105" class="hide">
-                                <table class="table table-hover" style="width:675px;">
-                                    <tr>
-                                        <td style="width:690px;">
-                                            <font color="#CCCCCC">目前尚無資料</font>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </span>
+                        <td id="menu-105" class="hide">
+                            <table style="width:675px;">
+                                <tr>
+                                    <td style="width:690px;">
+                                        <font color="#CCCCCC">目前尚無資料</font>
+                                    </td>
+                                </tr>
+                            </table>
                         </td>
                     </tr>
                     <tr>
@@ -150,16 +140,14 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>
-                            <span id="menu-104" class="hide">
-                                <table class="table table-hover" style="width:675px;">
-                                    <tr>
-                                        <td style="width:690px;">
-                                            <font color="#CCCCCC">目前尚無資料</font>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </span>
+                        <td id="menu-104" class="hide">
+                            <table style="width:675px;">
+                                <tr>
+                                    <td style="width:690px;">
+                                        <font color="#CCCCCC">目前尚無資料</font>
+                                    </td>
+                                </tr>
+                            </table>
                         </td>
                     </tr>
                     <tr>
@@ -170,16 +158,14 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>
-                            <span id="menu-103" class="hide">
-                                <table class="table table-hover" style="width:675px;">
-                                    <tr>
-                                        <td style="width:690px;">
-                                            <font color="#CCCCCC">目前尚無資料</font>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </span>
+                        <td id="menu-103" class="hide">
+                            <table style="width:675px;">
+                                <tr>
+                                    <td style="width:690px;">
+                                        <font color="#CCCCCC">目前尚無資料</font>
+                                    </td>
+                                </tr>
+                            </table>
                         </td>
                     </tr>
                     <tr>
@@ -190,21 +176,14 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>
-                            <span id="menu-102" class="hide">
-                                <table class="table table-hover" style="width:675px;">
-                                    <tr>
-                                        <td style="width:690px;">
-                                            <font color="#CCCCCC">目前尚無資料</font>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td style="width:690px;">
-                                            <font color="#CCCCCC">目前尚無資料</font>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </span>
+                        <td id="menu-102" class="hide">
+                            <table style="width:675px;">
+                                <tr>
+                                    <td style="width:690px;">
+                                        <font color="#CCCCCC">目前尚無資料</font>
+                                    </td>
+                                </tr>
+                            </table>
                         </td>
                     </tr>
                 </table>
