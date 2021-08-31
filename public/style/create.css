@@ -41,3 +41,7 @@ a{
 a:hover{
     text-decoration:underline;
 }
+
+.margin-right{
+    margin-right: 50%;
+}
