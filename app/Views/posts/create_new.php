@@ -23,7 +23,7 @@
                 align-items: center;
             }
         </style>
-        <title>create_post</title>
+        <title>公告系統首頁</title>
     </head>
 
     <body>

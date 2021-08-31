@@ -97,6 +97,13 @@ img {
     width: 146px;/*圖片寬度*/
 }
 
+#covid a {
+    background: url("/person_img/covid_19_response.jpg");/*預設顯示圖片*/
+    display: block;
+    height: 40px;/*圖片高度*/
+    width: 146px;/*圖片寬度*/
+}
+
 #m1 a {
     background: url("/person_img/main_menu_01.jpg");/*預設顯示圖片*/
     display: block;
