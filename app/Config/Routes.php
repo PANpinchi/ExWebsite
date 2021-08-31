@@ -34,9 +34,9 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 $routes->get('/applyController/norcollegeview','applyController::norcollegeview');
-$routes->get('/applyController/starcollegeview','applyController::starcollegeview');
+$routes->get('/starController/starcollegeview','starController::starcollegeview');
 $routes->get('/applyController/norseniorview','applyController::norseniorview');
-$routes->get('/applyController/starseniorview','applyController::starseniorview');
+$routes->get('/starController/starseniorview','starController::starseniorview');
 $routes->get('/viewController/show_back', 'viewController::show_back');
 $routes->get('/viewController/show_front_star', 'viewController::show_front_star');
 $routes->get('/viewController/show_front_per', 'viewController::show_front_per');

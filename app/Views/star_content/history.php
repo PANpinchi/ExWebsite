@@ -16,6 +16,15 @@
         <script>
             function toggleMenu($year) {
                 $("#menu-"+$year).toggle();
+                
+                /*if($("#menu-"+$year).style.display == "none")
+                {
+                    $("#arrow"+$year).src = "/img/arrow_bottom.png";
+                }
+                else
+                {
+                    $("#arrow"+$year).src = "/img/arrow_right.png";
+                }*/
             }
         </script>
     </head>
@@ -35,7 +44,7 @@
                 <table class="table table-hover" align="center" style="width:700px;">
                     <tr>
                         <td style="width:690px;">
-                            <div class="pointer btnFollow" onclick=toggleMenu(109) onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor=''">
+                            <div class="pointer" onclick=toggleMenu(109) onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor=''">
                                 <b>109學年度  </b><img id="arrow109" style="vertical-align:middle" src="\img\arrow_right.png">
                             </div>
                         </td>

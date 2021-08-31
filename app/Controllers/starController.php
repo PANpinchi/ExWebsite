@@ -33,7 +33,7 @@ class starController extends BaseController
 			'logindate'=> $login->findAll(),
 		];
 
-		return view('show/star_regulation',$data);
+		return view('star_content/regulation',$data);
 	}
 
 	/*重要時程頁面*/
@@ -50,7 +50,7 @@ class starController extends BaseController
 			'logindate'=> $login->findAll(),
 		];
 
-		return view('show/star_schedule',$data);
+		return view('star_content/schedule',$data);
 	}
 
 	/*發售辦法頁面*/
@@ -67,7 +67,7 @@ class starController extends BaseController
 			'logindate'=> $login->findAll(),
 		];
 
-		return view('show/star_purchase1',$data);
+		return view('star_content/purchase1',$data);
 	}
 
 	/*網路購買簡章頁面*/
@@ -84,7 +84,7 @@ class starController extends BaseController
 			'logindate'=> $login->findAll(),
 		];
 
-		return view('show/star_purchase2',$data);
+		return view('star_content/purchase2',$data);
 	}
 
 	/*簡章總則頁面*/
@@ -101,7 +101,7 @@ class starController extends BaseController
 			'logindate'=> $login->findAll(),
 		];
 
-		return view('show/star_appform1',$data);
+		return view('star_content/appform1',$data);
 	}
 
 	/*簡章附錄頁面*/
@@ -118,7 +118,7 @@ class starController extends BaseController
 			'logindate'=> $login->findAll(),
 		];
 
-		return view('show/star_appform2',$data);
+		return view('star_content/appform2',$data);
 	}
 
 	/*校系分則查詢頁面*/
@@ -135,7 +135,7 @@ class starController extends BaseController
 			'logindate'=> $login->findAll(),
 		];
 
-		return view('show/star_query',$data);
+		return view('star_content/query',$data);
 	}
 
 	/*其他事項頁面*/
@@ -152,7 +152,7 @@ class starController extends BaseController
 			'logindate'=> $login->findAll(),
 		];
 
-		return view('show/star_appform3',$data);
+		return view('star_content/appform3',$data);
 	}
 
 	/*簡章修正事項頁面*/
@@ -169,7 +169,7 @@ class starController extends BaseController
 			'logindate'=> $login->findAll(),
 		];
 
-		return view('show/star_appform4',$data);
+		return view('star_content/appform4',$data);
 	}
 
 	/*統計資料頁面*/
@@ -186,7 +186,7 @@ class starController extends BaseController
 			'logindate'=> $login->findAll(),
 		];
 
-		return view('show/star_statis',$data);
+		return view('star_content/statis',$data);
 	}
 
 	/*資料表件下載頁面*/
@@ -203,7 +203,7 @@ class starController extends BaseController
 			'logindate'=> $login->findAll(),
 		];
 
-		return view('show/star_download1',$data);
+		return view('star_content/download1',$data);
 	}
 
 	/*其他事項下載頁面*/
@@ -220,7 +220,7 @@ class starController extends BaseController
 			'logindate'=> $login->findAll(),
 		];
 
-		return view('show/star_download2',$data);
+		return view('star_content/download2',$data);
 	}
 
 	/*招生單位頁面*/
@@ -237,7 +237,7 @@ class starController extends BaseController
 			'logindate'=> $login->findAll(),
 		];
 
-		return view('show/star_site1',$data);
+		return view('star_content/site1',$data);
 	}
 
 	/*考試單位頁面*/
@@ -254,7 +254,7 @@ class starController extends BaseController
 			'logindate'=> $login->findAll(),
 		];
 
-		return view('show/star_site2',$data);
+		return view('star_content/site2',$data);
 	}
 
 	/*其他網站頁面*/
@@ -271,7 +271,7 @@ class starController extends BaseController
 			'logindate'=> $login->findAll(),
 		];
 
-		return view('show/star_site3',$data);
+		return view('star_content/site3',$data);
 	}
 
 	/*歷年資料頁面*/
@@ -288,7 +288,7 @@ class starController extends BaseController
 			'logindate'=> $login->findAll(),
 		];
 
-		return view('show/star_history',$data);
+		return view('star_content/history',$data);
 	}
 
 	/*聽障生免英聽檢定頁面*/
@@ -305,7 +305,7 @@ class starController extends BaseController
 			'logindate'=> $login->findAll(),
 		];
 
-		return view('show/star_freetelc',$data);
+		return view('star_content/freetelc',$data);
 	}
 
 	/*錄取(篩選)結果查詢頁面*/
@@ -322,7 +322,7 @@ class starController extends BaseController
 			'logindate'=> $login->findAll(),
 		];
 
-		return view('show/star_dispense',$data);
+		return view('star_content/dispense',$data);
 	}
 
 	/*網路聲明放棄頁面*/
@@ -339,7 +339,7 @@ class starController extends BaseController
 			'logindate'=> $login->findAll(),
 		];
 
-		return view('show/star_abandon',$data);
+		return view('star_content/abandon',$data);
 	}
 
 	/*創建新的貼文(繁星)*/
