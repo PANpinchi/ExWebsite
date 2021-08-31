@@ -32,14 +32,19 @@
         <form name = "accounts" action = "/loginController/save_img" enctype="multipart/form-data"  method="post" style="width: 650px;">
             <?php 
             if($_SESSION['image'] == NULL){
-                echo '<p style="font-size: 30px"><strong> 您尚未啟用 Face ID 功能 </strong></p>';
+                echo '
+                <p style="font-size: 30px"><strong> 您尚未啟用 Face ID 功能 </strong></p>
+                <img style="max-width: 50%; max-height: 50%"><br><br>
+                ';
             }
             else{
                 echo '<img src="/labeled_images/'.$_SESSION['user_id'].'/1.jpg" style="max-width: 50%; max-height: 50%"><br>'; 
             }
             ?>
-            <input name="img" id="img" style="display: none; margin-left: 120px;" type="file" accept=".jpg" onchange="haveFile()" required>
-            <img style="max-width: 50%; max-height: 50%"><br><br>
+            <input name="img" id="img" style="display: none; margin-left: 120px;" type="file" accept=".jpg" required>
+
+            <br>
+
             <?php 
             if($_SESSION['image'] == NULL){
                 echo '
@@ -48,7 +53,7 @@
             }
             else{
                 echo '
-                <button id="capture" type="button" class="btn btn-secondary" onclick="img.click()">選擇檔案</button><br><br>
+                <button id="capture" type="button" class="btn btn-secondary" onclick="img.click()">更換照片</button><br><br>
                 <a href="/loginController/del_img"><button id="capture" type="button" class="btn btn-primary">取消 Face ID </button></a>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <button id="capture" type="submit" class="btn btn-primary"">使用此張照片</button>'; 

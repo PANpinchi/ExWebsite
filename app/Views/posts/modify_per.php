@@ -16,7 +16,7 @@
     </head>
 
     <body>
-        <div style="padding-left: 100px">
+        <div class="margin-right">
             <form action="/applyController/restore_per" enctype="multipart/form-data" method="post">
                 <div class="row" style="width: 900px">
                     <div class="col offset-0">
