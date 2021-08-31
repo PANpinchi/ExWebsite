@@ -138,6 +138,7 @@
                                                     </table>
                                                 </td>
                                             </tr>
+                                            <tr><td><div id = "covid"><a href="/starController/covid19"> </a></div></tr>
                                             <tr><td><img src="/img/main_menu_title.jpg"></tr>
                                             <tr>
                                                 <td>

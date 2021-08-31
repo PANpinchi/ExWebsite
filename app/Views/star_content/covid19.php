@@ -1,4 +1,4 @@
-<?= $this->extend('templates\person_web_default') ?>
+<?= $this->extend('templates\high_post_default') ?>
 <?= $this->section('content') ?>
 
 <head>

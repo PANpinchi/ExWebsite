@@ -19,6 +19,23 @@ use App\Models\Per_post_page;
 
 class starController extends BaseController
 {
+	/*疫情防範網站*/
+	public function	covid19()
+	{
+		$login = new Logindate();;
+		$starsenior = new Starsenior();
+		$starcollege = new Starcollege();
+
+		$data = 
+		[
+			'starcollege' => $starcollege->findAll(),
+			'starsenior' => $starsenior->findAll(),
+			'logindate'=> $login->findAll(),
+		];
+
+		return view('star_content/covid19',$data);
+	}
+
 	/*法令規章頁面*/
 	public function regulation()
 	{
