@@ -403,7 +403,7 @@ class loginController extends BaseController
 
 	/* 產生驗證碼 */
 	public function verification_code()
-	{		
+	{
 		/* 創建驗證碼 */
 		$all = array_merge(range('a', 'z'), range('A', 'Z'), range(0, 9));
 		$div = ['1', 'l', '0', 'o', 'O', 'I'];
